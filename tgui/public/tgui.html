@@ -417,7 +417,7 @@ window.onerror = function (msg, url, line, col, error) {
       else {
         window.onerror.__stack__ = stack;
       }
-      var textProp = 'textContent';
+      var textProp = Byond.IS_LTE_IE8 ? 'innerText' : 'textContent';
       errorStack[textProp] = window.onerror.__stack__;
     }
     // Set window geometry
