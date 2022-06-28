@@ -33,15 +33,6 @@ GLOBAL_DATUM_INIT(typing_indicator, /mutable_appearance, mutable_appearance('ico
 	remove_all_indicators()
 	return ..()
 
-/// Whether or not to show a typing indicator when speaking. Defaults to on.
-/datum/preference/toggle/typing_indicator
-	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
-	savefile_key = "typingIndicator"
-	savefile_identifier = PREFERENCE_PLAYER
-
-/datum/preference/toggle/typing_indicator/apply_to_client(client/client, value)
-	client?.typing_indicators = value
-
 /** Sets the mob as "thinking" - with indicator and variable thinking_IC */
 /datum/tgui_say/proc/start_thinking()
 	if(!window_open || !client.typing_indicators)
@@ -65,7 +56,7 @@ GLOBAL_DATUM_INIT(typing_indicator, /mutable_appearance, mutable_appearance('ico
 	if(!window_open || !client.typing_indicators || !client.mob.thinking_IC)
 		return FALSE
 	client.mob.create_typing_indicator()
-	addtimer(CALLBACK(src, .proc/stop_typing), 5 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE | TIMER_STOPPABLE)
+	addtimer(CALLBACK(src, PROC_REF(stop_typing)), 5 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE | TIMER_STOPPABLE)
 
 /**
  * Callback to remove the typing indicator after a brief period of inactivity.

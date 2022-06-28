@@ -64,7 +64,7 @@
 	window_open = FALSE
 	winshow(client, "tgui_say", FALSE)
 	window.send_message("props", list(
-		lightMode = client.prefs?.read_preference(/datum/preference/toggle/tgui_say_light_mode),
+		lightMode = FALSE,
 		maxLength = max_length,
 	))
 	stop_thinking()
