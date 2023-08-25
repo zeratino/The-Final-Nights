@@ -190,7 +190,7 @@ SUBSYSTEM_DEF(garbage)
 				var/type = D.type
 				var/datum/qdel_item/I = items[type]
 				#ifdef TESTING
-				log_world("## TESTING: GC: -- \ref[D] | [type] was unable to be GC'd --")
+				log_world("## TESTING: GC: -- [FAST_REF(D)] | [type] was unable to be GC'd --")
 				for(var/c in GLOB.admins) //Using testing() here would fill the logs with ADMIN_VV garbage
 					var/client/admin = c
 					if(!check_rights_for(admin, R_ADMIN))
@@ -224,7 +224,7 @@ SUBSYSTEM_DEF(garbage)
 		HardDelete(D)
 		return
 	var/gctime = world.time
-	var/refid = "\ref[D]"
+	var/refid = FAST_REF(D)
 
 	D.gc_destroyed = gctime
 	var/list/queue = queues[level]
@@ -239,7 +239,7 @@ SUBSYSTEM_DEF(garbage)
 	++delslasttick
 	++totaldels
 	var/type = D.type
-	var/refID = "\ref[D]"
+	var/refID = FAST_REF(D)
 
 	del(D)
 
@@ -344,7 +344,7 @@ SUBSYSTEM_DEF(garbage)
 				D.find_references_legacy()
 			if (QDEL_HINT_IFFAIL_FINDREFERENCE)
 				SSgarbage.Queue(D)
-				SSgarbage.reference_find_on_fail[REF(D)] = TRUE
+				SSgarbage.reference_find_on_fail[FAST_REF(D)] = TRUE
 			#endif
 			else
 				#ifdef TESTING

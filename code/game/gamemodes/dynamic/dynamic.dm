@@ -107,17 +107,17 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 
 /datum/game_mode/dynamic/admin_panel()
 	var/list/dat = list()
-	dat += "Dynamic Mode <a href='byond://?_src_=vars;[HrefToken()];Vars=[REF(src)]'>VV</a> <a href='byond://?src=\ref[src];[HrefToken()]'>\[Refresh\]</a><BR>"
+	dat += "Dynamic Mode <a href='byond://?_src_=vars;[HrefToken()];Vars=[FAST_REF(src)]'>VV</a> <a href='byond://?src=[FAST_REF(src)];[HrefToken()]'>\[Refresh\]</a><BR>"
 	dat += "Threat Level: <b>[threat_level]</b><br/>"
 
-	dat += "Threat to Spend: <b>[threat]</b> <a href='byond://?src=\ref[src];[HrefToken()];adjustthreat=1'>Adjust</a> <a href='byond://?src=\ref[src];[HrefToken()];threatlog=1'>\[View Log\]</a><br/>"
+	dat += "Threat to Spend: <b>[threat]</b> <a href='byond://?src=[FAST_REF(src)];[HrefToken()];adjustthreat=1'>Adjust</a> <a href='byond://?src=[FAST_REF(src)];[HrefToken()];threatlog=1'>\[View Log\]</a><br/>"
 	dat += "<br/>"
 	dat += "Parameters: centre = [GLOB.dynamic_curve_centre] ; width = [GLOB.dynamic_curve_width].<br/>"
 	dat += "<i>On average, <b>[peaceful_percentage]</b>% of the rounds are more peaceful.</i><br/>"
-	dat += "Forced extended: <a href='byond://?src=\ref[src];[HrefToken()];forced_extended=1'><b>[GLOB.dynamic_forced_extended ? "On" : "Off"]</b></a><br/>"
-	dat += "Classic secret (only autotraitor): <a href='byond://?src=\ref[src];[HrefToken()];classic_secret=1'><b>[GLOB.dynamic_classic_secret ? "On" : "Off"]</b></a><br/>"
-	dat += "No stacking (only one round-ender): <a href='byond://?src=\ref[src];[HrefToken()];no_stacking=1'><b>[GLOB.dynamic_no_stacking ? "On" : "Off"]</b></a><br/>"
-	dat += "Stacking limit: [GLOB.dynamic_stacking_limit] <a href='byond://?src=\ref[src];[HrefToken()];stacking_limit=1'>Adjust</a>"
+	dat += "Forced extended: <a href='byond://?src=[FAST_REF(src)];[HrefToken()];forced_extended=1'><b>[GLOB.dynamic_forced_extended ? "On" : "Off"]</b></a><br/>"
+	dat += "Classic secret (only autotraitor): <a href='byond://?src=[FAST_REF(src)];[HrefToken()];classic_secret=1'><b>[GLOB.dynamic_classic_secret ? "On" : "Off"]</b></a><br/>"
+	dat += "No stacking (only one round-ender): <a href='byond://?src=[FAST_REF(src)];[HrefToken()];no_stacking=1'><b>[GLOB.dynamic_no_stacking ? "On" : "Off"]</b></a><br/>"
+	dat += "Stacking limit: [GLOB.dynamic_stacking_limit] <a href='byond://?src=[FAST_REF(src)];[HrefToken()];stacking_limit=1'>Adjust</a>"
 	dat += "<br/>"
 	dat += "<A href='byond://?src=\ref[src];[HrefToken()];force_latejoin_rule=1'>\[Force Next Latejoin Ruleset\]</A><br>"
 	if (forced_latejoin_rule)
@@ -132,8 +132,8 @@ GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
 	else
 		dat += "none.<br>"
 	dat += "<br>Injection Timers: (<b>[get_injection_chance(TRUE)]%</b> chance)<BR>"
-	dat += "Latejoin: [(latejoin_injection_cooldown-world.time)>60*10 ? "[round((latejoin_injection_cooldown-world.time)/60/10,0.1)] minutes" : "[(latejoin_injection_cooldown-world.time)] seconds"] <a href='byond://?src=\ref[src];[HrefToken()];injectlate=1'>Now!</a><BR>"
-	dat += "Midround: [(midround_injection_cooldown-world.time)>60*10 ? "[round((midround_injection_cooldown-world.time)/60/10,0.1)] minutes" : "[(midround_injection_cooldown-world.time)] seconds"] <a href='byond://?src=\ref[src];[HrefToken()];injectmid=1'>Now!</a><BR>"
+	dat += "Latejoin: [(latejoin_injection_cooldown-world.time)>60*10 ? "[round((latejoin_injection_cooldown-world.time)/60/10,0.1)] minutes" : "[(latejoin_injection_cooldown-world.time)] seconds"] <a href='byond://?src=[FAST_REF(src)];[HrefToken()];injectlate=1'>Now!</a><BR>"
+	dat += "Midround: [(midround_injection_cooldown-world.time)>60*10 ? "[round((midround_injection_cooldown-world.time)/60/10,0.1)] minutes" : "[(midround_injection_cooldown-world.time)] seconds"] <a href='byond://?src=[FAST_REF(src)];[HrefToken()];injectmid=1'>Now!</a><BR>"
 
 	var/datum/browser/browser = new(usr, "gamemode_panel", "Game Mode Panel", 500, 500)
 	browser.set_content(dat.Join())

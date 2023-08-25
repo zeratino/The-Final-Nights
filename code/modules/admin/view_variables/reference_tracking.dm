@@ -197,19 +197,19 @@ GLOBAL_LIST_EMPTY(deletion_failures)
 			var/variable = vars_list[varname]
 
 			if(variable == src)
-				testing("Found [type] \ref[src] in [datum_container.type]'s [varname] var. [container_name]")
+				testing("Found [type] [FAST_REF(src)] in [datum_container.type]'s [FAST_REF(datum_container)] [varname] var. [container_name]")
 
 			else if(islist(variable))
-				DoSearchVar(variable, "[container_name] -> list", recursive_limit - 1)
+				DoSearchVar(variable, "[container_name] [FAST_REF(datum_container)] -> [varname] (list)", recursive_limit - 1)
 
 	else if(islist(potential_container))
 		var/normal = IS_NORMAL_LIST(potential_container)
 		for(var/element_in_list in potential_container)
 			if(element_in_list == src)
-				testing("Found [type] \ref[src] in list [container_name].")
+				testing("Found [type] [FAST_REF(src)] in list [container_name].")
 
 			else if(element_in_list && !isnum(element_in_list) && normal && potential_container[element_in_list] == src)
-				testing("Found [type] \ref[src] in list [container_name]\[[element_in_list]\]")
+				testing("Found [type] [FAST_REF(src)] in list [container_name]\[[element_in_list]\]")
 
 			else if(islist(element_in_list))
 				DoSearchVar(element_in_list, "[container_name] -> list", recursive_limit - 1)
@@ -220,7 +220,10 @@ GLOBAL_LIST_EMPTY(deletion_failures)
 
 
 /proc/qdel_and_find_ref_if_fail(datum/thing_to_del, force = FALSE)
-	SSgarbage.reference_find_on_fail[REF(thing_to_del)] = TRUE
-	qdel(thing_to_del, force)
+	thing_to_del.qdel_and_find_ref_if_fail(force)
+
+/datum/proc/qdel_and_find_ref_if_fail(force = FALSE)
+	SSgarbage.reference_find_on_fail[FAST_REF(src)] = TRUE
+	qdel(src, force)
 
 #endif
