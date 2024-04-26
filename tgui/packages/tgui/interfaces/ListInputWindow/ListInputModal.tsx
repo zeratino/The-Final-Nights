@@ -9,8 +9,8 @@ import {
   KEY_Z,
 } from 'tgui-core/keycodes';
 
-import { useBackend } from '../backend';
-import { InputButtons } from './common/InputButtons';
+import { useBackend } from '../../backend';
+import { InputButtons } from '../common/InputButtons';
 
 type ListInputModalProps = {
   items: string[];
