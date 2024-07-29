@@ -39,10 +39,8 @@ const initialState = {
     visible: false,
     activeTab: SETTINGS_TABS[0].id,
   },
-  initialized: false,
   statLinked: true,
   statFontSize: 12,
-  statTabsStyle: 'default',
 } as const;
 
 export function settingsReducer(

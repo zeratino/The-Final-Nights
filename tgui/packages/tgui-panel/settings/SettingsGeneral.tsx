@@ -21,10 +21,11 @@ import { selectSettings } from './selectors';
 import { importChatSettings } from './settingsImExport';
 
 export function SettingsGeneral(props) {
-  const { theme, fontFamily, fontSize, lineHeight } =
+  const { theme, fontFamily, fontSize, lineHeight, statLinked, statFontSize } =
     useSelector(selectSettings);
   const dispatch = useDispatch();
   const [freeFont, setFreeFont] = useState(false);
+  const [statFont, setStatFont] = useState(false);
 
   return (
     <Section>
@@ -119,14 +120,46 @@ export function SettingsGeneral(props) {
                 stepPixelSize={20}
                 minValue={8}
                 maxValue={32}
-                value={fontSize}
+                value={statFont ? statFontSize : fontSize}
                 unit="px"
                 format={(value) => toFixed(value)}
                 onChange={(e, value) =>
-                  dispatch(updateSettings({ fontSize: value }))
+                  dispatch(
+                    updateSettings({
+                      [statFont ? 'statFontSize' : 'fontSize']: value,
+                    }),
+                  )
                 }
               />
             </Stack.Item>
+            <Stack.Item>
+              <Button
+                width={statFont ? 7.3 : 10}
+                onClick={() => setStatFont(!statFont)}
+              >
+                {statFont ? 'Stat Panel' : 'Chat'}
+              </Button>
+            </Stack.Item>
+            {!!statFont && (
+              <Stack.Item>
+                <Button
+                  tooltip={
+                    statLinked
+                      ? 'Unlink Stat Panel settings from chat'
+                      : 'Link Stat Panel settings to chat'
+                  }
+                  icon={statLinked ? 'link' : 'link-slash'}
+                  color={statLinked ? 'bad' : 'good'}
+                  onClick={() =>
+                    dispatch(
+                      updateSettings({
+                        statLinked: !statLinked,
+                      }),
+                    )
+                  }
+                />
+              </Stack.Item>
+            )}
           </Stack>
         </LabeledList.Item>
         <LabeledList.Item label="Line height">
