@@ -41,6 +41,7 @@ const initialState = {
   },
   statLinked: true,
   statFontSize: 12,
+  statTabsStyle: 'default',
 } as const;
 
 export function settingsReducer(
