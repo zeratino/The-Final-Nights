@@ -16,7 +16,9 @@ import { SettingsPanel, useSettings } from './settings';
 export const Panel = (props, context) => {
   // IE8-10: Needs special treatment due to missing Flex support
   if (Byond.IS_LTE_IE10) {
-    return <HoboPanel />;
+    return (
+      <HoboPanel />
+    );
   }
   const audio = useAudio(context);
   const settings = useSettings(context);
@@ -25,7 +27,9 @@ export const Panel = (props, context) => {
     const { useDebug, KitchenSink } = require('tgui/debug');
     const debug = useDebug(context);
     if (debug.kitchenSink) {
-      return <KitchenSink panel />;
+      return (
+        <KitchenSink panel />
+      );
     }
   }
   return (
@@ -47,19 +51,17 @@ export const Panel = (props, context) => {
                   icon="music"
                   tooltip="Music player"
                   tooltipPosition="bottom-left"
-                  onClick={() => audio.toggle()}
-                />
+                  onClick={() => audio.toggle()} />
               </Stack.Item>
               <Stack.Item>
                 <Button
                   icon={settings.visible ? 'times' : 'cog'}
                   selected={settings.visible}
-                  tooltip={
-                    settings.visible ? 'Close settings' : 'Open settings'
-                  }
+                  tooltip={settings.visible
+                    ? 'Close settings'
+                    : 'Open settings'}
                   tooltipPosition="bottom-left"
-                  onClick={() => settings.toggle()}
-                />
+                  onClick={() => settings.toggle()} />
               </Stack.Item>
             </Stack>
           </Section>
@@ -84,17 +86,15 @@ export const Panel = (props, context) => {
             <Notifications>
               {game.connectionLostAt && (
                 <Notifications.Item
-                  rightSlot={
+                  rightSlot={(
                     <Button
                       color="white"
-                      onClick={() => Byond.command('.reconnect')}
-                    >
+                      onClick={() => Byond.command('.reconnect')}>
                       Reconnect
                     </Button>
-                  }
-                >
-                  You are either AFK, experiencing lag or the connection has
-                  closed.
+                  )}>
+                  You are either AFK, experiencing lag or the connection
+                  has closed.
                 </Notifications.Item>
               )}
               {game.roundRestartedAt && (
@@ -124,11 +124,12 @@ const HoboPanel = (props, context) => {
             'z-index': 1000,
           }}
           selected={settings.visible}
-          onClick={() => settings.toggle()}
-        >
+          onClick={() => settings.toggle()}>
           Settings
         </Button>
-        {(settings.visible && <SettingsPanel />) || (
+        {settings.visible && (
+          <SettingsPanel />
+        ) || (
           <ChatPanel lineHeight={settings.lineHeight} />
         )}
       </Pane.Content>

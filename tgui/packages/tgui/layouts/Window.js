@@ -13,12 +13,7 @@ import { Icon } from '../components';
 import { UI_DISABLED, UI_INTERACTIVE, UI_UPDATE } from '../constants';
 import { useDebug } from '../debug';
 import { toggleKitchenSink } from '../debug/actions';
-import {
-  dragStartHandler,
-  recallWindowGeometry,
-  resizeStartHandler,
-  setWindowKey,
-} from '../drag';
+import { dragStartHandler, recallWindowGeometry, resizeStartHandler, setWindowKey } from '../drag';
 import { createLogger } from '../logging';
 import { Layout } from './Layout';
 
@@ -47,19 +42,30 @@ export class Window extends Component {
   }
 
   render() {
-    const { resizable, noClose, theme, title, children } = this.props;
-    const { config, suspended } = useBackend(this.context);
+    const {
+      resizable,
+      noClose,
+      theme,
+      title,
+      children,
+    } = this.props;
+    const {
+      config,
+      suspended,
+    } = useBackend(this.context);
     const { debugLayout } = useDebug(this.context);
     const dispatch = useDispatch(this.context);
     const fancy = config.window?.fancy;
     // Determine when to show dimmer
-    const showDimmer =
-      config.user &&
-      (config.user.observer
+    const showDimmer = config.user && (
+      config.user.observer
         ? config.status < UI_DISABLED
-        : config.status < UI_INTERACTIVE);
+        : config.status < UI_INTERACTIVE
+    );
     return (
-      <Layout className="Window" theme={theme}>
+      <Layout
+        className="Window"
+        theme={theme}>
         <TitleBar
           className="Window__titleBar"
           title={!suspended && (title || decodeHtmlEntities(config.title))}
@@ -70,28 +76,25 @@ export class Window extends Component {
             logger.log('pressed close');
             dispatch(backendSuspendStart());
           }}
-          noClose={noClose}
-        />
+          noClose={noClose} />
         <div
-          className={classes(['Window__rest', debugLayout && 'debug-layout'])}
-        >
+          className={classes([
+            'Window__rest',
+            debugLayout && 'debug-layout',
+          ])}>
           {!suspended && children}
-          {showDimmer && <div className="Window__dimmer" />}
+          {showDimmer && (
+            <div className="Window__dimmer" />
+          )}
         </div>
         {fancy && resizable && (
           <>
-            <div
-              className="Window__resizeHandle__e"
-              onMousedown={resizeStartHandler(1, 0)}
-            />
-            <div
-              className="Window__resizeHandle__s"
-              onMousedown={resizeStartHandler(0, 1)}
-            />
-            <div
-              className="Window__resizeHandle__se"
-              onMousedown={resizeStartHandler(1, 1)}
-            />
+            <div className="Window__resizeHandle__e"
+              onMousedown={resizeStartHandler(1, 0)} />
+            <div className="Window__resizeHandle__s"
+              onMousedown={resizeStartHandler(0, 1)} />
+            <div className="Window__resizeHandle__se"
+              onMousedown={resizeStartHandler(1, 1)} />
           </>
         )}
       </Layout>
@@ -99,15 +102,24 @@ export class Window extends Component {
   }
 }
 
-const WindowContent = (props) => {
-  const { className, fitted, children, ...rest } = props;
+const WindowContent = props => {
+  const {
+    className,
+    fitted,
+    children,
+    ...rest
+  } = props;
   return (
     <Layout.Content
-      className={classes(['Window__content', className])}
-      {...rest}
-    >
-      {(fitted && children) || (
-        <div className="Window__contentPadding">{children}</div>
+      className={classes([
+        'Window__content',
+        className,
+      ])}
+      {...rest}>
+      {fitted && children || (
+        <div className="Window__contentPadding">
+          {children}
+        </div>
       )}
     </Layout.Content>
   );
@@ -115,7 +127,7 @@ const WindowContent = (props) => {
 
 Window.Content = WindowContent;
 
-const statusToColor = (status) => {
+const statusToColor = status => {
   switch (status) {
     case UI_INTERACTIVE:
       return 'good';
@@ -128,35 +140,46 @@ const statusToColor = (status) => {
 };
 
 const TitleBar = (props, context) => {
-  const { className, title, status, noClose, fancy, onDragStart, onClose } =
-    props;
+  const {
+    className,
+    title,
+    status,
+    noClose,
+    fancy,
+    onDragStart,
+    onClose,
+  } = props;
   const dispatch = useDispatch(context);
   return (
-    <div className={classes(['TitleBar', className])}>
-      {(status === undefined && (
-        <Icon className="TitleBar__statusIcon" name="tools" opacity={0.5} />
-      )) || (
+    <div
+      className={classes([
+        'TitleBar',
+        className,
+      ])}>
+      {status === undefined && (
+        <Icon
+          className="TitleBar__statusIcon"
+          name="tools"
+          opacity={0.5} />
+      ) || (
         <Icon
           className="TitleBar__statusIcon"
           color={statusToColor(status)}
-          name="eye"
-        />
+          name="eye" />
       )}
       <div className="TitleBar__title">
-        {(typeof title === 'string' &&
-          title === title.toLowerCase() &&
-          toTitleCase(title)) ||
-          title}
+        {typeof title === 'string'
+          && title === title.toLowerCase()
+          && toTitleCase(title)
+          || title}
       </div>
       <div
         className="TitleBar__dragZone"
-        onMousedown={(e) => fancy && onDragStart(e)}
-      />
+        onMousedown={e => fancy && onDragStart(e)} />
       {process.env.NODE_ENV !== 'production' && (
         <div
           className="TitleBar__devBuildIndicator"
-          onClick={() => dispatch(toggleKitchenSink())}
-        >
+          onClick={() => dispatch(toggleKitchenSink())}>
           <Icon name="bug" />
         </div>
       )}
@@ -166,8 +189,7 @@ const TitleBar = (props, context) => {
           // IE8: Synthetic onClick event doesn't work on IE8.
           // IE8: Use a plain character instead of a unicode symbol.
           // eslint-disable-next-line react/no-unknown-property
-          onclick={onClose}
-        >
+          onclick={onClose}>
           {Byond.IS_LTE_IE8 ? 'x' : '×'}
         </div>
       )}

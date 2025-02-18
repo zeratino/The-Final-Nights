@@ -8,18 +8,10 @@ const CallingWindow = (props, context) => {
   return (
     <Dimmer>
       <Section transparent>
-        <Box inline ml={1}>
-          {'Calling...'}
-        </Box>
+        <Box inline ml={1}>{"Calling..."}</Box>
         <br />
         <Box inline ml={1}>
-          <Button
-            icon="phone-slash"
-            color="red"
-            onClick={() => {
-              act('hang');
-            }}
-          />
+          <Button icon="phone-slash" color="red" onClick={() => { act("hang"); }} />
         </Box>
       </Section>
     </Dimmer>
@@ -27,99 +19,86 @@ const CallingWindow = (props, context) => {
 };
 const NumpadWindow = (props, context) => {
   const { act, data } = useBackend(context);
-  const { my_number, choosed_number } = data;
+  const {
+    my_number,
+    choosed_number,
+  } = data;
   return (
-    <Box m="6px">
-      <Flex mb={1.5}>
-        <Flex.Item width="155px">
-          <Box height="60px" className="Telephone__displayBox">
-            {my_number}
-          </Box>
-        </Flex.Item>
-        <Flex.Item>
-          <Flex justifyContent="space-between" alignItems="center">
-            <Button
-              icon="book"
-              fontSize="20px"
-              lineHeight={1}
-              textAlign="center"
-              width="35px"
-              height="40px"
-              className="Telephone__Button Telephone__Button--keypad"
-              onClick={() => act('contacts')}
-            />
-            <Button
-              icon="wrench"
-              fontSize="20px"
-              lineHeight={1}
-              textAlign="center"
-              width="35x"
-              height="40px"
-              className="Telephone__Button Telephone__Button--settings"
-              onClick={() => act('settings')}
-            />
-          </Flex>
-        </Flex.Item>
+<Box m="6px">
+  <Flex mb={1.5}>
+    <Flex.Item width="155px"> 
+      <Box height="60px" className="Telephone__displayBox">
+        {my_number} 
+      </Box>
+    </Flex.Item>
+    <Flex.Item>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Button
+          icon="book"
+          fontSize="20px"
+          lineHeight={1}
+          textAlign="center"
+          width="35px" 
+          height="40px" 
+          className="Telephone__Button Telephone__Button--keypad"
+          onClick={() => act('contacts')}
+        />
+        <Button
+          icon="wrench"
+          fontSize="20px"
+          lineHeight={1}
+          textAlign="center"
+          width="35x" 
+          height="40px" 
+          className="Telephone__Button Telephone__Button--settings"
+          onClick={() => act('settings')}
+        />
       </Flex>
-      <Flex ml="3px">
-        <Flex.Item>
-          <PhoneKeypad phoneNumber={choosed_number} />
-        </Flex.Item>
-      </Flex>
-    </Box>
+    </Flex.Item>
+  </Flex>
+  <Flex ml="3px">
+    <Flex.Item>
+      <PhoneKeypad phoneNumber={choosed_number} />
+    </Flex.Item>
+  </Flex>
+</Box>
   );
 };
 
 const TalkingWindow = (props, context) => {
   const { act, data } = useBackend(context);
-  const { calling_user, talking } = data;
+  const {
+    calling_user,
+    talking,
+  } = data;
   return (
     <Dimmer>
       <Section transparent>
         {talking ? (
           <>
-            <Box inline ml={1}>
-              {'Current call: ' + calling_user}
-            </Box>
+            <Box inline ml={1}>{"Current call: " + calling_user }</Box>
             <br />
             <Box inline ml={1}>
-              <Button
-                icon="phone-slash"
-                color="red"
-                onClick={() => {
-                  act('hang');
-                }}
-              />
+              <Button icon="phone-slash" color="red" onClick={() => { act("hang"); }} />
             </Box>
           </>
         ) : (
+
           <>
-            <Box inline ml={1}>
-              {'Calling to ' + calling_user + '...'}
-            </Box>
+            <Box inline ml={1}>{"Calling to " + calling_user + "..."}</Box>
             <br />
             <Box inline ml={1}>
-              <Button
-                icon="phone"
-                color="green"
-                onClick={() => {
-                  act('accept');
-                }}
-              />
-              <Button
-                icon="phone-slash"
-                color="red"
-                onClick={() => {
-                  act('decline');
-                }}
-              />
+              <Button icon="phone" color="green" onClick={() => { act("accept"); }} />
+              <Button icon="phone-slash" color="red" onClick={() => { act("decline"); }} />
             </Box>
           </>
         )}
+
       </Section>
     </Dimmer>
   );
 };
+
 
 const PhoneKeypad = (props, context) => {
   const { act } = useBackend(context);
@@ -133,7 +112,7 @@ const PhoneKeypad = (props, context) => {
       <Grid width="1px">
         {keypadKeys.map((keyColumn, i) => (
           <Grid.Column key={keyColumn[0]}>
-            {keyColumn.map((key) => (
+            {keyColumn.map(key => (
               <Button
                 fluid
                 bold
@@ -149,10 +128,9 @@ const PhoneKeypad = (props, context) => {
                   'Telephone__Button--keypad',
                   'Telephone__Button--' + key,
                 ])}
-                onClick={() => act('keypad', { value: key })}
-              />
+                onClick={() => act("keypad", { value: key })} />
             ))}
-            {i === 2 && (
+            {i=== 2 && (
               <Button
                 fluid
                 bold
@@ -167,9 +145,7 @@ const PhoneKeypad = (props, context) => {
                   'Telephone__Button--keypad',
                   'Telephone__Button--Call',
                 ])}
-                onClick={() => act('call')}
-              />
-            )}
+                onClick={() => act("call")} />)}
           </Grid.Column>
         ))}
       </Grid>
@@ -179,16 +155,20 @@ const PhoneKeypad = (props, context) => {
 
 export const Telephone = (props, context) => {
   const { act, data } = useBackend(context);
-  const { online, calling } = data;
+  const {
+    online,
+    calling,
+  } = data;
   return (
-    <Window width={200} height={470} theme="retro">
+    <Window
+      width={200}
+      height={470}
+      theme="retro">
       <Window.Content>
         {calling ? (
           <CallingWindow />
-        ) : online ? (
-          <TalkingWindow />
         ) : (
-          <NumpadWindow />
+          online ? (<TalkingWindow />) : (<NumpadWindow />)
         )}
       </Window.Content>
     </Window>
