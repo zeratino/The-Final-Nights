@@ -150,6 +150,8 @@
 	. = ..()
 	var/mob/living/simple_animal/animal = locate() in get_turf(Obstacle)
 	if(animal)
+		if(animal.name == "Cain")
+			return //cain will never hate you.
 		if(HAS_TRAIT(src, TRAIT_ANIMAL_REPULSION))
 			adjustBruteLoss(3)
 			visible_message("<span class='danger'>[animal] bites at [name]!</span>", \
