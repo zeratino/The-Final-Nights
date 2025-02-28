@@ -87,6 +87,7 @@ GLOBAL_LIST_INIT(warehouse_positions, list(
 
 GLOBAL_LIST_INIT(tremere_positions, list(
 	"Chantry Regent",
+	"Chantry Gargoyle",
 	"Chantry Archivist"
 ))
 
