@@ -21,7 +21,7 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "You are a spawn of the Eldest. The Tzimisce within the city operate the local Hotel and enforce the rites of hospitality within the Hotel."
+	duty = "You are a spawn of the Eldest. The Tzimisce within the city operate the local Hotel and enforce the rites of hospitality within the Hotel. You should not be flaunting your powers in public."
 	minimal_masquerade = 0
 	allowed_bloodlines = list("Tzimisce")
 
