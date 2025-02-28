@@ -50,5 +50,5 @@
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
 /obj/effect/landmark/start/kiasyd
-	name = "kiasyd"
+	name = "Museum Groundskeeper"
 	icon_state = "Assistant"

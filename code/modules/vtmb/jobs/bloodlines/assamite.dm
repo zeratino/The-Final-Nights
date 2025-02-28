@@ -49,6 +49,6 @@
 		else
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
-/obj/effect/landmark/start/banu
-	name = "banu"
+/obj/effect/landmark/start/assamite
+	name = "Barista""
 	icon_state = "Assistant"
