@@ -47266,10 +47266,6 @@
 	dir = 1;
 	pixel_y = 9
 	},
-/obj/structure/chair/comfy/brown{
-	color = "#50C878";
-	dir = 1
-	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/tzimisce_hotel)
 "mol" = (
@@ -53386,17 +53382,15 @@
 /turf/open/floor/carpet/orange,
 /area/vtm/interior)
 "pxm" = (
-/obj/structure/fluff/hedge,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/railing{
 	dir = 1;
-	layer = 4;
-	pixel_y = 12
+	pixel_y = 9
 	},
-/turf/open/indestructible/necropolis/air,
+/obj/structure/chair/comfy/brown{
+	color = "#50C878";
+	dir = 1
+	},
+/turf/open/floor/plating/rough,
 /area/vtm/interior/tzimisce_hotel)
 "pxp" = (
 /obj/structure/weedshit{
@@ -253044,7 +253038,7 @@ bFi
 aSr
 bFr
 aSr
-pxm
+bFq
 bFr
 bFq
 bFr
@@ -254324,7 +254318,7 @@ aRT
 aXP
 nzU
 lUl
-qSO
+pxm
 aRQ
 aSr
 sBL
