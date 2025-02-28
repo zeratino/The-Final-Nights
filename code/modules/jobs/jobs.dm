@@ -30,7 +30,6 @@ GLOBAL_LIST_INIT(anarch_positions, list(
 	"Bruiser"
 	))
 
-
 GLOBAL_LIST_INIT(citizen_positions, list(
 	"Citizen",
 	"Barista",
@@ -48,7 +47,6 @@ GLOBAL_LIST_INIT(police_positions, list(
     "Police Sergeant",
     "Police Officer",
 	"Emergency Dispatcher"
-
 ))
 
 GLOBAL_LIST_INIT(national_security_positions, list(
