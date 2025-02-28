@@ -11,7 +11,7 @@
 	no_facial = TRUE
 	male_clothes = /obj/item/clothing/under/vampire/archivist
 	female_clothes = /obj/item/clothing/under/vampire/archivist
-	whitelisted = TRUE
+	whitelisted = FALSE
 	violating_appearance = TRUE
 	current_accessory = "none"
 	accessories = list("fae_ears", "none")

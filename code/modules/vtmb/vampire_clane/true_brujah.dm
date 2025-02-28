@@ -12,7 +12,7 @@
 	male_clothes = /obj/item/clothing/under/vampire/rich
 	female_clothes = /obj/item/clothing/under/vampire/business
 	restricted_disciplines = list(/datum/discipline/celerity)
-	whitelisted = TRUE
+	whitelisted = FALSE
 
 /datum/discipline/temporis/post_gain(mob/living/carbon/human/H)
 	if(level >= 1)
