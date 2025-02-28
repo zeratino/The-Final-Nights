@@ -117,6 +117,24 @@
 		"baali"
 	)
 
+/obj/item/vamp/keys/lasombra
+	name = "dark keys"
+	accesslocks = list(
+		"lasombra"
+	)
+
+/obj/item/vamp/keys/trujah
+	name = "static keys"
+	accesslocks = list(
+		"trujah"
+	)
+
+/obj/item/vamp/keys/kiasyd
+	name = "eldritch keys"
+	accesslocks = list(
+		"kiasyd"
+	)
+
 /obj/item/vamp/keys/daughters
 	name = "Eclectic keys"
 	accesslocks = list(
@@ -133,6 +151,12 @@
 	name = "Regal keys"
 	accesslocks = list(
 		"old_clan_tzimisce"
+	)
+
+/obj/item/vamp/keys/tzimisce_new
+	name = "Red keys"
+	accesslocks = list(
+		"new_clan_tzimisce"
 	)
 
 /obj/item/vamp/keys/malkav
