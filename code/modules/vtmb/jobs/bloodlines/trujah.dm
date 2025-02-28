@@ -21,7 +21,7 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "You are either a servant of the Del'Roh or an errant auturkis. Regardless of affiliation, you are a child of Ilyes and operate the clan haven of an antique shop."
+	duty = "You serve the True Blackhand! Operating out of the antique shop, you engage in extremely subtle political moves against the local sects. Good luck, Child of Ilyes."
 	minimal_masquerade = 0
 	allowed_bloodlines = list("True Brujah")
 
