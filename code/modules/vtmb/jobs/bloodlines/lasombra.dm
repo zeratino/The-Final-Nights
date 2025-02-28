@@ -50,5 +50,5 @@
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
 /obj/effect/landmark/start/lasombra
-	name = "lasombra"
+	name = "Monestary Monk"
 	icon_state = "Assistant"

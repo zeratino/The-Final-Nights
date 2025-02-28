@@ -50,5 +50,5 @@
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
 /obj/effect/landmark/start/salubri
-	name = "salubri"
+	name = "Veterinarian"
 	icon_state = "Assistant"
