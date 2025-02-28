@@ -11,7 +11,7 @@
 	alt_sprite = "rotten1"
 	alt_sprite_greyscale = TRUE
 
-	whitelisted = TRUE
+	whitelisted = FALSE
 
 /datum/vampireclane/cappadocian/on_gain(mob/living/carbon/human/H)
 	var/years_undead = H.chronological_age - H.age
