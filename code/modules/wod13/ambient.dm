@@ -372,6 +372,9 @@
 	fire_controled = FALSE
 	wall_rating = LOW_WALL_RATING
 
+/area/vtm/interior/penumbra/enoch
+	name = "???"
+
 /area/vtm/interior/chantry
 	name = "Chantry"
 	icon_state = "theatre"
