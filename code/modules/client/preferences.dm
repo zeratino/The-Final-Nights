@@ -279,6 +279,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	body_model = rand(1, 3)
 	true_experience = 50
 	real_name = random_unique_name(gender)
+	headshot_link = null // TFN EDIT
 	save_character()
 
 /proc/reset_shit(mob/M)
@@ -703,13 +704,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if(true_experience >= 3 && slotlocked)
 				dat += "<a href='?_src_=prefs;preference=change_appearance;task=input'>Change Appearance (3)</a><BR>"
-			if(clane)
-				if(clane.name != "Caitiff")
-					if(generation_bonus)
-						dat += "<a href='?_src_=prefs;preference=reset_with_bonus;task=input'>Create new character with generation bonus ([generation]-[generation_bonus])</a><BR>"
+			if(clane?.name != "Caitiff")
+				if(generation_bonus)
+					dat += "<a href='?_src_=prefs;preference=reset_with_bonus;task=input'>Create new character with generation bonus ([generation]-[generation_bonus])</a><BR>"
+			// TFN EDIT ADDITION START
+			if(length(flavor_text) <= 110)
+				dat += "<BR><b>Flavor Text:</b> [flavor_text] <a href='?_src_=prefs;preference=flavor_text;task=input'>Change</a><BR>"
+			else
+				dat += "<BR><b>Flavor Text:</b> [copytext_char(flavor_text, 1, 110)]... <a href='?_src_=prefs;preference=flavor_text;task=input'>Change</a>"
+				dat += "<a href='?_src_=prefs;preference=view_flavortext;task=input'>Show More</a><BR>"
 
-			dat += "<BR><b>Flavor Text:</b> [flavor_text] <a href='?_src_=prefs;preference=flavor_text;task=input'>Change</a><BR>"
-
+			dat += "<br><b>Headshot(1:1):</b> <a href='?_src_=prefs;preference=headshot;task=input'>Change</a>"
+			if(headshot_link != null)
+				dat += "<a href='?_src_=prefs;preference=view_headshot;task=input'>View</a>"
+			// TFN EDIT ADDITION END
 			dat += "<h2>[make_font_cool("EQUIP")]</h2>"
 
 			dat += "<b>Underwear:</b><BR><a href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
@@ -2376,12 +2384,46 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_text = input(user, "What a Lover knows about me:", "Character Preference") as text|null
 					if(new_text)
 						lover_text = trim(copytext_char(sanitize(new_text), 1, 512))
-
+				// TODO: Completely revamp flavor text into a more expansive system - TFN
+				// TFN EDIT ADDITION START: character headshots & flavortext
 				if("flavor_text")
-					var/new_flavor = input(user, "Choose your character's flavor text:", "Character Preference") as text|null
-					if(new_flavor)
-						flavor_text = trim(copytext_char(sanitize(new_flavor), 1, 512))
+					var/new_flavor = input(user, "Choose your character's flavor text:", "Character Preference") as message|null
+					if(!length(new_flavor))
+						return
+					flavor_text = new_flavor
 
+				if("view_flavortext")
+					var/datum/browser/popup = new(user, "[name]'s Description", name, 500, 200)
+					popup.set_content(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]", replacetext(flavor_text, "\n", "<BR>")))
+					popup.open(FALSE)
+					return
+
+				if("view_headshot")
+					var/list/dat = list("<img src='[headshot_link]' width='250px' height='250px'>")
+					var/datum/browser/popup = new(user, "[name]'s Headshot", "<div align='center'>Headshot</div>", 310, 320)
+					popup.set_content(dat.Join())
+					popup.open(FALSE)
+					return
+
+				if("headshot")
+					to_chat(user, span_notice("Please use a relatively SFW image of the head and shoulder area to maintain immersion level. Lastly, ["<b>do not use a real life photo or use any image that is less than serious.</b>"]"))
+					to_chat(user, span_notice("If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser."))
+					to_chat(user, span_notice("Resolution: 250x250 pixels."))
+					var/new_headshot_link = input(user, "Input the headshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Headshot", headshot_link) as text|null
+					if(isnull(new_headshot_link))
+						return
+					if(!length(new_headshot_link))
+						headshot_link = null
+						ShowChoices(user)
+						return
+					if(!valid_headshot_link(user, new_headshot_link))
+						headshot_link = null
+						ShowChoices(user)
+						return
+					headshot_link = new_headshot_link
+					to_chat(user, span_notice("Successfully updated headshot picture!"))
+					log_game("[user] has set their Headshot image to '[headshot_link]'.")
+				// TFN EDIT ADDITION END
 				if("change_appearance")
 					if((true_experience < 3) || !slotlocked)
 						return
@@ -3019,7 +3061,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.true_real_name = real_name
 	character.name = character.real_name
 	character.diablerist = diablerist
-
+	character.headshot_link = headshot_link // TFN EDIT
 	character.physique = physique
 	character.dexterity = dexterity
 	character.social = social
@@ -3067,7 +3109,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	if(pref_species.name == "Werewolf")
 		character.maxHealth = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique)))
-		character.health = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique )))
+		character.health = character.maxHealth
 		switch(tribe)
 			if("Wendigo")
 				character.yin_chi = 1
