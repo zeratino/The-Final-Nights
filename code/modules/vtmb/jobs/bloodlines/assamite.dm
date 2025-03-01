@@ -50,5 +50,5 @@
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
 /obj/effect/landmark/start/assamite
-	name = "Barista""
+	name = "Barista"
 	icon_state = "Assistant"
