@@ -1,4 +1,3 @@
-
 /datum/job/vamp/baali
 	title = "Counselor"
 	faction = "Vampire"
@@ -27,7 +26,7 @@
 
 /datum/outfit/job/baali
 	name = "Counselor"
-	jobtype = /datum/job/vamp/bali
+	jobtype = /datum/job/vamp/baali
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
 

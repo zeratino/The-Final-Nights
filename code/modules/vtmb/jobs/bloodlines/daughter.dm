@@ -8,7 +8,7 @@
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
-	outfit = /datum/outfit/job/doc
+	outfit = /datum/outfit/job/daughterof
 	antag_rep = 7
 	paycheck = PAYCHECK_ASSISTANT // Get a job. Job reassignment changes your paycheck now. Get over it.
 
@@ -25,13 +25,13 @@
 	minimal_masquerade = 0
 	allowed_bloodlines = list("Daughters of Cacophony")
 
-/datum/outfit/job/doc
+/datum/outfit/job/daughterof
 	name = "Cabaret Worker"
-	jobtype = /datum/job/vamp/doc
+	jobtype = /datum/job/vamp/daughterof
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
 
-/datum/outfit/job/doc/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/daughterof/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.clane)
 		if(H.gender == MALE)
@@ -49,6 +49,6 @@
 		else
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
-/obj/effect/landmark/start/doc
+/obj/effect/landmark/start/daughterof
 	name = "Cabaret Worker"
 	icon_state = "Assistant"
