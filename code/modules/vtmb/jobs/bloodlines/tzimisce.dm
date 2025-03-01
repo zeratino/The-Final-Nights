@@ -2,8 +2,8 @@
 /datum/job/vamp/tzimisce
 	title = "Hotel Attendant"
 	faction = "Vampire"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "Edict of Hospitality"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
@@ -16,7 +16,7 @@
 	liver_traits = list(TRAIT_GREYTIDE_METABOLISM)
 
 	paycheck_department = ACCOUNT_CIV
-	display_order = JOB_DISPLAY_ORDER_CITIZEN
+	display_order = JOB_DISPLAY_ORDER_TZIMISCE
 
 	allowed_species = list("Vampire")
 

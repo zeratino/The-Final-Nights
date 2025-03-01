@@ -16,7 +16,7 @@
 	liver_traits = list(TRAIT_GREYTIDE_METABOLISM)
 
 	paycheck_department = ACCOUNT_CIV
-	display_order = JOB_DISPLAY_ORDER_CITIZEN
+	display_order = JOB_DISPLAY_ORDER_LASOMBRA
 
 	allowed_species = list("Vampire")
 

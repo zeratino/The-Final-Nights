@@ -2,8 +2,8 @@
 /datum/job/vamp/daughterof
 	title = "Cabaret Worker"
 	faction = "Vampire"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the Traditions"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
@@ -16,7 +16,7 @@
 	liver_traits = list(TRAIT_GREYTIDE_METABOLISM)
 
 	paycheck_department = ACCOUNT_CIV
-	display_order = JOB_DISPLAY_ORDER_CITIZEN
+	display_order = JOB_DISPLAY_ORDER_DAUGHTER
 
 	allowed_species = list("Vampire")
 
