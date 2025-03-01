@@ -126,7 +126,8 @@
 /obj/item/vamp/keys/trujah
 	name = "static keys"
 	accesslocks = list(
-		"trujah"
+		"trujah",
+		"tmr"
 	)
 
 /obj/item/vamp/keys/kiasyd
@@ -138,7 +139,8 @@
 /obj/item/vamp/keys/daughters
 	name = "Eclectic keys"
 	accesslocks = list(
-		"daughters"
+		"daughters",
+		"tmr"
 	)
 
 /obj/item/vamp/keys/salubri
@@ -150,7 +152,8 @@
 /obj/item/vamp/keys/old_clan_tzimisce
 	name = "Regal keys"
 	accesslocks = list(
-		"old_clan_tzimisce"
+		"old_clan_tzimisce",
+		"tmr"
 	)
 
 /obj/item/vamp/keys/tzimisce_new
