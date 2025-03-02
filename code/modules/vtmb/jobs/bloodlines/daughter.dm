@@ -1,4 +1,3 @@
-
 /datum/job/vamp/daughterof
 	title = "Cabaret Worker"
 	faction = "Vampire"

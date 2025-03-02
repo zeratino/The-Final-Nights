@@ -1,4 +1,3 @@
-
 /datum/job/vamp/salubri
 	title = "Veterinarian"
 	faction = "Vampire"

@@ -1,8 +1,8 @@
 /datum/job/vamp/baali
 	title = "Counselor"
 	faction = "Vampire"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the Traditions"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
@@ -20,7 +20,7 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "You are a servant of your infernal lord, whoever it may be. Acting as an alcoholics anonymous counselor, your kin have etched out a cover as members of alcoholics anonymous. Good luck."
+	duty = "You are a member of the Order of Moloch! Acting as an alcoholics anonymous counselor, your kin have etched out a cover as members of alcoholics anonymous. Good luck."
 	minimal_masquerade = 0
 	allowed_bloodlines = list("Baali")
 

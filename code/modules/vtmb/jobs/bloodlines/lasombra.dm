@@ -1,10 +1,9 @@
-
 /datum/job/vamp/lasombra
 	title = "Monestary Monk"
 	faction = "Vampire"
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the Traditions"
+	supervisors = "Courts of Blood"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
@@ -21,7 +20,7 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "You are a member of the Amis Noir of Clan Lasombra! You maintain the gradually collapsing church that was set up along the pier that became a historical site."
+	duty = "You are a member of the Amis Noir within Clan Lasombra! You maintain the gradually collapsing church that was set up along the pier that became a historical site."
 	minimal_masquerade = 0
 	allowed_bloodlines = list("Lasombra")
 

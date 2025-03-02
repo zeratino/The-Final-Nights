@@ -1,4 +1,3 @@
-
 /datum/job/vamp/tzimisce
 	title = "Hotel Attendant"
 	faction = "Vampire"

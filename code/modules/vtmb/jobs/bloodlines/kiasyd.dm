@@ -1,9 +1,8 @@
-
 /datum/job/vamp/kiasyd
 	title = "Museum Groundskeeper"
 	faction = "Vampire"
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the Traditions"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
@@ -21,7 +20,7 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "You are a member of the Kiasyd bloodline! You operate the museum during the night and conduct arcane rituals in the basement."
+	duty = "You are a member of the Kiasyd bloodline! You operate the museum during the night and conduct arcane rituals where you please. Good luck."
 	minimal_masquerade = 0
 	allowed_bloodlines = list("Kiasyd")
 

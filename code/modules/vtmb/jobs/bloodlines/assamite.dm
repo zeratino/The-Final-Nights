@@ -1,4 +1,3 @@
-
 /datum/job/vamp/banu
 	title = "Barista"
 	faction = "Vampire"
