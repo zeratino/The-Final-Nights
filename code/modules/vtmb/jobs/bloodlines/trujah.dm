@@ -50,5 +50,5 @@
 			shoes = /obj/item/clothing/shoes/vampire/heels
 
 /obj/effect/landmark/start/trujah
-	name = "Trujah"
+	name = "Antique Shop Worker"
 	icon_state = "Assistant"
