@@ -15,9 +15,9 @@
 	paycheck_department = ACCOUNT_SRV
 	exp_type_department = EXP_TYPE_TREMERE
 
-	display_order = JOB_DISPLAY_ORDER_ARCHIVIST
+	display_order = JOB_DISPLAY_ORDER_GARGOYLE
 
-	v_duty = "An agent of the Chantry, you are a Chantry Gargoyle who was made legally. Serve the Regent well!"
+	v_duty = "An agent of the Chantry, you are a Tremere Gargoyle who was made legally having existed before their creation was banned. Serve the Regent well!"
 	minimal_masquerade = 3
 	allowed_species = list("Vampire")
 	allowed_bloodlines = list("Gargoyle")
