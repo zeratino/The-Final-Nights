@@ -78,7 +78,7 @@ SUBSYSTEM_DEF(city_time)
 						char_sheet.add_experience(2)
 
 					if(!HAS_TRAIT(H, TRAIT_NON_INT))
-						if(H.total_erp > 9000)
+						if(H.total_erp > 1500)
 							char_sheet.add_experience(2)
 							H.total_erp = 0
 						if(H.total_cleaned > 25)
