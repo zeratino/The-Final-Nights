@@ -145,7 +145,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/broadcast_login_logout = TRUE
 
 	//Generation
-	var/generation = 13
+	var/generation = DEFAULT_GENERATION
 	var/generation_bonus = 0
 
 	//Masquerade
@@ -453,43 +453,43 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<table width='100%'><tr><td width='24%' valign='top'>"
 
 			dat += "<b>Species:</b><BR><a href='?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
-			if(pref_species.name == "Vampire")
-				dat += "<b>Path of [enlightenment ? "Enlightenment" : "Humanity"]:</b> [humanity]/10"
-				//if(SSwhitelists.is_whitelisted(parent.ckey, "enlightenment") && !slotlocked)
-				if ((true_experience >= (humanity * 2)) && (humanity < 10))
-					dat += " <a href='?_src_=prefs;preference=path;task=input'>Increase [enlightenment ? "Enlightenment" : "Humanity"] ([humanity * 2])</a>"
-				dat += "<br>"
-				if(!slotlocked)
-					dat += "<a href='?_src_=prefs;preference=pathof;task=input'>Switch Path</a><BR>"
-			if(pref_species.name == "Kuei-Jin")
-				var/datum/dharma/D = new dharma_type()
-				dat += "<b>Dharma:</b> [D.name] [dharma_level]/6 <a href='?_src_=prefs;preference=dharmatype;task=input'>Switch</a><BR>"
-				dat += "[D.desc]<BR>"
-				if(true_experience >= 20 && (dharma_level < 6))
-					dat += " <a href='?_src_=prefs;preference=dharmarise;task=input'>Learn (20)</a><BR>"
-				dat += "<b>P'o Personality</b>: [po_type] <a href='?_src_=prefs;preference=potype;task=input'>Switch</a><BR>"
-				dat += "<b>Awareness:</b> [masquerade]/5<BR>"
-				dat += "<b>Yin/Yang</b>: [yin]/[yang] <a href='?_src_=prefs;preference=chibalance;task=input'>Adjust</a><BR>"
-				dat += "<b>Hun/P'o</b>: [hun]/[po] <a href='?_src_=prefs;preference=demonbalance;task=input'>Adjust</a><BR>"
-			if(pref_species.name == "Werewolf")
-				dat += "<b>Veil:</b> [masquerade]/5<BR>"
-			if(pref_species.name == "Vampire" || pref_species.name == "Ghoul")
-				dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
-			if(pref_species.name == "Vampire")
-				dat += "<b>Generation:</b> [generation]"
-				var/generation_allowed = TRUE
-				if(clane)
-					if(clane.name == "Caitiff")
+			switch(pref_species.name)
+				if("Vampire")
+					dat += "<b>Path of [enlightenment ? "Enlightenment" : "Humanity"]:</b> [humanity]/10"
+					if ((true_experience >= (humanity * 2)) && (humanity < 10))
+						dat += " <a href='?_src_=prefs;preference=path;task=input'>Increase [enlightenment ? "Enlightenment" : "Humanity"] ([humanity * 2])</a>"
+					dat += "<br>"
+					if(!slotlocked)
+						dat += "<a href='?_src_=prefs;preference=pathof;task=input'>Switch Path</a><BR>"
+					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
+					dat += "<b>Generation:</b> [generation]"
+					var/generation_allowed = TRUE
+					if(clane?.name == CLAN_NONE)
 						generation_allowed = FALSE
-				if(generation_allowed)
-					if(generation_bonus)
-						dat += " (+[generation_bonus]/[min(6, generation-7)])"
-					if(true_experience >= 20 && generation_bonus < max(0, generation-7))
-						dat += " <a href='?_src_=prefs;preference=generation;task=input'>Claim generation bonus (20)</a><BR>"
+					if(generation_allowed)
+						if(generation_bonus)
+							dat += " (+[generation_bonus]/[min(MAX_PUBLIC_GENERATION-1, generation-MAX_PUBLIC_GENERATION)])"
+						if(true_experience >= 20 && generation_bonus < max(0, generation-MAX_PUBLIC_GENERATION))
+							dat += " <a href='?_src_=prefs;preference=generation;task=input'>Claim generation bonus (20)</a><BR>"
+						else
+							dat += "<BR>"
 					else
 						dat += "<BR>"
-				else
-					dat += "<BR>"
+				if("Kuei-Jin")
+					var/datum/dharma/D = new dharma_type()
+					dat += "<b>Dharma:</b> [D.name] [dharma_level]/6 <a href='?_src_=prefs;preference=dharmatype;task=input'>Switch</a><BR>"
+					dat += "[D.desc]<BR>"
+					if(true_experience >= 20 && (dharma_level < 6))
+						dat += " <a href='?_src_=prefs;preference=dharmarise;task=input'>Learn (20)</a><BR>"
+					dat += "<b>P'o Personality</b>: [po_type] <a href='?_src_=prefs;preference=potype;task=input'>Switch</a><BR>"
+					dat += "<b>Awareness:</b> [masquerade]/5<BR>"
+					dat += "<b>Yin/Yang</b>: [yin]/[yang] <a href='?_src_=prefs;preference=chibalance;task=input'>Adjust</a><BR>"
+					dat += "<b>Hun/P'o</b>: [hun]/[po] <a href='?_src_=prefs;preference=demonbalance;task=input'>Adjust</a><BR>"
+				if("Werewolf")
+					dat += "<b>Veil:</b> [masquerade]/5<BR>"
+				if("Ghoul")
+					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
+
 			dat += "<h2>[make_font_cool("ATTRIBUTES")]</h2>"
 
 			dat += "<b>Archetype</b><BR>"
@@ -704,9 +704,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if(true_experience >= 3 && slotlocked)
 				dat += "<a href='?_src_=prefs;preference=change_appearance;task=input'>Change Appearance (3)</a><BR>"
-			if(clane?.name != "Caitiff")
-				if(generation_bonus)
-					dat += "<a href='?_src_=prefs;preference=reset_with_bonus;task=input'>Create new character with generation bonus ([generation]-[generation_bonus])</a><BR>"
+			if(generation_bonus)
+				dat += "<a href='?_src_=prefs;preference=reset_with_bonus;task=input'>Create new character with generation bonus ([generation]-[generation_bonus])</a><BR>"
 			// TFN EDIT ADDITION START
 			if(length(flavor_text) <= 110)
 				dat += "<BR><b>Flavor Text:</b> [flavor_text] <a href='?_src_=prefs;preference=flavor_text;task=input'>Change</a><BR>"
@@ -2370,7 +2369,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						return
 
 					true_experience -= 20
-					generation_bonus = min(generation_bonus + 1, max(0, generation-7))
+					generation_bonus = min(generation_bonus + 1, max(0, generation-MAX_PUBLIC_GENERATION))
 
 				if("friend_text")
 					var/new_text = input(user, "What a Friend knows about me:", "Character Preference") as text|null
@@ -2393,14 +2392,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					flavor_text = new_flavor
 
 				if("view_flavortext")
-					var/datum/browser/popup = new(user, "[name]'s Description", name, 500, 200)
-					popup.set_content(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]", replacetext(flavor_text, "\n", "<BR>")))
+					var/datum/browser/popup = new(user, "[real_name]'s Description", real_name, 500, 200)
+					popup.set_content(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[real_name]", replacetext(flavor_text, "\n", "<BR>")))
 					popup.open(FALSE)
 					return
 
 				if("view_headshot")
 					var/list/dat = list("<img src='[headshot_link]' width='250px' height='250px'>")
-					var/datum/browser/popup = new(user, "[name]'s Headshot", "<div align='center'>Headshot</div>", 310, 320)
+					var/datum/browser/popup = new(user, "[real_name]'s Headshot", "<div align='center'>Headshot</div>", 310, 320)
 					popup.set_content(dat.Join())
 					popup.open(FALSE)
 					return
@@ -2439,7 +2438,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					slotlocked = 0
 					torpor_count = 0
 					masquerade = initial(masquerade)
-					generation = bonus
+					generation = clamp(bonus, LOWEST_GENERATION_LIMIT, HIGHEST_GENERATION_LIMIT)
 					generation_bonus = 0
 					save_character()
 
