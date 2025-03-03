@@ -1,14 +1,13 @@
-
-/datum/job/vamp/citizen
-	title = "Citizen"
+/datum/job/vamp/salubri
+	title = "Veterinarian"
 	faction = "Vampire"
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the Traditions"
 	selection_color = "#df7058"
 	access = list()			//See /datum/job/assistant/get_access()
 	minimal_access = list()	//See /datum/job/assistant/get_access()
-	outfit = /datum/outfit/job/citizen
+	outfit = /datum/outfit/job/salubri
 	antag_rep = 7
 	paycheck = PAYCHECK_ASSISTANT // Get a job. Job reassignment changes your paycheck now. Get over it.
 
@@ -16,22 +15,22 @@
 	liver_traits = list(TRAIT_GREYTIDE_METABOLISM)
 
 	paycheck_department = ACCOUNT_CIV
-	display_order = JOB_DISPLAY_ORDER_CITIZEN
+	display_order = JOB_DISPLAY_ORDER_SALUBRI
 
-	allowed_species = list("Vampire", "Ghoul", "Human", "Werewolf", "Kuei-Jin")
+	allowed_species = list("Vampire")
 
 	v_duty = "Follow the traditions of the Camarilla. Obey the Prince and their authority. The city belongs to him. Aligning yourself with your clan members would be of benefit."
-	duty = "Obey the authorities... Or don't. You are up late tonight for one reason or another."
+	duty = "One of the few Healer Salubri left within the city, maybe even in the world! You operate the Vet for any diseased or sick animals. You may have been an escaped member of The Seven or not. Regardless, you must hide and lay low."
 	minimal_masquerade = 0
-	allowed_bloodlines = list("Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Giovanni", "Ministry", "Caitiff", "Cappadocian", "Gargoyle")
+	allowed_bloodlines = list("Salubri")
 
-/datum/outfit/job/citizen
-	name = "Citizen"
-	jobtype = /datum/job/vamp/citizen
+/datum/outfit/job/salubri
+	name = "salubri"
+	jobtype = /datum/job/vamp/salubri
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
 
-/datum/outfit/job/citizen/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/salubri/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.clane)
 		if(H.gender == MALE)
@@ -48,14 +47,7 @@
 			shoes = /obj/item/clothing/shoes/vampire
 		else
 			shoes = /obj/item/clothing/shoes/vampire/heels
-	if(H.clane)
-		if(H.clane.name == "Lasombra")
-			backpack_contents = list(/obj/item/passport =1, /obj/item/vamp/creditcard=1)
-	if(!H.clane)
-		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1)
-	if(H.clane && H.clane.name != "Lasombra")
-		backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1)
 
-/obj/effect/landmark/start/citizen
-	name = "Citizen"
+/obj/effect/landmark/start/salubri
+	name = "Veterinarian"
 	icon_state = "Assistant"

@@ -10,7 +10,7 @@
 	male_clothes = /obj/item/clothing/under/vampire/bandit
 	female_clothes = /obj/item/clothing/under/vampire/bandit
 	clan_keys = /obj/item/vamp/keys/banuhaqim
-	whitelisted = TRUE
+	whitelisted = FALSE
 
 /*
 /datum/discipline/quietus/post_gain(mob/living/carbon/human/H)
