@@ -239,14 +239,14 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 			if(H?.stat != DEAD && H?.key)
 				var/datum/preferences/char_sheet = GLOB.preferences_datums[ckey(H.key)]
 				if(char_sheet)
-					char_sheet.add_experience(1)
+					char_sheet.add_experience(3)
 
 					var/role = H.mind?.assigned_role
 					var/special_role = H.mind?.special_role
 
 					if(role in list("Prince", "Sheriff", "Hound", "Seneschal", "Chantry Regent", "Baron", "Dealer"))
 						char_sheet.add_experience(2)
-					if(H.total_erp > 9000)
+					if(H.total_erp > 1500)
 						char_sheet.add_experience(2)
 					if(H.total_cleaned > 25)
 						char_sheet.add_experience(1)

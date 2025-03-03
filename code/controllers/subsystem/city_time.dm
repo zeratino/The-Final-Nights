@@ -39,12 +39,12 @@ SUBSYSTEM_DEF(city_time)
 			if(H?.stat != DEAD && H?.key)
 				var/datum/preferences/char_sheet = GLOB.preferences_datums[ckey(H.key)]
 				if(char_sheet)
-					char_sheet.add_experience(1)
+					char_sheet.add_experience(3)
 
 					var/role = H.mind?.assigned_role
 
 					if(role in list("Prince", "Sheriff", "Seneschal", "Chantry Regent", "Baron", "Dealer"))
-						char_sheet.add_experience(2)
+						char_sheet.add_experience(3)
 
 					if(!HAS_TRAIT(H, TRAIT_NON_INT))
 						if(H.total_erp > 1500)
@@ -70,7 +70,7 @@ SUBSYSTEM_DEF(city_time)
 			if(H?.stat != DEAD && H?.key)
 				var/datum/preferences/char_sheet = GLOB.preferences_datums[ckey(H.key)]
 				if(char_sheet)
-					char_sheet.add_experience(1)
+					char_sheet.add_experience(3)
 
 					var/role = H.mind?.assigned_role
 
