@@ -14,4 +14,6 @@
 #define span_danger(str) ("<span class='danger'>" + str + "</span>")
 #define span_userdanger(str) ("<span class='userdanger'>" + str + "</span>")
 #define span_nicegreen(str) ("<span class='nicegreen'>" + str + "</span>")
+#define span_boldwarning(str) ("<span class='boldwarning'>" + str + "</span>")
+#define span_emote(str) ("<span class='emote'>" + str + "</span>")
 // TFN EDIT END
