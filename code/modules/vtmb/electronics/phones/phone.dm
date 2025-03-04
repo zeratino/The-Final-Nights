@@ -367,7 +367,7 @@
 			.= TRUE
 		if("contacts")
 			var/list/options = list("Add","Remove","Choose","Block", "Unblock", "My Number", "Publish Number", "Published Numbers", "Call History", "Delete Call History")
-			var/option =  input(usr, "Select an option", "Contacts Option") as null|anything in options
+			var/option =  tgui_input_list(usr, "Select an option", "Contacts Option", options)
 			var/result
 			switch(option)
 				if("Publish Number")
@@ -438,18 +438,18 @@
 						if(CNT_REMOVE)
 							removing += CNT_REMOVE.name
 					if(length(removing) >= 1)
-						result = input(usr, "Select a contact", "Contact Selection") as null|anything in removing
+						result = tgui_input_list(usr, "Select a contact", "Contact Selection", removing)
 						if(result)
 							for(var/datum/phonecontact/CNT_REMOVE in contacts)
 								if(CNT_REMOVE.name == result)
 									contacts -= CNT_REMOVE
 				if("Choose")
-					var/list/shit = list()
+					var/list/personal_contact = list()
 					for(var/datum/phonecontact/CNTCT in contacts)
 						if(CNTCT)
-							shit += CNTCT.name
-					if(length(shit) >= 1)
-						result = input(usr, "Select a contact", "Contact Selection") as null|anything in shit
+							personal_contact += CNTCT.name
+					if(length(personal_contact) >= 1)
+						result = tgui_input_list(usr, "Select a contact", "Contact Selection", personal_contact)
 						if(result)
 							for(var/datum/phonecontact/CNTCT in contacts)
 								if(CNTCT.name == result)

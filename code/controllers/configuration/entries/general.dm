@@ -76,7 +76,11 @@
 /datum/config_entry/flag/log_attack	// log attack messages
 
 /datum/config_entry/flag/log_emote	// log emotes
+// TFN EDIT ADDITION START
+/datum/config_entry/flag/log_subtle  // TFN EDIT: log subtle emotes
 
+/datum/config_entry/flag/log_subtler  // TFN EDIT: log subtler emotes
+// TFN EDIT ADDITION END
 /datum/config_entry/flag/log_econ	// log economy actions
 
 /datum/config_entry/flag/log_adminchat	// log admin chat messages

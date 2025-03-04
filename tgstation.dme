@@ -3550,4 +3550,5 @@
 #include "modular_tfn\code\modules\mob\living\carbon\human\human_defines.dm"
 #include "modular_tfn\modules\auspex_auras\auspex_auras.dm"
 #include "modular_tfn\modules\fomori\code\fomori.dm"
+#include "modular_tfn\modules\subtle\subtle.dm"
 // END_INCLUDE
