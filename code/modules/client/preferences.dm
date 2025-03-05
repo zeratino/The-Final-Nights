@@ -2399,8 +2399,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					return
 
 				if("view_headshot")
-					var/list/dat = list("<img src='[headshot_link]' width='250px' height='250px'>")
-					var/datum/browser/popup = new(user, "[real_name]'s Headshot", "<div align='center'>Headshot</div>", 310, 320)
+					var/list/dat = list("<table width='100%' height='100%'><td align='center' valign='middle'><img src='[headshot_link]' width='250px' height='250px'></td></table>")
+					var/datum/browser/popup = new(user, "[real_name]'s Headshot", "<div align='center'>Headshot</div>", 310, 330)
 					popup.set_content(dat.Join())
 					popup.open(FALSE)
 					return
