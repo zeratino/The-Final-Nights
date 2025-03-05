@@ -3130,7 +3130,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		var/dharma_bonus = 0
 		if(pref_species.name == "Kuei-Jin")
 			dharma_bonus = dharma_level
-		character.maxHealth = round((initial(character.maxHealth)-initial(character.maxHealth)/4)+(initial(character.maxHealth)/4)*((character.physique+character.additional_physique )+13-generation+dharma_bonus))
+		character.maxHealth = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique)))
 		character.health = character.maxHealth
 	if(pref_species.name == "Vampire")
 		character.humanity = humanity
