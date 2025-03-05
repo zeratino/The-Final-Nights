@@ -65,7 +65,7 @@
 
 /obj/projectile/beam/beam_rifle/vampire/vamp50
 	name = ".50 bullet"
-	damage = 35
+	damage = 45
 	armour_penetration = 20
 	bare_wound_bonus = 5
 	wound_bonus = 5
@@ -86,7 +86,7 @@
 
 /obj/projectile/beam/beam_rifle/vampire/vamp12g
 	name = "12g shotgun slug"
-	damage = 25
+	damage = 45
 	armour_penetration = 15
 	bare_wound_bonus = 10
 	wound_bonus = 5
@@ -105,7 +105,7 @@
 
 /obj/projectile/beam/beam_rifle/vampire/shotpellet
 	name = "12g shotgun pellet"
-	damage = 6
+	damage = 7
 	range = 22 //range of where you can see + one screen after
 	armour_penetration = 15
 	bare_wound_bonus = 5
