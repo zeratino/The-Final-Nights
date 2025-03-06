@@ -43,50 +43,50 @@
 
 /obj/projectile/beam/beam_rifle/vampire/vamp9mm
 	name = "9mm bullet"
-	damage = 12
+	damage = 14
 	bare_wound_bonus = 10
 
 /obj/projectile/beam/beam_rifle/vampire/vamp9mm/plus
 	name = "9mm HV bullet"
-	damage = 16
+	damage = 17
 	armour_penetration = 10
 
 /obj/projectile/beam/beam_rifle/vampire/vamp45acp
 	name = ".45 ACP bullet"
-	damage = 15
+	damage = 18
 	armour_penetration = 2
 
 /obj/projectile/beam/beam_rifle/vampire/vamp44
 	name = ".44 bullet"
-	damage = 18
+	damage = 20
 	armour_penetration = 15
 	bare_wound_bonus = -5
 	wound_bonus = 10
 
 /obj/projectile/beam/beam_rifle/vampire/vamp50
 	name = ".50 bullet"
-	damage = 45
+	damage = 70
 	armour_penetration = 20
 	bare_wound_bonus = 5
 	wound_bonus = 5
 
 /obj/projectile/beam/beam_rifle/vampire/vamp556mm
 	name = "5.56mm bullet"
-	damage = 25
+	damage = 35
 	armour_penetration = 25
 	bare_wound_bonus = -5
 	wound_bonus = 5
 
 /obj/projectile/beam/beam_rifle/vampire/vamp545mm
 	name = "5.45mm bullet"
-	damage = 25
+	damage = 35
 	armour_penetration = 30
 	bare_wound_bonus = 5
 	wound_bonus = -5
 
 /obj/projectile/beam/beam_rifle/vampire/vamp12g
 	name = "12g shotgun slug"
-	damage = 45
+	damage = 60
 	armour_penetration = 15
 	bare_wound_bonus = 10
 	wound_bonus = 5
@@ -105,7 +105,7 @@
 
 /obj/projectile/beam/beam_rifle/vampire/shotpellet
 	name = "12g shotgun pellet"
-	damage = 7
+	damage = 8
 	range = 22 //range of where you can see + one screen after
 	armour_penetration = 15
 	bare_wound_bonus = 5
@@ -119,8 +119,8 @@
 
 /obj/projectile/beam/beam_rifle/vampire/vamp556mm/incendiary
 	armour_penetration = 0
-	damage = 25
-	var/fire_stacks = 2
+	damage = 35
+	var/fire_stacks = 4
 
 /obj/projectile/beam/beam_rifle/vampire/vamp556mm/incendiary/on_hit(atom/target, blocked = FALSE)
 	if(iscarbon(target))
