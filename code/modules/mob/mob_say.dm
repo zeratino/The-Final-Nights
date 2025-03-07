@@ -14,14 +14,16 @@
 	if(!message)
 		return
 	say(message)
-
+// TFN EDIT START
 /mob/living/verb/flavor_verb()
 	set name = "Flavor Text"
 	set category = "IC"
-	var/flavor = input("Choose your new flavor text:") as text|null
-	if(flavor)
-		flavor_text = trim(copytext_char(sanitize(flavor), 1, 512))
+	var/flavor = input("Choose your character's flavor text:") as message|null
 
+	if(!length(flavor))
+		return
+	flavor_text = flavor // We don't have to worry about flavor text length due to examine overflow.
+// TFN EDIT END
 ///Whisper verb
 /mob/verb/whisper_verb(message as text)
 	set name = "Whisper"
@@ -34,7 +36,7 @@
 ///whisper a message
 /mob/proc/whisper(message, datum/language/language=null)
 	say(message, language) //only living mobs actually whisper, everything else just talks
-
+// TFN EDIT START
 ///The me emote verb
 /mob/verb/me_verb(message as text)
 	set name = "Me"
@@ -48,6 +50,7 @@
 
 	usr.emote("me",1,message,TRUE)
 
+// TFN EDIT END
 ///Speak as a dead person (ghost etc)
 /mob/proc/say_dead(message)
 	var/name = real_name
@@ -88,7 +91,7 @@
 		if(name != real_name)
 			alt_name = " (died as [real_name])"
 
-	var/spanned = say_quote(message)
+	var/spanned = say_quote(say_emphasis(message))
 	var/source = "<span class='game'><span class='name'>[name]</span>[alt_name]" //<span class='prefix'>DEAD:</span> [ChillRaccoon] - removed due to a maggot developer
 	var/rendered = " <span class='message'>[emoji_parse(spanned)]</span></span>"
 	log_talk(message, LOG_SAY, tag="DEAD")
