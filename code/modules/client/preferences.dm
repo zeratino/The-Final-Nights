@@ -3140,9 +3140,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				character.yang_chi = 5
 				character.max_yang_chi = 5
 	else
-		var/dharma_bonus = 0
-		if(pref_species.name == "Kuei-Jin")
-			dharma_bonus = dharma_level
 		character.maxHealth = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique)))
 		character.health = character.maxHealth
 	if(pref_species.name == "Vampire")
