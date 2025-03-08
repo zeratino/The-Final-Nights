@@ -21,7 +21,8 @@ GLOBAL_PROTECT(admin_verbs_default)
 	/client/proc/debugstatpanel,
 	/client/proc/fix_air,				/*resets air in designated radius to its default atmos composition*/
 	// TFN MODULAR START
-	/client/proc/bunker_bypass,
+	/client/proc/addbunkerbypass,
+	/client/proc/revokebunkerbypass,
 	// TFN MODULAR END
 	)
 GLOBAL_LIST_INIT(admin_verbs_admin, world.AVerbsAdmin())
