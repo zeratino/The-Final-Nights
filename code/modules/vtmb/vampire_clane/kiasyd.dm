@@ -144,12 +144,7 @@
 	. = ..()
 	switch(level_casting)
 		if(1)
-			var/list/total_list = list()
-			for(var/obj/item/I in target.contents)
-				if(I)
-					if(istype(I, /obj/item/storage))
-						total_list |= I.contents
-					total_list |= I
+			var/list/total_list = target.get_all_gear()
 			to_chat(caster, "<span class='purple'>Your fae senses reach out to detect what they're carrying...</span>")
 			for(var/obj/item/A in total_list)
 				if(A)
