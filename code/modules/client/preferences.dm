@@ -3131,6 +3131,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.maxHealth = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique)))
 		character.health = character.maxHealth
 	if(pref_species.name == "Vampire")
+		character.maxHealth = round((initial(character.maxHealth)+(initial(character.maxHealth)/4)*(character.physique + character.additional_physique)))
+		character.health = character.maxHealth
 		character.humanity = humanity
 	character.masquerade = masquerade
 	if(!character_setup)
