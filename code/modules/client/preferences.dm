@@ -286,9 +286,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	save_character()
 
 /proc/reset_shit(mob/M)
-	if(M?.key)
+	if(M.key)
 		var/datum/preferences/P = GLOB.preferences_datums[ckey(M.key)]
-		P?.reset_character()
+		if(P)
+			P.reset_character()
 
 /datum/preferences/New(client/C)
 	parent = C
