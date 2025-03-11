@@ -570,8 +570,8 @@
 	var/mob/living/carbon/human/patient = null
 	var/obj/machinery/computer/operating/computer = null
 
-	optable2 // wow, it faces the other way.
-		icon_state = "surgeonchair2"
+/obj/structure/table/optable/optable2 // wow, it faces the other way.
+	icon_state = "surgeonchair2"
 
 /obj/structure/table/optable/Initialize()
 	. = ..()
