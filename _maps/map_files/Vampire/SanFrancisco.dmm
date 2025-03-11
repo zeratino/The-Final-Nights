@@ -21061,12 +21061,6 @@
 	pixel_x = -3;
 	pixel_y = 2
 	},
-/obj/item/tape{
-	pixel_y = 15
-	},
-/obj/item/tape{
-	pixel_y = 15
-	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "bva" = (
@@ -28773,11 +28767,11 @@
 /obj/item/taperecorder{
 	pixel_x = 3
 	},
-/obj/item/pen,
-/obj/item/paper_bin{
-	pixel_y = 7;
-	pixel_x = -8
+/obj/item/paper_bin/carbon{
+	pixel_x = -3;
+	pixel_y = 7
 	},
+/obj/item/pen,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "dgU" = (
@@ -53158,8 +53152,6 @@
 /obj/machinery/light/dim{
 	pixel_y = 32
 	},
-/obj/item/camera_film,
-/obj/item/camera_film,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police)
 "pad" = (
@@ -56993,6 +56985,12 @@
 /obj/structure/chair/stool/bar,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior/strip_elysium)
+"qTe" = (
+/obj/item/paper{
+	info = "Hello! The government sent some FBI to watch our work, but I've got a hint for you. I think their office is straight-east somewhere in the wall in ghetto. Good luck, buddy..."
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/interior/police)
 "qTf" = (
 /obj/structure/railing{
 	dir = 4
@@ -67131,7 +67129,6 @@
 /obj/item/ammo_box/magazine/vampaug,
 /obj/item/ammo_box/magazine/vampaug,
 /obj/item/ammo_box/magazine/vampaug,
-/obj/item/megaphone,
 /turf/open/floor/carpet/blue,
 /area/vtm/interior/police)
 "vTj" = (
@@ -188599,7 +188596,7 @@ ajU
 azu
 azQ
 azT
-azT
+qTe
 azT
 azT
 azT
@@ -257225,7 +257222,7 @@ azv
 azv
 gTt
 azu
-vcd
+aAN
 aAN
 aAN
 aBi
