@@ -143,8 +143,7 @@
 /obj/item/vamp/keys/daughters
 	name = "Eclectic keys"
 	accesslocks = list(
-		"daughters",
-		"tmr"
+		"daughters"
 	)
 
 /obj/item/vamp/keys/salubri
