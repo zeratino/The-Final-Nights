@@ -620,7 +620,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		if ((preferences.pref_species.id != "kindred") && (preferences.pref_species.id != "ghoul"))
 			to_chat(usr, "<span class='warning'>Your target is not a vampire or a ghoul.</span>")
 			return
-		var/giving_discipline = input("What Discipline do you want to give [player]?") as null|anything in (subtypesof(/datum/discipline) - preferences.discipline_types)
+		var/giving_discipline = input("What Discipline do you want to give [player]?") as null|anything in (subtypesof(/datum/discipline) - preferences.discipline_types - /datum/discipline/bloodheal)
 		if (giving_discipline)
 			var/giving_discipline_level = input("What rank of this Discipline do you want to give [player]?") as null|anything in list(0, 1, 2, 3, 4, 5)
 			if (!isnull(giving_discipline_level))
@@ -633,8 +633,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 					preferences.discipline_levels += giving_discipline_level
 					preferences.save_character()
 
-					var/datum/discipline/discipline = new giving_discipline
-					discipline.level = giving_discipline_level
+					var/datum/discipline/discipline = new giving_discipline(giving_discipline_level)
 
 					message_admins("[ADMIN_LOOKUPFLW(usr)] gave [ADMIN_LOOKUPFLW(player)] the Discipline [discipline.name] at rank [discipline.level]. Reason: [reason]")
 					log_admin("[key_name(usr)] gave [key_name(player)] the Discipline [discipline.name] at rank [discipline.level]. Reason: [reason]")
