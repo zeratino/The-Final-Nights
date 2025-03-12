@@ -568,8 +568,6 @@
 				R.lover_text = H.client.prefs.lover_text
 				if(HAS_TRAIT(H,TRAIT_POTENT_BLOOD))
 					H.bloodquality = 4
-				if(HAS_TRAIT(H,TRAIT_ANIMAL_REPULSION))
-					H.more_companions -= 2
 				R.publish()
 		new_character = null
 		qdel(src)

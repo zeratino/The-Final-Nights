@@ -321,6 +321,8 @@
 	if(!AN)
 		AN = new(caster)
 	var/limit = min(2, level) + caster.social + caster.more_companions - 1
+	if(HAS_TRAIT(caster,TRAIT_ANIMAL_REPULSION))
+		limit = min(1, limit-2)
 	if(length(caster.beastmaster) >= limit)
 		var/mob/living/simple_animal/hostile/beastmaster/B = pick(caster.beastmaster)
 		B.death()
