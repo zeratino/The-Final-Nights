@@ -16,6 +16,8 @@
 		return 1
 
 /mob/living/carbon/human/proc/drinksomeblood(var/mob/living/mob)
+	var/bloodgain = 1*max(1, mob.bloodquality-1)
+	var/fumbled = FALSE
 	last_drinkblood_use = world.time
 	if(client)
 		client.images -= suckbar
@@ -128,16 +130,27 @@
 				return
 		if(iskindred(mob))
 			to_chat(src, "<span class='userlove'>[mob]'s blood tastes HEAVENLY...</span>")
-			adjustBruteLoss(-25, TRUE)
-			adjustFireLoss(-25, TRUE)
+			adjustBruteLoss(-10, TRUE)
+			adjustFireLoss(-10, TRUE)
 		else
 			to_chat(src, "<span class='warning'>You sip some <b>BLOOD</b> from your victim. It feels good.</span>")
-		bloodpool = min(maxbloodpool, bloodpool+1*max(1, mob.bloodquality-1))
-		adjustBruteLoss(-10, TRUE)
-		adjustFireLoss(-10, TRUE)
-		update_damage_overlays()
-		update_health_hud()
-		update_blood_hud()
+		if(HAS_TRAIT(src, TRAIT_MESSY_EATER))
+			if(prob(33)) // One third chance.
+				fumbled = TRUE
+		if(fumbled)
+			to_chat(src, "<span class='warning'>Some blood dribbles around your mouth, spilling down your front.</span>")
+			fumbled = FALSE
+			src.add_mob_blood(mob)
+			if(isturf(loc))
+				add_splatter_floor(loc)
+		else
+			bloodpool = min(maxbloodpool, bloodpool+bloodgain)
+			if(mob.bloodquality > 2)
+				adjustBruteLoss(-10, TRUE)
+				adjustFireLoss(-10, TRUE)
+			update_damage_overlays()
+			update_health_hud()
+			update_blood_hud()
 		if(mob.bloodpool <= 0)
 			if(ishuman(mob))
 				var/mob/living/carbon/human/K = mob
