@@ -363,7 +363,7 @@
 "ahW" = (/obj/structure/fluff/hedge,/obj/structure/railing{dir = 8},/obj/structure/flora/ausbushes/leafybush,/obj/structure/railing{layer = 4},/turf/open/indestructible/necropolis/air,/area/vtm/sewer/tzimisce_sanctum)
 "ahX" = (/obj/structure/flora/ausbushes/lavendergrass,/obj/structure/vampfence/rich,/turf/open/floor/plating/vampgrass,/area/vtm/interior/tzimisce_manor)
 "ahY" = (/obj/structure/table/wood,/obj/effect/mob_spawn/human/corpse/ciz4,/turf/open/indestructible/necropolis/air,/area/vtm/sewer/tzimisce_sanctum)
-"ahZ" = (/obj/structure/table/wood,/obj/item/drinkable_bloodpack/elite,/obj/item/vamp/keys/old_clan_tzimisce,/obj/item/vamp/keys/old_clan_tzimisce,/obj/item/vamp/keys/old_clan_tzimisce,/obj/item/vamp/keys/old_clan_tzimisce,/turf/open/indestructible/necropolis/air,/area/vtm/sewer/tzimisce_sanctum)
+"ahZ" = (/obj/structure/table/wood,/obj/item/drinkable_bloodpack/elite,/obj/item/vamp/keys/tzimisce,/obj/item/vamp/keys/tzimisce,/obj/item/vamp/keys/tzimisce,/obj/item/vamp/keys/tzimisce,/turf/open/indestructible/necropolis/air,/area/vtm/sewer/tzimisce_sanctum)
 "aia" = (/obj/structure/table/wood,/obj/item/storage/backpack/duffelbag/med/surgery,/turf/open/floor/plating/toilet,/area/vtm/sewer/tzimisce_sanctum)
 "aic" = (/obj/structure/table/wood,/obj/item/clothing/head/vampire/noddist_mask,/turf/open/indestructible/necropolis/air,/area/vtm/sewer/tzimisce_sanctum)
 "aie" = (/obj/structure/mirror{pixel_y = 32},/turf/open/floor/carpet/royalblue,/area/vtm/sewer/tzimisce_sanctum)

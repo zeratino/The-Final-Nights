@@ -159,7 +159,7 @@
 		"tmr"
 	)
 
-/obj/item/vamp/keys/tzimisce_new
+/obj/item/vamp/keys/tzimisce
 	name = "Regal keys"
 	accesslocks = list(
 		"tzimisce"
