@@ -95,7 +95,10 @@
 			var/mob/living/carbon/human/H = mob
 			drunked_of |= "[H.dna.real_name]"
 			if(!iskindred(mob))
-				H.blood_volume = max(H.blood_volume-50, 150)
+				if(isnpc(src))
+					H.blood_volume = max(H.blood_volume-50, 150)
+				else // players die less from being succed
+					H.blood_volume = max(H.blood_volume-20, 150)
 			if(iscathayan(src))
 				if(mob.yang_chi > 0 || mob.yin_chi > 0)
 					if(mob.yang_chi > mob.yin_chi)
@@ -130,8 +133,8 @@
 				return
 		if(iskindred(mob))
 			to_chat(src, "<span class='userlove'>[mob]'s blood tastes HEAVENLY...</span>")
-			adjustBruteLoss(-10, TRUE)
-			adjustFireLoss(-10, TRUE)
+			adjustBruteLoss(-25, TRUE)
+			adjustFireLoss(-25, TRUE)
 		else
 			to_chat(src, "<span class='warning'>You sip some <b>BLOOD</b> from your victim. It feels good.</span>")
 		if(HAS_TRAIT(src, TRAIT_MESSY_EATER))
@@ -145,9 +148,8 @@
 				add_splatter_floor(loc)
 		else
 			bloodpool = min(maxbloodpool, bloodpool+bloodgain)
-			if(mob.bloodquality > 2)
-				adjustBruteLoss(-10, TRUE)
-				adjustFireLoss(-10, TRUE)
+			adjustBruteLoss(-10, TRUE)
+			adjustFireLoss(-10, TRUE)
 			update_damage_overlays()
 			update_health_hud()
 			update_blood_hud()
