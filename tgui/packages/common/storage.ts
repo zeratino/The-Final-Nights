@@ -16,11 +16,11 @@ type StorageImplementation =
   | typeof IMPL_INDEXED_DB;
 
 const INDEXED_DB_VERSION = 1;
-const INDEXED_DB_NAME = 'tgui';
-const INDEXED_DB_STORE_NAME = 'storage-v1';
+const INDEXED_DB_NAME = "tgui";
+const INDEXED_DB_STORE_NAME = "storage-v1";
 
-const READ_ONLY = 'readonly';
-const READ_WRITE = 'readwrite';
+const READ_ONLY = "readonly";
+const READ_WRITE = "readwrite";
 
 type StorageBackend = {
   impl: StorageImplementation;
@@ -126,7 +126,7 @@ class IndexedDbBackend implements StorageBackend {
       };
       req.onsuccess = () => resolve(req.result);
       req.onerror = () => {
-        reject(new Error('Failed to open IDB: ' + req.error));
+        reject(new Error("Failed to open IDB: " + req.error));
       };
     });
   }
