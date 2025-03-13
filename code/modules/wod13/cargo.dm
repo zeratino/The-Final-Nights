@@ -65,6 +65,15 @@
 	contains = list(/obj/item/melee/vampirearms/tire)
 	crate_name = "weapon crate"
 
+/datum/supply_pack/vampire/paperwork
+	name = "Paperwork Kit"
+	desc = "Contains all your writing needs."
+	cost = 100
+	contains = list(
+		/obj/item/paper_bin,
+		/obj/item/pen = 5,)
+	crate_name = "paperwork crate"
+
 /datum/supply_pack/vampire/cuffs
 	name = "Box of Handcuffs"
 	desc = "Contains a box of handcuffs."
