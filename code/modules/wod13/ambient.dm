@@ -398,18 +398,22 @@
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING
 
-/area/vtm/interior/cog_pantry
+/area/vtm/interior/cog
+	name = "Children of Gaia Generic"
+	icon_state = "cog_pantry"
+
+/area/vtm/interior/cog/pantry
 	name = "Earth's Bounty Food Pantry"
 	icon_state = "cog_pantry"
 	music = /datum/vampiremusic/forest
 	wall_rating = HIGH_WALL_RATING
 
-/area/vtm/interior/cog_caern
+/area/vtm/interior/cog/caern
 	name = "Children of Gaia Caern"
 	icon_state = "cog_caern"
 	music = /datum/vampiremusic/forest
 	zone_type = "elysium"
-	wall_rating = HIGH_WALL_RATING
+	wall_rating = LOW_WALL_RATING
 
 //MISC AND CONTINUED AREAS
 /area/vtm/interior/penumbra
