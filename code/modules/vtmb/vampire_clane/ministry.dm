@@ -12,7 +12,7 @@
 
 /datum/vampireclane/ministry/on_gain(mob/living/carbon/human/H)
 	. = ..()
-	H.physiology.burn_mod = 1.5 // Setites take double damage from burning.
+	H.physiology.burn_mod = 1.5 // Setites take extra damage from burn.
 
 /datum/vampireclane/ministry/post_gain(mob/living/carbon/human/H)
 	. = ..()
