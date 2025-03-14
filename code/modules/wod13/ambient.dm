@@ -102,6 +102,20 @@
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
+/area/vtm/interior/strip/toreador
+	name = "Strip Club Apartments"
+	icon_state = "prince"
+	upper = FALSE
+	fire_controled = TRUE
+	zone_type = "elysium"
+
+/area/vtm/interior/strip/elysium
+	name = "Strip Club Elysium"
+	icon_state = "prince"
+	upper = FALSE
+	fire_controled = TRUE
+	zone_type = "elysium"
+
 /area/vtm/interior/mansion
 	name = "Abandoned Mansion"
 	icon_state = "mansion"
@@ -260,7 +274,7 @@
 /area/vtm/hotel
 	name = "Hotel"
 	icon_state = "hotel"
-//	music = /datum/vampiremusic/bar
+	music = /datum/vampiremusic/bar
 	ambience_index = AMBIENCE_INTERIOR
 	upper = FALSE
 	fire_controled = TRUE
@@ -334,6 +348,7 @@
 	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
+// GAROU CENTRIC AREAS
 /area/vtm/forest
 	name = "Forest"
 	icon_state = "park"
@@ -383,6 +398,20 @@
 	yin_chi = 2
 	wall_rating = LOW_WALL_RATING
 
+/area/vtm/interior/cog_pantry
+	name = "Earth's Bounty Food Pantry"
+	icon_state = "cog_pantry"
+	music = /datum/vampiremusic/forest
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/cog_caern
+	name = "Children of Gaia Caern"
+	icon_state = "cog_caern"
+	music = /datum/vampiremusic/forest
+	zone_type = "elysium"
+	wall_rating = HIGH_WALL_RATING
+
+//MISC AND CONTINUED AREAS
 /area/vtm/interior/penumbra
 	name = "Penumbra"
 	icon_state = "church"
@@ -479,6 +508,20 @@
 	zone_type = "elysium"
 	music = /datum/vampiremusic/nosferatu
 	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/setite
+	name = "Community Center"
+	icon_state = "hotel"
+	upper = FALSE
+	fire_controled = TRUE
+	wall_rating = HIGH_WALL_RATING
+
+/area/vtm/interior/setite/basement
+	name = "Community Center Basement"
+	zone_type = "elysium"
+	yang_chi = 0
+	yin_chi = 2
+
 //MUSIC
 
 /datum/vampiremusic

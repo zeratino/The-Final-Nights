@@ -165,6 +165,13 @@
 		"tzimisce"
 	)
 
+/obj/item/vamp/keys/setite
+	name = "Serpentine keys"
+	accesslocks = list(
+		"setite"
+	)
+	color = "#1805db"
+
 /obj/item/vamp/keys/malkav
 	name = "Insane keys"
 	accesslocks = list(
@@ -338,6 +345,13 @@
 		"pentex"
 	)
 	color = "#062e03"
+
+/obj/item/vamp/keys/children_of_gaia
+	name = "Food Pantry keys"
+	accesslocks = list(
+		"coggie"
+	)
+	color = "#339933"
 
 /obj/item/vamp/keys/graveyard
 	name = "Graveyard keys"
