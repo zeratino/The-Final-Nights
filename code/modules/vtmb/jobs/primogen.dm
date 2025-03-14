@@ -191,7 +191,7 @@
 
 //////////////////////////// POST 2015 STUFF BEYOND
 
-/datum/job/vamp/primogen_banu_haqim
+/datum/job/vamp/primogen_banu
 	title = "Primogen Banu Haqim"
 	department_head = list("Justicar")
 	faction = "Vampire"
@@ -217,7 +217,9 @@
 	my_contact_is_important = TRUE
 	known_contacts = list("Prince")
 
-/datum/outfit/job/primogen_banu_haqim
+	outfit = /datum/outfit/job/primogen_banu
+
+/datum/outfit/job/primogen_banu
 	name = "Primogen Banu Haqim"
 	jobtype = /datum/job/vamp/primogen_banu
 
@@ -230,7 +232,7 @@
 	r_pocket = /obj/item/cockclock
 	backpack_contents = list(/obj/item/passport=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard/elder=1, /obj/item/card/id/whip, /obj/item/card/id/steward, /obj/item/card/id/myrmidon)
 
-/obj/effect/landmark/start/primogen_banu_haqim
+/obj/effect/landmark/start/primogen_banu
 	name = "Primogen Banu Haqim"
 	icon_state = "Assistant"
 

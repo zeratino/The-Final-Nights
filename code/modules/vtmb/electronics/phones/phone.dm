@@ -848,7 +848,7 @@
 	contacts += T
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/sheriff
@@ -888,7 +888,7 @@
 	contacts += T
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/barkeeper
@@ -958,7 +958,7 @@
 	contacts += T
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/nosferatu/Initialize()
@@ -975,7 +975,7 @@
 	contacts += T
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/toreador/Initialize()
@@ -992,7 +992,7 @@
 	contacts += N
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/primogen_banu_haqim/Initialize()
@@ -1026,7 +1026,7 @@
 	contacts += N
 	var/datum/phonecontact/toreador/T = new()
 	contacts += T
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/tremere/Initialize()
@@ -1043,7 +1043,7 @@
 	contacts += T
 	var/datum/phonecontact/ventrue/V = new()
 	contacts += V
-	var/datum/phonecontact/brujah/B = new()
+	var/datum/phonecontact/primogen_banu_haqim/B = new()
 	contacts += B
 
 /obj/item/vamp/phone/archivist/Initialize()

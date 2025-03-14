@@ -136,7 +136,7 @@
 		if(host.clane.name == "Banu Haqim")
 			if(GLOB.banuname != "")
 				if(host.real_name != GLOB.banuname)
-					dat += " My primogen is:  [GLOB.namename].<BR>"
+					dat += " My primogen is:  [GLOB.banuname].<BR>"
 		if(host.clane.name == "Malkavian")
 			if(GLOB.malkavianname != "")
 				if(host.real_name != GLOB.malkavianname)
