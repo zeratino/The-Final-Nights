@@ -995,10 +995,10 @@
 	var/datum/phonecontact/brujah/B = new()
 	contacts += B
 
-/obj/item/vamp/phone/brujah/Initialize()
+/obj/item/vamp/phone/primogen_banu_haqim/Initialize()
 	..()
-	GLOB.brujahnumber = number
-	GLOB.brujahname = owner
+	GLOB.banunumber = number
+	GLOB.banuname = owner
 	var/datum/phonecontact/prince/PRINCE = new()
 	contacts += PRINCE
 	var/datum/phonecontact/tremere/REGENT = new()
