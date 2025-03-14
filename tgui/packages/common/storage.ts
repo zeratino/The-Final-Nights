@@ -16,7 +16,7 @@ type StorageImplementation =
   | typeof IMPL_INDEXED_DB;
 
 const INDEXED_DB_VERSION = 1;
-const INDEXED_DB_NAME = "tgui";
+const INDEXED_DB_NAME = "tfn-tgui";
 const INDEXED_DB_STORE_NAME = "storage-v1";
 
 const READ_ONLY = "readonly";
@@ -39,20 +39,17 @@ const testGeneric = (testFn: () => boolean) => (): boolean => {
 };
 
 const testHubStorage = testGeneric(
-  () => window.hubStorage && !!window.hubStorage.getItem,
+  () => window.hubStorage && window.hubStorage.getItem
 );
 
 // TODO: Remove with 516
 // prettier-ignore
 const testIndexedDb = testGeneric(() => (
   (window.indexedDB || window.msIndexedDB)
-  && !!(window.IDBTransaction || window.msIDBTransaction)
+  && (window.IDBTransaction || window.msIDBTransaction)
 ));
 
-class MemoryBackend implements StorageBackend {
-  private store: Record<string, any>;
-  public impl: StorageImplementation;
-
+class MemoryBackend {
   constructor() {
     this.impl = IMPL_MEMORY;
     this.store = {};
@@ -82,20 +79,19 @@ class HubStorageBackend implements StorageBackend {
     this.impl = IMPL_HUB_STORAGE;
   }
 
-  async get(key: string): Promise<any> {
-    const value = await window.hubStorage.getItem(key);
-    if (typeof value === 'string') {
+  async get(key) {
+    const value = await window.hubStorage.getItem("tfn-" + key);
+    if (typeof value === "string") {
       return JSON.parse(value);
     }
-    return undefined;
   }
 
-  async set(key: string, value: any): Promise<void> {
-    window.hubStorage.setItem(key, JSON.stringify(value));
+  async set(key, value) {
+    window.hubStorage.setItem("tfn-" + key, JSON.stringify(value));
   }
 
-  async remove(key: string): Promise<void> {
-    window.hubStorage.removeItem(key);
+  async remove(key) {
+    window.hubStorage.removeItem("tfn-" + key);
   }
 
   async clear(): Promise<void> {
@@ -103,10 +99,8 @@ class HubStorageBackend implements StorageBackend {
   }
 }
 
-class IndexedDbBackend implements StorageBackend {
-  public impl: StorageImplementation;
-  public dbPromise: Promise<IDBDatabase>;
-
+class IndexedDbBackend {
+  // TODO: Remove with 516
   constructor() {
     this.impl = IMPL_INDEXED_DB;
     this.dbPromise = new Promise((resolve, reject) => {
@@ -131,11 +125,11 @@ class IndexedDbBackend implements StorageBackend {
     });
   }
 
-  private async getStore(mode: IDBTransactionMode): Promise<IDBObjectStore> {
-    const db = await this.dbPromise;
-    return db
+  async getStore(mode) {
+    // prettier-ignore
+    return this.dbPromise.then((db) => db
       .transaction(INDEXED_DB_STORE_NAME, mode)
-      .objectStore(INDEXED_DB_STORE_NAME);
+      .objectStore(INDEXED_DB_STORE_NAME));
   }
 
   async get(key: string): Promise<any> {
@@ -147,7 +141,7 @@ class IndexedDbBackend implements StorageBackend {
     });
   }
 
-  async set(key: string, value: any): Promise<void> {
+  async set(key, value) {
     // NOTE: We deliberately make this operation transactionless
     const store = await this.getStore(READ_WRITE);
     store.put(value, key);
