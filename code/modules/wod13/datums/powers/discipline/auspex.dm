@@ -25,7 +25,6 @@
 
 /datum/discipline_power/auspex/heightened_senses/activate()
 	. = ..()
-	owner.add_client_colour(/datum/client_colour/glass_colour/lightblue)
 
 	ADD_TRAIT(owner, TRAIT_THERMAL_VISION, TRAIT_GENERIC)
 	ADD_TRAIT(owner, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
@@ -34,7 +33,6 @@
 
 /datum/discipline_power/auspex/heightened_senses/deactivate()
 	. = ..()
-	owner.remove_client_colour(/datum/client_colour/glass_colour/lightblue)
 
 	REMOVE_TRAIT(owner, TRAIT_THERMAL_VISION, TRAIT_GENERIC)
 	REMOVE_TRAIT(owner, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
@@ -81,7 +79,6 @@
 
 /datum/discipline_power/auspex/the_spirits_touch/activate()
 	. = ..()
-	owner.add_client_colour(/datum/client_colour/glass_colour/lightblue)
 
 	var/datum/atom_hud/health_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 	health_hud.add_hud_to(owner)
@@ -90,7 +87,6 @@
 
 /datum/discipline_power/auspex/the_spirits_touch/deactivate()
 	. = ..()
-	owner.remove_client_colour(/datum/client_colour/glass_colour/lightblue)
 
 	var/datum/atom_hud/health_hud = GLOB.huds[DATA_HUD_MEDICAL_ADVANCED]
 	health_hud.remove_hud_from(owner)
