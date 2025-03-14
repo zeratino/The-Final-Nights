@@ -12,7 +12,7 @@
 
 /datum/vampireclane/ministry/on_gain(mob/living/carbon/human/H)
 	. = ..()
-	H.add_quirk(/datum/quirk/lightophobia)
+	H.physiology.burn_mod = 1.5 // Setites take extra damage from burn.
 
 /datum/vampireclane/ministry/post_gain(mob/living/carbon/human/H)
 	. = ..()
