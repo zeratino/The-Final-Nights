@@ -50,6 +50,7 @@
 	name = "Clerk's keys"
 	accesslocks = list(
 		"camarilla",
+		"prince",
 		"clerk",
 		"theatre",
 		"milleniumCommon",
@@ -124,6 +125,17 @@
 		"kyasid"
 	)
 	color = "#290355"
+
+/obj/item/vamp/keys/lasombra/primogen
+	name = "Really Dark keys"
+	accesslocks = list(
+		"lasombra",
+		"kyasid",
+		"primogen",
+		"milleniumCommon",
+		"camarilla"
+	)
+	color = "#4b039c"
 
 /obj/item/vamp/keys/trujah
 	name = "static keys"
@@ -209,6 +221,16 @@
 		"banuhaqim"
 	)
 	color = "#06053d"
+
+/obj/item/vamp/keys/banuhaqim/primogen
+	name = "Really Just keys"
+	accesslocks = list(
+		"banuhaqim",
+		"primogen",
+		"milleniumCommon",
+		"camarilla"
+	)
+	color = "#05037e"
 
 /obj/item/vamp/keys/toreador/primogen
 	name = "Really sexy keys"
