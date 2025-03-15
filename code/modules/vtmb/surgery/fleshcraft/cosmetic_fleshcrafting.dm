@@ -7,8 +7,6 @@
 				/datum/surgery_step/add_flesh,
 				/datum/surgery_step/close)
 
-	possible_locs = list(BODY_ZONE_CHEST)
-	self_operable = TRUE
 	replaced_by = null
 	level_req = 2//technically I don't need to put this here, since it's 2 by default, but this is a good example of a surgery so I'll leave it
 
