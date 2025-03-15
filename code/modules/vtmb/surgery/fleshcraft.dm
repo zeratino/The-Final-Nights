@@ -20,6 +20,6 @@
 	var/datum/discipline/surgeon_vicissitude = surgeon_species.get_discipline(/datum/discipline/vicissitude)
 	if(!surgeon_vicissitude)//If the surgeon doesn't have vicissitude, they don't get to do vicissitude things
 		return FALSE
-	if(surgeon_vicissitude.level >= level_req)//Checks if we have at least 2 vicissitude, the level necessary for bonecrafting
+	if(surgeon_vicissitude.level >= level_req)//Checks if we have at least 2 vicissitude, the level necessary for fleshcrafting
 		return TRUE
 	return FALSE
