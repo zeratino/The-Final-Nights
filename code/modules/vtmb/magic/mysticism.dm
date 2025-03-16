@@ -137,7 +137,7 @@
 
 /obj/abyssrune/identification
 	name = "Occult Items Identification"
-	desc = "Identificates single occult item"
+	desc = "Identifies a single occult item"
 	icon_state = "rune4"
 	word = "WUS'ZAT"
 
@@ -148,3 +148,46 @@
 			playsound(loc, 'sound/magic/voidblink.ogg', 50, FALSE)
 			qdel(src)
 			return
+
+/obj/abyssrune/blackout //not canon wod material, seemed a cool idea.
+	name = "Blackout"
+	desc = "Destroys every wall light in range of the rune."
+	icon_state = "rune7"
+	word = "FYU'SES BLO'OUN"
+	mystlevel = 2
+
+//actual function of the rune
+/obj/abyssrune/blackout/complete()
+	for(var/obj/machinery/light/i in range(7, src)) //for every light in a range of 7 (called i)
+		if(i != LIGHT_BROKEN) //if it aint broke
+			i.break_light_tube(0) //break it
+	playsound(loc, 'sound/magic/voidblink.ogg', 50, FALSE) //make the funny void sound
+	qdel(src) //delete the rune
+
+/obj/abyssrune/comforting_darkness
+	name = "Comforting Darkness"
+	desc = "Use the power of the abyss to mend the wounds of yourself and others."
+	icon_state = "rune8"
+	word = "KEYUR AGA"
+	mystlevel = 2
+
+/obj/abyssrune/comforting_darkness/complete()
+	for(var/mob/living/victim in src.loc) //for every living mob in the same space as the rune
+		victim.adjustBruteLoss(-30)
+		victim.adjustFireLoss(-10)
+		victim.adjustToxLoss(-20)
+		victim.adjustCloneLoss(-5)
+		victim.SetSleeping(60)
+		playsound(loc, 'sound/magic/voidblink.ogg', 50, FALSE)
+		qdel(src)
+		return //shit uhhhhh do i need this???
+
+	//after the loop is exited (due to failure to find) it resorts to working on the caster
+	src.last_activator.adjustBruteLoss(-30) //not a lot, less than a good sword hit's worth, better to heal someone else with
+	src.last_activator.adjustFireLoss(-10) //better have burn heal!
+	src.last_activator.adjustToxLoss(-20) //shit, how do kindred deal with tox?
+	src.last_activator.adjustCloneLoss(-5) //heals clone damage at a VERY small rate
+	src.last_activator.SetSleeping(60) //sleeping is for balance to stop you from just selfspamming these. MIGHT be exploitable for offense too, but hey, creativity! its runes!
+	playsound(loc, 'sound/magic/voidblink.ogg', 50, FALSE)
+	qdel(src)
+	//godawful, sorry, could be worse though.
