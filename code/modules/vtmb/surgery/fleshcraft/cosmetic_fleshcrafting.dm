@@ -28,6 +28,8 @@
 	var/mob/living/carbon/human/victim = target
 	var/list/changes = list("spines", "spines_slim", "animal_skull", "nothing")
 	var/chosen = tgui_input_list(user, "How shall we change them?", "Cosmetics selection", changes)
+	if(isnull(chosen))
+		return TRUE//It's repeatable anyways just return true without doing anything and let us repeat the step
 	if(chosen == "nothing")
 		victim.remove_overlay(UNICORN_LAYER)
 		victim.overlays_standing[UNICORN_LAYER] = null
