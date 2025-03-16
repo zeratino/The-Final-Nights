@@ -406,6 +406,7 @@
 	name = "Earth's Bounty Food Pantry"
 	icon_state = "cog_pantry"
 	music = /datum/vampiremusic/forest
+	fire_controled = TRUE
 	wall_rating = HIGH_WALL_RATING
 
 /area/vtm/interior/cog/caern
@@ -413,6 +414,12 @@
 	icon_state = "cog_caern"
 	music = /datum/vampiremusic/forest
 	zone_type = "elysium"
+	wall_rating = LOW_WALL_RATING
+
+/area/vtm/interior/gnawer
+	name = "Bone Gnawer Shrine"
+	icon_state = "gnawer"
+	music = /datum/vampiremusic/forest
 	wall_rating = LOW_WALL_RATING
 
 //MISC AND CONTINUED AREAS
