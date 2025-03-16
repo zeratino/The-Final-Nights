@@ -1364,6 +1364,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if(is_banned_from(user.ckey, rank))
 				HTML += "<font color=red>[rank]</font></td><td><a href='?_src_=prefs;bancheck=[rank]'> BANNED</a></td></tr>"
 				continue
+			// Jobs can only be whitelisted under Trusted Player, so that's all it checks for.
+			if(job.whitelisted)
+				if(!SSwhitelists.is_whitelisted(user.ckey, TRUSTED_PLAYER))
+					HTML += "<font color=#290204>[rank]</font></td><td><font color=#290204> WHITELISTED</font></td></tr>"
+					continue
 			var/required_playtime_remaining = job.required_playtime_remaining(user.client)
 			//<font color=red>text</font> (Zamenil potomu chto slishkom rezhet glaza
 			if(required_playtime_remaining && !bypass)
