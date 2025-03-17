@@ -533,7 +533,7 @@ Dancer
 /datum/quirk/consumption/on_process(delta_time)
 	if(prob(5))
 		quirk_holder.adjustBruteLoss(5, TRUE)
-
+/*
 /datum/quirk/hunted
 	name = "Sir You Are Being Hunted"
 	desc = "You are in the Blood Hunt list from the start and can't leave it. Good luck!"
@@ -545,7 +545,8 @@ Dancer
 	if(iswerewolf(quirk_holder) || isgarou(quirk_holder))
 		return
 	if(isturf(quirk_holder.loc))
-		SSbloodhunt.announce_hunted(quirk_holder, "Camarilla Wanted List")
+		SSbloodhunt.announce_hunted(quirk_holder, "Camarilla Wanted List") */
+
 /*
 /datum/quirk/diablerist
 	name = "Black Secret"
