@@ -183,7 +183,7 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	worn_icon_state = "bruiser_badge"
 
-	/obj/item/card/id/sweeper
+/obj/item/card/id/sweeper
 	name = "sweeper badge"
 	id_type_name = "sweeper badge"
 	desc = "A badge which shows perspective."
