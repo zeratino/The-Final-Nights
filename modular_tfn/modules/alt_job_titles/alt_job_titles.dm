@@ -20,6 +20,7 @@
 	alt_titles = list(
 		"Medical Student",
 		"Intern",
+		"Nurse",
 		"Resident",
 		"General Practitioner",
 		"Surgeon",
