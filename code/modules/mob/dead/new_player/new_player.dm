@@ -290,6 +290,8 @@
 			return "[jobtitle] is unavailable."
 		if(JOB_UNAVAILABLE_BANNED)
 			return "You are currently banned from [jobtitle]."
+		if(JOB_UNAVAILABLE_WHITELISTED)
+			return "You do not have the relevant whitelist for [jobtitle]."
 		if(JOB_UNAVAILABLE_PLAYTIME)
 			return "You do not have enough relevant playtime for [jobtitle]."
 		if(JOB_UNAVAILABLE_ACCOUNTAGE)
@@ -317,6 +319,9 @@
 		return JOB_UNAVAILABLE_SLOTFULL
 	if(is_banned_from(ckey, rank))
 		return JOB_UNAVAILABLE_BANNED
+	if(job.whitelisted)
+		if(!SSwhitelists.is_whitelisted(ckey, TRUSTED_PLAYER))
+			return JOB_UNAVAILABLE_WHITELISTED
 	if(QDELETED(src))
 		return JOB_UNAVAILABLE_GENERIC
 	if(!job.player_old_enough(client) && !bypass)
