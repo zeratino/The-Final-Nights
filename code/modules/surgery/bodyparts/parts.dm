@@ -38,8 +38,11 @@
 	icon = 'icons/mob/animal_parts.dmi'
 	icon_state = "alien_chest"
 	dismemberable = 0
-	max_damage = 600
+	max_damage = 500
 	animal_origin = ALIEN_BODYPART
+
+/obj/item/bodypart/chest/crinos
+	max_damage = 600
 
 /obj/item/bodypart/chest/larva
 	icon = 'icons/mob/animal_parts.dmi'
@@ -142,8 +145,11 @@
 	px_y = 0
 	dismemberable = FALSE
 	can_be_disabled = FALSE
-	max_damage = 125
+	max_damage = 100
 	animal_origin = ALIEN_BODYPART
+
+/obj/item/bodypart/l_arm/crinos
+	max_damage = 125
 
 /obj/item/bodypart/r_arm
 	name = "right arm"
@@ -237,8 +243,11 @@
 	px_y = 0
 	dismemberable = FALSE
 	can_be_disabled = FALSE
-	max_damage = 125
+	max_damage = 100
 	animal_origin = ALIEN_BODYPART
+
+/obj/item/bodypart/r_arm/crinos
+	max_damage = 125
 
 /obj/item/bodypart/l_leg
 	name = "left leg"
@@ -326,8 +335,11 @@
 	px_y = 0
 	dismemberable = FALSE
 	can_be_disabled = FALSE
-	max_damage = 125
+	max_damage = 100
 	animal_origin = ALIEN_BODYPART
+
+/obj/item/bodypart/l_leg/crinos
+	max_damage = 125
 
 /obj/item/bodypart/r_leg
 	name = "right leg"
@@ -417,5 +429,8 @@
 	px_y = 0
 	dismemberable = FALSE
 	can_be_disabled = FALSE
-	max_damage = 125
+	max_damage = 100
 	animal_origin = ALIEN_BODYPART
+
+/obj/item/bodypart/r_leg/crinos
+	max_damage = 125
