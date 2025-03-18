@@ -246,6 +246,7 @@
 		"I'm late, don't interrupt me.",
 		"Check the bar if you want somebody to bother...",
 		"Can't speak right now.",
+		"It is 2015, get over it.",
 		"Goodnight, I guess?",
 		"Guh...",
 		"I dunno what to say.",
@@ -383,6 +384,7 @@
 		"I'm late.",
 		"Can't speak right now.",
 		"Buy yourself a Iphone or something.",
+		"It is 2015, get over it.",
 		"Hey.",
 		"Go away."
 	)
