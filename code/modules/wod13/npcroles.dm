@@ -89,7 +89,7 @@
 		"You know who I work for?",
 		"Get the hell outta here, 'fore I get my gang on yo' ass.",
 		"You need sumn' punk?",
-		"Trans rights friend",
+		"Get lost, loser.",
 		"Get outta this side of town.",
 		"Think you scare me? You know who I work for?",
 		"Think you're hot shit?"
@@ -99,7 +99,7 @@
 		"Another dumbass tryin' to look threatening.",
 		"Halloween's over, what's with the costumes.",
 		"Gotta get home soon, family to feed and all that.",
-		"Trans rights friend.",
+		"Get lost, loser.",
 		"I think.. I miss my wife.",
 		"What? You need somethin?",
 		"Outta my way.",
@@ -246,7 +246,7 @@
 		"I'm late, don't interrupt me.",
 		"Check the bar if you want somebody to bother...",
 		"Can't speak right now.",
-		"It is 2015, get over it.",
+		"It's 2015, get over it.",
 		"Goodnight, I guess?",
 		"Guh...",
 		"I dunno what to say.",
@@ -383,8 +383,8 @@
 		"Do I really need to answer?",
 		"I'm late.",
 		"Can't speak right now.",
-		"Buy yourself a Iphone or something.",
-		"It is 2015, get over it.",
+		"Buy yourself an Iphone or something.",
+		"It's 2015, get over it.",
 		"Hey.",
 		"Go away."
 	)
