@@ -89,7 +89,7 @@
 		"You know who I work for?",
 		"Get the hell outta here, 'fore I get my gang on yo' ass.",
 		"You need sumn' punk?",
-		"Get lost, liberal.",
+		"Trans rights friend",
 		"Get outta this side of town.",
 		"Think you scare me? You know who I work for?",
 		"Think you're hot shit?"
@@ -98,9 +98,8 @@
 		"Why you starin' at me like that?",
 		"Another dumbass tryin' to look threatening.",
 		"Halloween's over, what's with the costumes.",
-		"I think that whore gave me the clap.",
 		"Gotta get home soon, family to feed and all that.",
-		"Get lost, liberal.",
+		"Trans rights friend.",
 		"I think.. I miss my wife.",
 		"What? You need somethin?",
 		"Outta my way.",
@@ -372,9 +371,8 @@
 		"Do you need something?",
 		"Do I really need to answer?",
 		"I'm late.",
-		"Pervert...",
 		"Can't speak right now.",
-		"Buy yourself a watch",
+		"Buy yourself an Iphone or something.",
 		"Hey.",
 		"Go away."
 	)
@@ -383,9 +381,8 @@
 		"Do you need something?",
 		"Do I really need to answer?",
 		"I'm late.",
-		"Pervert...",
 		"Can't speak right now.",
-		"Buy yourself a watch",
+		"Buy yourself a Iphone or something.",
 		"Hey.",
 		"Go away."
 	)
