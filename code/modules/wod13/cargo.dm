@@ -67,7 +67,7 @@
 	contains = list(/obj/item/storage/box/handcuffs)
 	crate_name = "handcuff crate"
 
-	/datum/supply_pack/vampire/camera
+/datum/supply_pack/vampire/camera
 	name = "Camera Kit"
 	desc = "Contains a single camera and a spare roll of film."
 	cost = 200
@@ -111,7 +111,7 @@
 	cost = 400
 	contains = list(/obj/item/gas_can/full)
 
-	/datum/supply_pack/vampire/medicalsupplies
+/datum/supply_pack/vampire/medicalsupplies
 	name = "Medical Supplies"
 	desc = "Contains some first aid supplies."
 	cost = 500
@@ -267,7 +267,7 @@
 	contains = list(/obj/item/gun/ballistic/shotgun/toy/crossbow/vampire)
 	crate_name = "weapon crate"
 
-	/datum/supply_pack/vampire/weapondeagle50
+/datum/supply_pack/vampire/weapondeagle50
 	name = "Weapon (desert eagle 50AE)"
 	desc = "Contains a .50 caliber desert eagle."
 	cost = 2000
