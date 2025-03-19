@@ -518,39 +518,5 @@
 	if(!suppressed)  // direct
 		living_target.visible_message(span_danger("[living_target] is hit by \a [src]."), span_userdanger("You're hit by \a [src]!"), vision_distance=COMBAT_MESSAGE_RANGE)
 
-	try_fluster(living_target)
-
-/obj/projectile/kiss/proc/try_fluster(mob/living/living_target)
-	// people with the social anxiety quirk can get flustered when hit by a kiss
-	if((living_target.stat > SOFT_CRIT) || living_target.is_blind())
-		return
-	if(HAS_TRAIT(living_target, TRAIT_FEARLESS) || prob(50)) // 50% chance for it to apply, also immune while on meds
-		return
-
-	var/other_msg
-	var/self_msg
-	var/roll = rand(1, 3)
-	switch(roll)
-		if(1)
-			other_msg = "stumbles slightly, turning a bright red!"
-			self_msg = "You lose control of your limbs for a moment as your blood rushes to your face, turning it bright red!"
-			living_target.set_confusion(rand(5 SECONDS, 10 SECONDS))
-		if(2)
-			other_msg = "stammers softly for a moment before choking on something!"
-			self_msg = "You feel your tongue disappear down your throat as you fight to remember how to make words!"
-			addtimer(CALLBACK(living_target, TYPE_PROC_REF(/atom/movable, say), pick("Uhhh...", "O-oh, uhm...", "I- uhhhhh??", "You too!!", "What?")), rand(0.5 SECONDS, 1.5 SECONDS))
-			living_target.stuttering = (rand(10 SECONDS, 30 SECONDS))
-		if(3)
-			other_msg = "locks up with a stunned look on [living_target.p_their()] face, staring at [firer ? firer : "the ceiling"]!"
-			self_msg = "Your brain completely fails to process what just happened, leaving you rooted in place staring at [firer ? "[firer]" : "the ceiling"] for what feels like an eternity!"
-			living_target.face_atom(firer)
-			living_target.Stun(rand(3 SECONDS, 8 SECONDS))
-
-	living_target.visible_message("<b>[living_target]</b> [other_msg]", span_userdanger("Whoa! [self_msg]"))
-
 /obj/projectile/kiss/on_hit(atom/target, blocked, pierce_hit)
 	. = ..()
-	if(isliving(target))
-		var/mob/living/living_target = target
-		try_fluster(living_target)
-
