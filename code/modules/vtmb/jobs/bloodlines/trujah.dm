@@ -20,15 +20,20 @@
 	allowed_species = list("Vampire")
 
 	v_duty = "Openly follow the traditions, ensure the coming of Gehenna so that you might fight along the side of the righteous."
-	duty = "You serve the True Blackhand! Operating out of the antique shop, you engage in extremely subtle political moves against the local sects. Good luck, Child of Ilyes, an don't be discovered."
+	duty = "You serve the True Blackhand! Operating out of the antique shop, you engage in extremely subtle political moves against the local sects. Good luck, and don't be discovered."
 	minimal_masquerade = 0
-	allowed_bloodlines = list("True Brujah")
+	allowed_bloodlines = list("True Brujah", "Old Clan Tzimisce")
 
 /datum/outfit/job/trujah
 	name = "Antique Shop Worker"
 	jobtype = /datum/job/vamp/trujah
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
+	backpack_contents = list(
+		/obj/item/passport=1,
+		/obj/item/flashlight=1,
+		/obj/item/vamp/creditcard=1,
+	)
 
 /datum/outfit/job/trujah/pre_equip(mob/living/carbon/human/H)
 	..()

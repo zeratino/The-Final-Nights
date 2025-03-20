@@ -36,11 +36,10 @@ GLOBAL_LIST_INIT(citizen_positions, list(
 	"Barista",
 	"Counselor",
 	"Cabaret Worker",
-	"Museum Groundskeeper",
-	"Monestary Monk",
+	"Old Church Curator",
+	"Old Church Caretaker",
 	"Veterinarian",
-	"Antique Worker",
-	"Hotel Attendant"
+	"Antique Worker"
 ))
 
 GLOBAL_LIST_INIT(police_positions, list(

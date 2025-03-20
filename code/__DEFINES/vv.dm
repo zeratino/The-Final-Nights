@@ -77,6 +77,9 @@
 #define VV_HK_MODIFY_TRAITS "modtraits"
 #define VV_HK_VIEW_REFERENCES "viewreferences"
 
+// /datum/weakref
+#define VV_HK_TRACK_REF "track_ref"
+
 // /atom
 #define VV_HK_MODIFY_TRANSFORM "atom_transform"
 #define VV_HK_ADD_REAGENT "addreagent"

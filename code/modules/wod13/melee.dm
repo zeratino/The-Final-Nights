@@ -41,7 +41,7 @@
 /obj/item/melee/vampirearms/fireaxe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound)
-	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=70, icon_wielded="fireaxe1")
+	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=40, icon_wielded="fireaxe1")
 
 /obj/item/melee/vampirearms/fireaxe/proc/on_wield(obj/item/source, mob/user)
 	SIGNAL_HANDLER
@@ -71,7 +71,7 @@
 	icon = 'code/modules/wod13/48x32weapons.dmi'
 	icon_state = "katana"
 	flags_1 = CONDUCT_1
-	force = 55
+	force = 35
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
@@ -125,7 +125,7 @@
 	icon = 'code/modules/wod13/weapons.dmi'
 	icon_state = "rapier"
 	flags_1 = CONDUCT_1
-	force = 48
+	force = 35
 	throwforce = 10
 	block_chance = 45
 	armour_penetration = 30
@@ -147,7 +147,7 @@
     icon = 'code/modules/wod13/weapons.dmi'
     icon_state = "machete"
     flags_1 = CONDUCT_1
-    force = 45
+    force = 25
     throwforce = 30
     w_class = WEIGHT_CLASS_BULKY
     slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
@@ -170,7 +170,7 @@
 	icon = 'code/modules/wod13/weapons.dmi'
 	icon_state = "sabre"
 	flags_1 = CONDUCT_1
-	force = 56
+	force = 35
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
 	block_chance = 35
@@ -192,7 +192,7 @@
 	icon = 'code/modules/wod13/weapons.dmi'
 	icon_state = "longsword"
 	flags_1 = CONDUCT_1
-	force = 58
+	force = 35
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
 	block_chance = 40
@@ -335,7 +335,7 @@
 	name = "ripped arm"
 	desc = "Wow, that was someone's arm."
 	icon_state = "hand"
-	force = 50
+	force = 25
 	block_chance = 25
 	masquerade_violating = TRUE
 	is_wood = FALSE
@@ -411,7 +411,7 @@
 		return
 	if(isliving(target))
 		var/mob/living/L = target
-		L.apply_damage(30, CLONE)
+		L.apply_damage(8, CLONE)
 
 /obj/item/melee/vampirearms/knife/gangrel/lasombra
 	name = "shadow tentacle"
@@ -426,27 +426,8 @@
 		return
 	if(isliving(target))
 		var/mob/living/L = target
-		L.apply_damage(16, CLONE)
-		L.apply_damage(7, BURN)
-
-/obj/item/melee/touch_attack/quietus
-	name = "\improper poison touch"
-	desc = "This is kind of like when you rub your feet on a shag rug so you can zap your friends, only a lot less safe."
-	icon = 'code/modules/wod13/weapons.dmi'
-	catchphrase = null
-	on_use_sound = 'sound/magic/disintegrate.ogg'
-	icon_state = "quietus"
-	inhand_icon_state = "mansus"
-
-/obj/item/melee/touch_attack/quietus/afterattack(atom/target, mob/living/carbon/user, proximity)
-	if(!proximity)
-		return
-	if(isliving(target))
-		var/mob/living/L = target
-		L.adjustFireLoss(10)
-		L.AdjustKnockdown(3 SECONDS)
-		L.adjustStaminaLoss(50)
-	return ..()
+		L.apply_damage(8, CLONE)
+		L.apply_damage(8, BURN)
 
 /obj/item/melee/touch_attack/werewolf
 	name = "\improper falling touch"
@@ -469,24 +450,6 @@
 			L.toggle_resting()
 	return ..()
 
-/obj/item/quietus_upgrade
-	name = "poison for weapons"
-	desc = "Upgrade your melee weapons with it."
-	icon_state = "quietus"
-	icon = 'code/modules/wod13/items.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	item_flags = DROPDEL
-
-/obj/item/melee/vampirearms/attackby(obj/item/I, mob/living/user, params)
-	. = ..()
-	if(istype(I, /obj/item/quietus_upgrade))
-		if(!quieted)
-			quieted = TRUE
-			armour_penetration = min(100, armour_penetration+30)
-			force += 20
-			color = "#72b27c"
-			qdel(I)
-
 /obj/item/melee/vampirearms/knife/gangrel/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
@@ -498,7 +461,7 @@
 	icon_state = "chainsaw"
 	flags_1 = CONDUCT_1
 	force = 15
-	var/force_on = 150
+	var/force_on = 50
 	w_class = WEIGHT_CLASS_BULKY
 	throwforce = 10
 	throw_speed = 2
@@ -597,7 +560,7 @@
 	icon_state = "shovel"
 	name = "shovel"
 	desc = "Great weapon against mortal or immortal."
-	force = 40
+	force = 25
 	throwforce = 10
 	block_chance = 30
 	w_class = WEIGHT_CLASS_BULKY
@@ -622,7 +585,7 @@
 	desc = "More instrument, than a weapon. Instrumentally cuts heads..."
 	icon = 'code/modules/wod13/weapons.dmi'
 	icon_state = "kosa"
-	force = 50
+	force = 35
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = null
 	block_chance = 12
@@ -641,7 +604,7 @@
 	icon_state = "rock0"
 	name = "electric guitar"
 	desc = "You are pretty fly for a white guy..."
-	force = 40
+	force = 35
 	throwforce = 25
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
@@ -727,7 +690,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb_continuous = list("bludgeons", "bashes", "beats")
 	attack_verb_simple = list("bludgeon", "bash", "beat")
-	force = 30
+	force = 25
 	wound_bonus = 15
 	block_chance = 10
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_SUITSTORE

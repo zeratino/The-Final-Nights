@@ -584,17 +584,17 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 
 	if (!SSwhitelists.whitelists_enabled)
-		to_chat(usr, "<span class='warning'>Whitelisting isn't enabled!</span>")
+		to_chat(usr, span_warning("Whitelisting isn't enabled!"))
 		return
 
 	var/whitelistee = input("CKey to whitelist:") as null|text
 	if (whitelistee)
 		whitelistee = ckey(whitelistee)
 		var/list/whitelist_pool = (SSwhitelists.possible_whitelists - SSwhitelists.get_user_whitelists(whitelistee))
-		if (whitelist_pool.len == 0)
-			to_chat(usr, "<span class='warning'>[whitelistee] already has all whitelists!</span>")
+		if (!length(whitelist_pool))
+			to_chat(usr, span_warning("[whitelistee] already has all whitelists!"))
 			return
-		var/whitelist = input("Whitelist to give:") as null|anything in whitelist_pool
+		var/whitelist = input("Whitelist to give:") as null|anything in sortList(whitelist_pool)
 		if (whitelist)
 			var/ticket_link = input("Link to whitelist request ticket:") as null|text
 			if (ticket_link)
@@ -620,7 +620,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		if ((preferences.pref_species.id != "kindred") && (preferences.pref_species.id != "ghoul"))
 			to_chat(usr, "<span class='warning'>Your target is not a vampire or a ghoul.</span>")
 			return
-		var/giving_discipline = input("What Discipline do you want to give [player]?") as null|anything in (subtypesof(/datum/discipline) - preferences.discipline_types)
+		var/giving_discipline = input("What Discipline do you want to give [player]?") as null|anything in (subtypesof(/datum/discipline) - preferences.discipline_types - /datum/discipline/bloodheal)
 		if (giving_discipline)
 			var/giving_discipline_level = input("What rank of this Discipline do you want to give [player]?") as null|anything in list(0, 1, 2, 3, 4, 5)
 			if (!isnull(giving_discipline_level))
@@ -633,8 +633,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 					preferences.discipline_levels += giving_discipline_level
 					preferences.save_character()
 
-					var/datum/discipline/discipline = new giving_discipline
-					discipline.level = giving_discipline_level
+					var/datum/discipline/discipline = new giving_discipline(giving_discipline_level)
 
 					message_admins("[ADMIN_LOOKUPFLW(usr)] gave [ADMIN_LOOKUPFLW(player)] the Discipline [discipline.name] at rank [discipline.level]. Reason: [reason]")
 					log_admin("[key_name(usr)] gave [key_name(player)] the Discipline [discipline.name] at rank [discipline.level]. Reason: [reason]")

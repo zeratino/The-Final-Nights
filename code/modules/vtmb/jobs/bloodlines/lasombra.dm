@@ -1,5 +1,5 @@
 /datum/job/vamp/lasombra
-	title = "Monestary Monk"
+	title = "Old Church Caretaker"
 	faction = "Vampire"
 	total_positions = 5
 	spawn_positions = 5
@@ -29,6 +29,10 @@
 	jobtype = /datum/job/vamp/lasombra
 	l_pocket = /obj/item/vamp/phone
 	id = /obj/item/cockclock
+	backpack_contents = list(
+		/obj/item/passport=1,
+		/obj/item/vamp/creditcard=1,
+	)
 
 /datum/outfit/job/lasombra/pre_equip(mob/living/carbon/human/H)
 	..()

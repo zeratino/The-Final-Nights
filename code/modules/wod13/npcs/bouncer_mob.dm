@@ -89,8 +89,8 @@
 		entry_phrases = social_role.entry_phrases
 		police_block_phrases = social_role.police_block_phrases
 		block_phrases = social_role.block_phrases
-		my_weapon_type = role.bouncer_weapon_type
-		my_backup_weapon_type = role.bouncer_backup_weapon_type
+		my_weapon_type = social_role.bouncer_weapon_type
+		my_backup_weapon_type = social_role.bouncer_backup_weapon_type
 
 /mob/living/carbon/human/npc/bouncer/proc/stat_change_process_is_guarding(datum/source, statchange)
 	if(statchange >= HARD_CRIT)
