@@ -90,7 +90,7 @@
 	check_flags = DISC_CHECK_IMMOBILE | DISC_CHECK_CAPABLE | DISC_CHECK_LYING
 
 	level = 3
-	violates_masquerade = TRUE
+	violates_masquerade = FALSE
 
 	cooldown_length = 8 SECONDS
 
@@ -121,7 +121,7 @@
 	check_flags = DISC_CHECK_IMMOBILE | DISC_CHECK_CAPABLE | DISC_CHECK_LYING
 
 	level = 4
-	violates_masquerade = TRUE
+	violates_masquerade = FALSE
 
 	cooldown_length = 8 SECONDS
 
