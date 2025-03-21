@@ -98,13 +98,13 @@
 	DAMAP.overlays |= AM
 	dat += "<center>[icon2html(getFlatIcon(DAMAP), user)]</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(SU), user)] - Railway Station;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(CH), user)] - Catholic Church;</center><BR>"
+	dat += "<center>[icon2html(getFlatIcon(CH), user)] - Church;</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(GR), user)] - City Graveyard;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(HO), user)] - Hotel \"Cock Roach\";</center><BR>"
+	dat += "<center>[icon2html(getFlatIcon(HO), user)] - Hotel;</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(TO), user)] - Millenium Tower;</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(CL), user)] - Cleaning Services;</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(TH), user)] - National Theatre;</center><BR>"
-	dat += "<center>[icon2html(getFlatIcon(BA), user)] - Bar \"Big Shoe\";</center><BR>"
+	dat += "<center>[icon2html(getFlatIcon(BA), user)] - Bar;</center><BR>"
 	dat += "<center>[icon2html(getFlatIcon(HS), user)] - City Hospital.</center>"
 	user << browse(dat, "window=map;size=400x600;border=1;can_resize=0;can_minimize=0")
 	onclose(user, "map", src)
