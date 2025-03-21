@@ -260,7 +260,7 @@
 	my_contact_is_important = TRUE
 	known_contacts = list("Prince")
 
-/datum/outfit/job/brujah
+/datum/outfit/job/banu
 	name = "Primogen Banu Haqim"
 	jobtype = /datum/job/vamp/primogen_banu
 
