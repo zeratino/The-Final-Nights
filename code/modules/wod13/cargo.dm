@@ -71,7 +71,10 @@
 	name = "Camera Kit"
 	desc = "Contains a single camera and a spare roll of film."
 	cost = 200
-	contains = list(/obj/item/camera, /obj/item/camera_film)
+	contains = list(
+		/obj/item/camera,
+		/obj/item/camera_film,
+	)
 
 /datum/supply_pack/vampire/binoculars
 	name = "Binoculars"
