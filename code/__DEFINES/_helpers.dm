@@ -21,3 +21,4 @@
 // TFN EDIT END
 #define span_danger(str) ("<span class='danger'>" + str + "</span>")
 #define span_alert(str) ("<span class='alert'>" + str + "</span>")
+#define span_hear(str) ("<span class='hear'>" + str + "</span>")
