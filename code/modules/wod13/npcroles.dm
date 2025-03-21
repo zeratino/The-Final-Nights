@@ -97,7 +97,7 @@
 	neutral_phrases = list(
 		"Why you starin' at me like that?",
 		"Another dumbass tryin' to look threatening.",
-		"Halloween's over, what's with the costumes.",
+		"Halloween is over, what's with the costumes?",
 		"Gotta get home soon, family to feed and all that.",
 		"Get lost, loser.",
 		"I think.. I miss my wife.",
