@@ -241,7 +241,7 @@
 	supervisors = " the Traditions and the Laws of Haqim"
 	selection_color = "#4f0404"
 
-	outfit = /datum/outfit/job/banu
+	outfit = /datum/outfit/job/banuprim
 
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
 	minimal_access = list(ACCESS_BAR, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
@@ -260,7 +260,7 @@
 	my_contact_is_important = TRUE
 	known_contacts = list("Prince")
 
-/datum/outfit/job/banu
+/datum/outfit/job/banuprim
 	name = "Primogen Banu Haqim"
 	jobtype = /datum/job/vamp/primogen_banu
 
@@ -287,7 +287,7 @@
 	supervisors = " the Traditions and the Friends of the Night"
 	selection_color = "#4f0404"
 
-	outfit = /datum/outfit/job/lasombra
+	outfit = /datum/outfit/job/lasombraprim
 
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
 	minimal_access = list(ACCESS_BAR, ACCESS_MINERAL_STOREROOM, ACCESS_THEATRE)
@@ -306,7 +306,7 @@
 	my_contact_is_important = TRUE
 	known_contacts = list("Prince")
 
-/datum/outfit/job/lasombra
+/datum/outfit/job/lasombraprim
 	name = "Primogen Lasombra"
 	jobtype = /datum/job/vamp/primogen_lasombra
 
