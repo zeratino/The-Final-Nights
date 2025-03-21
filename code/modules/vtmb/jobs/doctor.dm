@@ -79,7 +79,7 @@
 	bounty_types = CIV_JOB_MED
 
 	v_duty = "Keep Saint John's clinic up and running. Sell blood. Keep your human colleagues ignorant."
-	duty = "Keep Saint John's Hospital up and running, on behalf of your boss. Keep your underlings and colleagues ignorant of the truth, as much as possible. Collect blood by helping mortals at the Clinic."
+	duty = "Keep Saint John's Hospital up and running on behalf of your hospital's eccentric patron who finances it. Keep your underlings and colleagues ignorant of the truth, as much as possible. Collect blood donations from locals for the day shift."
 	experience_addition = 15
 	// allowed_bloodlines = list("Daughters of Cacophony", "Salubri", "Baali", "Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry", "Tzimisce", "Lasombra", "Caitiff", "Kiasyd")
 	known_contacts = list("Primogen Malkavian")
