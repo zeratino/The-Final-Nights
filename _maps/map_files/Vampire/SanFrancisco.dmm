@@ -74692,6 +74692,12 @@
 /obj/effect/decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"wpF" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
+/turf/open/floor/plating/parquetry/old,
+/area/vtm/church/interior/staff)
 "wpJ" = (
 /obj/structure/chair/sofa,
 /obj/effect/decal/graffiti/large,
@@ -75416,6 +75422,12 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"wBU" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen/fourcolor,
+/turf/open/floor/plating/church,
+/area/vtm/church/interior/staff)
 "wBV" = (
 /obj/structure/weightmachine/stacklifter,
 /obj/effect/turf_decal/stripes/white/line{
@@ -80588,6 +80600,8 @@
 	pixel_x = -16
 	},
 /obj/structure/table/wood,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plating/saint,
 /area/vtm/church/interior/staff)
 "ydo" = (
@@ -221919,7 +221933,7 @@ hpl
 dAU
 dAU
 wXl
-vdR
+wpF
 dAU
 lzB
 qZU
@@ -223461,7 +223475,7 @@ qZU
 xgj
 xgj
 wjh
-jQi
+wBU
 jQi
 wjh
 xgj
