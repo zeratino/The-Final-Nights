@@ -11,10 +11,9 @@ SUBSYSTEM_DEF(statpanels)
 
 /datum/controller/subsystem/statpanels/fire(resumed = FALSE)
 	if (!resumed)
-		var/round_time = world.time - SSticker.round_start_time
 		var/list/global_data = list(
 			"Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]",
-			"Round Duration: [DisplayTimeText(round_time)]",
+			"Round Duration: [DisplayTimeText(world.time - SSticker.round_start_time)]",
 			"---",
 			"Canon: [GLOB.canon_event ? "Yes" : "No"]",
 			"Masquerade: [SSmasquerade.get_description()] [SSmasquerade.total_level]/1000",
