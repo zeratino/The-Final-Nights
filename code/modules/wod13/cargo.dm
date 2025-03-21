@@ -118,7 +118,12 @@
 	name = "Medical Supplies"
 	desc = "Contains some first aid supplies."
 	cost = 500
-	contains = list(/obj/item/stack/medical/gauze, /obj/item/stack/medical/bruise_pack, /obj/item/stack/medical/suture, /obj/item/stack/medical/ointment)
+	contains = list(
+		/obj/item/stack/medical/gauze, 
+		/obj/item/stack/medical/bruise_pack, 
+		/obj/item/stack/medical/suture, 
+		/obj/item/stack/medical/ointment,
+	)
 
 /datum/supply_pack/vampire/radiopack
 	name = "Radios"
