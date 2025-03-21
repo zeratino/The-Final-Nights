@@ -373,7 +373,7 @@
 		"Do I really need to answer?",
 		"I'm late.",
 		"Can't speak right now.",
-		"Buy yourself an Iphone or something.",
+		"Buy yourself an iPhone or something.",
 		"Hey.",
 		"Go away."
 	)
