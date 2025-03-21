@@ -101,7 +101,7 @@
 			if(host.clane.is_enlightened)
 				enlight = TRUE
 
-		if(!enlight)
+		if(!host.clane.is_enlightened)
 			switch(host.morality_path.score)
 				if(8 to 10)
 					humanity = "I'm saintly."
