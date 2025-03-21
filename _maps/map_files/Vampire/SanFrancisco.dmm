@@ -18653,6 +18653,7 @@
 "fCr" = (
 /obj/structure/table/wood/fancy/green,
 /obj/item/reagent_containers/glass/rag,
+/obj/item/vtm_artifact/key_of_alamut,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/banu/haven)
 "fCs" = (
