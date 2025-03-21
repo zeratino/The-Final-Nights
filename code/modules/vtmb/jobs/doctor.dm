@@ -24,7 +24,7 @@
 	bounty_types = CIV_JOB_MED
 
 	v_duty = "Help your fellow kindred in all matters medicine related. Sell blood. Keep your human colleagues ignorant. Remember, this is a Malkavian Domain."
-	duty = "Collect blood by helping mortals at the Clinic."
+	duty = "You are on the night shift at the local clinic. Your eccentric bosses seem to be keeping a close eye on your work."
 	experience_addition = 15
 	allowed_bloodlines = list("Daughters of Cacophony", "Salubri", "Baali", "Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry", "Tzimisce", "Lasombra", "Caitiff", "Kiasyd")
 	known_contacts = list("Clinic Director")
