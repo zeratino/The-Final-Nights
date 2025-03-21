@@ -161,7 +161,7 @@
 /turf/open/floor/plating/vampdirt,
 /area/vtm)
 "ada" = (
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "adc" = (
 /obj/effect/decal/bordur{
@@ -931,7 +931,7 @@
 /obj/structure/vampstatue{
 	name = "statue to the Del'Roh"
 	},
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "aoa" = (
 /obj/effect/decal/wallpaper/light,
@@ -998,7 +998,7 @@
 /area/vtm)
 "apb" = (
 /obj/structure/bookcase/random/religion,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "apf" = (
 /obj/effect/decal/trash,
@@ -1303,7 +1303,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "atu" = (
 /turf/open/floor/plating/vampgrass,
@@ -13912,7 +13912,7 @@
 /area/vtm/interior/cog/caern)
 "egZ" = (
 /obj/structure/table,
-/turf/open/floor/wood/cold,
+/turf/closed/wall/vampwall/bar/low,
 /area/vtm/interior/penumbra/enoch)
 "eha" = (
 /obj/structure/chair/wood/wings{
@@ -18339,7 +18339,7 @@
 /area/vtm/supply)
 "fyb" = (
 /obj/effect/decal/litter,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "fyi" = (
 /obj/structure/railing,
@@ -22616,7 +22616,7 @@
 /area/vtm/interior/shop)
 "gKz" = (
 /obj/structure/table/wood/fancy/royalblack,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "gKE" = (
 /obj/structure/bed/dogbed,
@@ -26318,7 +26318,7 @@
 /area/vtm/interior)
 "hSs" = (
 /obj/structure/closet/crate/coffin,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "hSv" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -28919,7 +28919,7 @@
 	name = "Shadowlands Portal";
 	id = Enoch
 	},
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "iHJ" = (
 /obj/structure/curtain,
@@ -41074,7 +41074,7 @@
 "mvk" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/item/flashlight/lantern,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "mvo" = (
 /obj/effect/decal/wallpaper/paper/stripe,
@@ -62485,7 +62485,7 @@
 /obj/item/flashlight/lantern,
 /obj/item/flashlight/lantern,
 /obj/item/flashlight/lantern,
-/turf/open/floor/wood/cold,
+/turf/closed/wall/vampwall/bar/low,
 /area/vtm/interior/penumbra/enoch)
 "sCo" = (
 /obj/effect/decal/litter,
@@ -64771,7 +64771,7 @@
 "tov" = (
 /obj/effect/decal/litter,
 /obj/structure/table,
-/turf/open/floor/wood/cold,
+/turf/closed/wall/vampwall/bar/low,
 /area/vtm/interior/penumbra/enoch)
 "toA" = (
 /obj/structure/bed,
@@ -67233,7 +67233,7 @@
 "ucN" = (
 /obj/structure/table,
 /obj/item/flashlight/lantern,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "uda" = (
 /obj/structure/table/wood,
@@ -69282,7 +69282,7 @@
 /area/vtm/interior/endron_facility/restricted)
 "uII" = (
 /obj/structure/chair,
-/turf/open/floor/wood/cold,
+/turf/open/floor/wood,
 /area/vtm/interior/penumbra/enoch)
 "uIM" = (
 /obj/structure/chair/plastic{
