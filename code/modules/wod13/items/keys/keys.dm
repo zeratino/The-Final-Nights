@@ -15,11 +15,6 @@
 	var/roundstart_fix = FALSE
 
 //===========================VAMPIRE KEYS===========================
-/obj/item/vamp/keys/camarilla
-	name = "Camarilla keys"
-	accesslocks = list("camarilla")
-	color = "#bd3327"
-
 /obj/item/vamp/keys/prince
 	name = "Prince's keys"
 	accesslocks = list(
@@ -122,7 +117,8 @@
 	name = "Dark keys"
 	accesslocks = list(
 		"lasombra",
-		"kyasid"
+		"kyasid",
+		"church"
 	)
 	color = "#290355"
 
@@ -131,7 +127,9 @@
 	accesslocks = list(
 		"lasombra",
 		"kyasid",
+		"church",
 		"primogen",
+		"primLasombra",
 		"milleniumCommon",
 		"camarilla"
 	)
@@ -148,6 +146,7 @@
 	name = "Solitary keys"
 	accesslocks = list(
 		"kiasyd",
+		"church",
 		"lasombra"
 	)
 	color = "#580443"
@@ -227,6 +226,8 @@
 	accesslocks = list(
 		"banuhaqim",
 		"primogen",
+		"primBanu",
+		"police",
 		"milleniumCommon",
 		"camarilla"
 	)
@@ -323,6 +324,13 @@
 		"police"
 	)
 
+/obj/item/vamp/keys/police/federal
+	name = "Federal Agent keys"
+	accesslocks = list(
+		"police",
+		"glowie"
+	)
+
 /obj/item/vamp/keys/dispatch
 	name = "Dispatcher keys"
 	accesslocks = list(
@@ -391,6 +399,12 @@
 	name = "Church keys"
 	accesslocks = list(
 		"church"
+	)
+
+/obj/item/vamp/keys/hunter
+	name = "Creed-Bound keys"
+	accesslocks = list(
+		"hunter"
 	)
 
 /obj/item/vamp/keys/supply

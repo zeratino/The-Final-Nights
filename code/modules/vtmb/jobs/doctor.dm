@@ -23,7 +23,7 @@
 	display_order = JOB_DISPLAY_ORDER_DOCTOR
 	bounty_types = CIV_JOB_MED
 
-	v_duty = "Help your fellow kindred in all matters medicine related. Sell blood. Keep your human colleagues ignorant."
+	v_duty = "Help your fellow kindred in all matters medicine related. Sell blood. Keep your human colleagues ignorant. Remember, this is a Malkavian Domain."
 	duty = "Collect blood by helping mortals at the Clinic."
 	experience_addition = 15
 	allowed_bloodlines = list("Daughters of Cacophony", "Salubri", "Baali", "Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry", "Tzimisce", "Lasombra", "Caitiff", "Kiasyd")
@@ -56,11 +56,11 @@
 
 /datum/job/vamp/vdirector
 	title = "Clinic Director"
-	department_head = list("Seneschal")
+	department_head = list("Primogen Malkavian")
 	faction = "Vampire"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Camarilla or the Anarchs"
+	supervisors = "the Patron of the Hospital (Malkavian Primogen)"
 	selection_color = "#80D0F4"
 	exp_type_department = EXP_TYPE_CLINIC
 
@@ -74,14 +74,15 @@
 
 	liver_traits = list(TRAIT_MEDICAL_METABOLISM)
 
-	allowed_species = list("Vampire", "Ghoul", "Human", "Werewolf", "Kuei-Jin")
+	allowed_species = list("Ghoul", "Human", "Kuei-Jin")
 	display_order = JOB_DISPLAY_ORDER_CLINICS_DIRECTOR
 	bounty_types = CIV_JOB_MED
 
 	v_duty = "Keep Saint John's clinic up and running. Sell blood. Keep your human colleagues ignorant."
-	duty = "Keep Saint John's clinic up and running. Collect blood by helping mortals at the Clinic."
+	duty = "Keep Saint John's Hospital up and running, on behalf of your boss. Keep your underlings and colleagues ignorant of the truth, as much as possible. Collect blood by helping mortals at the Clinic."
 	experience_addition = 15
-	allowed_bloodlines = list("Daughters of Cacophony", "Salubri", "Baali", "Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry", "Tzimisce", "Lasombra", "Caitiff", "Kiasyd")
+	// allowed_bloodlines = list("Daughters of Cacophony", "Salubri", "Baali", "Brujah", "Tremere", "Ventrue", "Nosferatu", "Gangrel", "Toreador", "Malkavian", "Banu Haqim", "Giovanni", "Ministry", "Tzimisce", "Lasombra", "Caitiff", "Kiasyd")
+	known_contacts = list("Primogen Malkavian")
 
 /datum/outfit/job/vdirector
 	name = "Clinic Director"
