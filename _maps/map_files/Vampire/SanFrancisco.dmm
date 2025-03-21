@@ -3867,8 +3867,8 @@
 /obj/structure/table/wood,
 /obj/item/melee/vampirearms/sabre{
 	color = "#00A36C";
-	name = "The Law of Judgement";
-	desc = "A curved sword seemingly stuck with a permanent green tint to its steel, it is a weapon that has been passed down within the clan for decades, and now, yours to wield in enforcing its namesake."
+	name = "Dai Lo's Dao";
+	desc = "A curved sword covered in a intricately etched pattern."
 	},
 /turf/open/floor/carpet/lone,
 /area/vtm/interior)
