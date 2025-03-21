@@ -129,7 +129,7 @@
 	name = "Radios"
 	desc = "Contains a pack of five handheld two way radios."
 	cost = 1000
-	contains = list(/obj/item/radio, /obj/item/radio, /obj/item/radio, /obj/item/radio, /obj/item/radio, )
+	contains = list(/obj/item/radio = 5)
 
 /datum/supply_pack/vampire/weaponfireaxe
 	name = "Weapon (fire axe)"
