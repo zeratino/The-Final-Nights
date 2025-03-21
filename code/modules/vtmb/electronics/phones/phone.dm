@@ -864,6 +864,8 @@
 	..()
 	GLOB.sheriffnumber = number
 	GLOB.sheriffname = owner
+	var/datum/phonecontact/prince/PRINCE = new()
+	contacts += PRINCE
 	var/datum/phonecontact/clerk/CLERK = new()
 	contacts += CLERK
 	var/datum/phonecontact/barkeeper/BARKEEPER = new()
