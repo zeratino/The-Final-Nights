@@ -60,6 +60,7 @@
 		"clerk",
 		"camarilla"
 	)
+	color = "#bd3327"
 
 /obj/item/vamp/keys/archive
 	name = "Archive keys"
