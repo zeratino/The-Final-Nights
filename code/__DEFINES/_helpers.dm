@@ -23,5 +23,3 @@
 #define span_danger(str) ("<span class='danger'>" + str + "</span>")
 #define span_alert(str) ("<span class='alert'>" + str + "</span>")
 #define span_hear(str) ("<span class='hear'>" + str + "</span>")
-#define span_redtext(str) ("<font color='redtext'>" + str + "</font>")
-#define span_greentext(str) ("<font color='greentext'>" + str + "</font>")
