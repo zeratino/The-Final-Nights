@@ -4,7 +4,16 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	var/quieted = FALSE
+	var/owner = null
 	cost = 25
+
+/obj/item/melee/vampirearms/pickup(mob/living/user)
+	. = ..()
+	if(quieted && user != src.owner)
+		to_chat(user, "<span class='userdanger'>The acidic ichor sears your hand!</span>")
+		user.apply_damage(20, BURN)
+		user.Paralyze(1)
+
 
 /obj/item
 	var/masquerade_violating = FALSE
