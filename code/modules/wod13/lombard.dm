@@ -37,11 +37,11 @@
 	illegal = TRUE
 
 /obj/lombard/blackmarket/attackby(obj/item/W, mob/living/user, params)
+	var/mob/living/carbon/human/H = user
+
 	if(!ishuman(user))
 		to_chat(H, span_notice("The black market is only for humans. Begone, creature!"))
 		return
-	var/mob/living/carbon/human/H = user
-
 	if(W.cost <= 0)
 		to_chat(H, span_notice("[W] isn't worth anything!"))
 		return
@@ -66,8 +66,9 @@
 	else if(illegal)
 		SEND_SIGNAL(H, COMSIG_PATH_HIT, PATH_SCORE_DOWN, 7)
 
-	for(var/i in 1 to (W.cost / 5) * (user.social + (user.additional_social * 0.1)))
-		new /obj/item/stack/dollar(get_turf(src))
+	var/amount = round(W.cost / 5 * (user.social + (user.additional_social * 0.1)))
+	if(amount > 0)
+		new /obj/item/stack/dollar(get_turf(src), amount)
 
 	playsound(get_turf(src), 'code/modules/wod13/sounds/sell.ogg', 50, TRUE)
 	qdel(W)
