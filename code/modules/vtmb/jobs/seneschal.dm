@@ -130,7 +130,7 @@
 	jobtype = /datum/job/vamp/harpy
 
 	ears = /obj/item/p25radio
-	id = /obj/item/card/id/clerk
+	id = /obj/item/card/id/clerk/harpy
 	uniform = /obj/item/clothing/under/vampire/clerk
 	shoes = /obj/item/clothing/shoes/vampire/brown
 	l_pocket = /obj/item/vamp/phone/harpy
@@ -191,7 +191,7 @@
 	gloves = /obj/item/clothing/gloves/vampire/work
 	suit = /obj/item/clothing/suit/vampire/trench
 	shoes = /obj/item/clothing/shoes/vampire
-	r_pocket = /obj/item/vamp/keys/camarilla
+	r_pocket = /obj/item/vamp/keys/camarilla/ghoul
 	l_pocket = /obj/item/vamp/phone/camarilla
 	backpack_contents = list(/obj/item/passport=1, /obj/item/cockclock=1, /obj/item/flashlight=1, /obj/item/vamp/creditcard=1)
 

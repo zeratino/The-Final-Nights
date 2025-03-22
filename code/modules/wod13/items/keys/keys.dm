@@ -54,7 +54,16 @@
 	color = "#bd3327"
 
 /obj/item/vamp/keys/camarilla
-	name = "Millenium Tower keys"
+	name = "Millenium Tower Security keys"
+	accesslocks = list(
+		"milleniumCommon",
+		"clerk",
+		"camarilla"
+	)
+	color = "#bd3327"
+
+/obj/item/vamp/keys/camarilla/ghoul
+	name = "Millenium Tower Employee keys"
 	accesslocks = list(
 		"milleniumCommon",
 		"clerk",
@@ -315,7 +324,8 @@
 	name = "Clinic director keys"
 	accesslocks = list(
 		"clinic",
-		"director"
+		"director",
+		"malkav"
 	)
 
 //===========================POLICE KEYS===========================

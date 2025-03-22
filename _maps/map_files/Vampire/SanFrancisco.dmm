@@ -621,6 +621,18 @@
 	},
 /turf/open/floor/plasteel/stairs/left,
 /area/vtm/interior/strip)
+"ajV" = (
+/obj/structure/vampdoor/wood/old{
+	desc = "It give you a mad vibes... Be careful!";
+	dir = 1;
+	lock_id = "malkav";
+	locked = 1;
+	lockpick_difficulty = 12;
+	name = "strange door"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating/bacotell,
+/area/vtm/clinic/haven)
 "ajX" = (
 /obj/structure/railing{
 	dir = 8
@@ -8406,6 +8418,17 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/graveyard/interior)
+"cwn" = (
+/obj/structure/vampdoor/wood/old{
+	desc = "It give you a mad vibes... Be careful!";
+	dir = 1;
+	lock_id = "malkav";
+	locked = 1;
+	lockpick_difficulty = 12;
+	name = "strange door"
+	},
+/turf/open/floor/plating/vampplating/mono,
+/area/vtm/clinic/haven)
 "cwp" = (
 /obj/structure/vampipe{
 	icon_state = "piping35"
@@ -32106,7 +32129,7 @@
 	dir = 1;
 	lock_id = "malkav";
 	locked = 1;
-	lockpick_difficulty = 4
+	lockpick_difficulty = 12
 	},
 /turf/open/floor/plating/vampplating,
 /area/vtm/clinic/haven)
@@ -37054,6 +37077,12 @@
 /obj/item/clothing/head/vampire/eod,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
+"lgB" = (
+/obj/machinery/light{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/vampplating,
+/area/vtm/clinic/haven)
 "lgD" = (
 /obj/structure/lamppost/one{
 	dir = 4
@@ -107174,7 +107203,7 @@ bqp
 hjB
 hjB
 eDf
-tlG
+lgB
 tlG
 eDf
 wRc
@@ -110782,7 +110811,7 @@ bTU
 bTU
 bTU
 bTU
-bTU
+cwn
 bTU
 bTU
 bTU
@@ -111039,7 +111068,7 @@ uCb
 cFz
 bTU
 bTU
-bTU
+cwn
 bTU
 bTU
 bTU
@@ -111806,7 +111835,7 @@ pQI
 wGN
 wGN
 kFO
-pDY
+ajV
 pQI
 pQI
 dnC
@@ -112064,7 +112093,7 @@ wGN
 jjK
 dCV
 uCb
-pQI
+goy
 pQI
 rhB
 dXa
