@@ -39,9 +39,6 @@
 /obj/lombard/blackmarket/attackby(obj/item/W, mob/living/user, params)
 	var/mob/living/carbon/human/H = user
 
-	if(!ishuman(user))
-		to_chat(H, span_notice("The black market is only for humans. Begone, creature!"))
-		return
 	if(W.cost <= 0)
 		to_chat(H, span_notice("[W] isn't worth anything!"))
 		return
