@@ -96,10 +96,6 @@
 				masquerade_level = "'m danger to the Masquerade and my own kind."
 		dat += "Camarilla thinks I[masquerade_level]<BR>"
 		var/humanity = "I'm out of my mind."
-		var/enlight = FALSE
-		if(host.clane)
-			if(host.clane.is_enlightened)
-				enlight = TRUE
 
 		if(!host.clane.is_enlightened)
 			switch(host.morality_path.score)
