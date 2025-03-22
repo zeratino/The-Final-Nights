@@ -26926,7 +26926,9 @@
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
 "hTd" = (
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8;
 	pixel_y = 18;
@@ -42731,7 +42733,9 @@
 /turf/open/floor/plating/vampgrass,
 /area/vtm/interior/chantry)
 "mGw" = (
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/white{
 	pixel_y = -4
 	},
@@ -50168,7 +50172,9 @@
 /turf/open/floor/carpet/green,
 /area/vtm/interior/wyrm_corrupted)
 "oNb" = (
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/white{
 	dir = 1;
 	pixel_y = 4
@@ -56720,7 +56726,9 @@
 /turf/closed/wall/vampwall/rich,
 /area/vtm/interior/giovanni)
 "qFQ" = (
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8;
 	pixel_y = 4;
@@ -71667,7 +71675,9 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
 "uWO" = (
-/obj/structure/bodycontainer/morgue,
+/obj/structure/bodycontainer/morgue{
+	dir = 8
+	},
 /obj/effect/turf_decal/siding/white{
 	dir = 8;
 	pixel_y = -4;
