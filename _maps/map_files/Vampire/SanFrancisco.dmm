@@ -8921,7 +8921,6 @@
 	name = "armored leather jacket"
 	},
 /obj/item/ammo_box/vampire/c9mm/silver,
-/obj/item/ammo_box/vampire/c556/silver,
 /obj/item/ammo_box/vampire/c44/silver,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
@@ -22571,9 +22570,7 @@
 "gIN" = (
 /obj/structure/table,
 /obj/item/ammo_box/vampire/c556/silver,
-/obj/item/ammo_box/vampire/c556/silver,
 /obj/item/ammo_box/vampire/c45acp/silver,
-/obj/item/ammo_box/vampire/c9mm/silver,
 /obj/item/ammo_box/vampire/c44/silver,
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower/f4)
@@ -33686,7 +33683,8 @@
 	dir = 1
 	},
 /obj/structure/vampdoor/glass/primogen_toreador{
-	lockpick_difficulty = 16
+	lockpick_difficulty = 16;
+	locked = 1
 	},
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plating/parquetry/old,
@@ -95008,7 +95006,7 @@ snI
 snI
 sLN
 sLN
-sLN
+snI
 snI
 jFF
 mQt
@@ -95266,7 +95264,7 @@ snI
 sLN
 sLN
 snI
-snI
+jFF
 jFF
 mQt
 hQR
