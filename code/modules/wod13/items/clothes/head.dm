@@ -289,3 +289,8 @@
 	desc = "A black beret with a mysterious golden insigna bearing a spiral."
 	icon_state = "pentex_beret"
 	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/vampire/chauffeur
+	name = "chauffeur hat"
+	desc = "A fine hat like that is well-earned by opening car doors for rich people and driving them around the city."
+	icon_state = "chauffeur"
