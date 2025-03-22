@@ -99,17 +99,10 @@
 	new /obj/effect/temp_visual/dir_setting/fall_effect(get_turf(src))
 	for(var/mob/living/carbon/C in range(3, src))
 		if(apply_stun_others)
-<<<<<<< Updated upstream
-			C.Stun(30)
-		shake_camera(C, (6-get_dist(C, src))+1, (6-get_dist(C, src)))
-	if(apply_stun_self)
-		Stun(20)
-=======
 			C.Knockdown(20)
 		shake_camera(C, (6-get_dist(C, src))+1, (6-get_dist(C, src)))
 	if(apply_stun_self)
 		Immobilize(20)
->>>>>>> Stashed changes
 	shake_camera(src, 5, 4)
 
 /mob/living/carbon/werewolf/Initialize()
