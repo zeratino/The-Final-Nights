@@ -19,8 +19,9 @@
 	if(istype(W, /obj/item/stack))
 		return
 
-	for(var/i in 1 to (W.cost / 5) * (user.social + (user.additional_social * 0.1)))
-		new /obj/item/stack/dollar(get_turf(src))
+	var/amount = round(W.cost / 5 * (user.social + (user.additional_social * 0.1)))
+	if(amount > 0)
+		new /obj/item/stack/dollar(get_turf(src), amount)
 
 	playsound(get_turf(src), 'code/modules/wod13/sounds/sell.ogg', 50, TRUE)
 	qdel(W)
