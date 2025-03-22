@@ -46622,8 +46622,8 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/church)
 "ozy" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/vampdoor/wood/theatre{
+	pixel_y = -9
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/theatre)
@@ -50297,18 +50297,6 @@
 /obj/effect/decal/graffiti/large,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/gnawer)
-"pFO" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 4
-	},
-/obj/structure/vampdoor/wood/theatre{
-	dir = 4
-	},
-/obj/effect/vip_barrier/elysium/theatre_backdoor{
-	dir = 8
-	},
-/turf/open/floor/plating/vampwood,
-/area/vtm/interior/theatre)
 "pFU" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -59262,13 +59250,11 @@
 /turf/closed/wall/vampwall/brick/low,
 /area/vtm/supply)
 "slo" = (
-/obj/structure/showcase/machinery/tv{
-	pixel_y = 13
+/obj/structure/chair/plastic{
+	dir = 1;
+	name = "Seat of Shame"
 	},
-/obj/structure/table/wood{
-	density = 0
-	},
-/turf/open/floor/plating/vampwood,
+/turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/theatre)
 "slu" = (
 /obj/effect/landmark/npcability,
@@ -177466,8 +177452,8 @@ aCS
 xFH
 ppW
 cLl
-bFO
-pFO
+grt
+grt
 cLl
 slo
 cLl
@@ -177726,7 +177712,7 @@ aLG
 grt
 grt
 cLl
-cLl
+ozy
 cLl
 cLl
 oxf
@@ -177982,7 +177968,7 @@ lHr
 bFO
 grt
 grt
-ozy
+grt
 grt
 grt
 grt
