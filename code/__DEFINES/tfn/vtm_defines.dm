@@ -62,10 +62,19 @@
 #define AURA_TRUE_FAITH "#ffe12f"
 
 /**
+ * Conditional defines
+ */
+
+#define isMasqueradeEnforced(A) (isarea(A) && A.zone_type == "masquerade")
+
+/**
  * Whitelist defines
  */
 
 #define TRUSTED_PLAYER "trusted_player"
+
+
+
 
 /**
  * Cooldown defines
@@ -73,3 +82,4 @@
 
 // Rituals
 #define COOLDOWN_RITUAL_INVOKE "ritual_invoke"
+
