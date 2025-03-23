@@ -168,8 +168,8 @@
 	name = "Comforting Darkness"
 	desc = "Use the power of the abyss to mend the wounds of yourself and others."
 	icon_state = "rune8"
-	word = "KEYUR AGA"
-	mystlevel = 2
+	word = "KEYUR'AGA"
+	mystlevel = 3
 
 /obj/abyssrune/comforting_darkness/complete()
 	var/list/heal_targets = list()
@@ -188,10 +188,8 @@
 	heal_targets |= invoker
 
 	for(var/mob/living/carbon/human/target in heal_targets)
-		target.adjustBruteLoss(-30)
-		target.adjustFireLoss(-10)
-		target.adjustToxLoss(-20)
-		target.adjustCloneLoss(-5)
+		target.heal_ordered_damage(90, list(BRUTE, TOX, OXY, STAMINA))
+		owner.heal_ordered_damage(20, list(BURN, CLONE))
 
 	TIMER_COOLDOWN_START(invoker, COOLDOWN_RITUAL_INVOKE, 30 SECONDS)
 	playsound(rune_location, 'sound/magic/voidblink.ogg', 50, FALSE)
