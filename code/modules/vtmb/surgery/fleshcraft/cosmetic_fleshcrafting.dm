@@ -17,14 +17,14 @@
 	time = 64
 
 /datum/surgery_step/add_flesh/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
-	display_results(user, target, "<span class='notice'>You begin to reshape [target]...</span>",
-		"<span class='notice'>[user] begins to manipulate [target]'s flesh in truly horrific ways!</span>",
-		"<span class='notice'>[user] begins to manipulate [target]'s flesh in truly horrific ways!</span>")
+	display_results(user, target, span_notice("You begin to reshape [target]..."),
+		span_notice("[user] begins to manipulate [target]'s flesh in truly horrific ways!</span>"),
+		span_notice("[user] begins to manipulate [target]'s flesh in truly horrific ways!</span>"))
 
 /datum/surgery_step/add_flesh/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, default_display_results = FALSE)
-	display_results(user, target, "<span class='notice'>You finish reshaping [target]!</span>",
-		"<span class='notice'>[user] changes [target] into something... new.</span>",
-		"<span class='notice'>[user] finishes.</span>")
+	display_results(user, target, span_notice("You finish reshaping [target]!"),
+		span_notice("[user] changes [target] into something... new."),
+		span_notice("[user] finishes."))
 	var/mob/living/carbon/human/victim = target
 	var/list/changes = list("spines", "spines_slim", "animal_skull", "nothing")
 	var/chosen = tgui_input_list(user, "How shall we change them?", "Cosmetics selection", changes)
