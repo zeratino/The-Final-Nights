@@ -97,7 +97,14 @@
 #define COOLDOWN_PATH_HIT "path_hit_cooldown"
 
 /**
+ * Area defines
+ */
+
+#define isMasqueradeEnforced(A) (isarea(A) && A.zone_type == "masquerade")
+
+/**
  * Whitelist defines
  */
 
 #define TRUSTED_PLAYER "trusted_player"
+
