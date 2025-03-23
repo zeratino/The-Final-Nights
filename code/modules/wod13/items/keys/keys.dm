@@ -186,6 +186,13 @@
 		"tzimisce"
 	)
 
+/obj/item/vamp/keys/tzimisce/manor
+	name = "Manor keys"
+	accesslocks = list(
+		"tzimisce",
+		"tzimiscemanor"
+	)
+
 /obj/item/vamp/keys/setite
 	name = "Serpentine keys"
 	accesslocks = list(

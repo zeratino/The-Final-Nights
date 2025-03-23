@@ -2145,6 +2145,10 @@
 /obj/manholeup,
 /turf/open/floor/plating/rough,
 /area/vtm/interior)
+"aEU" = (
+/obj/effect/landmark/npcwall,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/church)
 "aEX" = (
 /obj/structure/vampdoor/old{
 	dir = 8
@@ -2819,6 +2823,9 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/unionsquare)
+"aOK" = (
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "aON" = (
 /obj/structure/railing{
 	dir = 1;
@@ -4724,7 +4731,7 @@
 "bqu" = (
 /obj/structure/vampdoor/reinf{
 	dir = 8;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 12
 	},
@@ -4761,7 +4768,7 @@
 /area/vtm/interior/bianchiBank)
 "brp" = (
 /obj/structure/vampdoor/prison{
-	lock_id = "tzimisce"
+	lock_id = "tzimiscemanor"
 	},
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/tzimisce_sanctum)
@@ -6121,7 +6128,7 @@
 	},
 /obj/structure/vampdoor/wood{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 23
 	},
@@ -9721,6 +9728,10 @@
 /obj/item/newspaper,
 /turf/open/floor/carpet,
 /area/vtm/interior)
+"cMJ" = (
+/obj/effect/landmark/npcwall,
+/turf/open/floor/plating/vampdirt,
+/area/vtm/pacificheights/community)
 "cMT" = (
 /obj/structure/vampfence/rich{
 	pixel_y = 9
@@ -9837,6 +9848,13 @@
 	},
 /turf/open/floor/plating/bacotell,
 /area/vtm/interior/cog/pantry)
+"cOj" = (
+/obj/structure/curtain/bounty,
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/turf/open/floor/plating/vampwood,
+/area/vtm/interior/police/fed)
 "cOq" = (
 /obj/structure/table,
 /turf/open/floor/plating/granite/black,
@@ -11321,7 +11339,9 @@
 /obj/item/clothing/mask/vampire/balaclava,
 /obj/item/ammo_box/vampire/c45acp,
 /obj/item/ammo_box/vampire/c9mm/plus,
-/turf/open/floor/plating/vampcanalplating,
+/obj/item/storage/box/evidence,
+/obj/item/storage/box/evidence,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "dkL" = (
 /obj/structure/fluff/hedge{
@@ -12798,7 +12818,6 @@
 /obj/item/clothing/head/nun_hood,
 /obj/item/clothing/head/vampire/taqiyah,
 /obj/item/clothing/suit/chaplainsuit/nun,
-/obj/item/clothing/under/rank/civilian/chaplain,
 /obj/item/clothing/head/vampire/noddist_mask,
 /obj/item/clothing/head/vampire/hijab,
 /obj/item/clothing/head/vampire/prayer_veil,
@@ -12808,6 +12827,7 @@
 /obj/item/clothing/head/vampire/kalimavkion,
 /obj/item/clothing/under/vampire/suit,
 /obj/item/clothing/under/vampire/suit/female,
+/obj/item/clothing/under/vampire/graveyard,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
 "dIM" = (
@@ -13126,7 +13146,7 @@
 /obj/effect/landmark/start{
 	name = "Federal Investigator"
 	},
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/rough,
 /area/vtm/interior/police/fed)
 "dPo" = (
 /obj/structure/chair/sofa/corp/corner{
@@ -13347,6 +13367,11 @@
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/banu/haven)
+"dTq" = (
+/obj/effect/turf_decal/siding/white,
+/obj/structure/bed/roller,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "dTr" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -16211,6 +16236,7 @@
 /obj/item/clothing/suit/hooded/robes/black,
 /obj/item/clothing/suit/hooded/robes/black,
 /obj/item/clothing/head/vampire/kalimavkion,
+/obj/item/clothing/under/vampire/graveyard,
 /turf/open/floor/plating/saint,
 /area/vtm/church/interior/staff)
 "ePv" = (
@@ -16650,6 +16676,7 @@
 	pixel_x = 16
 	},
 /obj/item/clothing/head/vampire/kalimavkion,
+/obj/item/clothing/under/vampire/graveyard,
 /turf/open/floor/plating/saint,
 /area/vtm/church/interior/staff)
 "eUZ" = (
@@ -18771,7 +18798,7 @@
 /obj/effect/turf_decal/siding/wideplating/dark,
 /obj/structure/vampdoor/wood{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 17
 	},
@@ -20382,7 +20409,7 @@
 	},
 /obj/vampire_computer,
 /obj/fusebox,
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "fVz" = (
 /obj/structure/table/wood,
@@ -21279,6 +21306,9 @@
 	},
 /turf/open/floor/carpet,
 /area/vtm/anarch)
+"gjd" = (
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm)
 "gje" = (
 /obj/structure/chair/wood{
 	dir = 1
@@ -21406,6 +21436,7 @@
 /obj/item/food/strawberryicecreamsandwich,
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola/blue,
 /obj/item/reagent_containers/food/drinks/soda_cans/vampirecola/blue,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/plating/parquetry,
 /area/vtm/interior/millennium_tower)
 "gkU" = (
@@ -25566,7 +25597,7 @@
 /obj/effect/landmark/start{
 	name = "Federal Investigator"
 	},
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "hyK" = (
 /obj/structure/closet/crate/coffin,
@@ -26052,7 +26083,7 @@
 	dir = 8;
 	pixel_x = 16
 	},
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "hFL" = (
 /obj/structure/table/wood,
@@ -26173,10 +26204,14 @@
 /turf/open/floor/plating/saint,
 /area/vtm/interior/oldchurch)
 "hHn" = (
-/obj/effect/decal/wallpaper/paper/rich,
-/obj/effect/decal/wallpaper/gold,
-/turf/closed/wall/vampwall/rich,
-/area/vtm/interior/millennium_tower/ventrue)
+/obj/structure/table,
+/obj/item/storage/box/bodybags,
+/obj/item/hemostat,
+/obj/item/cautery,
+/obj/item/scalpel,
+/obj/item/surgical_drapes,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "hHr" = (
 /obj/structure/rack/tacobell/horizontal,
 /turf/open/floor/plating/bacotell,
@@ -28273,6 +28308,10 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"imN" = (
+/obj/machinery/washing_machine,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "ind" = (
 /obj/structure/barrels{
 	icon_state = "barrel5"
@@ -35081,10 +35120,16 @@
 /area/vtm)
 "kpP" = (
 /obj/structure/table/wood,
-/obj/item/bodybag,
-/obj/item/bodybag,
 /obj/item/lighter,
-/turf/open/floor/plating/vampcanalplating,
+/obj/item/storage/secure/briefcase{
+	pixel_x = 2;
+	pixel_y = -2
+	},
+/obj/item/storage/briefcase{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "kpT" = (
 /obj/structure/table/wood,
@@ -37664,6 +37709,8 @@
 /obj/machinery/light/prince{
 	pixel_y = 32
 	},
+/obj/item/clothing/under/vampire/suit/female,
+/obj/item/clothing/under/vampire/suit,
 /turf/open/floor/carpet/royalblue,
 /area/vtm/interior/millennium_tower/ventrue)
 "lcZ" = (
@@ -38497,7 +38544,7 @@
 "lqC" = (
 /obj/structure/vampdoor/wood{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 18
 	},
@@ -38946,7 +38993,7 @@
 "lyz" = (
 /obj/structure/vampdoor/reinf{
 	dir = 8;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 12
 	},
@@ -40506,6 +40553,15 @@
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights/community)
+"lWx" = (
+/obj/structure/table/wood,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/item/clothing/suit/apron/surgical,
+/obj/item/clothing/mask/surgical,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/syringes/variety,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "lWA" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -44431,7 +44487,9 @@
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/park)
 "ncJ" = (
-/obj/vampire_car/track/volkswagen,
+/obj/vampire_car/track/volkswagen{
+	access = "church"
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/church)
 "ncN" = (
@@ -49890,7 +49948,7 @@
 "oHE" = (
 /obj/structure/vampdoor/wood{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 10
 	},
@@ -50085,6 +50143,11 @@
 /obj/item/food/donut/jelly/choco,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/millennium_tower)
+"oKF" = (
+/obj/structure/table/wood,
+/obj/structure/microscope,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "oKK" = (
 /obj/structure/table,
 /turf/open/floor/plating/vampplating/mono,
@@ -50739,12 +50802,12 @@
 /turf/closed/wall/vampwall/bar,
 /area/vtm/interior/techshop)
 "oTm" = (
-/obj/effect/decal/wallpaper/paper/rich/low,
 /obj/structure/curtain/bounty,
 /obj/structure/window/reinforced/tinted{
 	dir = 1;
 	max_integrity = 1000000
 	},
+/obj/effect/decal/wallpaper/gold/low,
 /turf/closed/wall/vampwall/rich/low/window/reinforced,
 /area/vtm/interior/millennium_tower/ventrue)
 "oTt" = (
@@ -52534,7 +52597,7 @@
 /area/vtm/interior/millennium_tower/f2)
 "pvz" = (
 /obj/structure/filingcabinet/filingcabinet,
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "pvN" = (
 /obj/structure/table/wood/fancy/red,
@@ -53120,6 +53183,9 @@
 /obj/structure/flora/ausbushes,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/forest)
+"pDp" = (
+/turf/open/floor/plating/rough,
+/area/vtm/interior/police/fed)
 "pDs" = (
 /obj/structure/table/wood,
 /obj/item/newspaper,
@@ -55209,6 +55275,16 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/millennium_tower/f4)
+"qip" = (
+/obj/structure/vampdoor/simple{
+	lockpick_difficulty = 18;
+	locked = 1;
+	lock_id = "glowie";
+	name = "Sewer Access";
+	dir = 8
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/interior/police/fed)
 "qiq" = (
 /obj/effect/decal/bordur,
 /obj/effect/decal/litter,
@@ -56033,7 +56109,9 @@
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/trujah)
 "qvq" = (
-/obj/vampire_car/track/volkswagen,
+/obj/vampire_car/track/volkswagen{
+	access = "tzimisce"
+	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/old)
 "qvu" = (
@@ -57374,7 +57452,7 @@
 "qOh" = (
 /obj/structure/vampdoor/reinf{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 12
 	},
@@ -58780,7 +58858,7 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/police)
 "rhY" = (
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "rih" = (
 /obj/structure/sink{
@@ -60035,6 +60113,12 @@
 /obj/item/vamp/keys/hack,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/endron_facility/restricted)
+"rxS" = (
+/obj/structure/chair/wood{
+	dir = 1
+	},
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "rxW" = (
 /obj/structure/vampdoor/simple{
 	dir = 8
@@ -60049,7 +60133,9 @@
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
 "ryE" = (
-/obj/vampire_car/retro/rand,
+/obj/vampire_car/retro/rand{
+	access = "church"
+	},
 /turf/open/floor/plating/asphalt,
 /area/vtm/church)
 "ryF" = (
@@ -60112,7 +60198,7 @@
 "rzV" = (
 /obj/structure/vampdoor/wood{
 	dir = 4;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	lockpick_difficulty = 8
 	},
 /obj/effect/turf_decal/siding/wideplating/dark{
@@ -60804,6 +60890,10 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/anarch/basement)
+"rKp" = (
+/obj/structure/table/optable/optable2,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "rKr" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
@@ -60936,7 +61026,7 @@
 /area/vtm/fishermanswharf)
 "rLV" = (
 /obj/structure/filingcabinet/security,
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "rLY" = (
 /obj/structure/vamptree,
@@ -62977,6 +63067,10 @@
 /obj/item/vamp/keys/tzimisce,
 /obj/item/vamp/keys/tzimisce,
 /obj/item/vamp/keys/tzimisce,
+/obj/item/vamp/keys/tzimisce/manor,
+/obj/item/vamp/keys/tzimisce/manor,
+/obj/item/vamp/keys/tzimisce/manor,
+/obj/item/vamp/keys/tzimisce/manor,
 /turf/open/indestructible/necropolis/air,
 /area/vtm/sewer/tzimisce_sanctum)
 "spc" = (
@@ -63355,7 +63449,7 @@
 /obj/machinery/light/small/red{
 	pixel_y = 24
 	},
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "sto" = (
 /obj/structure/railing{
@@ -64356,7 +64450,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "sJH" = (
 /obj/structure/reagent_dispensers/cleaningfluid,
@@ -67398,6 +67492,7 @@
 /obj/item/flashlight,
 /obj/structure/coclock,
 /obj/item/storage/fancy/donut_box,
+/obj/item/storage/box/donkpockets,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/police/fed)
 "tGL" = (
@@ -69060,6 +69155,14 @@
 /obj/effect/decal/wallpaper/blue,
 /turf/closed/wall/vampwall/painted,
 /area/vtm/interior/police/upstairs)
+"uhU" = (
+/obj/structure/table/wood,
+/obj/item/clothing/gloves/vampire/latex,
+/obj/item/clothing/suit/apron/surgical,
+/obj/item/clothing/mask/surgical,
+/obj/item/storage/box/swab,
+/turf/open/floor/plating/toilet,
+/area/vtm/interior/police/fed)
 "uib" = (
 /obj/structure/trashbag,
 /obj/effect/decal/litter,
@@ -72708,7 +72811,7 @@
 /area/vtm/fishermanswharf/lower)
 "vlR" = (
 /obj/structure/filingcabinet/medical,
-/turf/open/floor/plating/vampcanalplating,
+/turf/open/floor/plating/vampwood,
 /area/vtm/interior/police/fed)
 "vmh" = (
 /obj/effect/decal/bordur/corner,
@@ -72800,7 +72903,9 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/sewer/nosferatu_town)
 "vnX" = (
-/obj/vampire_car/track,
+/obj/vampire_car/track{
+	access = "tzimisce"
+	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/pacificheights/old)
 "vol" = (
@@ -73014,7 +73119,7 @@
 	},
 /obj/structure/vampdoor/wood{
 	dir = 1;
-	lock_id = "tzimisce";
+	lock_id = "tzimiscemanor";
 	locked = 1;
 	lockpick_difficulty = 15;
 	name = "Basement Door"
@@ -82315,6 +82420,11 @@
 /obj/vampire_computer/prince,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/millennium_tower/f4)
+"ybX" = (
+/turf/closed/wall/vampwall{
+	density = 0
+	},
+/area/vtm/sewer)
 "ybY" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -133207,7 +133317,7 @@ wTq
 wTq
 wTq
 wTq
-wTq
+ybX
 wTq
 wTq
 wTq
@@ -133460,14 +133570,14 @@ qHD
 qHD
 qHD
 qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
+tND
+tND
+tND
+qGw
+gjd
+qGw
+tND
+tND
 qHD
 qHD
 qHD
@@ -133717,14 +133827,14 @@ qHD
 qHD
 qHD
 qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
+tND
+qoU
+qoU
+qoU
+qip
+qoU
+qoU
+tND
 qHD
 qHD
 qHD
@@ -133974,14 +134084,14 @@ qHD
 qHD
 qHD
 qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
+tND
+qoU
+oKF
+rxS
+aOK
+imN
+qoU
+tND
 qHD
 qHD
 qHD
@@ -134231,14 +134341,14 @@ qHD
 qHD
 qHD
 qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
+tND
+qoU
+uhU
+aOK
+aOK
+aOK
+qoU
+tND
 qHD
 qHD
 qHD
@@ -134488,14 +134598,14 @@ qHD
 qHD
 qHD
 qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
-qHD
+tND
+qoU
+lWx
+aOK
+aOK
+rKp
+qoU
+tND
 qHD
 qHD
 qHD
@@ -134746,12 +134856,12 @@ qHD
 qHD
 qHD
 tND
-tND
-tND
-tND
-tND
-tND
-tND
+qoU
+oKF
+rxS
+aOK
+hHn
+qoU
 tND
 qHD
 qHD
@@ -135006,7 +135116,7 @@ tND
 qoU
 qoU
 qoU
-qoU
+cOj
 qoU
 qoU
 tND
@@ -135774,7 +135884,7 @@ qHD
 qHD
 tND
 wNo
-rOB
+dTq
 sJE
 rhY
 rhY
@@ -136034,7 +136144,7 @@ wNo
 rOB
 sJE
 rhY
-rhY
+pDp
 dPn
 qoU
 tND
@@ -136291,7 +136401,7 @@ wNo
 eCD
 dkE
 hFE
-rhY
+pDp
 rpF
 qoU
 tND
@@ -155889,7 +155999,7 @@ lSc
 lSc
 oal
 lSc
-lSc
+cMJ
 lSc
 lSc
 lSc
@@ -156402,11 +156512,11 @@ eCQ
 hoZ
 hAX
 foI
-iYG
+tWr
 iYG
 biI
 rOj
-iYG
+tWr
 iAf
 hoZ
 iAf
@@ -156659,11 +156769,11 @@ hSy
 hSy
 hSy
 hSy
-hSy
-hSy
+aEU
+aEU
 cix
 hSy
-hSy
+aEU
 qsr
 fbx
 nTV
@@ -246851,7 +246961,7 @@ fah
 ojk
 uWA
 jKA
-rtk
+iNI
 jST
 tvv
 aeX
@@ -250439,7 +250549,7 @@ ntq
 ntq
 ntq
 ntq
-vLo
+iee
 lcY
 lil
 lil
@@ -250696,7 +250806,7 @@ ntq
 ntq
 ntq
 ntq
-hHn
+iee
 mKD
 wfa
 wfa
