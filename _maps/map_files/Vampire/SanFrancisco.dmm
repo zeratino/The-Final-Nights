@@ -636,6 +636,20 @@
 	},
 /turf/open/floor/plasteel/stairs/left,
 /area/vtm/interior/strip)
+"ajO" = (
+/obj/effect/decal/pallet,
+/obj/structure/railing{
+	dir = 1;
+	layer = 4;
+	pixel_y = 16
+	},
+/obj/effect/decal/pallet{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/structure/lattice,
+/turf/open/floor/plating/shit,
+/area/vtm/sewer)
 "ajV" = (
 /obj/structure/vampdoor/wood/old{
 	desc = "It give you a mad vibes... Be careful!";
@@ -15729,6 +15743,17 @@
 /obj/item/stack/dollar/hundred,
 /turf/open/floor/plating/vampdirt,
 /area/vtm/sewer/nosferatu_town)
+"eFy" = (
+/obj/structure/vampipe{
+	icon_state = "piping35"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "cleaning";
+	name = "Sewer gate";
+	locked = 0
+	},
+/turf/open/floor/plating/vampcanal,
+/area/vtm/sewer)
 "eFA" = (
 /turf/closed/wall/vampwall,
 /area/vtm/hotel)
@@ -17901,6 +17926,16 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/cog/pantry)
+"fmR" = (
+/obj/structure/vampipe{
+	icon_state = "piping35"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "coggie";
+	name = "Sewer gate"
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/sewer)
 "fmS" = (
 /obj/machinery/light{
 	dir = 4
@@ -40154,6 +40189,16 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/techshop)
+"lQS" = (
+/obj/structure/vampipe{
+	icon_state = "piping32"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "coggie";
+	name = "Sewer gate"
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/sewer)
 "lRq" = (
 /obj/structure/rack,
 /obj/item/clothing/head/vampire/bandana/red,
@@ -50146,6 +50191,9 @@
 "oKF" = (
 /obj/structure/table/wood,
 /obj/structure/microscope,
+/obj/machinery/light/small/red{
+	pixel_y = 24
+	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/police/fed)
 "oKK" = (
@@ -50353,6 +50401,17 @@
 /obj/structure/vampfence/corner/rich,
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/pacificheights/old)
+"oNz" = (
+/obj/structure/vampipe{
+	icon_state = "piping35"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "triad";
+	name = "Sewer gate";
+	locked = 0
+	},
+/turf/open/floor/plating/vampcanal,
+/area/vtm/sewer)
 "oNF" = (
 /obj/structure/filingcabinet,
 /obj/structure/coclock,
@@ -56949,6 +57008,17 @@
 "qHD" = (
 /turf/open/floor/plating/sidewalk,
 /area/vtm)
+"qHE" = (
+/obj/structure/vampipe{
+	icon_state = "piping32"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "cleaning";
+	name = "Sewer gate";
+	locked = 0
+	},
+/turf/open/floor/plating/vampcanal,
+/area/vtm/sewer)
 "qHJ" = (
 /obj/effect/turf_decal/siding/white,
 /obj/structure/vampdoor/simple,
@@ -58788,6 +58858,18 @@
 /obj/matrix,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
+"rhs" = (
+/obj/effect/decal/pallet,
+/obj/structure/railing{
+	layer = 4
+	},
+/obj/effect/decal/pallet{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/structure/lattice,
+/turf/open/floor/plating/shit,
+/area/vtm/sewer)
 "rhB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/bacotell,
@@ -62055,6 +62137,14 @@
 /obj/structure/barrels/rand,
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/interior/glasswalker)
+"rZy" = (
+/obj/structure/vampdoor/prison{
+	lock_id = "cleaning";
+	name = "Sewer gate";
+	locked = 0
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/sewer)
 "rZE" = (
 /obj/structure/rack,
 /obj/machinery/light{
@@ -64052,6 +64142,15 @@
 /obj/effect/decal/bordur/corner,
 /turf/open/water,
 /area/vtm/pacificheights/old)
+"sCZ" = (
+/obj/structure/vampipe{
+	icon_state = "piping35"
+	},
+/obj/structure/vampfence/rich{
+	dir = 4
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/sewer)
 "sDj" = (
 /obj/structure/railing{
 	layer = 4
@@ -77836,6 +77935,17 @@
 	},
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/police/upstairs)
+"wKf" = (
+/obj/structure/vampipe{
+	icon_state = "piping32"
+	},
+/obj/structure/vampdoor/prison{
+	lock_id = "triad";
+	name = "Sewer gate";
+	locked = 0
+	},
+/turf/open/floor/plating/vampcanal,
+/area/vtm/sewer)
 "wKh" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/vampwood,
@@ -79688,6 +79798,15 @@
 	},
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"xmA" = (
+/obj/structure/vampipe{
+	icon_state = "piping32"
+	},
+/obj/structure/vampfence/rich{
+	dir = 4
+	},
+/turf/open/floor/plating/vampcanalplating,
+/area/vtm/sewer)
 "xmF" = (
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/asphalt,
@@ -98666,7 +98785,7 @@ dVr
 dVr
 dVr
 dVr
-dVr
+lQS
 dVr
 dVr
 dVr
@@ -98691,7 +98810,7 @@ ryZ
 dVr
 dVr
 dVr
-dVr
+lQS
 dVr
 dVr
 dVr
@@ -98923,6 +99042,7 @@ isZ
 isZ
 isZ
 isZ
+jFy
 isZ
 isZ
 isZ
@@ -98941,14 +99061,13 @@ isZ
 isZ
 isZ
 isZ
+ajO
+rhs
 isZ
 isZ
 isZ
 isZ
-isZ
-isZ
-isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -99180,6 +99299,7 @@ isZ
 isZ
 isZ
 isZ
+jFy
 isZ
 isZ
 isZ
@@ -99198,14 +99318,13 @@ isZ
 isZ
 isZ
 isZ
+ajO
+rhs
 isZ
 isZ
 isZ
 isZ
-isZ
-isZ
-isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -99437,6 +99556,7 @@ dVI
 dVI
 dVI
 dVI
+fmR
 dVI
 dVI
 dVI
@@ -99461,8 +99581,7 @@ dVI
 dVI
 dVI
 dVI
-dVI
-dVI
+fmR
 dVI
 dVI
 dVI
@@ -114988,7 +115107,7 @@ dVr
 dVr
 dVr
 dVr
-dVr
+xmA
 dVr
 dVr
 dVr
@@ -115245,7 +115364,7 @@ xqR
 xqR
 xqR
 xqR
-xqR
+rZy
 xqR
 xqR
 xqR
@@ -115502,7 +115621,7 @@ isZ
 isZ
 isZ
 isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -115759,7 +115878,7 @@ isZ
 isZ
 isZ
 isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -116016,7 +116135,7 @@ isZ
 isZ
 isZ
 isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -116273,7 +116392,7 @@ xqR
 xqR
 xqR
 xqR
-xqR
+rZy
 xqR
 xqR
 xqR
@@ -116530,7 +116649,7 @@ dVI
 dVI
 dVI
 dVI
-dVI
+sCZ
 dVI
 dVI
 dVI
@@ -121413,7 +121532,7 @@ rUn
 rUn
 rUn
 rUn
-rUn
+qHE
 rUn
 rUn
 rUn
@@ -121532,7 +121651,7 @@ jKh
 mFH
 ylR
 rUn
-rUn
+wKf
 rUn
 rUn
 rUn
@@ -121568,7 +121687,7 @@ rUn
 rUn
 rUn
 rUn
-rUn
+wKf
 rUn
 xEM
 plS
@@ -121670,7 +121789,7 @@ isZ
 isZ
 isZ
 isZ
-isZ
+jFy
 isZ
 isZ
 isZ
@@ -121789,6 +121908,7 @@ isZ
 fPR
 isZ
 isZ
+jFy
 isZ
 isZ
 isZ
@@ -121824,8 +121944,7 @@ isZ
 isZ
 isZ
 isZ
-isZ
-isZ
+jFy
 isZ
 isZ
 fPR
@@ -121927,7 +122046,7 @@ pOW
 pOW
 pOW
 pOW
-pOW
+eFy
 pOW
 pOW
 pOW
@@ -122046,7 +122165,7 @@ jKh
 eml
 hJg
 pOW
-pOW
+oNz
 pOW
 pOW
 pOW
@@ -122082,7 +122201,7 @@ pOW
 pOW
 pOW
 pOW
-pOW
+oNz
 pOW
 uiO
 plS
