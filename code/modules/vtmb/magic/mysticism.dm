@@ -189,7 +189,7 @@
 
 	for(var/mob/living/carbon/human/target in heal_targets)
 		target.heal_ordered_damage(90, list(BRUTE, TOX, OXY, STAMINA))
-		owner.heal_ordered_damage(20, list(BURN, CLONE))
+		target.heal_ordered_damage(20, list(BURN, CLONE))
 
 	TIMER_COOLDOWN_START(invoker, COOLDOWN_RITUAL_INVOKE, 30 SECONDS)
 	playsound(rune_location, 'sound/magic/voidblink.ogg', 50, FALSE)
