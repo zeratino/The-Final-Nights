@@ -25,6 +25,8 @@
 /datum/discipline_power/animalism/summon_rat/activate()
 	. = ..()
 	var/limit = min(2, level) + owner.social + owner.more_companions - 1
+	if(HAS_TRAIT(owner, TRAIT_ANIMAL_REPULSION))
+		limit = max(1,limit-2)
 	if(length(owner.beastmaster) >= limit)
 		var/mob/living/simple_animal/hostile/beastmaster/beast = pick(owner.beastmaster)
 		beast.death()
@@ -54,6 +56,8 @@
 /datum/discipline_power/animalism/summon_cat/activate()
 	. = ..()
 	var/limit = min(2, level) + owner.social + owner.more_companions - 1
+	if(HAS_TRAIT(owner, TRAIT_ANIMAL_REPULSION))
+		limit = max(1,limit-2)
 	if(length(owner.beastmaster) >= limit)
 		var/mob/living/simple_animal/hostile/beastmaster/beast = pick(owner.beastmaster)
 		beast.death()
@@ -93,6 +97,8 @@
 /datum/discipline_power/animalism/summon_wolf/activate()
 	. = ..()
 	var/limit = min(2, level) + owner.social + owner.more_companions - 1
+	if(HAS_TRAIT(owner, TRAIT_ANIMAL_REPULSION))
+		limit = max(1,limit-2)
 	if(length(owner.beastmaster) >= limit)
 		var/mob/living/simple_animal/hostile/beastmaster/beast = pick(owner.beastmaster)
 		beast.death()
@@ -122,6 +128,8 @@
 /datum/discipline_power/animalism/summon_bat/activate()
 	. = ..()
 	var/limit = min(2, level) + owner.social + owner.more_companions - 1
+	if(HAS_TRAIT(owner, TRAIT_ANIMAL_REPULSION))
+		limit = max(1,limit-2)
 	if(length(owner.beastmaster) >= limit)
 		var/mob/living/simple_animal/hostile/beastmaster/beast = pick(owner.beastmaster)
 		beast.death()
@@ -139,16 +147,16 @@
 //RAT SHAPESHIFT
 /obj/effect/proc_holder/spell/targeted/shapeshift/animalism
 	name = "Animalism Form"
-	desc = "Take on the shape a rat."
+	desc = "Take on the shape a bat."
 	charge_max = 5 SECONDS
 	cooldown_min = 5 SECONDS
 	revert_on_death = TRUE
 	die_with_shapeshifted_form = FALSE
-	shapeshift_type = /mob/living/simple_animal/pet/rat
+	shapeshift_type = /mob/living/simple_animal/hostile/beastmaster/rat/flying
 
 /datum/discipline_power/animalism/rat_shapeshift
 	name = "Skitter"
-	desc = "Become one of the rats that crawl beneath the city."
+	desc = "Become one of the bats that fly above the city."
 
 	check_flags = DISC_CHECK_IMMOBILE | DISC_CHECK_CAPABLE | DISC_CHECK_LYING
 

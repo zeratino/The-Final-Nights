@@ -763,7 +763,10 @@
 				return
 			V.last_extracted = world.time
 			if(!iskindred(src))
-				new /obj/item/drinkable_bloodpack(get_step(V, SOUTH))
+				if(HAS_TRAIT(src,TRAIT_POTENT_BLOOD))
+					new /obj/item/drinkable_bloodpack/elite(get_step(V, SOUTH))
+				else
+					new /obj/item/drinkable_bloodpack(get_step(V, SOUTH))
 				bloodpool = max(0, bloodpool-2)
 			else
 				new /obj/item/drinkable_bloodpack/vitae(get_step(V, SOUTH))
@@ -1021,7 +1024,6 @@
 		user.setDir(SOUTH)
 		user.Stun(100)
 		user.forceMove(src.loc)
-		user.visible_message("<B>[user] dances on [src]!</B>")
 		animatepole(user)
 		user.layer = layer //set them to the poles layer
 		obj_flags &= ~IN_USE
@@ -1552,6 +1554,9 @@
 						user.visible_message("<span class='warning'>[user] digs a hole in [src].</span>", "<span class='warning'>You dig a hole in [src].</span>")
 						if(dead_amongst)
 							call_dharma("respect", user)
+					if(!dead_amongst)
+						user.visible_message("<span class='warning'>[user] refills [src].</span>", "<span class='warning'>You refill [src].</span>")
+						qdel(src)
 				else
 					var/dead_amongst = FALSE
 					for(var/mob/living/L in src)

@@ -121,6 +121,7 @@ GLOBAL_LIST_INIT(admin_verbs_fun, list(
 	/client/proc/mass_zombie_cure,
 	/client/proc/polymorph_all,
 	/client/proc/show_tip,
+	/client/proc/roll_dice_vtm,
 	/client/proc/smite,
 	/client/proc/admin_away,
 	/client/proc/toggle_RMB
@@ -584,17 +585,17 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 		return
 
 	if (!SSwhitelists.whitelists_enabled)
-		to_chat(usr, "<span class='warning'>Whitelisting isn't enabled!</span>")
+		to_chat(usr, span_warning("Whitelisting isn't enabled!"))
 		return
 
 	var/whitelistee = input("CKey to whitelist:") as null|text
 	if (whitelistee)
 		whitelistee = ckey(whitelistee)
 		var/list/whitelist_pool = (SSwhitelists.possible_whitelists - SSwhitelists.get_user_whitelists(whitelistee))
-		if (whitelist_pool.len == 0)
-			to_chat(usr, "<span class='warning'>[whitelistee] already has all whitelists!</span>")
+		if (!length(whitelist_pool))
+			to_chat(usr, span_warning("[whitelistee] already has all whitelists!"))
 			return
-		var/whitelist = input("Whitelist to give:") as null|anything in whitelist_pool
+		var/whitelist = input("Whitelist to give:") as null|anything in sortList(whitelist_pool)
 		if (whitelist)
 			var/ticket_link = input("Link to whitelist request ticket:") as null|text
 			if (ticket_link)

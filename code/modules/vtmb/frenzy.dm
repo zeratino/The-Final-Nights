@@ -27,9 +27,9 @@
 		SEND_SOUND(src, sound('code/modules/wod13/sounds/bloodneed.ogg', 0, 0, 50))
 		var/check
 		if(iscathayan(src))
-			check = vampireroll(max(1, mind.dharma.Hun), min(10, (mind.dharma.level*2)-max_demon_chi), src)
+			check = SSroll.storyteller_roll(max(1, mind.dharma.Hun), min(10, (mind.dharma.level*2)-max_demon_chi), src)
 		else
-			check = vampireroll(max(1, round(humanity/2)), min(frenzy_chance_boost, frenzy_hardness), src)
+			check = SSroll.storyteller_roll(max(1, round(humanity/2)), min(frenzy_chance_boost, frenzy_hardness), src)
 		switch(check)
 			if(DICE_FAILURE)
 				enter_frenzymod()
@@ -58,6 +58,7 @@
 	in_frenzy = TRUE
 	add_client_colour(/datum/client_colour/glass_colour/red)
 	demon_chi = 0
+	adjust_rage(-10, src, TRUE)
 	GLOB.frenzy_list += src
 
 /mob/living/carbon/proc/exit_frenzymod()
