@@ -119,17 +119,11 @@
 	desc = "Contains some first aid supplies."
 	cost = 500
 	contains = list(
-		/obj/item/stack/medical/gauze, 
-		/obj/item/stack/medical/bruise_pack, 
-		/obj/item/stack/medical/suture, 
+		/obj/item/stack/medical/gauze,
+		/obj/item/stack/medical/bruise_pack,
+		/obj/item/stack/medical/suture,
 		/obj/item/stack/medical/ointment,
 	)
-
-/datum/supply_pack/vampire/radiopack
-	name = "Radios"
-	desc = "Contains a pack of five handheld two way radios."
-	cost = 1000
-	contains = list(/obj/item/radio = 5)
 
 /datum/supply_pack/vampire/weaponfireaxe
 	name = "Weapon (fire axe)"
@@ -280,7 +274,7 @@
 	desc = "Contains a .50 caliber desert eagle."
 	cost = 2000
 	contains = list(
-		/obj/item/gun/ballistic/automatic/pistol/deagle, 
+		/obj/item/gun/ballistic/automatic/pistol/deagle,
 		/obj/item/ammo_box/magazine/m50,
 	)
 
