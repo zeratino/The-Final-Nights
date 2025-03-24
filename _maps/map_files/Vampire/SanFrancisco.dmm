@@ -26517,13 +26517,14 @@
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/giovanni/basement)
 "hMg" = (
-/obj/machinery/light/prince{
-	light_power = 0.45;
-	name = "dim light fixture";
+/obj/effect/decal/bordur{
 	dir = 8
 	},
-/turf/open/floor/plating/parquetry/old,
-/area/space)
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 8
+	},
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm/church)
 "hMj" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/weather/dirt{
@@ -26562,8 +26563,8 @@
 /area/vtm/park)
 "hMn" = (
 /obj/structure/table/wood,
-/obj/effect/decal/wallpaper/paper/rich,
 /obj/structure/curtain/bounty,
+/obj/effect/decal/wallpaper/paper/rich/low,
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/millennium_tower/ventrue)
 "hMy" = (
@@ -27605,6 +27606,9 @@
 	dir = 4
 	},
 /obj/effect/decal/bordur,
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
 /turf/open/floor/plating/sidewalkalt,
 /area/vtm/church)
 "ibo" = (
@@ -32764,6 +32768,13 @@
 /obj/effect/decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"jCp" = (
+/obj/effect/decal/bordur{
+	dir = 4
+	},
+/obj/effect/landmark/npcbeacon/directed,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/church)
 "jCx" = (
 /obj/structure/vampipe{
 	icon_state = "piping3";
@@ -33716,6 +33727,10 @@
 /obj/effect/decal/trash,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/fishermanswharf)
+"jSq" = (
+/obj/effect/landmark/npcbeacon,
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm/financialdistrict/construction)
 "jSr" = (
 /obj/effect/decal/pallet,
 /obj/structure/table/wood,
@@ -38802,7 +38817,7 @@
 "lvb" = (
 /obj/structure/stairs/north,
 /turf/open/floor/plating/parquetry/old,
-/area/space)
+/area/vtm/sewer)
 "lvg" = (
 /obj/transfer_point_vamp{
 	icon = 'icons/obj/stairs.dmi';
@@ -44357,7 +44372,9 @@
 /turf/closed/wall/vampwall/market/low/window/reinforced,
 /area/vtm/interior/shop)
 "mZU" = (
-/obj/effect/landmark/npcbeacon,
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "mZV" = (
@@ -52882,6 +52899,12 @@
 /obj/structure/chair/stool/bar,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/laundromat)
+"pyL" = (
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm/church)
 "pyM" = (
 /obj/manholedown,
 /turf/open/floor/plating/concrete,
@@ -57379,9 +57402,6 @@
 /area/vtm/interior/millennium_tower)
 "qLI" = (
 /obj/structure/hydrant,
-/obj/effect/landmark/npcbeacon/directed{
-	dir = 1
-	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "qLL" = (
@@ -57903,6 +57923,13 @@
 /obj/structure/closet/cardboard,
 /turf/open/floor/plating/parquetry/old,
 /area/vtm/interior/chantry)
+"qSW" = (
+/obj/effect/decal/bordur,
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalkalt,
+/area/vtm/church)
 "qSX" = (
 /obj/structure/railing{
 	dir = 1;
@@ -58204,9 +58231,6 @@
 /area/vtm/supply)
 "qWh" = (
 /obj/effect/decal/bordur/corner,
-/obj/effect/landmark/npcbeacon/directed{
-	dir = 1
-	},
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "qWr" = (
@@ -64055,6 +64079,7 @@
 /area/vtm/interior)
 "sBG" = (
 /obj/structure/strip_club,
+/obj/effect/landmark/npcbeacon,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
 "sBJ" = (
@@ -67867,8 +67892,14 @@
 /turf/open/floor/plating/rough,
 /area/vtm/interior/millennium_tower/f5)
 "tKk" = (
-/turf/open/floor/plating/parquetry/old,
-/area/space)
+/obj/effect/decal/bordur{
+	dir = 8
+	},
+/obj/effect/landmark/npcbeacon/directed{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk/old,
+/area/vtm/church)
 "tKo" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 1
@@ -75978,6 +76009,10 @@
 "wfa" = (
 /turf/open/floor/carpet/royalblue,
 /area/vtm/interior/millennium_tower/ventrue)
+"wfm" = (
+/obj/effect/landmark/npcbeacon/directed,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/church)
 "wfs" = (
 /obj/structure/vampdoor/wood/old{
 	lock_id = "mansion";
@@ -82785,8 +82820,8 @@
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/effect/decal/wallpaper/paper/rich,
 /obj/structure/curtain/bounty,
+/obj/effect/decal/wallpaper/paper/rich/low,
 /turf/closed/wall/vampwall/rich/low,
 /area/vtm/interior/millennium_tower/ventrue)
 "yeY" = (
@@ -111131,7 +111166,7 @@ wTq
 rwd
 wTq
 lvb
-tKk
+jkT
 wTq
 wHE
 jkT
@@ -111388,7 +111423,7 @@ wTq
 jkT
 wTq
 lvb
-hMg
+xOR
 wTq
 rwd
 jkT
@@ -111644,8 +111679,8 @@ nYS
 wTq
 jkT
 wTq
-sAo
-sAo
+wTq
+wTq
 wTq
 jkT
 cYo
@@ -159875,7 +159910,7 @@ cNc
 rPN
 cNc
 cNc
-cNc
+tol
 cNc
 cNc
 cNc
@@ -165611,12 +165646,12 @@ iTZ
 iTZ
 qLV
 wIg
-mJf
-mJf
-oqU
-tzx
-tzx
-tzx
+pyL
+pyL
+qSW
+tKk
+tKk
+tKk
 uMQ
 jPg
 jPg
@@ -166386,7 +166421,7 @@ qeo
 mJf
 oqU
 qFZ
-txC
+qFZ
 qFZ
 uMQ
 naM
@@ -166644,7 +166679,7 @@ osB
 oqU
 dJE
 qFZ
-txC
+qFZ
 uMQ
 uMQ
 uMQ
@@ -166899,7 +166934,7 @@ rqS
 xuU
 ggY
 oqU
-qFZ
+mZU
 xWk
 qFZ
 txC
@@ -168438,7 +168473,7 @@ hNu
 hNu
 hNu
 wvS
-mZU
+qFZ
 qFZ
 qFZ
 qFZ
@@ -168695,12 +168730,12 @@ hNu
 hNu
 hNu
 wvS
-mZU
 qFZ
 qFZ
 qFZ
 qFZ
-txC
+qFZ
+qFZ
 gRZ
 crB
 wDG
@@ -168948,13 +168983,13 @@ fQl
 hNu
 hNu
 hNu
-hNu
+jSq
 hNu
 hNu
 aqL
+qFZ
+qFZ
 mZU
-qFZ
-qFZ
 qFZ
 txC
 ahQ
@@ -168974,7 +169009,7 @@ nQz
 lFg
 hiu
 sAD
-sAD
+wfm
 sAD
 sAD
 hUI
@@ -169205,14 +169240,14 @@ idp
 hNu
 hNu
 hNu
+jSq
 hNu
 hNu
-hNu
-qFZ
-mZU
 qFZ
 qFZ
 qFZ
+qFZ
+txC
 qFZ
 qFZ
 ahQ
@@ -169231,7 +169266,7 @@ yfN
 lSE
 lSE
 lSE
-lSE
+jCp
 lSE
 lSE
 lSE
@@ -169462,14 +169497,14 @@ hNu
 hNu
 vvm
 hNu
-hNu
+jSq
 uoO
 hNu
 qFZ
 qFZ
 qFZ
 qFZ
-qFZ
+txC
 qFZ
 qFZ
 qFZ
@@ -169719,17 +169754,17 @@ mar
 hNu
 hNu
 hNu
-hNu
+jSq
 hNu
 hNu
 rxB
 qFZ
 tUP
+mZU
+mZU
 qFZ
 qFZ
-qFZ
-qFZ
-qFZ
+txC
 crB
 wDG
 rbo
@@ -170001,8 +170036,8 @@ tzx
 tzx
 tzx
 tzx
-tzx
-tzx
+hMg
+hMg
 tzx
 tzx
 tzx
@@ -170257,7 +170292,7 @@ qFZ
 qFZ
 qFZ
 qFZ
-qFZ
+txC
 qFZ
 qFZ
 qFZ
@@ -170514,7 +170549,7 @@ qFZ
 qFZ
 qFZ
 qFZ
-qFZ
+txC
 qFZ
 qFZ
 qFZ
@@ -172529,7 +172564,7 @@ hyN
 hyN
 hyN
 hyN
-hyN
+oDI
 hyN
 hyN
 hyN
@@ -178217,7 +178252,7 @@ eiL
 hnz
 gcj
 ujA
-ujA
+jTn
 ujA
 ujA
 uqQ
@@ -184900,7 +184935,7 @@ oCx
 xiV
 wnQ
 ujA
-ujA
+jTn
 ujA
 nSA
 iBb
