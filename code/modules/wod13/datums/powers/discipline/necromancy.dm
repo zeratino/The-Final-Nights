@@ -118,10 +118,11 @@
 	button_icon_state = "ghost"
 	check_flags = AB_CHECK_CONSCIOUS
 	vampiric = TRUE
+	var/ghosts_visible = FALSE
 
 /datum/action/ghost_hear/Trigger()
 	. = ..()
-	if(owner.see_invisible == SEE_INVISIBLE_OBSERVER)
+	if(ghosts_visible == TRUE)
 		deactivate()
 	else
 		activate()
@@ -129,6 +130,7 @@
 /datum/action/ghost_hear/proc/activate()
 	if(!isliving(owner))
 		return
+	ghosts_visible = TRUE
 	var/mob/living/user = owner
 	user.see_invisible = SEE_INVISIBLE_OBSERVER
 	to_chat(owner, span_notice("You peek beyond the Shroud to see ghosts."))
@@ -136,6 +138,7 @@
 /datum/action/ghost_hear/proc/deactivate()
 	if(!isliving(owner))
 		return
+	ghosts_visible = FALSE
 	var/mob/living/user = owner
 	user.see_invisible = initial(owner.see_invisible)
 	to_chat(owner, span_warning("Your vision returns to the mortal realm."))
