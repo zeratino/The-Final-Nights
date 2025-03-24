@@ -1128,7 +1128,7 @@
 	dir = 4;
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "aqR" = (
 /obj/effect/decal/bordur{
@@ -3672,6 +3672,8 @@
 	light_power = 0.45;
 	name = "dim light fixture"
 	},
+/obj/item/lipstick/purple,
+/obj/item/lipstick/black,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
 "bbd" = (
@@ -9634,7 +9636,7 @@
 /obj/structure/vampfence/corner/rich{
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "cKP" = (
 /obj/machinery/light/prince{
@@ -15272,7 +15274,7 @@
 /obj/structure/vampfence/rich{
 	dir = 8
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalkalt,
 /area/vtm/church)
 "exV" = (
 /obj/machinery/vamp/atm{
@@ -17011,7 +17013,7 @@
 	dir = 1;
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "faT" = (
 /turf/open/openspace,
@@ -17277,7 +17279,6 @@
 	},
 /obj/structure/vampdoor/simple{
 	lock_id = "hunter";
-	locked = 1;
 	lockpick_difficulty = 15;
 	dir = 8
 	},
@@ -20197,7 +20198,7 @@
 	dir = 4;
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalkalt,
 /area/vtm/church)
 "fSq" = (
 /obj/elevator_button_up{
@@ -24683,7 +24684,7 @@
 /obj/structure/vampdoor/simple{
 	lock_id = "hunter";
 	locked = 1;
-	lockpick_difficulty = 18
+	lockpick_difficulty = 20
 	},
 /obj/effect/decal/bordur,
 /turf/open/floor/plating/church,
@@ -29297,7 +29298,6 @@
 	},
 /obj/structure/vampdoor/simple{
 	lock_id = "hunter";
-	locked = 1;
 	lockpick_difficulty = 10;
 	dir = 8
 	},
@@ -37074,7 +37074,7 @@
 /obj/structure/vampfence/rich{
 	dir = 8
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "kUx" = (
 /obj/effect/decal/bordur,
@@ -49515,6 +49515,8 @@
 	},
 /obj/item/lipstick/random,
 /obj/item/dyespray,
+/obj/item/lipstick/purple,
+/obj/item/lipstick/black,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
 "oAP" = (
@@ -51847,7 +51849,7 @@
 /obj/structure/vampfence/rich{
 	dir = 1
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/park)
 "pjl" = (
 /obj/effect/landmark/start{
@@ -51985,7 +51987,7 @@
 	dir = 8;
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "plN" = (
 /obj/effect/turf_decal/siding/wood{
@@ -60175,7 +60177,7 @@
 	dir = 8;
 	icon_state = "fence_end"
 	},
-/turf/open/floor/plating/saint,
+/turf/open/floor/plating/sidewalk/old,
 /area/vtm/church)
 "rxJ" = (
 /obj/machinery/light/small{
@@ -76690,6 +76692,8 @@
 	},
 /obj/item/dyespray,
 /obj/item/lipstick/random,
+/obj/item/lipstick/purple,
+/obj/item/lipstick/black,
 /turf/open/floor/plating/church,
 /area/vtm/church/interior/haven)
 "wqI" = (
@@ -80618,7 +80622,6 @@
 "xAt" = (
 /obj/structure/vampdoor/simple{
 	lock_id = "hunter";
-	locked = 1;
 	lockpick_difficulty = 10;
 	dir = 1
 	},
