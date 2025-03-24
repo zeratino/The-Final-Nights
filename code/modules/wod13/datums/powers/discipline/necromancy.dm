@@ -121,7 +121,7 @@
 
 /datum/action/ghost_hear/Trigger()
 	. = ..()
-	if(user.see_invisible == SEE_INVISIBLE_OBSERVER)
+	if(owner.see_invisible == SEE_INVISIBLE_OBSERVER)
 		deactivate()
 	else
 		activate()
