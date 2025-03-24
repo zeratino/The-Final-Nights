@@ -121,13 +121,15 @@
 
 /datum/action/ghost_hear/Trigger()
 	. = ..()
-	activate()
+	if(user.see_invisible == SEE_INVISIBLE_OBSERVER)
+		deactivate()
+	else
+		activate()
 
 /datum/action/ghost_hear/proc/activate()
 	if(!isliving(owner))
 		return
 	var/mob/living/user = owner
-
 	user.see_invisible = SEE_INVISIBLE_OBSERVER
 	to_chat(owner, span_notice("You peek beyond the Shroud to see ghosts."))
 
