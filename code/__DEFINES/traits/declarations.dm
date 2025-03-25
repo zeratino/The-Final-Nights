@@ -147,7 +147,7 @@
 
 #define TRAIT_NOBLEED "nobleed" //This carbon doesn't bleed
 
-
+#define TRAIT_THUNDERSHOT		"thundershot" // Fire without ammo.
 #define TRAIT_DANCER			"dancer"
 #define TRAIT_EXP_DRIVER		"experienced_driver"
 #define TRAIT_BONE_KEY			"bone_key"

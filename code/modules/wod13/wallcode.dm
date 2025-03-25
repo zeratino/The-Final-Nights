@@ -1315,3 +1315,9 @@
 	barefootstep = FOOTSTEP_TROTUAR
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+
+//solving anime in a messy way.
+
+/turf/open/floor/plating/Initialize()
+	..()
+	base_icon_state = icon_state
