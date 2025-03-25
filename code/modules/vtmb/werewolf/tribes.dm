@@ -177,6 +177,21 @@
 				if(L)
 					L.electrocute_act(30, owner, siemens_coeff = 1, flags = NONE)
 
+/datum/action/gift/hands_full_of_thunder
+	name = "Hands Full of Thunder"
+	desc = "Invoke the machine spirits to support you in these trying times. Abstain from needing bullets when you fire a gun."
+	button_icon_state = "hands_full_of_thunder"
+	gnosis_req = 1
+
+/datum/action/gift/hands_full_of_thunder/Trigger()
+	. = ..()
+	if(allowed_to_proceed)
+		ADD_TRAIT(owner, TRAIT_THUNDERSHOT, src)
+		to_chat(owner, "<span class='notice'>You feel your fingers tingling with electricity...!</span>")
+		spawn(100)
+			REMOVE_TRAIT(owner, TRAIT_THUNDERSHOT, src)
+			to_chat(owner, "<span class='notice'>The buzz in your fingertips ebbs...</span>")
+
 /datum/action/gift/elemental_improvement
 	name = "Elemental Improvement"
 	desc = "Garou flesh replaces itself with prothesis, making it less vulnerable to brute damage, but more for burn damage."
