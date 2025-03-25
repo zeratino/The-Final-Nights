@@ -193,24 +193,32 @@
 
 /obj/structure/vampdoor/Click(location, control, params)
 	var/list/modifiers = params2list(params)
-	if(modifiers["right"])
-		if(!ishuman(usr) || !usr.canUseTopic(src, BE_CLOSE))
-			return
-		var/mob/living/carbon/human/H = usr
-		var/obj/item/vamp/keys/found_key = locate(/obj/item/vamp/keys) in H.contents
-		if(found_key)
-			if(found_key.roundstart_fix)
-				found_key.roundstart_fix = FALSE
-				lock_id = pick(found_key.accesslocks)
-			if(found_key.accesslocks)
-				for(var/i in found_key.accesslocks)
-					if(i == lock_id)
-						locked = !locked
-						playsound(src, lock_sound, 75, TRUE)
-						to_chat(usr, "<span class='notice'>You [locked ? "lock" : "unlock"] [src].</span>")
-						return
-			to_chat(usr, "<span class='warning'>Your key doesn't fit this lock!</span>")
-			return
-		to_chat(usr, "<span class='warning'>You need a key to lock/unlock this door!</span>")
+	if(!modifiers["right"])
+		return ..()
+
+	if(!ishuman(usr) || !usr.canUseTopic(src, BE_CLOSE))
 		return
+
+	var/mob/living/carbon/human/H = usr
+	var/obj/item/vamp/keys/found_key = locate(/obj/item/vamp/keys) in H.contents
+	if(!found_key)
+		to_chat(usr, span_warning("You need a key to lock/unlock this door!"))
+		return
+
+	if(found_key.roundstart_fix)
+		found_key.roundstart_fix = FALSE
+		lock_id = pick(found_key.accesslocks)
+
+	if(!found_key.accesslocks)
+		to_chat(usr, span_warning("Your key doesn't fit this lock!"))
+		return
+
+	for(var/i in found_key.accesslocks)
+		if(i == lock_id)
+			locked = !locked
+			playsound(src, lock_sound, 75, TRUE)
+			to_chat(usr, span_notice("You [locked ? "lock" : "unlock"] [src]."))
+			return
+
+	to_chat(usr, span_warning("Your key doesn't fit this lock!"))
 	return ..()
