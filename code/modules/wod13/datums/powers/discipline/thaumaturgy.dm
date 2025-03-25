@@ -89,7 +89,7 @@
 	else //this mob is a human!
 		var/mob/living/carbon/human/VLL = VL
 		if(!iskindred(VLL) && !iscathayan(VLL)) //If it is not one of the undead, the blood loss should be lower and also lower blood reagent.
-			VLL.blood_volume = max(H.blood_volume-35, 150)
+			VLL.blood_volume = max(VLL.blood_volume-35, 150)
 			VLL.bloodpool = max(VLL.bloodpool - 1, 0)
 			if(isgarou(VLL)) //But, if it is a Garou, it should burn. rawr.
 				VLL.visible_message(span_danger("[target]'s wounds spray boiling hot blood!"), "<span class='userdanger'>Your blood boils!</span>")
