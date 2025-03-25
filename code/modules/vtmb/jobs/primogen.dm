@@ -236,8 +236,6 @@
 	name = "Primogen Banu Haqim"
 	icon_state = "Assistant"
 
-//
-
 /datum/job/vamp/primogen_lasombra
 	title = "Primogen Lasombra"
 	department_head = list("Justicar")
