@@ -29,7 +29,7 @@
 		if(iscathayan(src))
 			check = SSroll.storyteller_roll(max(1, mind.dharma.Hun), min(10, (mind.dharma.level*2)-max_demon_chi), src)
 		else
-			check = SSroll.storyteller_roll(max(1, round(humanity/2)), min(frenzy_chance_boost, frenzy_hardness), src)
+			check = SSroll.storyteller_roll(max(1, round(H.morality_path.score/2)), min(frenzy_chance_boost, frenzy_hardness), src)
 		switch(check)
 			if(DICE_FAILURE)
 				enter_frenzymod()
