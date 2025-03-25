@@ -69,41 +69,41 @@
 /obj/projectile/thaumaturgy/on_hit(atom/target, blocked = FALSE, pierce_hit)
 	if(!ishuman(firer))
 		return
-	var/mob/living/carbon/human/Thaumaturge = firer
+	var/mob/living/carbon/human/caster = firer
 	if(!isliving(target))
 		return
-	var/mob/living/LivingTarget = target
-	var/sucked = min(LivingTarget.bloodpool, level)
-	if(!ishuman(LivingTarget)) //Is this mob a human?
-		if(LivingTarget.bloodpool >= 1 && LivingTarget.stat != DEAD)
-			LivingTarget.bloodpool = max(LivingTarget.bloodpool - sucked, 0)
-			if(isgarou(LivingTarget)) //Are they a sneaky Crinos/Hispo/Lupus?
-				LivingTarget.apply_damage(45, BURN)
-				LivingTarget.visible_message(span_danger("[target]'s wounds spray boiling hot blood!"), "<span class='userdanger'>Your blood boils!</span>")
-				LivingTarget.add_splatter_floor(get_turf(target))
-				LivingTarget.add_splatter_floor(get_turf(get_step(target, target.dir)))
+	var/mob/living/target_l = target
+	var/sucked = min(target_l.bloodpool, level)
+	if(!ishuman(target_l)) //Is this mob a human?
+		if(target_l.bloodpool >= 1 && target_l.stat != DEAD)
+			target_l.bloodpool = max(target_l.bloodpool - sucked, 0)
+			if(isgarou(target_l)) //Are they a sneaky Crinos/Hispo/Lupus?
+				target_l.apply_damage(45, BURN)
+				target_l.visible_message(span_danger("[target]'s wounds spray boiling hot blood!"), "<span class='userdanger'>Your blood boils!</span>")
+				target_l.add_splatter_floor(get_turf(target))
+				target_l.add_splatter_floor(get_turf(get_step(target, target.dir)))
 				return
-			LivingTarget.bloodpool = max(LivingTarget.bloodpool - sucked, 0)
-			Thaumaturge.bloodpool = min(Thaumaturge.bloodpool + sucked, Thaumaturge.maxbloodpool)
-			LivingTarget.visible_message(span_danger("[target]'s wounds spill out, returning to [Thaumaturge]!"), "<span class='userdanger'>Your blood sprays out towards [Thaumaturge]!</span>")
+			target_l.bloodpool = max(target_l.bloodpool - sucked, 0)
+			caster.bloodpool = min(caster.bloodpool + sucked, caster.maxbloodpool)
+			target_l.visible_message(span_danger("[target]'s wounds spill out, returning to [caster]!"), "<span class='userdanger'>Your blood sprays out towards [caster]!</span>")
 	else //this mob is a human!
-		var/mob/living/carbon/human/HumanTarget = LivingTarget
-		if(!iskindred(HumanTarget) && !iscathayan(HumanTarget)) //If it is not one of the undead, the blood loss should be lower and also lower blood reagent.
-			HumanTarget.blood_volume = max(HumanTarget.blood_volume-35, 150)
-			HumanTarget.bloodpool = max(HumanTarget.bloodpool - 1, 0)
-			if(isgarou(HumanTarget)) //But, if it is a Garou, it should burn. rawr.
-				HumanTarget.visible_message(span_danger("[target]'s wounds spray boiling hot blood!"), "<span class='userdanger'>Your blood boils!</span>")
-				HumanTarget.apply_damage(45, BURN)
-				HumanTarget.add_splatter_floor(get_turf(target))
-				HumanTarget.add_splatter_floor(get_turf(get_step(target, target.dir)))
+		var/mob/living/carbon/human/target_h = target_l
+		if(!iskindred(target_h) && !iscathayan(target_h)) //If it is not one of the undead, the blood loss should be lower and also lower blood reagent.
+			target_h.blood_volume = max(target_h.blood_volume-35, 150)
+			target_h.bloodpool = max(target_h.bloodpool - 1, 0)
+			if(isgarou(target_h)) //But, if it is a Garou, it should burn. rawr.
+				target_h.visible_message(span_danger("[target]'s wounds spray boiling hot blood!"), "<span class='userdanger'>Your blood boils!</span>")
+				target_h.apply_damage(45, BURN)
+				target_h.add_splatter_floor(get_turf(target))
+				target_h.add_splatter_floor(get_turf(get_step(target, target.dir)))
 				return
-			HumanTarget.visible_message(span_danger("[target]'s wounds spill out, blood flowing to [Thaumaturge]!"), "<span class='userdanger'>Your blood sprays out towards [Thaumaturge]!</span>")
-			Thaumaturge.bloodpool = min(Thaumaturge.bloodpool + max(1, HumanTarget.bloodquality-1), Thaumaturge.maxbloodpool)
+			target_h.visible_message(span_danger("[target]'s wounds spill out, blood flowing to [caster]!"), "<span class='userdanger'>Your blood sprays out towards [caster]!</span>")
+			caster.bloodpool = min(caster.bloodpool + max(1, target_h.bloodquality-1), caster.maxbloodpool)
 		else
-			if(HumanTarget.bloodpool >= 0)
-				HumanTarget.bloodpool = max(HumanTarget.bloodpool - sucked, 0)
-				Thaumaturge.bloodpool = min(Thaumaturge.bloodpool + sucked, Thaumaturge.maxbloodpool)
-			HumanTarget.visible_message(span_danger("[target]'s wounds spill out, returning to [Thaumaturge]!"), "<span class='userdanger'>Your blood sprays out towards [Thaumaturge]!</span>")
+			if(target_h.bloodpool >= 0)
+				target_h.bloodpool = max(target_h.bloodpool - sucked, 0)
+				caster.bloodpool = min(caster.bloodpool + sucked, caster.maxbloodpool)
+			target_h.visible_message(span_danger("[target]'s wounds spill out, returning to [caster]!"), "<span class='userdanger'>Your blood sprays out towards [caster]!</span>")
 
 /datum/discipline_power/thaumaturgy/a_taste_for_blood
 	name = "A Taste for Blood"
