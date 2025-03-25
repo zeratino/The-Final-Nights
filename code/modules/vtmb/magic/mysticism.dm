@@ -158,9 +158,9 @@
 
 //actual function of the rune
 /obj/abyssrune/blackout/complete()
-	for(var/obj/machinery/light/i in range(7, src)) //for every light in a range of 7 (called i)
-		if(i != LIGHT_BROKEN) //if it aint broke
-			i.break_light_tube(0) //break it
+	for(var/obj/machinery/light/light_to_kill in range(7, src)) //for every light in a range of 7 (called i)
+		if(light_to_kill != LIGHT_BROKEN) //if it aint broke
+			light_to_kill.break_light_tube(0) //break it
 	playsound(get_turf(src), 'sound/magic/voidblink.ogg', 50, FALSE) //make the funny void sound
 	qdel(src) //delete the rune
 
@@ -189,7 +189,7 @@
 
 	for(var/mob/living/carbon/human/target in heal_targets)
 		target.heal_ordered_damage(90, list(BRUTE, TOX, OXY, STAMINA))
-		target.heal_ordered_damage(20, list(BURN, CLONE))
+		target.heal_ordered_damage(30, list(BURN, CLONE))
 
 	TIMER_COOLDOWN_START(invoker, COOLDOWN_RITUAL_INVOKE, 30 SECONDS)
 	playsound(rune_location, 'sound/magic/voidblink.ogg', 50, FALSE)
