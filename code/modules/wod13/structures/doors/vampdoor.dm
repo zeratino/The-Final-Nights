@@ -236,19 +236,14 @@
 						to_chat(user, "[src] is now unlocked.")
 						locked = FALSE
 
-/obj/structure/vampdoor/apartment
+/obj/structure/vampdoor/wood/apartment
 	locked = TRUE
 	grant_apartment_key = TRUE
 	apartment_key_type = /obj/item/vamp/keys/apartment
 	lock_id = null //Will be randomized
 	lockpick_difficulty = 8
 
-/obj/structure/vampdoor/apartment/generic
-
-/obj/structure/vampdoor/apartment/generic/two_keys
-	apartment_key_amount = 2
-
-/obj/structure/vampdoor/apartment/Initialize()
+/obj/structure/vampdoor/wood/apartment/Initialize()
 	. = ..()
 	if(grant_apartment_key && !lock_id)
 		lock_id = "[rand(1,9999999)]" // I know, not foolproof
