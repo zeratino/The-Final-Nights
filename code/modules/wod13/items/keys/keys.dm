@@ -325,7 +325,7 @@
 	accesslocks = list(
 		"cappadocian"
 	)
-		color = "#99620e"
+	color = "#99620e"
 
 //===========================CLINIC KEYS===========================
 /obj/item/vamp/keys/clinic
