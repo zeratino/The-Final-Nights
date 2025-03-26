@@ -257,7 +257,6 @@
 	var/bloodpool = 5
 	var/maxbloodpool = 5
 	var/generation = 13
-	var/humanity = 7
 	var/masquerade = 5
 	var/last_masquerade_violation = 0
 	var/last_nonraid = 0
@@ -286,3 +285,6 @@
 	var/max_demon_chi = 0
 	COOLDOWN_DECLARE(chi_restore)
 	var/datum/action/chi_discipline/chi_ranged
+
+	//If we are currently leaning on something, and what that object is
+	var/atom/leaned_object
