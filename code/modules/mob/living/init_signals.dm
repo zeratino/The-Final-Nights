@@ -224,9 +224,9 @@
 /// Called when [TRAIT_OBFUSCATED] is added to the mob.
 /mob/living/proc/make_invisible(datum/source)
 	SIGNAL_HANDLER
-	animate(src, alpha = 0, time = 0.5 SECONDS)
+	animate(src, invisibility = OBFUSCATE_INVISIBILITY, time = 0.5 SECONDS)
 
 /// Called when [TRAIT_OBFUSCATED] is removed from the mob.
 /mob/living/proc/make_visible(datum/source)
 	SIGNAL_HANDLER
-	animate(src, alpha = 255, time = 0.5 SECONDS)
+	animate(src, invisibility = NONE, time = 0.5 SECONDS)
