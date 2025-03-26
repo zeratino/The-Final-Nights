@@ -4396,6 +4396,12 @@
 /obj/structure/chair/comfy/brown,
 /turf/open/floor/carpet/lone,
 /area/vtm/interior)
+"blL" = (
+/obj/structure/table/wood,
+/obj/item/candle,
+/obj/item/trash/candle,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "blM" = (
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plasteel/stairs{
@@ -5785,6 +5791,16 @@
 	},
 /turf/open/floor/plating/vampwood,
 /area/vtm/hotel)
+"bHn" = (
+/obj/structure/table/wood,
+/obj/item/clothing/mask/vampire/venetian_mask/jester,
+/obj/item/clothing/mask/vampire/venetian_mask/fancy,
+/obj/item/clothing/mask/vampire/venetian_mask/fancy,
+/obj/item/clothing/mask/vampire/venetian_mask/fancy,
+/obj/item/clothing/mask/vampire/venetian_mask,
+/obj/item/clothing/mask/vampire/venetian_mask,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "bHo" = (
 /obj/structure/lamppost/sidewalk,
 /turf/open/floor/plating/vampgrass,
@@ -10717,14 +10733,8 @@
 /turf/open/indestructible/necropolis/air,
 /area/vtm/sewer/tzimisce_sanctum)
 "dbN" = (
-/obj/effect/decal/coastline{
-	dir = 4
-	},
-/obj/effect/decal/coastline{
-	dir = 4
-	},
-/turf/open/floor/plating/vampbeach,
-/area/vtm/northbeach)
+/turf/open/water,
+/area/space)
 "dbP" = (
 /obj/machinery/light{
 	dir = 4
@@ -13472,6 +13482,12 @@
 	},
 /turf/closed/wall/vampwall/painted,
 /area/vtm/interior/banu/haven)
+"dUF" = (
+/obj/structure/chair/pew/left{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "dUR" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -14361,6 +14377,10 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights)
+"eig" = (
+/obj/structure/railing,
+/turf/open/floor/plating/vampwood,
+/area/space)
 "eir" = (
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_town)
@@ -15877,6 +15897,12 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm)
+"eIh" = (
+/obj/structure/chair/pew{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "eIk" = (
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -17975,6 +18001,13 @@
 /obj/structure/punching_bag,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f3)
+"fnE" = (
+/obj/structure/table/wood,
+/obj/item/storage/book/bible,
+/obj/item/card/id/hunter,
+/obj/item/clothing/neck/vampire/prayerbeads,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "fnG" = (
 /obj/effect/decal/bordur{
 	dir = 4
@@ -19321,6 +19354,12 @@
 	},
 /turf/open/floor/plating/saint,
 /area/vtm/church/interior/staff)
+"fFl" = (
+/obj/structure/table/wood,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/box/matches,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "fFq" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm)
@@ -23408,14 +23447,8 @@
 /turf/closed/wall/vampwall/metal,
 /area/vtm/interior/wyrm_corrupted)
 "gOK" = (
-/obj/effect/decal/coastline{
-	dir = 4
-	},
-/obj/effect/decal/coastline{
-	dir = 4
-	},
-/turf/closed/wall/vampwall/rich/old,
-/area/vtm/northbeach)
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "gOM" = (
 /obj/item/vamp/phone/street{
 	pixel_z = 24
@@ -33651,6 +33684,11 @@
 /obj/effect/decal/trash,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/setite/basement)
+"jQU" = (
+/obj/structure/closet/crate/coffin,
+/obj/effect/mob_spawn/human/skeleton,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "jQW" = (
 /obj/structure/bed/maint,
 /obj/effect/turf_decal/weather/dirt{
@@ -45322,8 +45360,8 @@
 /turf/open/floor/carpet/green,
 /area/vtm/hotel)
 "npk" = (
-/turf/closed/wall/vampwall/rich/old,
-/area/vtm/northbeach)
+/turf/closed/wall/vampwall/painted,
+/area/space)
 "npw" = (
 /obj/item/kirbyplants/random,
 /obj/structure/extinguisher_cabinet{
@@ -46669,6 +46707,10 @@
 	},
 /turf/open/floor/plating/sidewalk,
 /area/vtm/pacificheights/community)
+"nIR" = (
+/obj/structure/curtain/bounty,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "nIZ" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 4
@@ -50821,6 +50863,12 @@
 	alpha = 0
 	},
 /area/vtm)
+"oSs" = (
+/obj/structure/chair/pew/right{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "oSu" = (
 /obj/effect/decal/wallpaper/stone,
 /turf/closed/wall/vampwall/rich,
@@ -54354,6 +54402,9 @@
 /obj/manholedown,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/financialdistrict/construction)
+"pRV" = (
+/turf/open/floor/plating/vampwood,
+/area/space)
 "pRX" = (
 /obj/structure/fluff/hedge,
 /obj/effect/turf_decal/siding/white{
@@ -54383,6 +54434,9 @@
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/park)
+"pSE" = (
+/turf/open/openspace,
+/area/space)
 "pSV" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/structure/coclock,
@@ -54887,6 +54941,10 @@
 /obj/item/storage/pill_bottle/mutadone,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/clinic)
+"qaY" = (
+/obj/structure/vampstatue/angel,
+/turf/open/water,
+/area/space)
 "qbh" = (
 /obj/structure/window/reinforced/indestructable{
 	alpha = 0
@@ -58262,6 +58320,10 @@
 /obj/structure/big_vamprocks,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/old)
+"qWZ" = (
+/obj/structure/stairs/west,
+/turf/open/floor/plating/rough/cave,
+/area/space)
 "qXd" = (
 /obj/machinery/button/crematorium{
 	id = "cleanatorium";
@@ -59904,6 +59966,11 @@
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/forest)
+"rtE" = (
+/obj/structure/closet/crate/coffin,
+/obj/effect/mob_spawn/human/corpse/ciz4,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "rtG" = (
 /turf/open/floor/plating/rust,
 /area/vtm/sewer)
@@ -62476,6 +62543,15 @@
 /obj/machinery/mineral/equipment_vendor/fastfood/smoking,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/shop)
+"sdK" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "sdO" = (
 /obj/effect/decal/bordur{
 	dir = 1
@@ -78624,6 +78700,10 @@
 	},
 /turf/open/floor/plating/vampdirt,
 /area/vtm)
+"wUY" = (
+/obj/structure/closet/crate/coffin,
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "wVf" = (
 /obj/structure/fluff/hedge{
 	pixel_y = 6
@@ -100992,9 +101072,9 @@ cSf
 cSf
 cSf
 cSf
-cSf
-cSf
-cSf
+jjV
+jjV
+jjV
 cSf
 cSf
 cSf
@@ -101249,9 +101329,9 @@ cSf
 cSf
 cSf
 cSf
-cSf
-cSf
-cSf
+jjV
+qWZ
+jjV
 cSf
 cSf
 cSf
@@ -101506,10 +101586,10 @@ cSf
 cSf
 cSf
 cSf
-cSf
-cSf
-cSf
-cSf
+jjV
+wHf
+jjV
+eig
 cSf
 cSf
 cSf
@@ -101763,10 +101843,10 @@ cSf
 cSf
 cSf
 cSf
-cSf
-cSf
-cSf
-cSf
+jjV
+wHf
+wHf
+pRV
 cSf
 cSf
 cSf
@@ -102007,10 +102087,10 @@ dhc
 (74,1,1) = {"
 dhc
 dhc
-dhc
-dhc
-dhc
-dhc
+nYS
+nYS
+nYS
+nYS
 nYS
 nxc
 nxc
@@ -102020,10 +102100,10 @@ cSf
 cSf
 cSf
 cSf
-cSf
-cSf
-cSf
-cSf
+jjV
+wHf
+jjV
+eig
 cSf
 cSf
 cSf
@@ -102263,27 +102343,27 @@ dhc
 "}
 (75,1,1) = {"
 dhc
-dhc
-dhc
-dhc
-dhc
-dhc
+tiZ
 nYS
-nxc
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+npk
+npk
+npk
+npk
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+gOK
+jjV
+jjV
+jjV
+jjV
+jjV
 cSf
 cSf
 cSf
@@ -102519,28 +102599,28 @@ dhc
 dhc
 "}
 (76,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+nYS
+npk
+npk
+dbN
+dbN
+dbN
+npk
+jjV
+jQU
+gOK
+rtE
+gOK
+jjV
+sdK
+gOK
+gOK
+jjV
+wUY
+blL
+wUY
+jjV
 cSf
 cSf
 cSf
@@ -102776,28 +102856,28 @@ dhc
 dhc
 "}
 (77,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-fZO
-fZO
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+npk
+dbN
+dbN
+npk
+dbN
+dbN
+npk
+jjV
+gOK
+gOK
+gOK
+nIR
+gOK
+gOK
+gOK
+nIR
+gOK
+gOK
+gOK
+jjV
 cSf
 cSf
 cSf
@@ -103033,28 +103113,28 @@ dhc
 dhc
 "}
 (78,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-fZO
-fZO
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+dbN
+dbN
+dbN
+dbN
+dbN
+dbN
+dbN
+jjV
+nIR
+jjV
+nIR
+nIR
+gOK
+gOK
+gOK
+nIR
+gOK
+gOK
+gOK
+jjV
 cSf
 cSf
 cSf
@@ -103290,28 +103370,28 @@ dhc
 dhc
 "}
 (79,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-fZO
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+dbN
+qaY
+dbN
+dbN
+dbN
+dbN
+dbN
+gOK
+gOK
+gOK
+gOK
+jjV
+nIR
+jjV
+nIR
+jjV
+nIR
+jjV
+nIR
+jjV
 cSf
 cSf
 cSf
@@ -103547,28 +103627,28 @@ dhc
 dhc
 "}
 (80,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-hrG
-hYc
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+dbN
+dbN
+dbN
+dbN
+dbN
+dbN
+dbN
+jjV
+nIR
+jjV
+nIR
+nIR
+oSs
+eIh
+dUF
+nIR
+gOK
+gOK
+gOK
+jjV
 cSf
 cSf
 cSf
@@ -103804,28 +103884,28 @@ dhc
 dhc
 "}
 (81,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-lvu
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+npk
+dbN
+dbN
+npk
+dbN
+dbN
+npk
+jjV
+gOK
+gOK
+gOK
+nIR
+gOK
+gOK
+gOK
+nIR
+gOK
+gOK
+gOK
+jjV
 cSf
 cSf
 cSf
@@ -104061,28 +104141,28 @@ dhc
 dhc
 "}
 (82,1,1) = {"
-dhc
-dhc
-dhc
-dhc
-dhc
-dhc
 nYS
-nxc
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+nYS
+npk
+npk
+dbN
+dbN
+dbN
+npk
+jjV
+jQU
+gOK
+rtE
+gOK
+jjV
+fnE
+bHn
+fFl
+jjV
+wUY
+blL
+wUY
+jjV
 cSf
 cSf
 cSf
@@ -104319,27 +104399,27 @@ dhc
 "}
 (83,1,1) = {"
 dhc
-dhc
-dhc
-dhc
-dhc
-dhc
+tiZ
 nYS
-nxc
-fZO
-fZO
-jAq
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
-cSf
+npk
+npk
+npk
+npk
+npk
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
+jjV
 cSf
 cSf
 cSf
@@ -104577,14 +104657,14 @@ dhc
 (84,1,1) = {"
 dhc
 dhc
-dhc
-dhc
-dhc
-dhc
+nYS
+nYS
+nYS
+nYS
 nYS
 nxc
-fZO
-jAq
+cSf
+cSf
 cSf
 cSf
 cSf
@@ -107157,8 +107237,8 @@ nxc
 nxc
 nxc
 cSf
-cSf
-cSf
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -107413,11 +107493,11 @@ nYS
 nYS
 nYS
 nxc
-cSf
-cSf
-cSf
-cSf
-cSf
+fZO
+fZO
+fZO
+fZO
+fZO
 cSf
 cSf
 cSf
@@ -107670,11 +107750,11 @@ nYS
 dhc
 nYS
 nxc
-cSf
-cSf
-cSf
-cSf
-cSf
+fZO
+fZO
+fZO
+fZO
+fZO
 cSf
 cSf
 cSf
@@ -107928,10 +108008,10 @@ dhc
 nYS
 nxc
 nxc
-cSf
-cSf
-cSf
-cSf
+fZO
+fZO
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -108185,10 +108265,10 @@ dhc
 nYS
 nYS
 nxc
-cSf
-cSf
-cSf
-cSf
+hrG
+hYc
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -108442,10 +108522,10 @@ dhc
 nYS
 nYS
 nxc
-cSf
-cSf
-cSf
-cSf
+lvu
+fZO
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -108699,9 +108779,9 @@ dhc
 nYS
 nxc
 nxc
-cSf
-cSf
-cSf
+fZO
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -108955,10 +109035,10 @@ dhc
 nYS
 nYS
 nxc
-cSf
-cSf
-cSf
-cSf
+fZO
+fZO
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -109212,9 +109292,9 @@ dhc
 nYS
 nxc
 nxc
-cSf
-cSf
-cSf
+fZO
+fZO
+jAq
 cSf
 cSf
 cSf
@@ -166271,10 +166351,10 @@ hgv
 hgv
 hgv
 hgv
-gOK
-rgV
-dbN
-rgV
+icl
+icl
+icl
+icl
 rgV
 rgV
 rgV
@@ -166528,10 +166608,10 @@ tND
 tND
 tND
 tND
-npk
-qIX
-qIX
-qIX
+icl
+gOK
+gOK
+gOK
 qIX
 qIX
 qIX
@@ -166785,9 +166865,9 @@ qHD
 qHD
 qHD
 tND
-npk
-qIX
-qIX
+icl
+pSE
+gOK
 fYI
 fYI
 fYI
