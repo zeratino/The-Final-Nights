@@ -49,6 +49,9 @@
 		SIGNAL_REMOVETRAIT(TRAIT_TORPOR),
 	), PROC_REF(update_torpor_action))
 
+	RegisterSignal(src, SIGNAL_ADDTRAIT(TRAIT_OBFUSCATED), PROC_REF(make_invisible))
+	RegisterSignal(src, SIGNAL_REMOVETRAIT(TRAIT_OBFUSCATED), PROC_REF(make_visible))
+
 /// Called when [TRAIT_KNOCKEDOUT] is added to the mob.
 /mob/living/proc/on_knockedout_trait_gain(datum/source)
 	SIGNAL_HANDLER
@@ -217,3 +220,13 @@
 /mob/living/proc/on_skittish_trait_loss(datum/source)
 	SIGNAL_HANDLER
 	RemoveElement(/datum/element/skittish)
+
+/// Called when [TRAIT_OBFUSCATED] is added to the mob.
+/mob/living/proc/make_invisible(datum/source)
+	SIGNAL_HANDLER
+	animate(src, alpha = 0, time = 0.5 SECONDS)
+
+/// Called when [TRAIT_OBFUSCATED] is removed from the mob.
+/mob/living/proc/make_visible(datum/source)
+	SIGNAL_HANDLER
+	animate(src, alpha = 255, time = 0.5 SECONDS)

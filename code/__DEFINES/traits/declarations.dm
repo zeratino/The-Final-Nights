@@ -300,3 +300,6 @@
 #define TRAIT_DRIED "trait_dried"
 //Trait for customizable reagent holder
 #define TRAIT_CUSTOMIZABLE_REAGENT_HOLDER "customizable_reagent_holder"
+
+//Trait for when a kindred turns on obfuscate. Supposed to make them invisible to normal sight.area
+#define TRAIT_OBFUSCATED "trait_obfuscated"
