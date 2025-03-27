@@ -4401,7 +4401,7 @@
 /obj/item/candle,
 /obj/item/trash/candle,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "blM" = (
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plasteel/stairs{
@@ -5800,7 +5800,7 @@
 /obj/item/clothing/mask/vampire/venetian_mask,
 /obj/item/clothing/mask/vampire/venetian_mask,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "bHo" = (
 /obj/structure/lamppost/sidewalk,
 /turf/open/floor/plating/vampgrass,
@@ -10734,7 +10734,7 @@
 /area/vtm/sewer/tzimisce_sanctum)
 "dbN" = (
 /turf/open/water,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "dbP" = (
 /obj/machinery/light{
 	dir = 4
@@ -13487,7 +13487,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "dUR" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -14380,7 +14380,7 @@
 "eig" = (
 /obj/structure/railing,
 /turf/open/floor/plating/vampwood,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "eir" = (
 /turf/open/floor/plating/rough,
 /area/vtm/sewer/nosferatu_town)
@@ -15902,7 +15902,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "eIk" = (
 /obj/structure/table/wood,
 /turf/open/floor/plating/parquetry/old,
@@ -18007,7 +18007,7 @@
 /obj/item/card/id/hunter,
 /obj/item/clothing/neck/vampire/prayerbeads,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "fnG" = (
 /obj/effect/decal/bordur{
 	dir = 4
@@ -19359,7 +19359,7 @@
 /obj/item/storage/fancy/candle_box,
 /obj/item/storage/box/matches,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "fFq" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm)
@@ -23448,7 +23448,7 @@
 /area/vtm/interior/wyrm_corrupted)
 "gOK" = (
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "gOM" = (
 /obj/item/vamp/phone/street{
 	pixel_z = 24
@@ -33688,7 +33688,7 @@
 /obj/structure/closet/crate/coffin,
 /obj/effect/mob_spawn/human/skeleton,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "jQW" = (
 /obj/structure/bed/maint,
 /obj/effect/turf_decal/weather/dirt{
@@ -45340,6 +45340,9 @@
 "noM" = (
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/millennium_tower)
+"noR" = (
+/turf/open/floor/plating/rough/cave,
+/area/vtm/sewer/cappadocian)
 "npf" = (
 /obj/effect/decal/bordur,
 /obj/effect/decal/trash,
@@ -45361,7 +45364,7 @@
 /area/vtm/hotel)
 "npk" = (
 /turf/closed/wall/vampwall/painted,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "npw" = (
 /obj/item/kirbyplants/random,
 /obj/structure/extinguisher_cabinet{
@@ -46710,7 +46713,7 @@
 "nIR" = (
 /obj/structure/curtain/bounty,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "nIZ" = (
 /obj/structure/chair/sofa/corp/corner{
 	dir = 4
@@ -50868,7 +50871,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "oSu" = (
 /obj/effect/decal/wallpaper/stone,
 /turf/closed/wall/vampwall/rich,
@@ -54404,7 +54407,7 @@
 /area/vtm/financialdistrict/construction)
 "pRV" = (
 /turf/open/floor/plating/vampwood,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "pRX" = (
 /obj/structure/fluff/hedge,
 /obj/effect/turf_decal/siding/white{
@@ -54436,7 +54439,7 @@
 /area/vtm/park)
 "pSE" = (
 /turf/open/openspace,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "pSV" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/structure/coclock,
@@ -54948,7 +54951,7 @@
 "qaY" = (
 /obj/structure/vampstatue/angel,
 /turf/open/water,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "qbh" = (
 /obj/structure/window/reinforced/indestructable{
 	alpha = 0
@@ -58327,7 +58330,7 @@
 "qWZ" = (
 /obj/structure/stairs/west,
 /turf/open/floor/plating/rough/cave,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "qXd" = (
 /obj/machinery/button/crematorium{
 	id = "cleanatorium";
@@ -59974,7 +59977,7 @@
 /obj/structure/closet/crate/coffin,
 /obj/effect/mob_spawn/human/corpse/ciz4,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "rtG" = (
 /turf/open/floor/plating/rust,
 /area/vtm/sewer)
@@ -62072,7 +62075,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "rXD" = (
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower)
@@ -62561,7 +62564,7 @@
 /obj/item/flashlight/lantern,
 /obj/item/flashlight/lantern,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "sdO" = (
 /obj/effect/decal/bordur{
 	dir = 1
@@ -62896,7 +62899,7 @@
 "sjo" = (
 /obj/structure/vampdoor/wood/cappadocian,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "sjw" = (
 /obj/item/vamp/phone/street{
 	pixel_z = 24
@@ -65157,7 +65160,7 @@
 "sTw" = (
 /obj/structure/vampdoor/wood/cappadocian,
 /turf/open/floor/plating/rough/cave,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "sTy" = (
 /obj/machinery/light/prince{
 	pixel_y = 32
@@ -70337,6 +70340,9 @@
 /obj/item/candle/infinite,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/sewer/tzimisce_sanctum)
+"uww" = (
+/turf/closed/wall/vampwall/junk/alt,
+/area/vtm/sewer/cappadocian)
 "uwQ" = (
 /obj/structure/vampdoor{
 	dir = 4
@@ -74658,6 +74664,9 @@
 	},
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower/f3)
+"vJS" = (
+/turf/closed/wall/vampwall/rich/old,
+/area/vtm/sewer/cappadocian)
 "vJY" = (
 /obj/structure/chair/wood{
 	dir = 4
@@ -78721,7 +78730,7 @@
 "wUY" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/plating/sidewalk,
-/area/space)
+/area/vtm/sewer/cappadocian)
 "wVf" = (
 /obj/structure/fluff/hedge{
 	pixel_y = 6
@@ -101090,9 +101099,9 @@ cSf
 cSf
 cSf
 cSf
-jjV
-jjV
-jjV
+uww
+uww
+uww
 cSf
 cSf
 cSf
@@ -101347,9 +101356,9 @@ cSf
 cSf
 cSf
 cSf
-jjV
+uww
 qWZ
-jjV
+uww
 cSf
 cSf
 cSf
@@ -101604,9 +101613,9 @@ cSf
 cSf
 cSf
 cSf
-jjV
-wHf
-jjV
+uww
+noR
+uww
 eig
 cSf
 cSf
@@ -101861,8 +101870,8 @@ cSf
 cSf
 cSf
 cSf
-jjV
-wHf
+uww
+noR
 sTw
 pRV
 hdT
@@ -102118,9 +102127,9 @@ cSf
 cSf
 cSf
 cSf
-jjV
-wHf
-jjV
+uww
+noR
+uww
 eig
 cSf
 cSf
@@ -102368,20 +102377,20 @@ npk
 npk
 npk
 npk
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
 rXB
-jjV
-jjV
-jjV
-jjV
-jjV
+uww
+uww
+uww
+uww
+uww
 cSf
 cSf
 cSf
@@ -102625,20 +102634,20 @@ dbN
 dbN
 dbN
 npk
-jjV
+uww
 jQU
 gOK
 rtE
 gOK
-jjV
+uww
 sdK
 gOK
 gOK
-jjV
+uww
 wUY
 blL
 wUY
-jjV
+uww
 cSf
 cSf
 cSf
@@ -102883,7 +102892,7 @@ npk
 dbN
 dbN
 npk
-jjV
+uww
 gOK
 gOK
 gOK
@@ -102895,7 +102904,7 @@ nIR
 gOK
 gOK
 gOK
-jjV
+uww
 cSf
 cSf
 cSf
@@ -103140,19 +103149,19 @@ dbN
 dbN
 dbN
 dbN
-jjV
+uww
 nIR
-jjV
+uww
 nIR
-nIR
-gOK
-gOK
-gOK
 nIR
 gOK
 gOK
 gOK
-jjV
+nIR
+gOK
+gOK
+gOK
+uww
 cSf
 cSf
 cSf
@@ -103401,15 +103410,15 @@ gOK
 gOK
 gOK
 gOK
-jjV
+uww
 nIR
-jjV
+uww
 nIR
-jjV
+uww
 nIR
-jjV
+uww
 nIR
-jjV
+uww
 cSf
 cSf
 cSf
@@ -103654,9 +103663,9 @@ dbN
 dbN
 dbN
 dbN
-jjV
+uww
 nIR
-jjV
+uww
 nIR
 nIR
 oSs
@@ -103666,7 +103675,7 @@ nIR
 gOK
 gOK
 gOK
-jjV
+uww
 cSf
 cSf
 cSf
@@ -103911,7 +103920,7 @@ npk
 dbN
 dbN
 npk
-jjV
+uww
 gOK
 gOK
 gOK
@@ -103923,7 +103932,7 @@ nIR
 gOK
 gOK
 gOK
-jjV
+uww
 cSf
 cSf
 cSf
@@ -104167,20 +104176,20 @@ dbN
 dbN
 dbN
 npk
-jjV
+uww
 jQU
 gOK
 rtE
 gOK
-jjV
+uww
 fnE
 bHn
 fFl
-jjV
+uww
 wUY
 blL
 wUY
-jjV
+uww
 cSf
 cSf
 cSf
@@ -104424,20 +104433,20 @@ npk
 npk
 npk
 npk
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
-jjV
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
+uww
 cSf
 cSf
 cSf
@@ -166369,10 +166378,10 @@ hgv
 hgv
 hgv
 hgv
-icl
-icl
-icl
-icl
+vJS
+vJS
+vJS
+vJS
 rgV
 rgV
 rgV
@@ -166626,7 +166635,7 @@ tND
 tND
 tND
 tND
-icl
+vJS
 gOK
 gOK
 sjo
@@ -166883,7 +166892,7 @@ qHD
 qHD
 qHD
 tND
-icl
+vJS
 pSE
 gOK
 fYI
