@@ -108,3 +108,8 @@ GLOBAL_PROTECT(picture_logging_id)
 GLOBAL_VAR(picture_logging_prefix)
 GLOBAL_PROTECT(picture_logging_prefix)
 /////
+
+#undef DECLARE_LOG
+#undef DECLARE_LOG_NAMED
+#undef START_LOG
+#undef DONT_START_LOG
