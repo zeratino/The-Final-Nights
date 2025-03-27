@@ -10,7 +10,9 @@
 /obj/item/melee/vampirearms/pickup(mob/living/user)
 	. = ..()
 	if(quieted)
-		if(user.weak_reference != src.owner)
+		var/mob/living/carbon/human/resolved_blade_owner = owner?.resolve()
+		// We don't need to check if resolved_blade_owner is null, the following check will work as intended either way.
+		if(user != resolved_blade_owner)
 			to_chat(user, "<span class='userdanger'>The acidic ichor sears your hand!</span>")
 			user.apply_damage(20, BURN)
 			user.Paralyze(1)
