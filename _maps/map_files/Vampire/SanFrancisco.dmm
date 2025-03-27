@@ -62067,6 +62067,12 @@
 	},
 /turf/open/floor/plating/vampplating/stone,
 /area/vtm/interior/bianchiBank)
+"rXB" = (
+/obj/structure/vampdoor/wood/cappadocian{
+	dir = 4
+	},
+/turf/open/floor/plating/sidewalk,
+/area/space)
 "rXD" = (
 /turf/open/floor/plating/vampplating,
 /area/vtm/interior/millennium_tower)
@@ -101605,7 +101611,7 @@ eig
 cSf
 cSf
 cSf
-cSf
+hdT
 cSf
 cSf
 cSf
@@ -101859,13 +101865,13 @@ jjV
 wHf
 sTw
 pRV
+hdT
 cSf
 cSf
 cSf
 cSf
 cSf
-cSf
-cSf
+hdT
 hns
 adH
 krV
@@ -102370,7 +102376,7 @@ jjV
 jjV
 jjV
 jjV
-gOK
+rXB
 jjV
 jjV
 jjV

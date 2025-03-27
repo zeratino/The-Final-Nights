@@ -38,4 +38,4 @@
 
 	var/obj/item/clothing/mask/vampire/venetian_mask/fancy/new_mask = new(H.loc)
 	H.equip_to_appropriate_slot(new_mask, FALSE)
-
+	clan_keys = /obj/item/vamp/keys/cappadocian
