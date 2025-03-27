@@ -1,3 +1,4 @@
+/// The directory in which ALL log files should be stored
 GLOBAL_VAR(log_directory)
 GLOBAL_PROTECT(log_directory)
 
@@ -10,6 +11,7 @@ GLOBAL_PROTECT(##log_var_name);\
 	if(!temp_log_override && ##start){\
 		start_log(GLOB.##log_var_name);\
 	}\
+}
 
 #define DECLARE_LOG(log_name, start) DECLARE_LOG_NAMED(##log_name, "[copytext(#log_name, 1, length(#log_name) - 3)]", start)
 #define START_LOG TRUE
