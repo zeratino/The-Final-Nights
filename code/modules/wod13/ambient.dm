@@ -434,6 +434,7 @@
 	yin_chi = 2
 	wall_rating = HIGH_WALL_RATING
 
+/area/vtm/sewer/cappadocian
 	name = "Cappadocian Crypt"
 	icon_state = "graveyard"
 	ambience_index = AMBIENCE_INTERIOR
