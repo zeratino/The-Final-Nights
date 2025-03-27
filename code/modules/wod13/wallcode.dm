@@ -67,6 +67,19 @@
 /turf/closed/wall/vampwall/attack_hand(mob/user)
 	return
 
+/turf/closed/wall/vampwall/MouseDrop_T(atom/dropping, mob/user, params)
+	. = ..()
+	if(user.a_intent != INTENT_HARM)
+		LoadComponent(/datum/component/leanable, dropping)
+	else
+		if(get_dist(user, src) < 2)
+			var/turf/above_turf = locate(user.x, user.y, user.z + 1)
+			if(above_turf && istype(above_turf, /turf/open/openspace))
+				var/mob/living/carbon/human/carbon_human = user
+				carbon_human.climb_wall(above_turf)
+			else
+				to_chat(user, "<span class='warning'>You can't climb there!</span>")
+
 /turf/closed/wall/vampwall/ex_act(severity, target)
 	return
 
@@ -928,6 +941,7 @@
 	icon_state = "wallpaper"
 	plane = GAME_PLANE
 	layer = ABOVE_NORMAL_TURF_LAYER	//WALLPAPER_LAYER dont work
+	mouse_opacity = 0
 
 /obj/effect/decal/wallpaper/Initialize()
 	..()
