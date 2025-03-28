@@ -41,12 +41,12 @@
 	var/mob/living/carbon/human/human = user
 	if(human.received_apartment_key)
 		return FALSE
-	var/alert = alert(user, "Is this my apartment?", "Apartment", "Yes", "No")
+	var/alert = tgui_alert(user, "Is this my apartment?", "Apartment", list("Yes", "No"))
 	if(alert != "Yes")
 		return
 	if(!grant_apartment_key)
 		return
-	var/spare_key = alert(user, "Do I have an extra spare key?", "Apartment", "Yes", "No")
+	var/spare_key = tgui_alert(user, "Do I have an extra spare key?", "Apartment", list("Yes", "No"))
 	if(!grant_apartment_key)
 		return
 	if(spare_key == "Yes")
