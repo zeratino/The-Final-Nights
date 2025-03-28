@@ -33684,11 +33684,6 @@
 /obj/effect/decal/trash,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/setite/basement)
-"jQU" = (
-/obj/structure/closet/crate/coffin,
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
-/turf/open/floor/plating/sidewalk,
-/area/vtm/sewer/cappadocian)
 "jQW" = (
 /obj/structure/bed/maint,
 /obj/effect/turf_decal/weather/dirt{
@@ -49769,8 +49764,7 @@
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/sewer/nosferatu_town)
 "oDo" = (
-/obj/structure/stairs,
-/turf/open/floor/plating/sidewalk,
+/turf/open/floor/plasteel/stairs/medium,
 /area/vtm/sewer/cappadocian)
 "oDs" = (
 /obj/effect/decal/painting/third,
@@ -102639,7 +102633,7 @@ dbN
 dbN
 npk
 uww
-jQU
+rtE
 gOK
 rtE
 gOK
@@ -104181,7 +104175,7 @@ dbN
 dbN
 npk
 uww
-jQU
+rtE
 gOK
 rtE
 gOK
