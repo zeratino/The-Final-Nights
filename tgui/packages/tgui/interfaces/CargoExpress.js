@@ -108,12 +108,8 @@ const CargoExpressContent = ({
                 disabled={!orderQueue.length}
               />
             </>
-<<<<<<< HEAD
-          )}>
-=======
           }
         >
->>>>>>> parent of 2d085b6076 (Revert "Fixes most of the CI, updates some of tgui" (#804))
           <Section title="Cash">
             <LabeledList>
               <LabeledList.Item label="Cash:">
