@@ -1,5 +1,5 @@
 import { Window } from './Window';
-import { Component } from 'inferno';
+import { Component } from 'react';
 
 export class Windows extends Component {
   render() {

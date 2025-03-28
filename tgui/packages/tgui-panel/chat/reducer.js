@@ -4,16 +4,7 @@
  * @license MIT
  */
 
-import {
-  addChatPage,
-  changeChatPage,
-  loadChat,
-  removeChatPage,
-  toggleAcceptedType,
-  updateChatPage,
-  updateMessageCount,
-  changeScrollTracking,
-} from './actions';
+import { addChatPage, changeChatPage, loadChat, removeChatPage, toggleAcceptedType, updateChatPage, updateMessageCount, changeScrollTracking } from './actions';
 import { canPageAcceptType, createMainPage } from './model';
 
 const mainPage = createMainPage();
@@ -34,6 +25,19 @@ export const chatReducer = (state = initialState, action) => {
     // Validate version and/or migrate state
     if (payload?.version !== state.version) {
       return state;
+    }
+    // Enable any filters that are not explicitly set, that are
+    // enabled by default on the main page.
+    // NOTE: This mutates acceptedTypes on the state.
+    for (let id of Object.keys(payload.pageById)) {
+      const page = payload.pageById[id];
+      const filters = page.acceptedTypes;
+      const defaultFilters = mainPage.acceptedTypes;
+      for (let type of Object.keys(defaultFilters)) {
+        if (filters[type] === undefined) {
+          filters[type] = defaultFilters[type];
+        }
+      }
     }
     // Reset page message counts
     // NOTE: We are mutably changing the payload on the assumption

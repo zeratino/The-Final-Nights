@@ -1,5 +1,5 @@
 import { HeaderButtons } from './HeaderButtons';
-import { Component } from 'inferno';
+import { Component } from 'react';
 import { noop } from './constants';
 import { GetIconByName, GetAppByName } from '../functions';
 
