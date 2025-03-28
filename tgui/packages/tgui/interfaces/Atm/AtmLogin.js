@@ -5,12 +5,20 @@ import { Window } from '../../layouts';
 
 export const AtmLogin = (props, context) => {
   const { act, data } = useBackend(context);
-  const [entered_code, setEnteredCode] = useLocalState(context, "login_code", "");
+  const [entered_code, setEnteredCode] = useLocalState(
+    context,
+    'login_code',
+    '',
+  );
 
+<<<<<<< HEAD
   const {
     account_owner,
     code,
   } = data;
+=======
+  const { account_owner, code } = data;
+>>>>>>> parent of 2d085b6076 (Revert "Fixes most of the CI, updates some of tgui" (#804))
 
   const handleLogin = () => {
     act('login', { code: entered_code });
@@ -28,10 +36,14 @@ export const AtmLogin = (props, context) => {
               />
             </LabeledList.Item>
             <LabeledList.Item>
+<<<<<<< HEAD
               <Button
                 content="Log In"
                 onClick={handleLogin}
               />
+=======
+              <Button content="Log In" onClick={handleLogin} />
+>>>>>>> parent of 2d085b6076 (Revert "Fixes most of the CI, updates some of tgui" (#804))
             </LabeledList.Item>
           </LabeledList>
         </Section>
