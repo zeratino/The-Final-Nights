@@ -33686,7 +33686,7 @@
 /area/vtm/interior/setite/basement)
 "jQU" = (
 /obj/structure/closet/crate/coffin,
-/obj/effect/mob_spawn/human/skeleton,
+/obj/effect/mob_spawn/human/corpse/charredskeleton,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/sewer/cappadocian)
 "jQW" = (
@@ -49768,6 +49768,10 @@
 /obj/effect/landmark/latejoin_masquerade,
 /turf/open/floor/plating/sidewalk/old,
 /area/vtm/sewer/nosferatu_town)
+"oDo" = (
+/obj/structure/stairs,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/sewer/cappadocian)
 "oDs" = (
 /obj/effect/decal/painting/third,
 /obj/effect/decal/wallpaper/paper/stripe,
@@ -101619,8 +101623,8 @@ uww
 eig
 cSf
 cSf
-cSf
 hdT
+cSf
 cSf
 cSf
 cSf
@@ -103406,7 +103410,7 @@ dbN
 dbN
 dbN
 dbN
-gOK
+oDo
 gOK
 gOK
 gOK
