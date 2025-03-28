@@ -140,6 +140,8 @@
 		new /datum/data/mining_equipment("beanie",	/obj/item/clothing/head/vampire/beanie,	10),
 		new /datum/data/mining_equipment("black beanie",	/obj/item/clothing/head/vampire/beanie/black,	10),
 		new /datum/data/mining_equipment("rough beanie",	/obj/item/clothing/head/vampire/beanie/homeless,	10),
+		new /datum/data/mining_equipment("red beret",	/obj/item/clothing/head/beret,	10),
+		new /datum/data/mining_equipment("black beret",	/obj/item/clothing/head/beret/black,	10),
 		new /datum/data/mining_equipment("scarf",	/obj/item/clothing/neck/vampire/scarf,	10),
 		new /datum/data/mining_equipment("blue tie",	/obj/item/clothing/neck/tie/blue,	10),
 		new /datum/data/mining_equipment("red tie",	/obj/item/clothing/neck/tie/red,	10),
