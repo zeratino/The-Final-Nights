@@ -43,7 +43,7 @@ export const Gmail = (props) => {
               }
               onClick={() => act('gmail_switch_screen', { screen: 2 })}
             >
-              Stared <Icon name="star" style={{ color: '#ff9f29' }} />
+              Starred <Icon name="star" style={{ color: '#ff9f29' }} />
             </div>
             <div className="nav-link">Chats</div>
             <div className="nav-link">Sent Mail</div>
@@ -80,7 +80,7 @@ const Emails = (props) => {
   );
 };
 
-const Stared = (props) => {
+const Starred = (props) => {
   const { emails, act } = props;
   return (
     <>
@@ -88,7 +88,7 @@ const Stared = (props) => {
       <EmailActions act={act} />
       <div className="messages">
         {emails.map((email) => {
-          return email.stared === 1 && <Email email={email} act={act} />;
+          return email.starred === 1 && <Email email={email} act={act} />;
         })}
       </div>
       <EmailActions act={act} />

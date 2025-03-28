@@ -5,7 +5,7 @@ export const XPButton = (props) => {
   return (
     <div
       className={classes(['xp-button', disabled && 'disabled'])}
-      onClick={!disabled && onClick}
+      onClick={disabled ? null : onClick}
     >
       {content}
     </div>
