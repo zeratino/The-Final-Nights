@@ -3,10 +3,10 @@ import icq from '../../../assets/WindowsXP/icq.png';
 import { TextArea, Input } from '../../../components';
 import { useLocalState } from '../../../backend';
 
-export const ICQ = (props, context) => {
+export const ICQ = (props) => {
   const { app, act } = props;
-  const [username, setUsername] = useLocalState(context, 'icq_username', '');
-  const [message, setMessage] = useLocalState(context, 'icq_message', '');
+  const [username, setUsername] = useLocalState('icq_username', '');
+  const [message, setMessage] = useLocalState('icq_message', '');
   return app.username === '' ? (
     <div className="visitor">
       <div>

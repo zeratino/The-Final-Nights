@@ -29,7 +29,7 @@ const damageTypes = [
   },
 ];
 
-export const OperatingComputer = (props, context) => {
+export const OperatingComputer = (props) => {
   const [tab, setTab] = useSharedState(context, 'tab', 1);
   return (
     <Window width={350} height={470} resizable>
@@ -49,8 +49,8 @@ export const OperatingComputer = (props, context) => {
   );
 };
 
-const PatientStateView = (props, context) => {
-  const { act, data } = useBackend(context);
+const PatientStateView = (props) => {
+  const { act, data } = useBackend();
   const { table, procedures = [], patient = {} } = data;
   if (!table) {
     return <NoticeBox>No Table Detected</NoticeBox>;
@@ -123,8 +123,8 @@ const PatientStateView = (props, context) => {
   );
 };
 
-const SurgeryProceduresView = (props, context) => {
-  const { act, data } = useBackend(context);
+const SurgeryProceduresView = (props) => {
+  const { act, data } = useBackend();
   const { surgeries = [] } = data;
   return (
     <Section title="Advanced Surgery Procedures">

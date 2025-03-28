@@ -3,10 +3,10 @@ import logo from '../../assets/WindowsXP/login-xp.jpg';
 import { XPButton, XPInput } from './Components';
 import { useLocalState } from '../../backend';
 
-export const LoginScreen = (props, context) => {
+export const LoginScreen = (props) => {
   const { data, act } = props;
-  const [name, setName] = useLocalState(context, 'login_username', '');
-  const [password, setPassword] = useLocalState(context, 'login_pass', '');
+  const [name, setName] = useLocalState('login_username', '');
+  const [password, setPassword] = useLocalState('login_pass', '');
 
   return (
     <div className="login-screen">

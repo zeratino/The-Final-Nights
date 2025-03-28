@@ -11,8 +11,8 @@ import {
 } from '../components';
 import { Window } from '../layouts';
 
-export const ChemReactionChamber = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ChemReactionChamber = (props) => {
+  const { act, data } = useBackend();
   const [reagentName, setReagentName] = useLocalState(
     context,
     'reagentName',

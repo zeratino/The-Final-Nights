@@ -13,7 +13,7 @@ import { Window } from "../layouts";
 import { useBackend, useLocalState } from "../backend";
 
 export const ListInputModal = (_, context) => {
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { items = [], message, init_value, preferences, timeout, title } = data;
   const { large_buttons } = preferences;
   const [selected, setSelected] = useLocalState(
@@ -177,8 +177,8 @@ export const ListInputModal = (_, context) => {
  * Displays the list of selectable items.
  * If a search query is provided, filters the items.
  */
-const ListDisplay = (props, context) => {
-  const { act } = useBackend(context);
+const ListDisplay = (props) => {
+  const { act } = useBackend();
   const {
     filteredItems,
     onClick,
@@ -226,8 +226,8 @@ const ListDisplay = (props, context) => {
  * Renders a search bar input.
  * Closing the bar defaults input to an empty string.
  */
-const SearchBar = (props, context) => {
-  const { act } = useBackend(context);
+const SearchBar = (props) => {
+  const { act } = useBackend();
   const { filteredItems, onSearch, searchQuery, selected } = props;
 
   return (

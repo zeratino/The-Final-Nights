@@ -96,11 +96,11 @@ const Stared = (props) => {
   );
 };
 
-const ComposeEmail = (props, context) => {
+const ComposeEmail = (props) => {
   const { act } = props;
-  const [to, setTo] = useLocalState(context, 'gmail_to', '');
-  const [subject, setSubject] = useLocalState(context, 'gmail_subject', '');
-  const [message, setMessage] = useLocalState(context, 'gmail_message', '');
+  const [to, setTo] = useLocalState('gmail_to', '');
+  const [subject, setSubject] = useLocalState('gmail_subject', '');
+  const [message, setMessage] = useLocalState('gmail_message', '');
   return (
     <div className="compose">
       <ComposerActions

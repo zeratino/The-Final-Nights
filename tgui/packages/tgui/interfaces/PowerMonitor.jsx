@@ -34,8 +34,8 @@ export const PowerMonitor = () => {
   );
 };
 
-export const PowerMonitorContent = (props, context) => {
-  const { data } = useBackend(context);
+export const PowerMonitorContent = (props) => {
+  const { data } = useBackend();
   const { history } = data;
   const [sortByField, setSortByField] = useLocalState(
     context,

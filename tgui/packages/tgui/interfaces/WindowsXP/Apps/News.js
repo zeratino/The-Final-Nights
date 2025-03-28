@@ -1,9 +1,9 @@
 import { useLocalState } from '../../../backend';
 import { Button, Input } from '../../../components';
 
-export const News = (props, context) => {
+export const News = (props) => {
   const { app, act } = props;
-  const [message, setMessage] = useLocalState(context, 'news_message', '');
+  const [message, setMessage] = useLocalState('news_message', '');
   return (
     <div className="news__screen">
       <div className="news__text">{app.text}</div>

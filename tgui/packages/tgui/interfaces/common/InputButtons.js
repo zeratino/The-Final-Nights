@@ -1,8 +1,8 @@
 import { useBackend } from "../../backend";
 import { Box, Button, Stack } from "../../components";
 
-export const InputButtons = (props, context) => {
-  const { act, data } = useBackend(context);
+export const InputButtons = (props) => {
+  const { act, data } = useBackend();
   const { large_buttons = false, swapped_buttons = true } = data.preferences;
   const { input, inputIsValid } = props;
 

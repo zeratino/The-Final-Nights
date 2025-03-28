@@ -215,7 +215,7 @@ const pauseEvent = (e) => {
   return false;
 };
 
-const Stamp = (props, context) => {
+const Stamp = (props) => {
   const { image, opacity } = props;
   const stamp_transform = {
     left: image.x + 'px',
@@ -240,7 +240,7 @@ const setInputReadonly = (text, readonly) => {
 
 // got to make this a full component if we
 // want to control updates
-const PaperSheetView = (props, context) => {
+const PaperSheetView = (props) => {
   const { value = '', stamps = [], backgroundColor, readOnly } = props;
   const stamp_list = stamps;
   const text_html = {
@@ -277,8 +277,8 @@ const PaperSheetView = (props, context) => {
 
 // again, need the states for dragging and such
 class PaperSheetStamper extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       x: 0,
       y: 0,
@@ -384,8 +384,8 @@ class PaperSheetStamper extends Component {
 // component too if I want to keep updates
 // low and keep the weird flashing down
 class PaperSheetEdit extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       previewSelected: 'Preview',
       old_text: props.value || '',
@@ -589,8 +589,8 @@ class PaperSheetEdit extends Component {
   }
 }
 
-export const PaperSheet = (props, context) => {
-  const { data } = useBackend(context);
+export const PaperSheet = (props) => {
+  const { data } = useBackend();
   const {
     edit_mode,
     text,

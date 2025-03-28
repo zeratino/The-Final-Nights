@@ -15,8 +15,8 @@ import { Window } from '../layouts';
 
 const MAX_SEARCH_RESULTS = 25;
 
-export const Uplink = (props, context) => {
-  const { data } = useBackend(context);
+export const Uplink = (props) => {
+  const { data } = useBackend();
   const { telecrystals } = data;
   return (
     <Window width={620} height={580} theme="syndicate" resizable>
@@ -27,11 +27,11 @@ export const Uplink = (props, context) => {
   );
 };
 
-export const GenericUplink = (props, context) => {
+export const GenericUplink = (props) => {
   const { currencyAmount = 0, currencySymbol = 'cr' } = props;
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { compactMode, lockable, categories = [] } = data;
-  const [searchText, setSearchText] = useLocalState(context, 'searchText', '');
+  const [searchText, setSearchText] = useLocalState('searchText', '');
   const [selectedCategory, setSelectedCategory] = useLocalState(
     context,
     'category',
@@ -114,9 +114,9 @@ export const GenericUplink = (props, context) => {
   );
 };
 
-const ItemList = (props, context) => {
+const ItemList = (props) => {
   const { compactMode, currencyAmount, currencySymbol } = props;
-  const { act } = useBackend(context);
+  const { act } = useBackend();
   const [hoveredItem, setHoveredItem] = useLocalState(
     context,
     'hoveredItem',

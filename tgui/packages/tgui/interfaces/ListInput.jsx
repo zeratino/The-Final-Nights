@@ -14,8 +14,8 @@ const ARROW_KEY_DOWN = 40;
 
 let lastScrollTime = 0;
 
-export const ListInput = (props, context) => {
-  const { act, data } = useBackend(context);
+export const ListInput = (props) => {
+  const { act, data } = useBackend();
   const { title, message, buttons, timeout } = data;
 
   // Search

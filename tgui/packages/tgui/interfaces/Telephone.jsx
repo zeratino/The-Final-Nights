@@ -3,8 +3,8 @@ import { useBackend } from '../backend';
 import { Box, Button, Flex, Grid, Dimmer, Section } from '../components';
 import { Window } from '../layouts';
 
-const CallingWindow = (props, context) => {
-  const { act } = useBackend(context);
+const CallingWindow = (props) => {
+  const { act } = useBackend();
   return (
     <Dimmer>
       <Section transparent>
@@ -25,8 +25,8 @@ const CallingWindow = (props, context) => {
     </Dimmer>
   );
 };
-const NumpadWindow = (props, context) => {
-  const { act, data } = useBackend(context);
+const NumpadWindow = (props) => {
+  const { act, data } = useBackend();
   const { my_number, choosed_number } = data;
   return (
     <Box m="6px">
@@ -70,8 +70,8 @@ const NumpadWindow = (props, context) => {
   );
 };
 
-const TalkingWindow = (props, context) => {
-  const { act, data } = useBackend(context);
+const TalkingWindow = (props) => {
+  const { act, data } = useBackend();
   const { calling_user, talking } = data;
   return (
     <Dimmer>
@@ -121,8 +121,8 @@ const TalkingWindow = (props, context) => {
   );
 };
 
-const PhoneKeypad = (props, context) => {
-  const { act } = useBackend(context);
+const PhoneKeypad = (props) => {
+  const { act } = useBackend();
   const keypadKeys = [
     ['1', '4', '7', '_', 'C'],
     ['2', '5', '8', '0', '+'],
@@ -177,8 +177,8 @@ const PhoneKeypad = (props, context) => {
   );
 };
 
-export const Telephone = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Telephone = (props) => {
+  const { act, data } = useBackend();
   const { online, calling } = data;
   return (
     <Window width={200} height={470} theme="retro">

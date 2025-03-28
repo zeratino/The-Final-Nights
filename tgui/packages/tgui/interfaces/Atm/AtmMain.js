@@ -3,25 +3,22 @@ import { useLocalState } from '../../backend';
 import { Button, Input, LabeledList, Section, Box } from '../../components';
 import { Window } from '../../layouts';
 
-export const AtmMain = (props, context) => {
-  const { act, data } = useBackend(context);
+export const AtmMain = (props) => {
+  const { act, data } = useBackend();
   const [transferAmount, setTransferAmount] = useLocalState(
-    context,
     'transfer_amount',
     '',
   );
   const [withdrawAmount, setWithdrawAmount] = useLocalState(
-    context,
     'withdraw_amount',
     '',
   );
-  const [newPin, setNewPin] = useLocalState(context, 'new_pin', '');
+  const [newPin, setNewPin] = useLocalState('new_pin', '');
   const [selectedAccount, setSelectedAccount] = useLocalState(
-    context,
     'selected_account',
     '',
   );
-  const [searchTerm, setSearchTerm] = useLocalState(context, 'search_term', '');
+  const [searchTerm, setSearchTerm] = useLocalState('search_term', '');
   const buttonStyle = { minWidth: '120px', flex: 3 };
 
   const {

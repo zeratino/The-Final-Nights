@@ -1,8 +1,8 @@
 import { useLocalState } from '../../../backend';
 
-export const Notepad = (props, context) => {
+export const Notepad = (props) => {
   const { app, act } = props;
-  const [text, setText] = useLocalState(context, 'notepad_text', app.text);
+  const [text, setText] = useLocalState('notepad_text', app.text);
   return (
     <div className="notepad">
       <section className="np__toolbar">

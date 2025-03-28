@@ -5,7 +5,7 @@ import { Box, Button, Icon, Section } from '../components';
 import { Window } from '../layouts';
 
 export const Safe = (properties, context) => {
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { dial, open } = data;
   return (
     <Window width={625} height={800} theme="ntos">
@@ -42,7 +42,7 @@ export const Safe = (properties, context) => {
 };
 
 const Dialer = (properties, context) => {
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { dial, open, locked, broken } = data;
   const dialButton = (amount, right) => {
     return (
@@ -81,7 +81,7 @@ const Dialer = (properties, context) => {
 };
 
 const Contents = (properties, context) => {
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { contents } = data;
   return (
     <Box className="Safe__contents" overflow="auto">

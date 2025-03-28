@@ -4,8 +4,8 @@ import { Window } from '../layouts';
 import { Component } from 'react';
 
 export class VaultDoor extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       inputCode: '',
     };

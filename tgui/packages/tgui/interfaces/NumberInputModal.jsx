@@ -6,10 +6,10 @@ import { Box, Button, NumberInput, Section, Stack } from "../components";
 import { Window } from "../layouts";
 
 export const NumberInputModal = (_, context) => {
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   const { message, init_value, preferences, timeout, title } = data;
   const { large_buttons } = preferences;
-  const [input, setInput] = useLocalState(context, "input", init_value);
+  const [input, setInput] = useLocalState("input", init_value);
   const onChange = value => {
     if (value === input) {
       return;
@@ -61,8 +61,8 @@ export const NumberInputModal = (_, context) => {
 };
 
 /** Gets the user input and invalidates if there's a constraint. */
-const InputArea = (props, context) => {
-  const { data } = useBackend(context);
+const InputArea = (props) => {
+  const { data } = useBackend();
   const { min_value, max_value, init_value } = data;
   const { input, onClick, onChange } = props;
 

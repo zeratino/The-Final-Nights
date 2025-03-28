@@ -24,12 +24,12 @@ const pod_grey = {
 };
 
 const useCompact = (context) => {
-  const [compact, setCompact] = useLocalState(context, 'compact', false);
+  const [compact, setCompact] = useLocalState('compact', false);
   const toggleCompact = () => setCompact(!compact);
   return [compact, toggleCompact];
 };
 
-export const CentcomPodLauncher = (props, context) => {
+export const CentcomPodLauncher = (props) => {
   const [compact] = useCompact(context);
   return (
     <Window
@@ -49,7 +49,7 @@ export const CentcomPodLauncher = (props, context) => {
   );
 };
 
-const CentcomPodLauncherContent = (props, context) => {
+const CentcomPodLauncherContent = (props) => {
   const [compact] = useCompact(context);
   return (
     <Window.Content>
@@ -429,8 +429,8 @@ const EFFECTS_ALL = [
   },
 ];
 
-const ViewTabHolder = (props, context) => {
-  const { act, data } = useBackend(context);
+const ViewTabHolder = (props) => {
+  const { act, data } = useBackend();
   const [tabPageIndex, setTabPageIndex] = useLocalState(
     context,
     'tabPageIndex',
@@ -525,7 +525,7 @@ const ViewTabHolder = (props, context) => {
   );
 };
 
-const TabPod = (props, context) => {
+const TabPod = (props) => {
   return (
     <Box color="label">
       Note: You can right click on this
@@ -535,8 +535,8 @@ const TabPod = (props, context) => {
   );
 };
 
-const TabBay = (props, context) => {
-  const { act, data } = useBackend(context);
+const TabBay = (props) => {
+  const { act, data } = useBackend();
   return (
     <>
       <Button
@@ -554,8 +554,8 @@ const TabBay = (props, context) => {
   );
 };
 
-const TabDrop = (props, context) => {
-  const { act, data } = useBackend(context);
+const TabDrop = (props) => {
+  const { act, data } = useBackend();
   return (
     <>
       <Button
@@ -573,8 +573,8 @@ const TabDrop = (props, context) => {
   );
 };
 
-const PodStatusPage = (props, context) => {
-  const { act, data } = useBackend(context);
+const PodStatusPage = (props) => {
+  const { act, data } = useBackend();
   const [compact, toggleCompact] = useCompact(context);
   return (
     <Section fill width="100%">
@@ -692,8 +692,8 @@ const PodStatusPage = (props, context) => {
   );
 };
 
-const ReverseMenu = (props, context) => {
-  const { act, data } = useBackend(context);
+const ReverseMenu = (props) => {
+  const { act, data } = useBackend();
   const [tabPageIndex, setTabPageIndex] = useLocalState(
     context,
     'tabPageIndex',
@@ -988,9 +988,9 @@ class PresetsPage extends Component {
   }
 }
 
-const LaunchPage = (props, context) => {
+const LaunchPage = (props) => {
   const [compact] = useCompact(context);
-  const { act, data } = useBackend(context);
+  const { act, data } = useBackend();
   return (
     <Button
       fluid
@@ -1011,8 +1011,8 @@ const LaunchPage = (props, context) => {
   );
 };
 
-const StylePage = (props, context) => {
-  const { act, data } = useBackend(context);
+const StylePage = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section
       fill
@@ -1068,8 +1068,8 @@ const StylePage = (props, context) => {
   );
 };
 
-const Bays = (props, context) => {
-  const { act, data } = useBackend(context);
+const Bays = (props) => {
+  const { act, data } = useBackend();
   const [compact] = useCompact(context);
   return (
     <Section
@@ -1117,8 +1117,8 @@ const Bays = (props, context) => {
   );
 };
 
-const Timing = (props, context) => {
-  const { act, data } = useBackend(context);
+const Timing = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section
       fill
@@ -1164,8 +1164,8 @@ const Timing = (props, context) => {
   );
 };
 
-const DelayHelper = (props, context) => {
-  const { act, data } = useBackend(context);
+const DelayHelper = (props) => {
+  const { act, data } = useBackend();
   const { delay_list, reverse = false } = props;
   return (
     <LabeledControls wrap>
@@ -1203,8 +1203,8 @@ const DelayHelper = (props, context) => {
   );
 };
 
-const Sounds = (props, context) => {
-  const { act, data } = useBackend(context);
+const Sounds = (props) => {
+  const { act, data } = useBackend();
   return (
     <Section
       fill

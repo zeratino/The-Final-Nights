@@ -3,10 +3,9 @@ import { useLocalState } from '../../backend';
 import { Button, Input, LabeledList, Section } from '../../components';
 import { Window } from '../../layouts';
 
-export const AtmLogin = (props, context) => {
-  const { act, data } = useBackend(context);
+export const AtmLogin = (props) => {
+  const { act, data } = useBackend();
   const [entered_code, setEnteredCode] = useLocalState(
-    context,
     'login_code',
     '',
   );

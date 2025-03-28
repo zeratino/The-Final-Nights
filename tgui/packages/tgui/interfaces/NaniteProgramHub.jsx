@@ -10,8 +10,8 @@ import {
 } from '../components';
 import { Window } from '../layouts';
 
-export const NaniteProgramHub = (props, context) => {
-  const { act, data } = useBackend(context);
+export const NaniteProgramHub = (props) => {
+  const { act, data } = useBackend();
   const { detail_view, disk, has_disk, has_program, programs = {} } = data;
   const [selectedCategory, setSelectedCategory] = useSharedState(
     context,
