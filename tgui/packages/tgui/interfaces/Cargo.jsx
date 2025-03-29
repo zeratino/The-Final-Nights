@@ -121,7 +121,7 @@ export const CargoCatalog = (props) => {
   const { express, onAddToQueue, onRemoveFromQueue } = props;
   const { act, data } = useBackend();
   const { self_paid, app_cost } = data;
-  const supplies = Object.keys(data.supplies);
+  const supplies = Object.values(data.supplies);
   const [activeSupplyName, setActiveSupplyName] = useSharedState(
     'supply',
     supplies[0]?.name,
@@ -147,7 +147,7 @@ export const CargoCatalog = (props) => {
       }
     >
       <Flex>
-        <Flex.Item ml={-1} mr={1}>
+        <Flex.Item mr={1}>
           <Tabs vertical>
             {supplies.map((supply) => (
               <Tabs.Tab
@@ -155,14 +155,14 @@ export const CargoCatalog = (props) => {
                 selected={supply.name === activeSupplyName}
                 onClick={() => setActiveSupplyName(supply.name)}
               >
-                {supply.name} ({supply.packs.length})
+                {supply.name} ({supply?.packs?.length || 0})
               </Tabs.Tab>
             ))}
           </Tabs>
         </Flex.Item>
         <Flex.Item grow={1} basis={0}>
           <Table>
-            {activeSupply?.packs.map((pack) => {
+            {activeSupply?.packs?.map((pack) => {
               const tags = [];
               if (pack.small_item) {
                 tags.push('Small');
