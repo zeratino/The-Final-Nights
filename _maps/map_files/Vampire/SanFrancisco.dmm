@@ -29893,10 +29893,6 @@
 /obj/machinery/shower{
 	pixel_y = 9
 	},
-/obj/machinery/atmospherics/components/unary/passive_vent{
-	dir = 1;
-	name = "shower drain"
-	},
 /turf/open/floor/plating/toilet,
 /area/vtm/interior/millennium_tower/f4)
 "iHL" = (
@@ -45038,11 +45034,10 @@
 /turf/open/floor/plating/vampwood,
 /area/vtm/northbeach)
 "nfM" = (
-/obj/machinery/light/small/red{
-	pixel_y = 24
+/obj/item/paper{
+	info = "Once, something horrible was here."
 	},
-/obj/structure/toilet/secret,
-/turf/open/floor/plating/shit,
+/turf/open/floor/plating/rough/cave,
 /area/vtm/sewer/nosferatu_town)
 "nfQ" = (
 /obj/item/flashlight/lamp{
@@ -62014,7 +62009,6 @@
 "rSq" = (
 /obj/effect/decal/trash,
 /obj/effect/decal/trash,
-/obj/machinery/atmospherics/components/unary/tank/air,
 /obj/effect/decal/graffiti,
 /turf/open/floor/plating/vampcanalplating,
 /area/vtm/interior/glasswalker)
@@ -75310,11 +75304,6 @@
 /obj/effect/decal/bordur/corner,
 /turf/open/floor/plating/vampgrass,
 /area/vtm)
-"vOo" = (
-/obj/effect/decal/cardboard,
-/obj/machinery/atmospherics/components/unary/tank/air,
-/turf/open/floor/plating/vampcanalplating,
-/area/vtm/interior/glasswalker)
 "vOw" = (
 /obj/item/melee/skateboard,
 /obj/structure/table,
@@ -104546,7 +104535,7 @@ mIV
 mIV
 mIV
 vqC
-vOo
+oVl
 xRb
 cPX
 dOH
@@ -113921,7 +113910,7 @@ nYS
 nYS
 wJn
 nfM
-cSf
+fZO
 nxc
 tiZ
 nof
