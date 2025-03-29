@@ -11,7 +11,7 @@ const createBabelConfig = options => {
       ['@babel/preset-env', {
         modules: 'commonjs',
         useBuiltIns: 'entry',
-        corejs: '3.8',
+        corejs: '3',
         spec: false,
         loose: true,
         targets: [],
