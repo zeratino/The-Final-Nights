@@ -33,7 +33,7 @@ import { createRenderer } from './renderer';
 import { perf } from 'common/perf';
 import { setupGlobalEvents } from './events';
 import { setupHotKeys } from './hotkeys';
-import { setupHotReloading } from 'tgui-dev-server/link/client.js';
+import { setupHotReloading } from 'tgui-dev-server/link/client.cjs';
 import { setGlobalStore } from './backend';
 
 perf.mark('inception', window.performance?.timing?.navigationStart);
