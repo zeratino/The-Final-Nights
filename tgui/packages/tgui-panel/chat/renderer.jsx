@@ -443,10 +443,7 @@ class ChatRenderer {
       message.node = node;
       // Query all possible selectors to find out the message type
       if (!message.type) {
-        // IE8: Does not support querySelector on elements that
-        // are not yet in the document.
-        // prettier-ignore
-        const typeDef = !Byond.IS_LTE_IE8 && MESSAGE_TYPES
+        const typeDef = MESSAGE_TYPES
           .find(typeDef => (
             typeDef.selector && node.querySelector(typeDef.selector)
           ));
@@ -549,10 +546,6 @@ class ChatRenderer {
   }
 
   saveToDisk() {
-    // Allow only on IE11
-    if (Byond.IS_LTE_IE10) {
-      return;
-    }
     // Compile currently loaded stylesheets as CSS text
     let cssText = '';
     const styleSheets = document.styleSheets;
