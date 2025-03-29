@@ -1,7 +1,6 @@
 import { map, sortBy } from 'common/collections';
 import { flow } from 'common/fp';
 import { toFixed } from 'common/math';
-import { pureComponentHooks } from 'common/react';
 import { useBackend, useLocalState } from '../backend';
 import {
   Box,
@@ -200,8 +199,6 @@ export const AreaCharge = (props) => {
   );
 };
 
-AreaCharge.defaultHooks = pureComponentHooks;
-
 const AreaStatusColorBox = (props) => {
   const { status } = props;
   const power = Boolean(status & 2);
@@ -215,5 +212,3 @@ const AreaStatusColorBox = (props) => {
     />
   );
 };
-
-AreaStatusColorBox.defaultHooks = pureComponentHooks;

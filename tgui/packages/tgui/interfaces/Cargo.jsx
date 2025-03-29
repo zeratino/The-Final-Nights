@@ -1,4 +1,3 @@
-import { toArray } from 'common/collections';
 import { useBackend, useSharedState } from '../backend';
 import {
   AnimatedNumber,
@@ -122,7 +121,7 @@ export const CargoCatalog = (props) => {
   const { express, onAddToQueue, onRemoveFromQueue } = props;
   const { act, data } = useBackend();
   const { self_paid, app_cost } = data;
-  const supplies = toArray(data.supplies);
+  const supplies = Object.keys(data.supplies);
   const [activeSupplyName, setActiveSupplyName] = useSharedState(
     context,
     'supply',

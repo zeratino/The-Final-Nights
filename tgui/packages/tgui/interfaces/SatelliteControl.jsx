@@ -1,6 +1,5 @@
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, ProgressBar, Section } from '../components';
-import { LabeledListItem } from '../components/LabeledList';
 import { Window } from '../layouts';
 
 export const SatelliteControl = (props) => {
@@ -12,7 +11,7 @@ export const SatelliteControl = (props) => {
         {data.meteor_shield && (
           <Section>
             <LabeledList>
-              <LabeledListItem label="Coverage">
+              <LabeledList.Item label="Coverage">
                 <ProgressBar
                   value={
                     data.meteor_shield_coverage /
@@ -29,7 +28,7 @@ export const SatelliteControl = (props) => {
                     bad: [-Infinity, 0.3],
                   }}
                 />
-              </LabeledListItem>
+              </LabeledList.Item>
             </LabeledList>
           </Section>
         )}
