@@ -171,7 +171,7 @@
 	icon_state = "deagle"
 	ammo_type = /obj/item/ammo_casing/vampire/c50
 	caliber = CALIBER_50
-	max_ammo = 5 //5 .50 bullets in a pistol magazine is already pushing it
+	max_ammo = 7 //Can't touch this without breaking the sprite because its using .44 mag sprites.
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/gun/ballistic/automatic/vampire/deagle/c50
