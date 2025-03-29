@@ -7,7 +7,7 @@
 import { toFixed } from 'tgui-core/math';
 import { useLocalState } from 'tgui/backend';
 import { useDispatch, useSelector } from 'tgui/backend';
-import { Box, Button, ColorBox, Divider, Dropdown, Flex, Input, LabeledList, NumberInput, Section, Stack, Tabs, TextArea } from 'tgui/components';
+import { Box, Button, ColorBox, Divider, Dropdown, Flex, Input, LabeledList, NumberInput, Section, Stack, Tabs, TextArea } from 'tgui-core/components';
 import { ChatPageSettings } from '../chat';
 import { rebuildChat, saveChatToDisk } from '../chat/actions';
 import { THEMES } from '../themes';

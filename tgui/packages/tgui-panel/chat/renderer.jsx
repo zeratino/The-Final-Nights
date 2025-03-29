@@ -11,7 +11,7 @@ import { COMBINE_MAX_MESSAGES, COMBINE_MAX_TIME_WINDOW, IMAGE_RETRY_DELAY, IMAGE
 import { render } from 'react-dom';
 import { canPageAcceptType, createMessage, isSameMessage } from './model';
 import { highlightNode, linkifyNode } from './replaceInTextNode';
-import { Tooltip } from 'tgui/components';
+import { Tooltip } from 'tgui-core/components';
 
 const logger = createLogger('chatRenderer');
 

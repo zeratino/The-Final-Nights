@@ -2,7 +2,7 @@ import { Loader } from "./common/Loader";
 import { InputButtons } from "./common/InputButtons";
 import { useBackend, useLocalState } from "../backend";
 import { KEY_ENTER, KEY_ESCAPE } from "tgui-core/keycodes";
-import { Box, Section, Stack, TextArea } from "../components";
+import { Box, Section, Stack, TextArea } from "tgui-core/components";
 import { Window } from "../layouts";
 
 export const sanitizeMultiline = toSanitize => {

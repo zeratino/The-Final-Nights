@@ -2,7 +2,7 @@ import { Loader } from "./common/Loader";
 import { InputButtons } from "./common/InputButtons";
 import { KEY_ENTER, KEY_ESCAPE } from "tgui-core/keycodes";
 import { useBackend, useLocalState } from "../backend";
-import { Box, Button, NumberInput, Section, Stack } from "../components";
+import { Box, Button, NumberInput, Section, Stack } from "tgui-core/components";
 import { Window } from "../layouts";
 
 export const NumberInputModal = (_, context) => {

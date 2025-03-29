@@ -1,6 +1,6 @@
 import chess from '../../../assets/WindowsXP/user.png';
 import icq from '../../../assets/WindowsXP/icq.png';
-import { TextArea, Input } from '../../../components';
+import { TextArea, Input } from 'tgui-core/components';
 import { useLocalState } from '../../../backend';
 
 export const ICQ = (props) => {
