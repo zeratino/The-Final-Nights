@@ -171,7 +171,7 @@
 	icon_state = "deagle"
 	ammo_type = /obj/item/ammo_casing/vampire/c50
 	caliber = CALIBER_50
-	max_ammo = 7
+	max_ammo = 5 //5 .50 bullets in a pistol magazine is already pushing it
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/gun/ballistic/automatic/vampire/deagle/c50
@@ -180,8 +180,7 @@
 	icon_state = "deagle50"
 	inhand_icon_state = "deagle"
 	worn_icon_state = "deagle"
-	w_class = WEIGHT_CLASS_BULKY // No dual-wielding these, its a .50 cal with 0 fire delay
-	recoil = 5 // Big recoil
+	weapon_weight = WEAPON_HEAVY // No dual-wielding .50 cals.
 	mag_type = /obj/item/ammo_box/magazine/m50
 	fire_sound_volume = 125 //MY EARS
 
@@ -583,6 +582,7 @@
 	inhand_icon_state = "sniper"
 	worn_icon_state = "sniper"
 	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/internal/vampire/sniper
 	bolt_wording = "bolt"
 	bolt_type = BOLT_TYPE_STANDARD
@@ -596,7 +596,6 @@
 	tac_reloads = FALSE
 	fire_delay = 40
 	burst_size = 1
-	w_class = WEIGHT_CLASS_NORMAL
 	zoomable = TRUE
 	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
 	zoom_out_amt = 5
