@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { useLocalState } from '../backend';
+import { useState } from 'react';
 import { Button, Flex, Section } from 'tgui-core/components';
 
 export const meta = {
@@ -13,10 +13,10 @@ export const meta = {
 };
 
 const Story = (props) => {
-  const [grow, setGrow] = useLocalState('fs_grow', 1);
-  const [direction, setDirection] = useLocalState('fs_direction', 'column');
-  const [fill, setFill] = useLocalState('fs_fill', true);
-  const [hasTitle, setHasTitle] = useLocalState('fs_title', true);
+  const [grow, setGrow] = useState(1);
+  const [direction, setDirection] = useState('column');
+  const [fill, setFill] = useState(true);
+  const [hasTitle, setHasTitle] = useState(true);
   return (
     <Flex height="100%" direction="column">
       <Flex.Item mb={1}>
@@ -25,7 +25,8 @@ const Story = (props) => {
             fluid
             onClick={() =>
               setDirection(direction === 'column' ? 'row' : 'column')
-            }>
+            }
+          >
             {`Flex direction="${direction}"`}
           </Button>
           <Button fluid onClick={() => setGrow(Number(!grow))}>
@@ -37,7 +38,8 @@ const Story = (props) => {
           <Button
             fluid
             selected={hasTitle}
-            onClick={() => setHasTitle(!hasTitle)}>
+            onClick={() => setHasTitle(!hasTitle)}
+          >
             {`Section title`}
           </Button>
         </Section>
@@ -47,7 +49,8 @@ const Story = (props) => {
           <Flex.Item
             mr={direction === 'row' && 1}
             mb={direction === 'column' && 1}
-            grow={grow}>
+            grow={grow}
+          >
             <Section title={hasTitle && 'Section 1'} fill={fill}>
               Content
             </Section>

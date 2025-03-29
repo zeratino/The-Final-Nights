@@ -10,7 +10,7 @@ import {
   Stack,
   TextArea,
 } from 'tgui-core/components';
-import { formatMoney } from '../format';
+import { formatMoney } from 'tgui-core/format';
 import { Window } from '../layouts';
 
 export const RequestKiosk = (props) => {

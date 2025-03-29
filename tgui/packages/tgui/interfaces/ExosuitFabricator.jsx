@@ -14,7 +14,7 @@ import {
   Section,
   Stack,
 } from 'tgui-core/components';
-import { formatMoney, formatSiUnit } from '../format';
+import { formatMoney, formatSiUnit } from 'tgui-core/format';
 import { Window } from '../layouts';
 
 const MATERIAL_KEYS = {

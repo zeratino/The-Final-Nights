@@ -10,7 +10,7 @@ import {
   Tabs,
   NoticeBox,
 } from 'tgui-core/components';
-import { formatMoney } from '../format';
+import { formatMoney } from 'tgui-core/format';
 import { Window } from '../layouts';
 
 const MAX_SEARCH_RESULTS = 25;

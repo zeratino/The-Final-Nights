@@ -9,7 +9,7 @@ import {
   Stack,
   Tabs,
 } from 'tgui-core/components';
-import { formatMoney } from '../format';
+import { formatMoney } from 'tgui-core/format';
 import { Window } from '../layouts';
 
 export const BlackMarketUplink = (props) => {

@@ -15,7 +15,7 @@ import {
 } from 'tgui-core/components';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
-import { formatSiUnit, formatSiBaseTenUnit } from '../format';
+import { formatSiUnit, formatSiBaseTenUnit } from 'tgui-core/format';
 
 export const Hypertorus = (props) => {
   const { act, data } = useBackend();

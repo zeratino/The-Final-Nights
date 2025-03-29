@@ -12,7 +12,7 @@ import {
   Section,
   Tooltip,
 } from 'tgui-core/components';
-import { formatSiUnit } from '../format';
+import { formatSiUnit } from 'tgui-core/format';
 import { Window } from '../layouts';
 
 const formatPressure = (value) => {
