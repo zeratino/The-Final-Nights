@@ -1,6 +1,6 @@
 import { classes } from 'common/react';
 import { useBackend } from '../backend';
-import { Box, Button, Flex, Grid, Dimmer, Section } from '../components';
+import { Box, Button, Flex, Stack, Dimmer, Section } from '../components';
 import { Window } from '../layouts';
 
 const CallingWindow = (props) => {
@@ -130,9 +130,9 @@ const PhoneKeypad = (props) => {
   ];
   return (
     <Box width="185px">
-      <Grid width="1px">
+      <Stack>
         {keypadKeys.map((keyColumn, i) => (
-          <Grid.Column key={keyColumn[0]}>
+          <Stack.Item key={keyColumn[0]}>
             {keyColumn.map((key) => (
               <Button
                 fluid
@@ -170,9 +170,9 @@ const PhoneKeypad = (props) => {
                 onClick={() => act('call')}
               />
             )}
-          </Grid.Column>
+          </Stack.Item>
         ))}
-      </Grid>
+      </Stack>
     </Box>
   );
 };

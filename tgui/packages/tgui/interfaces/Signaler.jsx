@@ -1,6 +1,6 @@
 import { toFixed } from 'common/math';
 import { useBackend } from '../backend';
-import { Button, Grid, NumberInput, Section } from '../components';
+import { Button, Stack, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
 
 export const Signaler = (props) => {
@@ -10,11 +10,11 @@ export const Signaler = (props) => {
     <Window width={280} height={132}>
       <Window.Content>
         <Section>
-          <Grid>
-            <Grid.Column size={1.4} color="label">
+          <Stack>
+            <Stack.Item grow color="label">
               Frequency:
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item>
               <NumberInput
                 animate
                 unit="kHz"
@@ -31,8 +31,8 @@ export const Signaler = (props) => {
                   })
                 }
               />
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item>
               <Button
                 ml={1.3}
                 icon="sync"
@@ -43,13 +43,13 @@ export const Signaler = (props) => {
                   })
                 }
               />
-            </Grid.Column>
-          </Grid>
-          <Grid mt={0.6}>
-            <Grid.Column size={1.4} color="label">
+            </Stack.Item>
+          </Stack>
+          <Stack mt={0.6}>
+            <Stack.Item grow color="label">
               Code:
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item>
               <NumberInput
                 animate
                 step={1}
@@ -64,8 +64,8 @@ export const Signaler = (props) => {
                   })
                 }
               />
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item>
               <Button
                 ml={1.3}
                 icon="sync"
@@ -76,10 +76,10 @@ export const Signaler = (props) => {
                   })
                 }
               />
-            </Grid.Column>
-          </Grid>
-          <Grid mt={0.8}>
-            <Grid.Column>
+            </Stack.Item>
+          </Stack>
+          <Stack mt={0.8}>
+            <Stack.Item>
               <Button
                 mb={-0.1}
                 fluid
@@ -88,8 +88,8 @@ export const Signaler = (props) => {
                 textAlign="center"
                 onClick={() => act('signal')}
               />
-            </Grid.Column>
-          </Grid>
+            </Stack.Item>
+          </Stack>
         </Section>
       </Window.Content>
     </Window>

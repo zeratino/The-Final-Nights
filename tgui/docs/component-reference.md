@@ -8,51 +8,52 @@ This table of contents must be manually maintained.
 Make sure to add new items to this list if you document new components.
 -->
 
-- [General Concepts](#general-concepts)
-- [`tgui/components`](#tguicomponents)
-  - [`AnimatedNumber`](#animatednumber)
-  - [`BlockQuote`](#blockquote)
-  - [`Box`](#box)
-  - [`Button`](#button)
-  - [`Button.Checkbox`](#buttoncheckbox)
-  - [`Button.Confirm`](#buttonconfirm)
-  - [`Button.Input`](#buttoninput)
-  - [`ByondUi`](#byondui)
-  - [`Collapsible`](#collapsible)
-  - [`ColorBox`](#colorbox)
-  - [`Dimmer`](#dimmer)
-  - [`Divider`](#divider)
-  - [`Dropdown`](#dropdown)
-  - [`Flex`](#flex)
-  - [`Flex.Item`](#flexitem)
-  - [`Grid`](#grid)
-  - [`Grid.Column`](#gridcolumn)
-  - [`Icon`](#icon)
-  - [`Icon.Stack`](#iconstack)
-  - [`Input`](#input)
-  - [`Knob`](#knob)
-  - [`LabeledControls`](#labeledcontrols)
-  - [`LabeledControls.Item`](#labeledcontrolsitem)
-  - [`LabeledList`](#labeledlist)
-  - [`LabeledList.Item`](#labeledlistitem)
-  - [`LabeledList.Divider`](#labeledlistdivider)
-  - [`Modal`](#modal)
-  - [`NoticeBox`](#noticebox)
-  - [`NumberInput`](#numberinput)
-  - [`ProgressBar`](#progressbar)
-  - [`RoundGauge`](#roundgauge)
-  - [`Section`](#section)
-  - [`Slider`](#slider)
-  - [`Stack`](#stack)
-  - [`Table`](#table)
-  - [`Table.Row`](#tablerow)
-  - [`Table.Cell`](#tablecell)
-  - [`Tabs`](#tabs)
-  - [`Tabs.Tab`](#tabstab)
-  - [`Tooltip`](#tooltip)
-- [`tgui/layouts`](#tguilayouts)
-  - [`Window`](#window)
-  - [`Window.Content`](#windowcontent)
+- [Component Reference](#component-reference)
+  - [General Concepts](#general-concepts)
+  - [`tgui/components`](#tguicomponents)
+    - [`AnimatedNumber`](#animatednumber)
+    - [`BlockQuote`](#blockquote)
+    - [`Box`](#box)
+    - [`Button`](#button)
+    - [`Button.Checkbox`](#buttoncheckbox)
+    - [`Button.Confirm`](#buttonconfirm)
+    - [`Button.Input`](#buttoninput)
+    - [`ByondUi`](#byondui)
+    - [`Collapsible`](#collapsible)
+    - [`ColorBox`](#colorbox)
+    - [`Dimmer`](#dimmer)
+    - [`Divider`](#divider)
+    - [`Dropdown`](#dropdown)
+    - [`Flex`](#flex)
+    - [`Flex.Item`](#flexitem)
+    - [`Icon`](#icon)
+    - [`Icon.Stack`](#iconstack)
+    - [`Input`](#input)
+    - [`Knob`](#knob)
+    - [`LabeledControls`](#labeledcontrols)
+    - [`LabeledControls.Item`](#labeledcontrolsitem)
+    - [`LabeledList`](#labeledlist)
+    - [`LabeledList.Item`](#labeledlistitem)
+    - [`LabeledList.Divider`](#labeledlistdivider)
+    - [`Modal`](#modal)
+    - [`NoticeBox`](#noticebox)
+    - [`NumberInput`](#numberinput)
+    - [`Popper`](#popper)
+    - [`ProgressBar`](#progressbar)
+    - [`RoundGauge`](#roundgauge)
+    - [`Section`](#section)
+    - [`Slider`](#slider)
+    - [`Stack`](#stack)
+    - [`Stack.Item`](#stackitem)
+    - [`Table`](#table)
+    - [`Table.Row`](#tablerow)
+    - [`Table.Cell`](#tablecell)
+    - [`Tabs`](#tabs)
+    - [`Tabs.Tab`](#tabstab)
+    - [`Tooltip`](#tooltip)
+  - [`tgui/layouts`](#tguilayouts)
+    - [`Window`](#window)
+    - [`Window.Content`](#windowcontent)
 
 ## General Concepts
 
@@ -468,43 +469,6 @@ before any flex-related calculations are done. Has to be a length
   Setting basis to `0` breaks the loop and fixes all of the problems.
 - `align: string` - This allows the default alignment (or the one specified by
 align-items) to be overridden for individual flex items. See: [Flex](#flex).
-
-### `Grid`
-
-> **Deprecated:** This component is no longer recommended due to the variety
-> of bugs that come with table-based layouts.
-> We recommend using [Flex](#flex) instead.
-
-Helps you to divide horizontal space into two or more equal sections.
-It is essentially a single-row `Table`, but with some extra features.
-
-Example:
-
-```jsx
-<Grid>
-  <Grid.Column>
-    <Section title="Section 1">
-      Hello world!
-    </Section>
-  </Grid.Column>
-  <Grid.Column size={2}>
-    <Section title="Section 2">
-      Hello world!
-    </Section>
-  </Grid.Column>
-</Grid>
-```
-
-**Props:**
-
-- See inherited props: [Table](#table)
-
-### `Grid.Column`
-
-**Props:**
-
-- See inherited props: [Table.Cell](#tablecell)
-- `size: number` (default: 1) - Size of the column relative to other columns.
 
 ### `Icon`
 

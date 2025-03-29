@@ -1,6 +1,6 @@
 import { classes } from 'common/react';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Grid, NumberInput } from '../components';
+import { Box, Button, Stack, NumberInput } from '../components';
 import { Window } from '../layouts';
 
 const getNumberColor = (number) => {
@@ -322,8 +322,8 @@ export const RouletteBetTable = (props) => {
                 })
               }
             />
-            <Grid>
-              <Grid.Column>
+            <Stack>
+              <Stack.Item grow>
                 <Button
                   fluid
                   content="Bet custom amount..."
@@ -333,8 +333,8 @@ export const RouletteBetTable = (props) => {
                     })
                   }
                 />
-              </Grid.Column>
-              <Grid.Column size={0.1}>
+              </Stack.Item>
+              <Stack.Item>
                 <NumberInput
                   value={customBet}
                   minValue={0}
@@ -344,8 +344,8 @@ export const RouletteBetTable = (props) => {
                   width="40px"
                   onChange={(e, value) => setCustomBet(value)}
                 />
-              </Grid.Column>
-            </Grid>
+              </Stack.Item>
+            </Stack>
           </Box>
         </td>
       </tr>

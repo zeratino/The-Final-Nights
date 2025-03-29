@@ -1,6 +1,6 @@
 import { sortBy } from 'common/collections';
 import { useLocalState } from '../../backend';
-import { Button, Flex, Grid, Section, Tabs } from '../../components';
+import { Button, Flex, Stack, Section, Tabs } from '../../components';
 
 const diffMap = {
   0: {
@@ -100,8 +100,8 @@ export const AccessList = (props) => {
           </Tabs>
         </Flex.Item>
         <Flex.Item grow={1}>
-          <Grid>
-            <Grid.Column mr={0}>
+          <Stack>
+            <Stack.Item mr={0}>
               <Button
                 fluid
                 icon="check"
@@ -109,8 +109,8 @@ export const AccessList = (props) => {
                 color="good"
                 onClick={() => grantDep(selectedAccess.regid)}
               />
-            </Grid.Column>
-            <Grid.Column ml={0}>
+            </Stack.Item>
+            <Stack.Item ml={0}>
               <Button
                 fluid
                 icon="times"
@@ -118,8 +118,8 @@ export const AccessList = (props) => {
                 color="bad"
                 onClick={() => denyDep(selectedAccess.regid)}
               />
-            </Grid.Column>
-          </Grid>
+            </Stack.Item>
+          </Stack>
           {selectedAccessEntries.map((entry) => (
             <Button.Checkbox
               fluid

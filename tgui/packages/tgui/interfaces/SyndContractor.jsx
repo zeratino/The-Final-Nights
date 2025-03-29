@@ -4,7 +4,7 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
+  Stack,
   Icon,
   LabeledList,
   Modal,
@@ -228,8 +228,8 @@ export const StatusPane = (props) => {
         </Box>
       }
     >
-      <Grid>
-        <Grid.Column size={0.85}>
+      <Stack>
+        <Stack.Item grow>
           <LabeledList>
             <LabeledList.Item
               label="TC Available"
@@ -247,16 +247,16 @@ export const StatusPane = (props) => {
               {data.earned_tc}
             </LabeledList.Item>
           </LabeledList>
-        </Grid.Column>
-        <Grid.Column>
+        </Stack.Item>
+        <Stack.Item grow>
           <LabeledList>
             <LabeledList.Item label="Contracts Completed">
               {data.contracts_completed}
             </LabeledList.Item>
             <LabeledList.Item label="Current Status">ACTIVE</LabeledList.Item>
           </LabeledList>
-        </Grid.Column>
-      </Grid>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };
@@ -333,15 +333,15 @@ const ContractsTab = (props) => {
                 </>
               }
             >
-              <Grid>
-                <Grid.Column>{contract.message}</Grid.Column>
-                <Grid.Column size={0.5}>
+              <Stack>
+                <Stack.Item>{contract.message}</Stack.Item>
+                <Stack.Item size={0.5}>
                   <Box bold mb={1}>
                     Dropoff Location:
                   </Box>
                   <Box>{contract.dropoff}</Box>
-                </Grid.Column>
-              </Grid>
+                </Stack.Item>
+              </Stack>
             </Section>
           );
         })}

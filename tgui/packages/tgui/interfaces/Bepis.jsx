@@ -2,7 +2,7 @@ import { useBackend } from '../backend';
 import {
   Box,
   Button,
-  Grid,
+  Stack,
   LabeledList,
   NumberInput,
   Section,
@@ -46,8 +46,8 @@ export const Bepis = (props) => {
             Console is currently being operated by{' '}
             {data.account_owner ? data.account_owner : 'no one'}.
           </Section>
-          <Grid>
-            <Grid.Column size={1.5}>
+          <Stack>
+            <Stack.Item basis="60%">
               <Section title="Stored Data and Statistics">
                 <LabeledList>
                   <LabeledList.Item label="Deposited Credits">
@@ -93,8 +93,8 @@ export const Bepis = (props) => {
                   onClick={() => act('withdraw_cash')}
                 />
               </Box>
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item>
               <Section title="Market Data and Analysis">
                 <Box>Average technology cost: {data.mean_value}</Box>
                 <Box>
@@ -114,8 +114,8 @@ export const Bepis = (props) => {
                   content="Begin Testing"
                 />
               </Section>
-            </Grid.Column>
-          </Grid>
+            </Stack.Item>
+          </Stack>
         </Section>
       </Window.Content>
     </Window>

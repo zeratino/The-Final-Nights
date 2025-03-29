@@ -2,7 +2,7 @@ import { useBackend } from '../backend';
 import {
   Box,
   Button,
-  Grid,
+  Stack,
   LabeledList,
   NumberInput,
   ProgressBar,
@@ -35,8 +35,8 @@ export const SolarControl = (props) => {
             />
           }
         >
-          <Grid>
-            <Grid.Column>
+          <Stack>
+            <Stack.Item>
               <LabeledList>
                 <LabeledList.Item
                   label="Solar tracker"
@@ -51,8 +51,8 @@ export const SolarControl = (props) => {
                   {connected_panels}
                 </LabeledList.Item>
               </LabeledList>
-            </Grid.Column>
-            <Grid.Column size={1.5}>
+            </Stack.Item>
+            <Stack.Item grow>
               <LabeledList>
                 <LabeledList.Item label="Power output">
                   <ProgressBar
@@ -69,8 +69,8 @@ export const SolarControl = (props) => {
                   </ProgressBar>
                 </LabeledList.Item>
               </LabeledList>
-            </Grid.Column>
-          </Grid>
+            </Stack.Item>
+          </Stack>
         </Section>
         <Section title="Controls">
           <LabeledList>

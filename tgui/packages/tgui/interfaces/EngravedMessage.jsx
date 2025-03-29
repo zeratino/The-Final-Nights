@@ -1,6 +1,6 @@
 import { decodeHtmlEntities } from 'common/string';
 import { useBackend } from '../backend';
-import { Box, Button, Grid, LabeledList, Section } from '../components';
+import { Box, Button, Stack, LabeledList, Section } from '../components';
 import { Window } from '../layouts';
 
 export const EngravedMessage = (props) => {
@@ -24,8 +24,8 @@ export const EngravedMessage = (props) => {
           <Box bold textAlign="center" fontSize="20px" mb={2}>
             {decodeHtmlEntities(hidden_message)}
           </Box>
-          <Grid>
-            <Grid.Column>
+          <Stack>
+            <Stack.Item grow>
               <Button
                 fluid
                 icon="arrow-up"
@@ -37,8 +37,8 @@ export const EngravedMessage = (props) => {
                 lineHeight="24px"
                 onClick={() => act('like')}
               />
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item grow>
               <Button
                 fluid
                 icon="circle"
@@ -49,8 +49,8 @@ export const EngravedMessage = (props) => {
                 lineHeight="24px"
                 onClick={() => act('neutral')}
               />
-            </Grid.Column>
-            <Grid.Column>
+            </Stack.Item>
+            <Stack.Item grow>
               <Button
                 fluid
                 icon="arrow-down"
@@ -62,8 +62,8 @@ export const EngravedMessage = (props) => {
                 lineHeight="24px"
                 onClick={() => act('dislike')}
               />
-            </Grid.Column>
-          </Grid>
+            </Stack.Item>
+          </Stack>
         </Section>
         <Section>
           <LabeledList>

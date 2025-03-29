@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   Collapsible,
-  Grid,
+  Stack,
   LabeledList,
   NoticeBox,
   NumberInput,
@@ -53,9 +53,9 @@ export const NaniteInfoBox = (props) => {
         </Box>
       }
     >
-      <Grid>
-        <Grid.Column mr={1}>{desc}</Grid.Column>
-        <Grid.Column size={0.5}>
+      <Stack>
+        <Stack.Item mr={1}>{desc}</Stack.Item>
+        <Stack.Item size={0.5}>
           <LabeledList>
             <LabeledList.Item label="Use Rate">{use_rate}</LabeledList.Item>
             {!!can_trigger && (
@@ -69,10 +69,10 @@ export const NaniteInfoBox = (props) => {
               </>
             )}
           </LabeledList>
-        </Grid.Column>
-      </Grid>
-      <Grid>
-        <Grid.Column>
+        </Stack.Item>
+      </Stack>
+      <Stack>
+        <Stack.Item>
           <Section title="Codes" level={3} mr={1}>
             <LabeledList>
               <LabeledList.Item label="Activation">
@@ -89,8 +89,8 @@ export const NaniteInfoBox = (props) => {
               )}
             </LabeledList>
           </Section>
-        </Grid.Column>
-        <Grid.Column>
+        </Stack.Item>
+        <Stack.Item>
           <Section title="Delays" level={3} mr={1}>
             <LabeledList>
               <LabeledList.Item label="Restart">
@@ -111,8 +111,8 @@ export const NaniteInfoBox = (props) => {
               )}
             </LabeledList>
           </Section>
-        </Grid.Column>
-      </Grid>
+        </Stack.Item>
+      </Stack>
       <Section title="Extra Settings" level={3}>
         <LabeledList>
           {extra_settings.map((setting) => {

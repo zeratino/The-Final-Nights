@@ -1,6 +1,6 @@
 import { multiline } from 'common/string';
 import { useBackend } from '../backend';
-import { Box, Button, Grid, Section, Table, Tooltip } from '../components';
+import { Box, Button, Stack, Section, Table, Tooltip } from '../components';
 import { Window } from '../layouts';
 
 export const ComputerFabricator = (props) => {
@@ -39,8 +39,8 @@ const CfStep1 = (props) => {
         Choose your Device
       </Box>
       <Box mt={3}>
-        <Grid width="100%">
-          <Grid.Column>
+        <Stack>
+          <Stack.Item grow>
             <Button
               fluid
               icon="laptop"
@@ -54,8 +54,8 @@ const CfStep1 = (props) => {
                 })
               }
             />
-          </Grid.Column>
-          <Grid.Column>
+          </Stack.Item>
+          <Stack.Item grow>
             <Button
               fluid
               icon="tablet-alt"
@@ -69,8 +69,8 @@ const CfStep1 = (props) => {
                 })
               }
             />
-          </Grid.Column>
-        </Grid>
+          </Stack.Item>
+        </Stack>
       </Box>
     </Section>
   );
