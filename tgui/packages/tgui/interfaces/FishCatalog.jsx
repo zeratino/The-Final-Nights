@@ -13,7 +13,6 @@ export const FishCatalog = (props) => {
     data.fish_info || [],
   );
   const [currentFish, setCurrentFish] = useLocalState(
-    context,
     'currentFish',
     null,
   );

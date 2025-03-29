@@ -24,7 +24,7 @@ export const Cargo = (props) => {
 
 export const CargoContent = (props) => {
   const { act, data } = useBackend();
-  const [tab, setTab] = useSharedState(context, 'tab', 'catalog');
+  const [tab, setTab] = useSharedState('tab', 'catalog');
   const { requestonly } = data;
   const cart = data.cart || [];
   const requests = data.requests || [];
@@ -123,7 +123,6 @@ export const CargoCatalog = (props) => {
   const { self_paid, app_cost } = data;
   const supplies = Object.keys(data.supplies);
   const [activeSupplyName, setActiveSupplyName] = useSharedState(
-    context,
     'supply',
     supplies[0]?.name,
   );

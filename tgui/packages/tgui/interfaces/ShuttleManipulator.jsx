@@ -92,7 +92,6 @@ export const ShuttleManipulatorTemplates = (props) => {
   const templateObject = data.templates || {};
   const selected = data.selected || {};
   const [selectedTemplateId, setSelectedTemplateId] = useLocalState(
-    context,
     'templateId',
     Object.keys(templateObject)[0],
   );

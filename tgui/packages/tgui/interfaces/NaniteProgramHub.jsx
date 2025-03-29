@@ -14,7 +14,6 @@ export const NaniteProgramHub = (props) => {
   const { act, data } = useBackend();
   const { detail_view, disk, has_disk, has_program, programs = {} } = data;
   const [selectedCategory, setSelectedCategory] = useSharedState(
-    context,
     'category',
   );
   const programsInCategory = (programs && programs[selectedCategory]) || [];

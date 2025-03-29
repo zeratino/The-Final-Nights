@@ -140,7 +140,6 @@ export const ExosuitFabricator = (props) => {
     queue,
   );
   const [displayMatCost, setDisplayMatCost] = useSharedState(
-    context,
     'display_mats',
     false,
   );
@@ -209,7 +208,6 @@ const EjectMaterial = (props) => {
   const { material } = props;
   const { name, removable, sheets, ref } = material;
   const [removeMaterials, setRemoveMaterials] = useSharedState(
-    context,
     'remove_mats_' + name,
     1,
   );
@@ -291,7 +289,6 @@ const PartSets = (props) => {
   const partSets = data.partSets || [];
   const buildableParts = data.buildableParts || {};
   const [selectedPartTab, setSelectedPartTab] = useSharedState(
-    context,
     'part_tab',
     partSets.length ? buildableParts[0] : '',
   );
@@ -328,13 +325,11 @@ const PartLists = (props) => {
   const { queueMaterials, materials } = props;
 
   const [selectedPartTab, setSelectedPartTab] = useSharedState(
-    context,
     'part_tab',
     getFirstValidPartSet(partSets),
   );
 
   const [searchText, setSearchText] = useSharedState(
-    context,
     'search_text',
     '',
   );
@@ -414,7 +409,7 @@ const PartCategory = (props) => {
   const { act, data } = useBackend();
   const { buildingPart } = data;
   const { parts, name, forceShow, placeholder } = props;
-  const [displayMatCost] = useSharedState(context, 'display_mats', false);
+  const [displayMatCost] = useSharedState('display_mats', false);
   return (
     (!!parts.length || forceShow) && (
       <Section

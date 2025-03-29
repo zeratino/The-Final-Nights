@@ -37,7 +37,6 @@ export const NtosCardContent = (props) => {
     id_name,
   } = data;
   const [selectedDepartment, setSelectedDepartment] = useLocalState(
-    context,
     'department',
     Object.keys(jobs)[0],
   );

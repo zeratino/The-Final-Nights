@@ -26,13 +26,13 @@ export class VaultDoor extends Component {
   }
 
   handleSubmit() {
-    const { act } = useBackend(this.context);
+    const { act } = useBackend();
     act('submit_pincode', { pincode: this.state.inputCode });
     this.setState({ inputCode: '' });
   }
 
   render() {
-    const { data } = useBackend(this.context);
+    const { data } = useBackend();
     const { pincode } = data;
     const { inputCode } = this.state;
 

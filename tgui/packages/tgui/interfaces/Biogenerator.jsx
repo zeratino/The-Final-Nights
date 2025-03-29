@@ -43,7 +43,6 @@ export const BiogeneratorContent = (props) => {
   const { biomass, can_process, categories = [] } = data;
   const [searchText, setSearchText] = useLocalState('searchText', '');
   const [selectedCategory, setSelectedCategory] = useLocalState(
-    context,
     'category',
     categories[0]?.name,
   );
@@ -123,7 +122,6 @@ export const BiogeneratorContent = (props) => {
 const ItemList = (props) => {
   const { act } = useBackend();
   const [hoveredItem, setHoveredItem] = useLocalState(
-    context,
     'hoveredItem',
     {},
   );

@@ -115,7 +115,6 @@ const MaterialRow = (props) => {
   const { material, onRelease } = props;
 
   const [amount, setAmount] = useLocalState(
-    context,
     'amount' + material.name,
     1,
   );

@@ -37,7 +37,6 @@ export const PowerMonitorContent = (props) => {
   const { data } = useBackend();
   const { history } = data;
   const [sortByField, setSortByField] = useLocalState(
-    context,
     'sortByField',
     null,
   );

@@ -5,7 +5,7 @@ import { useBackend, useLocalState } from "../backend";
 import { Box, Button, NumberInput, Section, Stack } from "tgui-core/components";
 import { Window } from "../layouts";
 
-export const NumberInputModal = (_, context) => {
+export const NumberInputModal = (props) => {
   const { act, data } = useBackend();
   const { message, init_value, preferences, timeout, title } = data;
   const { large_buttons } = preferences;

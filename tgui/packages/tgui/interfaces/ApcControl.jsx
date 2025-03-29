@@ -88,7 +88,6 @@ const ControlPanel = (props) => {
   const { act, data } = useBackend();
   const { emagged, logging } = data;
   const [sortByField, setSortByField] = useLocalState(
-    context,
     'sortByField',
     null,
   );

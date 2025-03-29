@@ -283,12 +283,10 @@ export const Filteriffic = (props) => {
   const hasFilters = filters !== {};
   const filterDefaults = data['filter_info'];
   const [massApplyPath, setMassApplyPath] = useLocalState(
-    context,
     'massApplyPath',
     '',
   );
   const [hiddenSecret, setHiddenSecret] = useLocalState(
-    context,
     'hidden',
     false,
   );

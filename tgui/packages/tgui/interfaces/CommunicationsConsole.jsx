@@ -331,22 +331,18 @@ const PageMain = (props) => {
   } = data;
 
   const [callingShuttle, setCallingShuttle] = useLocalState(
-    context,
     'calling_shuttle',
     false,
   );
   const [messagingAssociates, setMessagingAssociates] = useLocalState(
-    context,
     'messaging_associates',
     false,
   );
   const [messagingSector, setMessagingSector] = useLocalState(
-    context,
     'messaing_sector',
     null,
   );
   const [requestingNukeCodes, setRequestingNukeCodes] = useLocalState(
-    context,
     'requesting_nuke_codes',
     false,
   );

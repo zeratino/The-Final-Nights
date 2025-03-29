@@ -14,7 +14,7 @@ import { Window } from '../layouts';
 
 export const MedicalKiosk = (props) => {
   const { act, data } = useBackend();
-  const [scanIndex] = useSharedState(context, 'scanIndex');
+  const [scanIndex] = useSharedState('scanIndex');
   const { active_status_1, active_status_2, active_status_3, active_status_4 } =
     data;
   return (
@@ -75,7 +75,7 @@ export const MedicalKiosk = (props) => {
 const MedicalKioskScanButton = (props) => {
   const { index, name, description, icon } = props;
   const { act, data } = useBackend();
-  const [scanIndex, setScanIndex] = useSharedState(context, 'scanIndex');
+  const [scanIndex, setScanIndex] = useSharedState('scanIndex');
   const paid = data[`active_status_${index}`];
   return (
     <Stack align="baseline">

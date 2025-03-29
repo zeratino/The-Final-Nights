@@ -236,18 +236,16 @@ const PackagingControlsItem = (props) => {
 
 const PackagingControls = (props) => {
   const { act, data } = useBackend();
-  const [pillAmount, setPillAmount] = useSharedState(context, 'pillAmount', 1);
+  const [pillAmount, setPillAmount] = useSharedState('pillAmount', 1);
   const [patchAmount, setPatchAmount] = useSharedState(
-    context,
     'patchAmount',
     1,
   );
   const [bottleAmount, setBottleAmount] = useSharedState(
-    context,
     'bottleAmount',
     1,
   );
-  const [packAmount, setPackAmount] = useSharedState(context, 'packAmount', 1);
+  const [packAmount, setPackAmount] = useSharedState('packAmount', 1);
   const {
     condi,
     chosenPillStyle,

@@ -22,14 +22,14 @@ const pod_grey = {
   color: 'grey',
 };
 
-const useCompact = (context) => {
+const useCompact = () => {
   const [compact, setCompact] = useLocalState('compact', false);
   const toggleCompact = () => setCompact(!compact);
   return [compact, toggleCompact];
 };
 
 export const CentcomPodLauncher = (props) => {
-  const [compact] = useCompact(context);
+  const [compact] = useCompact();
   return (
     <Window
       resizable
@@ -49,7 +49,7 @@ export const CentcomPodLauncher = (props) => {
 };
 
 const CentcomPodLauncherContent = (props) => {
-  const [compact] = useCompact(context);
+  const [compact] = useCompact();
   return (
     <Window.Content>
       <Stack fill vertical>
@@ -431,7 +431,6 @@ const EFFECTS_ALL = [
 const ViewTabHolder = (props) => {
   const { act, data } = useBackend();
   const [tabPageIndex, setTabPageIndex] = useLocalState(
-    context,
     'tabPageIndex',
     1,
   );
@@ -574,7 +573,7 @@ const TabDrop = (props) => {
 
 const PodStatusPage = (props) => {
   const { act, data } = useBackend();
-  const [compact, toggleCompact] = useCompact(context);
+  const [compact, toggleCompact] = useCompact();
   return (
     <Section fill width="100%">
       <Stack>
@@ -694,7 +693,6 @@ const PodStatusPage = (props) => {
 const ReverseMenu = (props) => {
   const { act, data } = useBackend();
   const [tabPageIndex, setTabPageIndex] = useLocalState(
-    context,
     'tabPageIndex',
     1,
   );
@@ -807,8 +805,8 @@ class PresetsPage extends Component {
     storage.set('podlauncher_preset_' + id, data);
   }
 
-  async loadDataFromPreset(id, context) {
-    const { act } = useBackend(this.context);
+  async loadDataFromPreset(id) {
+    const { act } = useBackend();
     act('loadDataFromPreset', {
       payload: await storage.get('podlauncher_preset_' + id),
     });
@@ -846,23 +844,20 @@ class PresetsPage extends Component {
   }
   render() {
     const { presets } = this.state;
-    const { act, data } = useBackend(this.context);
+    const { act, data } = useBackend();
     const [presetIndex, setSelectedPreset] = useLocalState(
-      this.context,
       'presetIndex',
       0,
     );
     const [settingName, setEditingNameStatus] = useLocalState(
-      this.context,
       'settingName',
       0,
     );
     const [newNameText, setText] = useLocalState(
-      this.context,
       'newNameText',
       '',
     );
-    const [hue, setHue] = useLocalState(this.context, 'hue', 0);
+    const [hue, setHue] = useLocalState('hue', 0);
     return (
       <Section
         scrollable
@@ -988,7 +983,7 @@ class PresetsPage extends Component {
 }
 
 const LaunchPage = (props) => {
-  const [compact] = useCompact(context);
+  const [compact] = useCompact();
   const { act, data } = useBackend();
   return (
     <Button
@@ -1069,7 +1064,7 @@ const StylePage = (props) => {
 
 const Bays = (props) => {
   const { act, data } = useBackend();
-  const [compact] = useCompact(context);
+  const [compact] = useCompact();
   return (
     <Section
       fill

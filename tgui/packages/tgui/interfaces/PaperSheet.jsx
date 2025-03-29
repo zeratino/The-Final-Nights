@@ -298,7 +298,7 @@ class PaperSheetStamper extends Component {
       if (e.pageY <= 30) {
         return;
       }
-      const { act, data } = useBackend(this.context);
+      const { act, data } = useBackend();
       const stamp_obj = {
         x: this.state.x,
         y: this.state.y,
@@ -397,7 +397,7 @@ class PaperSheetEdit extends Component {
   // This is the main rendering part, this creates the html from marked text
   // as well as the form fields
   createPreview(value, do_fields = false) {
-    const { data } = useBackend(this.context);
+    const { data } = useBackend();
     const { text, pen_color, pen_font, is_crayon, field_counter, edit_usr } =
       data;
     const out = { text: text };
@@ -477,7 +477,7 @@ class PaperSheetEdit extends Component {
   }
   // the final update send to byond, final upkeep
   finalUpdate(new_text) {
-    const { act } = useBackend(this.context);
+    const { act } = useBackend();
     const final_processing = this.createPreview(new_text, true);
     act('save', final_processing);
     this.setState(() => {

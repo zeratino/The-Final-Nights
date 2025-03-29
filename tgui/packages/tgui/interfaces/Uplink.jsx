@@ -33,7 +33,6 @@ export const GenericUplink = (props) => {
   const { compactMode, lockable, categories = [] } = data;
   const [searchText, setSearchText] = useLocalState('searchText', '');
   const [selectedCategory, setSelectedCategory] = useLocalState(
-    context,
     'category',
     categories[0]?.name,
   );
@@ -118,7 +117,6 @@ const ItemList = (props) => {
   const { compactMode, currencyAmount, currencySymbol } = props;
   const { act } = useBackend();
   const [hoveredItem, setHoveredItem] = useLocalState(
-    context,
     'hoveredItem',
     {},
   );

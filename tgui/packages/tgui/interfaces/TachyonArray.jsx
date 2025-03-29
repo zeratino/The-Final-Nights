@@ -29,7 +29,6 @@ export const TachyonArrayContent = (props) => {
   const { act, data } = useBackend();
   const { records = [] } = data;
   const [activeRecordName, setActiveRecordName] = useSharedState(
-    context,
     'record',
     records[0]?.name,
   );

@@ -11,7 +11,7 @@ import { Window } from '../layouts';
 
 export const RoboticsControlConsole = (props) => {
   const { act, data } = useBackend();
-  const [tab, setTab] = useSharedState(context, 'tab', 1);
+  const [tab, setTab] = useSharedState('tab', 1);
   const { can_hack, cyborgs = [], drones = [] } = data;
   return (
     <Window width={500} height={460} resizable>

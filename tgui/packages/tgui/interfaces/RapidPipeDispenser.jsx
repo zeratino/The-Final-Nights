@@ -69,7 +69,6 @@ export const RapidPipeDispenser = (props) => {
   } = data;
   const previews = data.preview_rows.flatMap((row) => row.previews);
   const [categoryName, setCategoryName] = useLocalState(
-    context,
     'categoryName',
   );
   const shownCategory =

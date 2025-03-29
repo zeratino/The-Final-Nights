@@ -13,7 +13,7 @@ import { CargoCatalog } from './Cargo';
 
 export const CargoExpress = (props) => {
   const { act, data } = useBackend();
-  const [tab, setTab] = useSharedState(context, 'tab', 'catalog');
+  const [tab, setTab] = useSharedState('tab', 'catalog');
 
   const orderQueue = data.order_queue ? JSON.parse(data.order_queue) : [];
 
