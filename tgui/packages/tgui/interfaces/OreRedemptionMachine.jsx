@@ -1,4 +1,4 @@
-import { toTitleCase } from 'common/string';
+import { toTitleCase } from 'tgui-core/string';
 import { useBackend, useLocalState } from '../backend';
 import {
   BlockQuote,

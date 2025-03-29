@@ -1,6 +1,6 @@
 import { uniqBy } from 'common/collections';
-import { classes } from 'common/react';
-import { createSearch } from 'common/string';
+import { classes } from 'tgui-core/react';
+import { createSearch } from 'tgui-core/string';
 import { Fragment } from 'react';
 import { useBackend, useSharedState } from '../backend';
 import {

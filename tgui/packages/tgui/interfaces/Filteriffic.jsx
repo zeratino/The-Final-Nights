@@ -1,6 +1,6 @@
 import { map } from 'common/collections';
-import { toFixed } from 'common/math';
-import { numberOfDecimalDigits } from '../../common/math';
+import { toFixed } from 'tgui-core/math';
+import { numberOfDecimalDigits } from 'tgui-core/math';
 import { useBackend, useLocalState } from '../backend';
 import {
   Box,

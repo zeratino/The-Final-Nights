@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-import { createUuid } from 'common/uuid';
+import { createUuid } from 'tgui-core/uuid';
 import { MESSAGE_TYPES, MESSAGE_TYPE_INTERNAL } from './constants';
 
 export const canPageAcceptType = (page, type) =>

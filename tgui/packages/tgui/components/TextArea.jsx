@@ -5,11 +5,11 @@
  * @license MIT
  */
 
-import { classes } from 'common/react';
+import { classes } from 'tgui-core/react';
 import { Component, createRef } from 'react';
 import { Box } from './Box';
 import { toInputValue } from './Input';
-import { KEY_ENTER, KEY_ESCAPE, KEY_TAB } from 'common/keycodes';
+import { KEY_ENTER, KEY_ESCAPE, KEY_TAB } from 'tgui-core/keycodes';
 
 export class TextArea extends Component {
   constructor(props) {

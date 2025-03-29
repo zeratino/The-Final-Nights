@@ -1,4 +1,4 @@
-import { createSearch } from 'common/string';
+import { createSearch } from 'tgui-core/string';
 import { sortBy } from 'common/collections';
 import { useBackend, useLocalState } from '../backend';
 import {

@@ -1,8 +1,8 @@
-import { classes } from 'common/react';
-import { clamp } from 'common/math';
+import { classes } from 'tgui-core/react';
+import { clamp } from 'tgui-core/math';
 import { Component, createRef } from 'react';
 import { Box } from './Box';
-import { KEY_ESCAPE, KEY_ENTER } from 'common/keycodes';
+import { KEY_ESCAPE, KEY_ENTER } from 'tgui-core/keycodes';
 
 const DEFAULT_MIN = 0;
 const DEFAULT_MAX = 10000;

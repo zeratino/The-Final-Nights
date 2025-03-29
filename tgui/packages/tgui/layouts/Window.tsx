@@ -4,8 +4,8 @@
  * @license MIT
  */
 
-import { classes } from 'common/react';
-import { decodeHtmlEntities, toTitleCase } from 'common/string';
+import { classes } from 'tgui-core/react';
+import { decodeHtmlEntities, toTitleCase } from 'tgui-core/string';
 import { backendSuspendStart, useBackend } from '../backend';
 import { Icon } from 'tgui-core/components';
 import { UI_DISABLED, UI_INTERACTIVE, UI_UPDATE } from '../constants';

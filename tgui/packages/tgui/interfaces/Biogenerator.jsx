@@ -1,5 +1,5 @@
-import { classes } from 'common/react';
-import { createSearch } from 'common/string';
+import { classes } from 'tgui-core/react';
+import { createSearch } from 'tgui-core/string';
 import { useBackend, useLocalState } from '../backend';
 import {
   Box,

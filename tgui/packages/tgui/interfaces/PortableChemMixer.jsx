@@ -1,4 +1,4 @@
-import { toTitleCase } from 'common/string';
+import { toTitleCase } from 'tgui-core/string';
 import { useBackend } from '../backend';
 import {
   AnimatedNumber,

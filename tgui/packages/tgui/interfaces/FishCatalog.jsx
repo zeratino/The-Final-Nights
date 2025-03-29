@@ -1,10 +1,10 @@
 import { sortBy } from 'common/collections';
-import { flow } from 'common/fp';
-import { classes } from 'common/react';
+import { flow } from 'tgui-core/fp';
+import { classes } from 'tgui-core/react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
 import { Window } from '../layouts';
-import { capitalize } from 'common/string';
+import { capitalize } from 'tgui-core/string';
 
 export const FishCatalog = (props) => {
   const { act, data } = useBackend();

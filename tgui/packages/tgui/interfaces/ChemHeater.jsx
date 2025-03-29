@@ -1,4 +1,4 @@
-import { round, toFixed } from 'common/math';
+import { round, toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import {
   AnimatedNumber,

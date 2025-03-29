@@ -1,6 +1,6 @@
 import { Loader } from "./common/Loader";
 import { InputButtons } from "./common/InputButtons";
-import { KEY_ENTER, KEY_ESCAPE } from "../../common/keycodes";
+import { KEY_ENTER, KEY_ESCAPE } from "tgui-core/keycodes";
 import { useBackend, useLocalState } from "../backend";
 import { Box, Button, NumberInput, Section, Stack } from "../components";
 import { Window } from "../layouts";

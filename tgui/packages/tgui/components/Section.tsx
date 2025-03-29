@@ -7,7 +7,7 @@
 import { BoxProps, computeBoxClassName, computeBoxProps } from './Box';
 import { ReactNode, RefObject, createRef, useEffect } from 'react';
 import { addScrollableNode, removeScrollableNode } from '../events';
-import { canRender, classes } from 'common/react';
+import { canRender, classes } from 'tgui-core/react';
 
 export type SectionProps = Partial<{
   buttons: ReactNode;

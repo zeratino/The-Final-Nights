@@ -1,4 +1,4 @@
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, LabeledList, Section } from 'tgui-core/components';

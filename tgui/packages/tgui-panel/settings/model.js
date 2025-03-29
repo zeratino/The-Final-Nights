@@ -1,7 +1,7 @@
 /**
  * @file
  */
-import { createUuid } from 'common/uuid';
+import { createUuid } from 'tgui-core/uuid';
 
 export const createHighlightSetting = (obj) => ({
   id: createUuid(),

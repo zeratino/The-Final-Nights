@@ -15,7 +15,7 @@ import {
   KEY_RIGHT,
   KEY_SPACE,
   KEY_TAB,
-} from 'common/keycodes';
+} from 'tgui-core/keycodes';
 
 export class AlertModal extends Component {
   constructor() {

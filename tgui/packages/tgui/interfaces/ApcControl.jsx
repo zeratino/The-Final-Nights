@@ -1,5 +1,5 @@
 import { map, sortBy } from 'common/collections';
-import { flow } from 'common/fp';
+import { flow } from 'tgui-core/fp';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Dimmer, Flex, Icon, Table, Tabs } from 'tgui-core/components';
 import { Window } from '../layouts';

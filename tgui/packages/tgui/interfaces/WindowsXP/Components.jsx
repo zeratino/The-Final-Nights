@@ -1,4 +1,4 @@
-import { classes } from '../../../common/react';
+import { classes } from 'tgui-core/react';
 
 export const XPButton = (props) => {
   const { onClick, disabled, content } = props;

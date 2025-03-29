@@ -1,5 +1,5 @@
 import { map } from 'common/collections';
-import { classes } from 'common/react';
+import { classes } from 'tgui-core/react';
 import { useBackend, useLocalState } from '../backend';
 import {
   Box,
