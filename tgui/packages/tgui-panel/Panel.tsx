@@ -4,8 +4,9 @@
  * @license MIT
  */
 
-import { Button, Section, Stack } from 'tgui-core/components';
 import { Pane } from 'tgui/layouts';
+import { Button, Section, Stack } from 'tgui-core/components';
+
 import { NowPlayingWidget, useAudio } from './audio';
 import { ChatPanel, ChatTabs } from './chat';
 import { useGame } from './game';
@@ -25,6 +26,7 @@ export const Panel = (props) => {
       return <KitchenSink panel />;
     }
   }
+
   return (
     <Pane theme={settings.theme}>
       <Stack fill vertical>
@@ -95,30 +97,6 @@ export const Panel = (props) => {
           </Section>
         </Stack.Item>
       </Stack>
-    </Pane>
-  );
-};
-
-const HoboPanel = (props) => {
-  const settings = useSettings();
-  return (
-    <Pane theme={settings.theme}>
-      <Pane.Content scrollable>
-        <Button
-          style={{
-            position: 'fixed',
-            top: '1em',
-            right: '2em',
-            zIndex: 1000,
-          }}
-          selected={settings.visible}
-          onClick={() => settings.toggle()}>
-          Settings
-        </Button>
-        {(settings.visible && <SettingsPanel />) || (
-          <ChatPanel lineHeight={settings.lineHeight} />
-        )}
-      </Pane.Content>
     </Pane>
   );
 };
