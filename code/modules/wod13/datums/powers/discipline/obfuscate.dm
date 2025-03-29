@@ -229,7 +229,7 @@
 
 	level = 5
 	check_flags = DISC_CHECK_CAPABLE
-	vitae_cost = 3
+	vitae_cost = 2
 
 	toggled = TRUE
 
