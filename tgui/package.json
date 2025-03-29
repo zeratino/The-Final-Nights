@@ -5,6 +5,17 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "tgui:build": "webpack",
+    "tgui:analyze": "webpack --analyze",
+    "tgui:dev": "node --experimental-modules packages/tgui-dev-server/index.js",
+    "tgui:lint": "eslint packages --ext .js,.cjs,.ts,.tsx",
+    "tgui:sonar": "eslint packages --ext .js,.cjs,.ts,.tsx -c .eslintrc-sonar.yml",
+    "tgui:tsc": "tsc",
+    "tgui:test": "jest --watch",
+    "tgui:test-simple": "CI=true jest --color",
+    "tgui:test-ci": "CI=true jest --color --collect-coverage"
+  },
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
@@ -26,8 +37,8 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.50.0",
-    "webpack-bundle-analyzer": "^4.3.0",
-    "webpack-cli": "^4.3.1"
+    "webpack": "^5.21.1",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.5.20"
   }
 }
