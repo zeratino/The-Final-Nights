@@ -170,7 +170,6 @@
 	)
 
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces/pre_activation_checks()
-	. = ..()
 	return is_seen_check()
 
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces/activate()
