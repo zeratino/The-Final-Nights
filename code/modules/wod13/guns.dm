@@ -180,6 +180,8 @@
 	icon_state = "deagle50"
 	inhand_icon_state = "deagle"
 	worn_icon_state = "deagle"
+	w_class = WEIGHT_CLASS_BULKY // No dual-wielding these, its a .50 cal with 0 fire delay
+	recoil = 5 // Big recoil
 	mag_type = /obj/item/ammo_box/magazine/m50
 	fire_sound_volume = 125 //MY EARS
 
