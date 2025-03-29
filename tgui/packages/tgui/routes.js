@@ -15,14 +15,10 @@ const routingError = (type, name) => () => {
     <Window resizable>
       <Window.Content scrollable>
         {type === 'notFound' && (
-          <div>
-            Interface <b>{name}</b> was not found.
-          </div>
+          <div>Interface <b>{name}</b> was not found.</div>
         )}
         {type === 'missingExport' && (
-          <div>
-            Interface <b>{name}</b> is missing an export.
-          </div>
+          <div>Interface <b>{name}</b> is missing an export.</div>
         )}
       </Window.Content>
     </Window>
@@ -37,7 +33,7 @@ const SuspendedWindow = () => {
   );
 };
 
-export const getRoutedComponent = (store) => {
+export const getRoutedComponent = store => {
   const state = store.getState();
   const { suspended, config } = selectBackend(state);
   if (suspended) {
@@ -54,7 +50,8 @@ export const getRoutedComponent = (store) => {
   let esModule;
   try {
     esModule = requireInterface(`./${name}.js`);
-  } catch (err) {
+  }
+  catch (err) {
     if (err.code === 'MODULE_NOT_FOUND') {
       return routingError('notFound', name);
     }

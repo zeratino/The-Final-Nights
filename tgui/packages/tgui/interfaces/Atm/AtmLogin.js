@@ -5,13 +5,12 @@ import { Window } from '../../layouts';
 
 export const AtmLogin = (props, context) => {
   const { act, data } = useBackend(context);
-  const [entered_code, setEnteredCode] = useLocalState(
-    context,
-    'login_code',
-    '',
-  );
+  const [entered_code, setEnteredCode] = useLocalState(context, "login_code", "");
 
-  const { account_owner, code } = data;
+  const {
+    account_owner,
+    code,
+  } = data;
 
   const handleLogin = () => {
     act('login', { code: entered_code });
@@ -29,7 +28,10 @@ export const AtmLogin = (props, context) => {
               />
             </LabeledList.Item>
             <LabeledList.Item>
-              <Button content="Log In" onClick={handleLogin} />
+              <Button
+                content="Log In"
+                onClick={handleLogin}
+              />
             </LabeledList.Item>
           </LabeledList>
         </Section>

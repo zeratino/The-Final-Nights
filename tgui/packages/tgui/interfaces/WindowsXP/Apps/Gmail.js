@@ -3,7 +3,7 @@ import { Icon, Input, TextArea } from '../../../components';
 import { useLocalState } from '../../../backend';
 import { XPButton } from '../Components';
 
-export const Gmail = (props) => {
+export const Gmail = props => {
   const { app, act } = props;
   return (
     <div className="gmail">
@@ -24,8 +24,7 @@ export const Gmail = (props) => {
             className={
               'nav-link' + (app.screen === 0 ? ' active-nav-link' : '')
             }
-            onClick={() => act('gmail_switch_screen', { screen: 0 })}
-          >
+            onClick={() => act('gmail_switch_screen', { screen: 0 })}>
             Compose Mail
           </div>
           <div className="sidebar-links">
@@ -33,17 +32,15 @@ export const Gmail = (props) => {
               className={
                 'nav-link' + (app.screen === 1 ? ' active-nav-link' : '')
               }
-              onClick={() => act('gmail_switch_screen', { screen: 1 })}
-            >
+              onClick={() => act('gmail_switch_screen', { screen: 1 })}>
               {'Inbox (' + app.emails.length + ')'}
             </div>
             <div
               className={
                 'nav-link' + (app.screen === 2 ? ' active-nav-link' : '')
               }
-              onClick={() => act('gmail_switch_screen', { screen: 2 })}
-            >
-              Stared <Icon name="star" style={{ color: '#ff9f29' }} />
+              onClick={() => act('gmail_switch_screen', { screen: 2 })}>
+              Starred <Icon name="star" style={{ color: '#ff9f29' }} />
             </div>
             <div className="nav-link">Chats</div>
             <div className="nav-link">Sent Mail</div>
@@ -54,7 +51,7 @@ export const Gmail = (props) => {
         <div className="gmail-body">
           {app.screen === 0 && <ComposeEmail act={act} />}
           {app.screen === 1 && <Emails emails={app.emails} act={act} />}
-          {app.screen === 2 && <Stared emails={app.emails} act={act} />}
+          {app.screen === 2 && <Starred emails={app.emails} act={act} />}
           {app.screen === 4 && (
             <EmailScreen email={app.current_email} act={act} />
           )}
@@ -64,14 +61,14 @@ export const Gmail = (props) => {
   );
 };
 
-const Emails = (props) => {
+const Emails = props => {
   const { emails, act } = props;
   return (
     <>
       <div className="mails-title">Welcome to the Gmail!</div>
       <EmailActions act={act} />
       <div className="messages">
-        {emails.map((email) => {
+        {emails.map(email => {
           return <Email key={email.reference} email={email} act={act} />;
         })}
       </div>
@@ -80,15 +77,15 @@ const Emails = (props) => {
   );
 };
 
-const Stared = (props) => {
+const Starred = props => {
   const { emails, act } = props;
   return (
     <>
       <div className="mails-title">Welcome to the Gmail!</div>
       <EmailActions act={act} />
       <div className="messages">
-        {emails.map((email) => {
-          return email.stared === 1 && <Email email={email} act={act} />;
+        {emails.map(email => {
+          return email.starred === 1 && <Email email={email} act={act} />;
         })}
       </div>
       <EmailActions act={act} />
@@ -156,7 +153,7 @@ const ComposeEmail = (props, context) => {
   );
 };
 
-const ComposerActions = (props) => {
+const ComposerActions = props => {
   const { act, to, message, subject, setTo, setMessage, setSubject } = props;
   return (
     <div className="compose-header">
@@ -181,7 +178,7 @@ const ComposerActions = (props) => {
   );
 };
 
-const Email = (props) => {
+const Email = props => {
   const { email, act } = props;
   return (
     <div
@@ -189,8 +186,7 @@ const Email = (props) => {
       onDoubleClick={() => {
         act('set_current_email', { ref: email.reference });
         act('gmail_switch_screen', { screen: 4 });
-      }}
-    >
+      }}>
       <div className="email-buttons">
         <input
           type="checkbox"
@@ -205,7 +201,7 @@ const Email = (props) => {
           onClick={() => {
             act('set_email_star', { ref: email.reference });
           }}
-          style={email.stared && { color: '#ff9f29' }}
+          style={email.starred && { color: '#ff9f29' }}
         />
       </div>
       <div className="text-block">
@@ -222,7 +218,7 @@ const Email = (props) => {
     </div>
   );
 };
-const EmailActions = (props) => {
+const EmailActions = props => {
   const { act } = props;
   return (
     <div className="mail-actions">
@@ -239,16 +235,14 @@ const EmailActions = (props) => {
           className="action-link"
           onClick={() => {
             act('select_all_emails');
-          }}
-        >
+          }}>
           All,{' '}
         </div>
         <div
           className="action-link"
           onClick={() => {
             act('deselect_all_emails');
-          }}
-        >
+          }}>
           None
         </div>
       </div>
@@ -256,7 +250,7 @@ const EmailActions = (props) => {
   );
 };
 
-const EmailScreen = (props) => {
+const EmailScreen = props => {
   const { email, act } = props;
   return (
     <>
@@ -264,8 +258,7 @@ const EmailScreen = (props) => {
       <div className="message-actions">
         <div
           className="back-to-inbox"
-          onClick={() => act('gmail_switch_screen', { screen: 1 })}
-        >
+          onClick={() => act('gmail_switch_screen', { screen: 1 })}>
           « Back to inbox
         </div>
       </div>

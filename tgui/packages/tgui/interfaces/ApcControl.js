@@ -9,9 +9,17 @@ import { AreaCharge, powerRank } from './PowerMonitor';
 export const ApcControl = (props, context) => {
   const { data } = useBackend(context);
   return (
-    <Window title="APC Controller" width={550} height={500} resizable>
-      {data.authenticated === 1 && <ApcLoggedIn />}
-      {data.authenticated === 0 && <ApcLoggedOut />}
+    <Window
+      title="APC Controller"
+      width={550}
+      height={500}
+      resizable>
+      {data.authenticated === 1 && (
+        <ApcLoggedIn />
+      )}
+      {data.authenticated === 0 && (
+        <ApcLoggedOut />
+      )}
     </Window>
   );
 };
@@ -26,8 +34,7 @@ const ApcLoggedOut = (props, context) => {
         fluid
         color={emagged === 1 ? '' : 'good'}
         content={text}
-        onClick={() => act('log-in')}
-      />
+        onClick={() => act('log-in')} />
     </Window.Content>
   );
 };
@@ -35,7 +42,10 @@ const ApcLoggedOut = (props, context) => {
 const ApcLoggedIn = (props, context) => {
   const { act, data } = useBackend(context);
   const { restoring } = data;
-  const [tabIndex, setTabIndex] = useLocalState(context, 'tab-index', 1);
+  const [
+    tabIndex,
+    setTabIndex,
+  ] = useLocalState(context, 'tab-index', 1);
   return (
     <>
       <Tabs>
@@ -44,8 +54,7 @@ const ApcLoggedIn = (props, context) => {
           onClick={() => {
             setTabIndex(1);
             act('check-apcs');
-          }}
-        >
+          }}>
           APC Control Panel
         </Tabs.Tab>
         <Tabs.Tab
@@ -53,8 +62,7 @@ const ApcLoggedIn = (props, context) => {
           onClick={() => {
             setTabIndex(2);
             act('check-logs');
-          }}
-        >
+          }}>
           Log View Panel
         </Tabs.Tab>
       </Tabs>
@@ -87,12 +95,14 @@ const ApcLoggedIn = (props, context) => {
 
 const ControlPanel = (props, context) => {
   const { act, data } = useBackend(context);
-  const { emagged, logging } = data;
-  const [sortByField, setSortByField] = useLocalState(
-    context,
-    'sortByField',
-    null,
-  );
+  const {
+    emagged,
+    logging,
+  } = data;
+  const [
+    sortByField,
+    setSortByField,
+  ] = useLocalState(context, 'sortByField', null);
   return (
     <Flex>
       <Flex.Item>
@@ -102,18 +112,17 @@ const ControlPanel = (props, context) => {
         <Button.Checkbox
           checked={sortByField === 'name'}
           content="Name"
-          onClick={() => setSortByField(sortByField !== 'name' && 'name')}
-        />
+          onClick={() => setSortByField(sortByField !== 'name' && 'name')} />
         <Button.Checkbox
           checked={sortByField === 'charge'}
           content="Charge"
-          onClick={() => setSortByField(sortByField !== 'charge' && 'charge')}
-        />
+          onClick={() => setSortByField(
+            sortByField !== 'charge' && 'charge'
+          )} />
         <Button.Checkbox
           checked={sortByField === 'draw'}
           content="Draw"
-          onClick={() => setSortByField(sortByField !== 'draw' && 'draw')}
-        />
+          onClick={() => setSortByField(sortByField !== 'draw' && 'draw')} />
       </Flex.Item>
       <Flex.Item grow={1} />
       <Flex.Item>
@@ -130,7 +139,11 @@ const ControlPanel = (props, context) => {
             />
           </>
         )}
-        <Button color="bad" content="Log Out" onClick={() => act('log-out')} />
+        <Button
+          color="bad"
+          content="Log Out"
+          onClick={() => act('log-out')}
+        />
       </Flex.Item>
     </Flex>
   );
@@ -139,7 +152,9 @@ const ControlPanel = (props, context) => {
 const ApcControlScene = (props, context) => {
   const { data, act } = useBackend(context);
 
-  const [sortByField] = useLocalState(context, 'sortByField', null);
+  const [
+    sortByField,
+  ] = useLocalState(context, 'sortByField', null);
 
   const apcs = flow([
     map((apc, i) => ({
@@ -147,20 +162,24 @@ const ApcControlScene = (props, context) => {
       // Generate a unique id
       id: apc.name + i,
     })),
-    sortByField === 'name' && sortBy((apc) => apc.name),
-    sortByField === 'charge' && sortBy((apc) => -apc.charge),
-    sortByField === 'draw' &&
-      sortBy(
-        (apc) => -powerRank(apc.load),
-        (apc) => -parseFloat(apc.load),
-      ),
+    sortByField === 'name' && sortBy(apc => apc.name),
+    sortByField === 'charge' && sortBy(apc => -apc.charge),
+    sortByField === 'draw' && sortBy(
+      apc => -powerRank(apc.load),
+      apc => -parseFloat(apc.load)),
   ])(data.apcs);
   return (
     <Table>
       <Table.Row header>
-        <Table.Cell>On/Off</Table.Cell>
-        <Table.Cell>Area</Table.Cell>
-        <Table.Cell collapsing>Charge</Table.Cell>
+        <Table.Cell>
+          On/Off
+        </Table.Cell>
+        <Table.Cell>
+          Area
+        </Table.Cell>
+        <Table.Cell collapsing>
+          Charge
+        </Table.Cell>
         <Table.Cell collapsing textAlign="right">
           Draw
         </Table.Cell>
@@ -175,33 +194,35 @@ const ApcControlScene = (props, context) => {
         </Table.Cell>
       </Table.Row>
       {apcs.map((apc, i) => (
-        <tr key={apc.id} className="Table__row  candystripe">
+        <tr
+          key={apc.id}
+          className="Table__row  candystripe">
           <td>
             <Button
               icon={apc.operating ? 'power-off' : 'times'}
               color={apc.operating ? 'good' : 'bad'}
-              onClick={() =>
-                act('breaker', {
-                  ref: apc.ref,
-                })
-              }
+              onClick={() => act('breaker', {
+                ref: apc.ref,
+              })}
             />
           </td>
           <td>
             <Button
-              onClick={() =>
-                act('access-apc', {
-                  ref: apc.ref,
-                })
-              }
-            >
+              onClick={() => act('access-apc', {
+                ref: apc.ref,
+              })}>
               {apc.name}
             </Button>
           </td>
           <td className="Table__cell text-right text-nowrap">
-            <AreaCharge charging={apc.charging} charge={apc.charge} />
+            <AreaCharge
+              charging={apc.charging}
+              charge={apc.charge}
+            />
           </td>
-          <td className="Table__cell text-right text-nowrap">{apc.load}</td>
+          <td className="Table__cell text-right text-nowrap">
+            {apc.load}
+          </td>
           <td className="Table__cell text-center text-nowrap">
             <AreaStatusColorButton
               target="equipment"
@@ -241,12 +262,16 @@ const LogPanel = (props, context) => {
       // Generate a unique id
       id: line.entry + i,
     })),
-    (logs) => logs.reverse(),
+    logs => logs.reverse(),
   ])(data.logs);
   return (
     <Box m={-0.5}>
-      {logs.map((line) => (
-        <Box p={0.5} key={line.id} className="candystripe" bold>
+      {logs.map(line => (
+        <Box
+          p={0.5}
+          key={line.id}
+          className="candystripe"
+          bold>
           {line.entry}
         </Box>
       ))}
@@ -254,7 +279,7 @@ const LogPanel = (props, context) => {
   );
 };
 
-const AreaStatusColorButton = (props) => {
+const AreaStatusColorButton = props => {
   const { target, status, apc, act } = props;
   const power = Boolean(status & 2);
   const mode = Boolean(status & 1);
@@ -262,21 +287,20 @@ const AreaStatusColorButton = (props) => {
     <Button
       icon={mode ? 'sync' : 'power-off'}
       color={power ? 'good' : 'bad'}
-      onClick={() =>
-        act('toggle-minor', {
-          type: target,
-          value: statusChange(status),
-          ref: apc.ref,
-        })
-      }
+      onClick={() => act('toggle-minor', {
+        type: target,
+        value: statusChange(status),
+        ref: apc.ref,
+      })}
     />
   );
 };
 
-const statusChange = (status) => {
+const statusChange = status => {
   // mode flip power flip both flip
   // 0, 2, 3
   return status === 0 ? 2 : status === 2 ? 3 : 0;
 };
 
 AreaStatusColorButton.defaultHooks = pureComponentHooks;
+
