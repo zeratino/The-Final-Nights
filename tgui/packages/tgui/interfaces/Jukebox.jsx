@@ -9,7 +9,7 @@ import {
   Knob,
   LabeledControls,
   LabeledList,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const Jukebox = (props) => {

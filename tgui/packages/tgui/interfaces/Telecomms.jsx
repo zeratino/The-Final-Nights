@@ -11,7 +11,7 @@ import {
   NumberInput,
   LabeledControls,
   Box,
-} from '../components';
+} from 'tgui-core/components';
 import { RADIO_CHANNELS } from '../constants';
 import { Window } from '../layouts';
 

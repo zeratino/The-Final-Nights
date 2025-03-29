@@ -7,7 +7,7 @@ import {
   Knob,
   LabeledControls,
   Section,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const TrainingMachine = (props) => {

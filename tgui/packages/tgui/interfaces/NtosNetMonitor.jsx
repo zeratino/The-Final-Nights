@@ -6,7 +6,7 @@ import {
   NoticeBox,
   NumberInput,
   Section,
-} from '../components';
+} from 'tgui-core/components';
 import { NtosWindow } from '../layouts';
 
 export const NtosNetMonitor = (props) => {

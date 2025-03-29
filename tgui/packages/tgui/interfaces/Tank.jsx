@@ -6,7 +6,7 @@ import {
   NumberInput,
   RoundGauge,
   Section,
-} from '../components';
+} from 'tgui-core/components';
 import { formatSiUnit } from '../format';
 import { Window } from '../layouts';
 

@@ -12,7 +12,7 @@ import {
   Section,
   Table,
   NumberInput,
-} from '../components';
+} from 'tgui-core/components';
 import { getGasColor, getGasLabel } from '../constants';
 import { Window } from '../layouts';
 import { formatSiUnit, formatSiBaseTenUnit } from '../format';

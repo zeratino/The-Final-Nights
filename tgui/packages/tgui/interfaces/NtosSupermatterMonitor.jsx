@@ -9,7 +9,7 @@ import {
   Section,
   Stack,
   Table,
-} from '../components';
+} from 'tgui-core/components';
 import { getGasColor, getGasLabel } from '../constants';
 import { NtosWindow } from '../layouts';
 

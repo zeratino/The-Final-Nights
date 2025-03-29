@@ -9,7 +9,7 @@ import {
   Table,
   Tabs,
   NoticeBox,
-} from '../components';
+} from 'tgui-core/components';
 import { formatMoney } from '../format';
 import { Window } from '../layouts';
 

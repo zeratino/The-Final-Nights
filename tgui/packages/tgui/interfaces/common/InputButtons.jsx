@@ -1,5 +1,5 @@
 import { useBackend } from "../../backend";
-import { Box, Button, Stack } from "../../components";
+import { Box, Button, Stack } from "tgui-core/components";
 
 export const InputButtons = (props) => {
   const { act, data } = useBackend();

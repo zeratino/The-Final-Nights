@@ -13,7 +13,7 @@ import {
   ProgressBar,
   Section,
   Table,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const PEAK_DRAW = 500000;

@@ -1,6 +1,6 @@
 import { classes } from 'common/react';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Stack, NumberInput } from '../components';
+import { Box, Button, Stack, NumberInput } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const getNumberColor = (number) => {

@@ -6,7 +6,7 @@
 
 import { classes } from 'common/react';
 import { useBackend } from '../backend';
-import { Box } from '../components';
+import { Box } from 'tgui-core/components';
 import { Layout } from './Layout';
 
 export const Pane = (props) => {

@@ -1,6 +1,6 @@
 import { useBackend } from '../../backend';
 import { useLocalState } from '../../backend';
-import { Button, Input, LabeledList, Section } from '../../components';
+import { Button, Input, LabeledList, Section } from 'tgui-core/components';
 import { Window } from '../../layouts';
 
 export const AtmLogin = (props) => {

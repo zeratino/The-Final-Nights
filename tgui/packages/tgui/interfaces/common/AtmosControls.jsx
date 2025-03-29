@@ -1,6 +1,6 @@
 import { decodeHtmlEntities } from 'common/string';
 import { useBackend } from '../../backend';
-import { Button, LabeledList, NumberInput, Section } from '../../components';
+import { Button, LabeledList, NumberInput, Section } from 'tgui-core/components';
 import { getGasLabel } from '../../constants';
 
 export const Vent = (props) => {

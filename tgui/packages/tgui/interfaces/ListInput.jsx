@@ -6,7 +6,7 @@
 
 import { clamp01 } from 'common/math';
 import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Section, Input, Stack } from '../components';
+import { Box, Button, Section, Input, Stack } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const ARROW_KEY_UP = 38;

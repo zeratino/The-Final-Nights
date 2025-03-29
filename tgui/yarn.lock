@@ -8590,6 +8590,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tgui-core@npm:^1.8.4":
+  version: 1.8.4
+  resolution: "tgui-core@npm:1.8.4"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: e288342e58b5f60d92b0b119d25b05e025ce4205b3da33af9709eba30dbd7994b78ef4882a99fc4568647a84bf829d41d4561510dfc841ebcb2062723f74d03e
+  languageName: node
+  linkType: hard
+
 "tgui-dev-server@workspace:*, tgui-dev-server@workspace:packages/tgui-dev-server":
   version: 0.0.0-use.local
   resolution: "tgui-dev-server@workspace:packages/tgui-dev-server"
@@ -8684,6 +8694,7 @@ __metadata:
     marked: ^4.2.12
     react: ^18.2.0
     react-dom: ^18.2.0
+    tgui-core: ^1.8.4
     tgui-dev-server: "workspace:*"
     tgui-polyfill: "workspace:*"
   languageName: unknown

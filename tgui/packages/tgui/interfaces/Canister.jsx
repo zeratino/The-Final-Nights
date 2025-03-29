@@ -11,7 +11,7 @@ import {
   RoundGauge,
   Section,
   Tooltip,
-} from '../components';
+} from 'tgui-core/components';
 import { formatSiUnit } from '../format';
 import { Window } from '../layouts';
 

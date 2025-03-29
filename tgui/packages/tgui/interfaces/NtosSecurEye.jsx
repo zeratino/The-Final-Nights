@@ -4,7 +4,7 @@ import { classes } from 'common/react';
 import { createSearch } from 'common/string';
 import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
-import { Button, ByondUi, Input, Section } from '../components';
+import { Button, ByondUi, Input, Section } from 'tgui-core/components';
 import { NtosWindow } from '../layouts';
 import {
   prevNextCamera,

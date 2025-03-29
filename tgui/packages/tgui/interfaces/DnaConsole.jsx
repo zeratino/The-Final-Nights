@@ -18,7 +18,7 @@ import {
   ProgressBar,
   Section,
   Stack,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const SUBJECT_CONCIOUS = 0;

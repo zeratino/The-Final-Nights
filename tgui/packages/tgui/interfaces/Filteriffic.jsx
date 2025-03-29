@@ -13,7 +13,7 @@ import {
   NoticeBox,
   NumberInput,
   Section,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 const FilterIntegerEntry = (props) => {

@@ -13,7 +13,7 @@ import {
   ProgressBar,
   Section,
   Stack,
-} from '../components';
+} from 'tgui-core/components';
 import { formatMoney, formatSiUnit } from '../format';
 import { Window } from '../layouts';
 

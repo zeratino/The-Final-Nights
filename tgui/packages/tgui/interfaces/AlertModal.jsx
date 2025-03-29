@@ -7,7 +7,7 @@
 import { Loader } from "./common/Loader";
 import { useBackend } from '../backend';
 import { Component, createRef } from 'react';
-import { Box, Flex, Section } from '../components';
+import { Box, Flex, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
 import {
   KEY_ENTER,

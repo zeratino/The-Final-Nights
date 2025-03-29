@@ -1,6 +1,6 @@
 import { multiline } from 'common/string';
 import { useBackend } from '../backend';
-import { Box, Button, Stack, Section, Table, Tooltip } from '../components';
+import { Box, Button, Stack, Section, Table, Tooltip } from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const ComputerFabricator = (props) => {

@@ -7,7 +7,7 @@ import {
   ProgressBar,
   Section,
   Slider,
-} from '../components';
+} from 'tgui-core/components';
 import { formatPower } from '../format';
 import { Window } from '../layouts';
 

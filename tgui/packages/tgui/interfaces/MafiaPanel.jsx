@@ -10,7 +10,7 @@ import {
   Section,
   Stack,
   TimeDisplay,
-} from '../components';
+} from 'tgui-core/components';
 import { Window } from '../layouts';
 
 export const MafiaPanel = (props) => {
