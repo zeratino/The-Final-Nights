@@ -589,7 +589,7 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 
 	playsound(src, 'sound/effects/radioclick.ogg', 30, FALSE)
 
-	var/tmp/garble = FALSE
+	var/garble = FALSE
 	if(iskindred(speaker))
 		var/mob/living/carbon/human/speaker_man = speaker
 		if(speaker_man.clane?.name == "Lasombra")

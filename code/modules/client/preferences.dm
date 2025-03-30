@@ -461,12 +461,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Species:</b><BR><a href='byond://?_src_=prefs;preference=species;task=input'>[pref_species.name]</a><BR>"
 			switch(pref_species.name)
 				if("Vampire")
-					dat += "<b>Path of [enlightenment ? "Enlightenment" : "Humanity"]:</b> [humanity]/10"
-					if ((true_experience >= (humanity * 2)) && (humanity < 10))
-						dat += " <a href='byond://?_src_=prefs;preference=path;task=input'>Increase [enlightenment ? "Enlightenment" : "Humanity"] ([humanity * 2])</a>"
-					dat += "<br>"
-					if(!slotlocked)
-						dat += "<a href='byond://?_src_=prefs;preference=pathof;task=input'>Switch Path</a><BR>"
 					dat += "<b>Masquerade:</b> [masquerade]/5<BR>"
 					dat += "<b>Generation:</b> [generation]"
 					var/generation_allowed = TRUE
