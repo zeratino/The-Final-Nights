@@ -151,22 +151,18 @@ export function SettingsGeneral(props) {
       <Stack fill>
         <Stack.Item mt={0.15}>
           <Button
-            icon="compact-disc"
+            icon="cloud-arrow-down"
             tooltip="Export chat settings"
             onClick={() => dispatch(exportSettings())}
-          >
-            Export settings
-          </Button>
+          />
         </Stack.Item>
         <Stack.Item mt={0.15}>
           <Button.File
             accept=".json"
             tooltip="Import chat settings"
-            icon="arrow-up-from-bracket"
+            icon="cloud-arrow-up"
             onSelectFiles={(files) => importChatSettings(files)}
-          >
-            Import settings
-          </Button.File>
+          />
         </Stack.Item>
         <Stack.Item grow mt={0.15}>
           <Button

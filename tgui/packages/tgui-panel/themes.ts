@@ -70,6 +70,8 @@ export const setClientTheme = (name) => {
     'forum.text-color': themeColor.TEXT,
     'github.background-color': themeColor.BUTTON,
     'github.text-color': themeColor.TEXT,
+    'discord.background-color': themeColor.BUTTON,
+    'discord.text-color': themeColor.TEXT,
     'report-issue.background-color': themeColor.BUTTON,
     'report-issue.text-color': themeColor.TEXT,
     'fullscreen-toggle.background-color': themeColor.BUTTON,

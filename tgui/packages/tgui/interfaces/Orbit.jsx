@@ -157,7 +157,7 @@ export const Orbit = (props) => {
                 color="transparent"
                 tooltip={`Toggle Auto-Observe. When active, you'll
                 see the UI / full inventory of whoever you're orbiting. Neat!`}
-                tooltipPosition="bottom-left"
+                tooltipPosition="bottom-end"
                 selected={auto_observe}
                 icon={auto_observe ? 'toggle-on' : 'toggle-off'}
                 onClick={() => act('toggle_observe')}
@@ -166,7 +166,7 @@ export const Orbit = (props) => {
                 inline
                 color="transparent"
                 tooltip="Refresh"
-                tooltipPosition="bottom-left"
+                tooltipPosition="bottom-end"
                 icon="sync-alt"
                 onClick={() => act('refresh')}
               />

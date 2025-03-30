@@ -15,7 +15,7 @@ import { Window } from '../layouts';
 export const Jukebox = (props) => {
   const { act, data } = useBackend();
   const { active, track_selected, track_length, track_beat, volume } = data;
-  const songs = flow([sortBy((song) => song.name)])(data.songs || []);
+  data.songs.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Window width={370} height={313}>
       <Window.Content>
@@ -35,7 +35,7 @@ export const Jukebox = (props) => {
               <Dropdown
                 overflow-y="scroll"
                 width="240px"
-                options={songs.map((song) => song.name)}
+                options={data.songs.map((song) => song.name)}
                 disabled={active}
                 selected={track_selected || 'Select a Track'}
                 onSelected={(value) =>
