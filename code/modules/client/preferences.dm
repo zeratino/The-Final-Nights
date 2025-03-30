@@ -1423,9 +1423,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			// TFN EDIT START: alt job titles
 			var/rank_title_line = "[displayed_rank]"
 			if(length(job.alt_titles) && (rank in GLOB.leader_positions))//Bold head jobs
-				rank_title_line = "<b><a href='?_src_=prefs;preference=job;task=alt_title;job_title=[job.title]'>[rank_title_line]</a></b>"
+				rank_title_line = "<b><a href='byond://?_src_=prefs;preference=job;task=alt_title;job_title=[job.title]'>[rank_title_line]</a></b>"
 			else if(length(job.alt_titles))
-				rank_title_line = "<a href='?_src_=prefs;preference=job;task=alt_title;job_title=[job.title]'>[rank_title_line]</a>"
+				rank_title_line = "<a href='byond://?_src_=prefs;preference=job;task=alt_title;job_title=[job.title]'>[rank_title_line]</a>"
 			else
 				rank_title_line = "<span class='dark'>[rank]</span>"
 			HTML += rank_title_line

@@ -200,17 +200,17 @@ SUBSYSTEM_DEF(statpanels)
 		list("CPU:", world.cpu),
 		list("Instances:", "[num2text(world.contents.len, 10)]"),
 		list("World Time:", "[world.time]"),
-		list("Globals:", GLOB.stat_entry(), "\ref[GLOB]"),
-		list("[config]:", config.stat_entry(), "\ref[config]"),
+		list("Globals:", GLOB.stat_entry(), "[FAST_REF(GLOB)]"),
+		list("[config]:", config.stat_entry(), "[FAST_REF(config)]"),
 		list("Byond:", "(FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%)) (Internal Tick Usage: [round(MAPTICK_LAST_INTERNAL_TICK_USAGE,0.1)]%)"),
-		list("Master Controller:", Master.stat_entry(), "\ref[Master]"),
-		list("Failsafe Controller:", Failsafe.stat_entry(), "\ref[Failsafe]"),
+		list("Master Controller:", Master.stat_entry(), "[FAST_REF(Master)]"),
+		list("Failsafe Controller:", Failsafe.stat_entry(), "[FAST_REF(Failsafe)]"),
 		list("","")
 	)
 	for(var/ss in Master.subsystems)
 		var/datum/controller/subsystem/sub_system = ss
-		mc_data[++mc_data.len] = list("\[[sub_system.state_letter()]][sub_system.name]", sub_system.stat_entry(), "\ref[sub_system]")
-	mc_data[++mc_data.len] = list("Camera Net", "Cameras: [GLOB.cameranet.cameras.len] | Chunks: [GLOB.cameranet.chunks.len]", "\ref[GLOB.cameranet]")
+		mc_data[++mc_data.len] = list("\[[sub_system.state_letter()]][sub_system.name]", sub_system.stat_entry(), "[FAST_REF(sub_system)]")
+	mc_data[++mc_data.len] = list("Camera Net", "Cameras: [GLOB.cameranet.cameras.len] | Chunks: [GLOB.cameranet.chunks.len]", "[FAST_REF(GLOB.cameranet)]")
 
 ///immediately update the active statpanel tab of the target client
 /datum/controller/subsystem/statpanels/proc/immediate_send_stat_data(client/target)

@@ -5,4 +5,3 @@
 #define GET_TYPEID(ref) ( ( (length(ref) <= 10) ? "TYPEID_NULL" : copytext(ref, 4, -7) ) )
 #define IS_NORMAL_LIST(L) (GET_TYPEID(FAST_REF(L)) == TYPEID_NORMAL_LIST)
 
-
