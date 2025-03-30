@@ -46,10 +46,10 @@ SUBSYSTEM_DEF(statpanels)
 
 		if(!target.stat_panel.is_ready())
 			continue
-		if(target.stat_tab == "Status")
-			var/ping_str = url_encode("Ping: [round(target.lastping, 1)]ms (Average: [round(target.avgping, 1)]ms)")
-			var/other_str = url_encode(json_encode(target.mob.get_status_tab_items()))
-			target << output("[encoded_global_data];[ping_str];[other_str]", "statbrowser:update")
+
+		if(target.stat_tab == "Status" && num_fires % status_wait == 0)
+			set_status_tab(target)
+
 		if(!target.holder)
 			target.stat_panel.send_message("remove_admin_tabs")
 		else
