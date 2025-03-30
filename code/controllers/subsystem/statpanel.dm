@@ -110,29 +110,29 @@ SUBSYSTEM_DEF(statpanels)
 	target.stat_panel.send_message("update_tickets", ahelp_tickets)
 	var/datum/interview_manager/m = GLOB.interviews
 
-				// get open interview count
-				var/dc = 0
-				for (var/ckey in m.open_interviews)
-					var/datum/interview/I = m.open_interviews[ckey]
-					if (I && !I.owner)
-						dc++
-				var/stat_string = "([m.open_interviews.len - dc] online / [dc] disconnected)"
+	// get open interview count
+	var/dc = 0
+	for (var/ckey in m.open_interviews)
+		var/datum/interview/current_interview = m.open_interviews[ckey]
+		if (current_interview && !current_interview.owner)
+			dc++
+	var/stat_string = "([m.open_interviews.len - dc] online / [dc] disconnected)"
 
-				// Prepare each queued interview
-				var/list/queued = list()
-				for (var/datum/interview/I in m.interview_queue)
-					queued += list(list(
-						"ref" = REF(I),
-						"status" = "\[[I.pos_in_queue]\]: [I.owner_ckey][!I.owner ? " (DC)": ""] \[INT-[I.id]\]"
-					))
+	// Prepare each queued interview
+	var/list/queued = list()
+	for (var/datum/interview/queued_interview in m.interview_queue)
+		queued += list(list(
+			"ref" = REF(queued_interview),
+			"status" = "\[[queued_interview.pos_in_queue]\]: [queued_interview.owner_ckey][!queued_interview.owner ? " (DC)": ""] \[INT-[queued_interview.id]\]"
+		))
 
-				var/list/data = list(
-					"status" = list(
-						"Active:" = "[m.open_interviews.len] [stat_string]",
-						"Queued:" = "[m.interview_queue.len]",
-						"Closed:" = "[m.closed_interviews.len]"),
-					"interviews" = queued
-				)
+	var/list/data = list(
+		"status" = list(
+			"Active:" = "[m.open_interviews.len] [stat_string]",
+			"Queued:" = "[m.interview_queue.len]",
+			"Closed:" = "[m.closed_interviews.len]"),
+		"interviews" = queued
+	)
 
 	// Push update
 	target.stat_panel.send_message("update_interviews", data)
