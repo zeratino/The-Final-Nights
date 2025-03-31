@@ -1869,9 +1869,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(slotlocked)
 						return
 
-					var/new_age = tgui_input_number(user, "Choose your character's biological age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference", age, AGE_MAX, AGE_MIN)
+					var/new_age = tgui_input_number(user, "Choose your character's biological age:\n([AGE_MIN]-[AGE_MAX])", "Character Preference", age, AGE_MAX, AGE_MIN, round_value = TRUE)
 					if(new_age)
-						age = max(min( round(text2num(new_age)), AGE_MAX),AGE_MIN)
+						age = clamp(new_age, AGE_MIN, AGE_MAX)
 						if (age > total_age)
 							total_age = age
 						update_preview_icon()
@@ -1880,9 +1880,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(slotlocked)
 						return
 
-					var/new_age = tgui_input_number(user, "Choose your character's actual age:\n([age]-[age+1000])", "Character Preference", total_age, age+1000, age)
+					var/new_age = tgui_input_number(user, "Choose your character's actual age:\n([age]-[age+1000])", "Character Preference", total_age, age+1000, age, round_value = TRUE)
 					if(new_age)
-						total_age = max(min(round(text2num(new_age)), age+1000), age)
+						total_age = clamp(new_age, age, age+1000)
 						if (total_age < age)
 							age = total_age
 						update_preview_icon()
