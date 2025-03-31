@@ -10,7 +10,7 @@ const sortByPlaytime = sortBy(([_, playtime]) => -playtime);
 
 const PlaytimeSection = (props) => {
   const { playtimes } = props;
-  const sortedPlaytimes = sortByPlaytime(Object.entries(playtimes));
+  const sortedPlaytimes = Object.entries(playtimes).sort((a, b) => a.playtime - b.playtime)
   const mostPlayed = sortedPlaytimes[0][1];
 
   return (
