@@ -212,7 +212,7 @@ export const DmTarget = new Juke.Target({
   parameters: [DefineParameter, DmVersionParameter, WarningParameter, NoWarningParameter, SkipIconCutter],
   dependsOn: ({ get }) => [
     get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-    !get(SkipIconCutter) && IconCutterTarget,
+    !get(SkipIconCutter) && IconCutterTarget, TguiTarget,
   ],
   inputs: [
     '_maps/map_files/generic/**',
