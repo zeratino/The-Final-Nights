@@ -68,6 +68,8 @@ export const setClientTheme = (name) => {
     'wiki.text-color': themeColor.TEXT,
     'forum.background-color': themeColor.BUTTON,
     'forum.text-color': themeColor.TEXT,
+    'discord.background-color': themeColor.BUTTON,
+    'discord.text-color': themeColor.TEXT,
     'github.background-color': themeColor.BUTTON,
     'github.text-color': themeColor.TEXT,
     'report-issue.background-color': themeColor.BUTTON,

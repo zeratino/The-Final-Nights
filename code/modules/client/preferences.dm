@@ -201,6 +201,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/lover = FALSE
 
 	var/flavor_text
+	var/ooc_notes
 
 	var/friend_text
 	var/enemy_text
@@ -731,6 +732,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			else
 				dat += "<BR><b>Flavor Text:</b> [copytext_char(flavor_text, 1, 110)]... <a href='byond://?_src_=prefs;preference=flavor_text;task=input'>Change</a>"
 				dat += "<a href='byond://?_src_=prefs;preference=view_flavortext;task=input'>Show More</a><BR>"
+
+			dat += "<BR><b>OOC Notes:</b> [ooc_notes] <a href='byond://?_src_=prefs;preference=ooc_notes;task=input'>Change</a><BR>"
 
 			dat += "<br><b>Headshot(1:1):</b> <a href='byond://?_src_=prefs;preference=headshot;task=input'>Change</a>"
 			if(headshot_link != null)
@@ -2478,6 +2481,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						lover_text = new_text
 				// TODO: Completely revamp flavor text into a more expansive system - TFN
 				// TFN EDIT ADDITION START: character headshots & flavortext
+				if("ooc_notes")
+					var/new_ooc_notes = tgui_input_text(user, "Choose your character's OOC notes:", "Character Preference", ooc_notes, MAX_MESSAGE_LEN, TRUE, FALSE)
+					if(!length(new_ooc_notes))
+						return
+					ooc_notes = new_ooc_notes
+
 				if("flavor_text")
 					var/new_flavor = tgui_input_text(user, "Choose your character's flavor text:", "Character Preference", flavor_text, MAX_MESSAGE_LEN, TRUE, FALSE)
 					if(!length(new_flavor))
@@ -3245,6 +3254,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			GLOB.masquerade_breakers_list += character
 
 	character.flavor_text = sanitize_text(flavor_text)
+	character.ooc_notes = sanitize_text(ooc_notes)
 	character.gender = gender
 	character.age = age
 	character.chronological_age = total_age

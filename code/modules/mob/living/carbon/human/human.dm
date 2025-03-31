@@ -561,10 +561,8 @@
 		return
 
 	if(href_list["view_flavortext"])
-		var/datum/browser/popup = new(user, "[name]'s Description", name, 500, 200)
-		popup.set_content(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]", replacetext(flavor_text, "\n", "<BR>")))
-		popup.open(FALSE)
-		return
+		tgui.holder = src
+		tgui.ui_interact(usr) //datum has a tgui component, here we open the window
 	// TFN EDIT ADDITION END
 	..() //end of this massive fucking chain. TODO: make the hud chain not spooky. - Yeah, great job doing that.
 
