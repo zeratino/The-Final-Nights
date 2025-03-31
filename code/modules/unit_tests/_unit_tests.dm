@@ -106,7 +106,6 @@
 #include "heretic_knowledge.dm"
 #include "holidays.dm"
 #include "keybinding_init.dm"
-#include "machine_disassembly.dm"
 #include "medical_wounds.dm"
 #include "merge_type.dm"
 #include "metabolizing.dm"
