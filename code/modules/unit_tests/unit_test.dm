@@ -245,8 +245,6 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 		//This should be obvious
 		/obj/machinery/doomsday_device,
 		//Template type
-		/obj/machinery/power/turbine,
-		//Template type
 		/obj/effect/mob_spawn,
 		//Singleton
 		/mob/dview,
