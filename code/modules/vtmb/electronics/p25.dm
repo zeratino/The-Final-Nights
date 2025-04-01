@@ -212,6 +212,11 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 	desc = "A P25 radio transceiver configured for general communications."
 	p25_network = "tower"
 
+/obj/machinery/p25transceiver/anarch
+	name = "anarch P25 transceiver"
+	desc = "A P25 radio transceiver configured for general communications."
+	p25_network = "anarch"
+
 // ==============================
 // Police Transceiver
 // ==============================
@@ -483,6 +488,8 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 			return "Clinic Radio Transceiver"
 		if("tower")
 			return "Tower Radio Transceiver"
+		if("anarch")
+			return "Anarch Radio Transceiver"
 		else
 			return "Radio Transceiver"
 
@@ -509,6 +516,8 @@ GLOBAL_LIST_EMPTY(p25_tranceivers)
 			return "CRT"
 		if("tower")
 			return "TRT"
+		if("anarch")
+			return "BRT"
 		else
 			return "RT"
 
