@@ -94,7 +94,7 @@ GLOBAL_PROTECT(href_token)
 	if ((C = owner) || (C = GLOB.directory[target]))
 		disassociate()
 		add_verb(C, /client/proc/readmin)
-		client.update_special_keybinds()
+		C.update_special_keybinds()
 
 /datum/admins/proc/associate(client/C)
 	if(IsAdminAdvancedProcCall())
