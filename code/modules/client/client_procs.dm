@@ -218,6 +218,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	// Instantiate tgui panel
 	tgui_panel = new(src, "browseroutput")
 
+	tgui_say = new(src, "tgui_say")
+
 	set_right_click_menu_mode(TRUE)
 
 	GLOB.ahelp_tickets.ClientLogin(src)
@@ -339,9 +341,18 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	// Initialize tgui panel
 	tgui_panel.initialize()
 
-	if(alert_mob_dupe_login)
-		spawn()
-			alert(mob, "You have logged in already with another key this round, please log out of this one NOW or risk being banned!")
+	tgui_say.initialize()
+
+	if(alert_mob_dupe_login && !holder)
+		var/dupe_login_message = "Your ComputerID has already logged in with another key this round, please log out of this one NOW or risk being banned!"
+		if (alert_admin_multikey)
+			dupe_login_message += "\nAdmins have been informed."
+			message_admins(span_danger("<B>MULTIKEYING: </B></span><span class='notice'>[key_name_admin(src)] has a matching CID+IP with another player and is clearly multikeying. They have been warned to leave the server or risk getting banned."))
+			log_admin_private("MULTIKEYING: [key_name(src)] has a matching CID+IP with another player and is clearly multikeying. They have been warned to leave the server or risk getting banned.")
+		spawn(0.5 SECONDS) //needs to run during world init, do not convert to add timer
+			alert(mob, dupe_login_message) //players get banned if they don't see this message, do not convert to tgui_alert (or even tg_alert) please.
+			to_chat(mob, span_danger(dupe_login_message))
+
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -994,12 +1005,18 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 					movement_keys[key] = WEST
 				if("South")
 					movement_keys[key] = SOUTH
-				if("Say")
-					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=inputSay")
-				if("OOC")
-					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=ooc")
-				if("Me")
-					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=me")
+				if(SAY_CHANNEL)
+					var/say = tgui_say_create_open_command(SAY_CHANNEL)
+					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[say]")
+				if(RADIO_CHANNEL)
+					var/radio = tgui_say_create_open_command(RADIO_CHANNEL)
+					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[radio]")
+				if(ME_CHANNEL)
+					var/me = tgui_say_create_open_command(ME_CHANNEL)
+					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[me]")
+				if(OOC_CHANNEL)
+					var/ooc = tgui_say_create_open_command(OOC_CHANNEL)
+					winset(src, "default-[REF(key)]", "parent=default;name=[key];command=[ooc]")
 
 /client/proc/change_view(new_size)
 	if (isnull(new_size))

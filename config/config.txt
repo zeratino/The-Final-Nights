@@ -157,6 +157,9 @@ LOG_CLONING
 ## log shuttle actions
 LOG_SHUTTLE
 
+## log speech indicators
+LOG_SPEECH_INDICATORS
+
 ##Log camera pictures - Must have picture logging enabled
 PICTURE_LOGGING_CAMERA
 

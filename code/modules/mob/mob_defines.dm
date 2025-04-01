@@ -242,3 +242,10 @@
 
 	///If the blood cell cursor is currently active due to a Discipline being targeted
 	var/discipline_targeting = FALSE
+
+	/// Typing indicator - mob is typing into a input
+	var/typing_indicator = FALSE
+	/// Thinking indicator - mob has input window open
+	var/thinking_indicator = FALSE
+	/// User is thinking in character. Used to revert to thinking state after stop_typing
+	var/thinking_IC = FALSE
