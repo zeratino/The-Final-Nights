@@ -2850,6 +2850,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								key_bindings -= old_key
 						user << browse(null, "window=capturekeypress")
 						user.client.set_macros()
+						user.client.update_special_keybinds()
 						save_preferences()
 						ShowChoices(user)
 						return
@@ -2885,6 +2886,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 					user << browse(null, "window=capturekeypress")
 					user.client.set_macros()
+					user.client.update_special_keybinds()
 					save_preferences()
 
 				if("keybindings_reset")
@@ -2895,6 +2897,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					hotkeys = (choice == "Hotkey")
 					key_bindings = (hotkeys) ? deepCopyList(GLOB.hotkey_keybinding_list_by_key) : deepCopyList(GLOB.classic_keybinding_list_by_key)
 					user.client.set_macros()
+					user.client.update_special_keybinds()
 
 				if("chat_on_map")
 					chat_on_map = !chat_on_map
