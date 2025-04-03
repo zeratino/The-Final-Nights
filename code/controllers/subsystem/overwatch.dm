@@ -2,7 +2,7 @@ SUBSYSTEM_DEF(overwatch)
 	name = "Overwatch"
 	flags = SS_NO_INIT | SS_NO_FIRE
 
-/datum/controller/subsystem/overwatch/proc/record_action(mob/source, message)
+/datum/controller/subsystem/overwatch/proc/record_action(source, message)
 	if(!CONFIG_GET(flag/discord_overwatch))
 		return
 
@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(overwatch)
 	request.prepare(RUSTG_HTTP_METHOD_POST, webhook, json_encode(webhook_info), headers, "tmp/response.json")
 	request.begin_async()
 
-/datum/controller/subsystem/overwatch/proc/format_embed_overwatch(mob/source, message)
+/datum/controller/subsystem/overwatch/proc/format_embed_overwatch(source, message)
 	RETURN_TYPE(/datum/discord_embed)
 	PRIVATE_PROC(TRUE)
 
@@ -30,7 +30,7 @@ SUBSYSTEM_DEF(overwatch)
 	embed.description = "OVERWATCH"
 	embed.author = key_name(source)
 
-	var/client/client = source.client
+	var/client/client = CLIENT_FROM_VAR(source)
 	if(client.holder)
 		embed.description += " - Admin Action"
 	else
