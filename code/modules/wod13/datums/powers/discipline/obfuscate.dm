@@ -60,6 +60,16 @@
 	deltimer(cooldown_timer)
 	cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
+/datum/discipline_power/obfuscate/proc/handle_walk(datum/source, atom/moving_thing, dir)
+	SIGNAL_HANDLER
+
+	if (owner.m_intent != MOVE_INTENT_WALK)
+		to_chat(owner, span_danger("Your [src] falls away as you move too quickly!"))
+		try_deactivate(direct = TRUE)
+
+		deltimer(cooldown_timer)
+		cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
+
 /datum/discipline_power/obfuscate/proc/handle_bump(datum/source, atom/moving_thing, dir)
 	SIGNAL_HANDLER
 
@@ -172,17 +182,6 @@
 	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
-
-//remove this when Mask of a Thousand Faces is made tabletop accurate
-/datum/discipline_power/obfuscate/unseen_presence/proc/handle_walk(datum/source, atom/moving_thing, dir)
-	SIGNAL_HANDLER
-
-	if (owner.m_intent != MOVE_INTENT_WALK)
-		to_chat(owner, span_danger("Your [src] falls away as you move too quickly!"))
-		try_deactivate(direct = TRUE)
-
-		deltimer(cooldown_timer)
-		cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 //MASK OF A THOUSAND FACES
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces
