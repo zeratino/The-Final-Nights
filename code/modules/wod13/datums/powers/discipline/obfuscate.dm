@@ -15,31 +15,15 @@
 	deactivate_sound = 'code/modules/wod13/sounds/obfuscate_deactivate.ogg'
 
 	var/static/list/aggressive_signals = list(
-		COMSIG_MOB_THROW,
-
-		COMSIG_MOB_SAY,
-		COMSIG_MOB_EMOTE,
-
 		COMSIG_MOB_ATTACK_HAND,
-		COMSIG_MOB_LIVING_ATTACK_HAND,
 		COMSIG_MOB_ATTACKED_HAND,
-		COMSIG_MOB_ITEM_ATTACK,
 		COMSIG_MOB_MELEE_SWING,
 		COMSIG_MOB_FIRED_GUN,
 		COMSIG_MOB_THREW_MOVABLE,
 		COMSIG_MOB_ATTACKING_MELEE,
 		COMSIG_MOB_ATTACKED_BY_MELEE,
-
-		COMSIG_LIVING_RESTING,
-
-		COMSIG_LIVING_START_PULL,
-		COMSIG_LIVING_GET_PULLED,
-
-		COMSIG_POWER_ACTIVATE,
-		COMSIG_POWER_ACTIVATE_ON,
-
+		CELERITY_POWER_ACTIVATE,
 		COMSIG_PROJECTILE_PREHIT,
-		COMSIG_PROJECTILE_RANGE_OUT,
 	)
 
 /datum/discipline_power/obfuscate/proc/on_combat_signal(datum/source)
@@ -50,34 +34,6 @@
 
 	deltimer(cooldown_timer)
 	cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), COMBAT_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
-
-/datum/discipline_power/obfuscate/proc/handle_move(datum/source, atom/moving_thing, dir)
-	SIGNAL_HANDLER
-
-	to_chat(owner, span_danger("Your [src] falls away as you move from your position!"))
-	try_deactivate(direct = TRUE)
-
-	deltimer(cooldown_timer)
-	cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
-
-/datum/discipline_power/obfuscate/proc/handle_walk(datum/source, atom/moving_thing, dir)
-	SIGNAL_HANDLER
-
-	if (owner.m_intent != MOVE_INTENT_WALK)
-		to_chat(owner, span_danger("Your [src] falls away as you move too quickly!"))
-		try_deactivate(direct = TRUE)
-
-		deltimer(cooldown_timer)
-		cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
-
-/datum/discipline_power/obfuscate/proc/handle_bump(datum/source, atom/moving_thing, dir)
-	SIGNAL_HANDLER
-
-	to_chat(owner, span_danger("Your [src] falls away as you collide with something!"))
-	try_deactivate(direct = TRUE)
-
-	deltimer(cooldown_timer)
-	cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 /datum/discipline_power/obfuscate/proc/is_seen_check()
 	for (var/mob/living/viewer in oviewers(7, owner))
@@ -121,8 +77,6 @@
 	. = ..()
 	RegisterSignal(owner, aggressive_signals, PROC_REF(on_combat_signal), override = TRUE)
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(handle_move))
-	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	RegisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	for(var/mob/living/carbon/human/npc/NPC in GLOB.npc_list)
 		if (NPC.danger_source == owner)
@@ -133,10 +87,17 @@
 	. = ..()
 	UnregisterSignal(owner, aggressive_signals)
 	UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
-	UnregisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
+
+/datum/discipline_power/obfuscate/cloak_of_shadows/proc/handle_move(datum/source, atom/moving_thing, dir)
+	SIGNAL_HANDLER
+
+	to_chat(owner, span_danger("Your [src] falls away as you move from your position!"))
+	try_deactivate(direct = TRUE)
+
+	deltimer(cooldown_timer)
+	cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 //UNSEEN PRESENCE
 /datum/discipline_power/obfuscate/unseen_presence
@@ -164,9 +125,7 @@
 /datum/discipline_power/obfuscate/unseen_presence/activate()
 	. = ..()
 	RegisterSignal(owner, aggressive_signals, PROC_REF(on_combat_signal), override = TRUE)
-	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(handle_walk))
-	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	RegisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
+	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(handle_move))
 
 	for(var/mob/living/carbon/human/npc/NPC in GLOB.npc_list)
 		if (NPC.danger_source == owner)
@@ -178,10 +137,19 @@
 	. = ..()
 	UnregisterSignal(owner, aggressive_signals)
 	UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
-	UnregisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
+
+//remove this when Mask of a Thousand Faces is made tabletop accurate
+/datum/discipline_power/obfuscate/unseen_presence/proc/handle_move(datum/source, atom/moving_thing, dir)
+	SIGNAL_HANDLER
+
+	if (owner.m_intent != MOVE_INTENT_WALK)
+		to_chat(owner, span_danger("Your [src] falls away as you move too quickly!"))
+		try_deactivate(direct = TRUE)
+
+		deltimer(cooldown_timer)
+		cooldown_timer = addtimer(CALLBACK(src, PROC_REF(cooldown_expire)), REVEAL_COOLDOWN_LENGTH, TIMER_STOPPABLE | TIMER_DELETE_ME)
 
 //MASK OF A THOUSAND FACES
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces
@@ -208,9 +176,6 @@
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces/activate()
 	. = ..()
 	RegisterSignal(owner, aggressive_signals, PROC_REF(on_combat_signal), override = TRUE)
-	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	RegisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
-	
 
 	for(var/mob/living/carbon/human/npc/NPC in GLOB.npc_list)
 		if (NPC.danger_source == owner)
@@ -220,8 +185,6 @@
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces/deactivate()
 	. = ..()
 	UnregisterSignal(owner, aggressive_signals)
-	UnregisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
 
@@ -247,8 +210,6 @@
 /datum/discipline_power/obfuscate/vanish_from_the_minds_eye/activate()
 	. = ..()
 	RegisterSignal(owner, aggressive_signals, PROC_REF(on_combat_signal), override = TRUE)
-	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	RegisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	for(var/mob/living/carbon/human/npc/NPC in GLOB.npc_list)
 		if (NPC.danger_source == owner)
@@ -258,8 +219,6 @@
 /datum/discipline_power/obfuscate/vanish_from_the_minds_eye/deactivate()
 	. = ..()
 	UnregisterSignal(owner, aggressive_signals)
-	UnregisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
 
@@ -285,8 +244,6 @@
 /datum/discipline_power/obfuscate/cloak_the_gathering/activate()
 	. = ..()
 	RegisterSignal(owner, aggressive_signals, PROC_REF(on_combat_signal), override = TRUE)
-	RegisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	RegisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	for(var/mob/living/carbon/human/npc/NPC in GLOB.npc_list)
 		if (NPC.danger_source == owner)
@@ -296,8 +253,6 @@
 /datum/discipline_power/obfuscate/cloak_the_gathering/deactivate()
 	. = ..()
 	UnregisterSignal(owner, aggressive_signals)
-	UnregisterSignal(owner, COMSIG_MOVABLE_BUMP, PROC_REF(handle_bump))
-	UnregisterSignal(owner, COMSIG_MOVABLE_CROSSED, PROC_REF(handle_bump))
 
 	REMOVE_TRAIT(owner, TRAIT_OBFUSCATED, OBFUSCATE_TRAIT)
 
