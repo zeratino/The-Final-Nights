@@ -2486,14 +2486,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(!length(new_ooc_notes))
 						return
 					ooc_notes = new_ooc_notes
-					SSoverwatch.record_action(user, html_decode(ooc_notes))
+					SSoverwatch.record_action(user, "**OOC NOTES**: [html_decode(ooc_notes)]")
 
 				if("flavor_text")
 					var/new_flavor = tgui_input_text(user, "Choose your character's flavor text:", "Character Preference", flavor_text, MAX_FLAVOR_LEN, multiline = TRUE)
 					if(!length(new_flavor))
 						return
 					flavor_text = new_flavor
-					SSoverwatch.record_action(user, html_decode(flavor_text))
+					SSoverwatch.record_action(user, "**FLAVORTEXT**: [html_decode(flavor_text)]")
 
 				if("view_flavortext")
 					var/datum/browser/popup = new(user, "[real_name]_flavortext", real_name, 500, 200)
