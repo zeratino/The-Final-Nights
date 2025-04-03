@@ -180,7 +180,7 @@
 
 	level = 3
 	check_flags = DISC_CHECK_CAPABLE
-	vitae_cost = 0
+	vitae_cost = 1
 
 	toggled = TRUE
 
@@ -222,7 +222,7 @@
 
 	level = 4
 	check_flags = DISC_CHECK_CAPABLE
-	vitae_cost = 0
+	vitae_cost = 2
 
 	toggled = TRUE
 
@@ -260,7 +260,7 @@
 
 	level = 5
 	check_flags = DISC_CHECK_CAPABLE
-	vitae_cost = 0
+	vitae_cost = 2
 
 	toggled = TRUE
 
