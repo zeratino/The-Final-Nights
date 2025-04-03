@@ -808,6 +808,7 @@
 
 			message_admins("[ADMIN_LOOKUPFLW(teacher)] taught [ADMIN_LOOKUPFLW(student)] the Discipline [giving_discipline.name].")
 			log_game("[key_name(teacher)] taught [key_name(student)] the Discipline [giving_discipline.name].")
+			SSoverwatch.record_action(teacher.client, "[key_name(teacher)] taught [key_name(student)] the Discipline [giving_discipline.name].")
 
 		qdel(giving_discipline)
 
