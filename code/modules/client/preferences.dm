@@ -2526,7 +2526,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					headshot_link = new_headshot_link
 					to_chat(user, span_notice("Successfully updated headshot picture!"))
 					log_game("[key_name(user)] has set their Headshot image to '[headshot_link]'.")
-					SSoverwatch.record_action(user, "[key_name(user)] has set their Headshot image to '[headshot_link]'.")
+					SSoverwatch.record_action(user, "[key_name(user)] has set their Headshot image to [headshot_link]")
 				// TFN EDIT ADDITION END
 				if("change_appearance")
 					if(!slotlocked)
