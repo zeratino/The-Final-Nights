@@ -4007,6 +4007,7 @@
 /area/vtm/interior)
 "bdO" = (
 /obj/structure/fluff/hedge,
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "bdT" = (
@@ -5809,6 +5810,15 @@
 /obj/effect/landmark/npcwall,
 /turf/open/floor/plating/vampplating/mono,
 /area/vtm/interior/millennium_tower)
+"bDc" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	layer = 4;
+	pixel_y = -1
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/interior/tzimisce_manor)
 "bDg" = (
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating/vampdirt,
@@ -11919,6 +11929,23 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/plating/vampgrass,
 /area/vtm/church)
+"dlE" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	layer = 4;
+	pixel_y = -1
+	},
+/obj/structure/railing{
+	dir = 8;
+	layer = 4
+	},
+/obj/structure/railing{
+	dir = 4;
+	layer = 4
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/interior/tzimisce_manor)
 "dlM" = (
 /obj/machinery/light/red{
 	pixel_y = 32
@@ -14675,6 +14702,23 @@
 /obj/structure/fence/door,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/ghetto/old)
+"ecC" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1;
+	layer = 4;
+	pixel_y = 9
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/interior/tzimisce_manor)
 "ecG" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -15783,6 +15827,8 @@
 /obj/machinery/light/prince{
 	dir = 4
 	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "euk" = (
@@ -20948,6 +20994,7 @@
 	layer = 4;
 	pixel_y = 9
 	},
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "fQu" = (
@@ -22461,6 +22508,7 @@
 	dir = 8;
 	layer = 4
 	},
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/tzimisce_manor)
 "glm" = (
@@ -23593,6 +23641,8 @@
 /obj/machinery/light/prince{
 	dir = 4
 	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "gBB" = (
@@ -24162,7 +24212,8 @@
 /obj/structure/vampdoor/wood{
 	dir = 4;
 	lock_id = "tzimiscemanor";
-	lockpick_difficulty = 18
+	lockpick_difficulty = 18;
+	locked = 1
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "emergencylockdown";
@@ -25909,6 +25960,8 @@
 	name = "dim light fixture";
 	light_color = "#000080"
 	},
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "hiS" = (
@@ -35173,6 +35226,7 @@
 /obj/machinery/light/prince{
 	dir = 8
 	},
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "jSE" = (
@@ -36757,6 +36811,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "krm" = (
@@ -36775,6 +36830,7 @@
 /area/vtm)
 "krt" = (
 /obj/structure/coclock/grandpa,
+/obj/effect/turf_decal/siding/wideplating/dark,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
 "krv" = (
@@ -37383,6 +37439,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "kBa" = (
@@ -40893,11 +40950,6 @@
 /obj/item/vamp/keys/tzimisce,
 /obj/item/vamp/keys/tzimisce,
 /obj/item/vamp/keys/tzimisce,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
 "lAP" = (
@@ -41033,6 +41085,8 @@
 	layer = 4;
 	pixel_y = 9
 	},
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "lCF" = (
@@ -41363,6 +41417,7 @@
 /obj/structure/fluff/hedge{
 	pixel_x = 5
 	},
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/tzimisce_manor)
 "lGS" = (
@@ -42608,6 +42663,7 @@
 	name = "dim light fixture";
 	light_color = "#000080"
 	},
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/tzimisce_manor)
 "lZA" = (
@@ -45362,6 +45418,8 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/tzimisce_manor)
 "mNU" = (
@@ -47227,6 +47285,7 @@
 	layer = 5.9
 	},
 /obj/structure/fluff/hedge,
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/parquetry/rich,
 /area/vtm/interior/tzimisce_manor)
 "not" = (
@@ -51319,6 +51378,16 @@
 /obj/manholeup,
 /turf/open/floor/plating,
 /area/vtm/interior)
+"ovU" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	layer = 4;
+	pixel_y = -1
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/interior/tzimisce_manor)
 "ovY" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/plating/vampgrass,
@@ -52141,6 +52210,25 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/concrete,
 /area/vtm/interior/cog/caern)
+"oGA" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1;
+	layer = 4;
+	pixel_y = 9
+	},
+/obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/interior/tzimisce_manor)
 "oGI" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
@@ -53684,6 +53772,7 @@
 /obj/machinery/light/prince{
 	dir = 4
 	},
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "pcm" = (
@@ -56742,6 +56831,12 @@
 "pSE" = (
 /turf/open/openspace,
 /area/vtm/sewer/cappadocian)
+"pSO" = (
+/obj/structure/table/glass{
+	density = 0
+	},
+/turf/open/floor/carpet/red,
+/area/vtm/interior/tzimisce_manor)
 "pSV" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/structure/coclock,
@@ -57698,6 +57793,7 @@
 	dir = 4;
 	pixel_y = -7
 	},
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/tzimisce_manor)
 "qgD" = (
@@ -63303,6 +63399,8 @@
 /obj/machinery/light/prince{
 	dir = 8
 	},
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/plating/granite/black,
 /area/vtm/interior/tzimisce_manor)
 "rEY" = (
@@ -63335,6 +63433,17 @@
 	},
 /turf/open/floor/plating/vampgrass,
 /area/vtm/pacificheights/community)
+"rFy" = (
+/obj/structure/fluff/hedge,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/light/prince{
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/plating/granite/black,
+/area/vtm/interior/tzimisce_manor)
 "rFz" = (
 /obj/effect/decal/asphaltline{
 	dir = 8
@@ -72758,6 +72867,7 @@
 	dir = 4;
 	layer = 4
 	},
+/obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "uot" = (
@@ -74901,6 +75011,7 @@
 	layer = 4;
 	pixel_y = 12
 	},
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "uTZ" = (
@@ -75610,6 +75721,7 @@
 	layer = 4;
 	pixel_y = -1
 	},
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/interior/tzimisce_manor)
 "vdR" = (
@@ -85353,6 +85465,8 @@
 	layer = 4;
 	pixel_y = -1
 	},
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/interior/tzimisce_manor)
 "xRE" = (
@@ -275112,7 +275226,7 @@ rOo
 rOo
 rOo
 xKe
-vdQ
+ovU
 dkb
 dkb
 xDG
@@ -275885,7 +275999,7 @@ wZt
 iCm
 bfd
 dkb
-fQr
+oGA
 hwL
 hwL
 hwL
@@ -276669,7 +276783,7 @@ uYk
 xWi
 rOo
 bdO
-viE
+dlE
 ctX
 kIZ
 uYk
@@ -277174,7 +277288,7 @@ lCB
 ghf
 ghf
 ghf
-fQr
+ecC
 dkb
 jOO
 wxY
@@ -277939,7 +278053,7 @@ rOo
 rOo
 rOo
 rOo
-vdQ
+bDc
 dkb
 dkb
 gCU
@@ -278976,7 +279090,7 @@ ntq
 rOo
 rEX
 mNT
-rEX
+rFy
 rOo
 xKG
 qzH
@@ -340153,7 +340267,7 @@ cFe
 lCf
 rOo
 clc
-rzV
+pSO
 rzV
 rzV
 rzV
@@ -340412,7 +340526,7 @@ rOo
 bjr
 rzV
 rzV
-uiK
+rzV
 rzV
 lAH
 rOo
@@ -340669,7 +340783,7 @@ rOo
 rzV
 rzV
 rzV
-rzV
+uiK
 rzV
 rzV
 rOo
