@@ -4,7 +4,19 @@
 	worn_icon = 'code/modules/wod13/worn.dmi'
 	onflooricon = 'code/modules/wod13/onfloor.dmi'
 	var/quieted = FALSE
+	var/datum/weakref/owner = null
 	cost = 25
+
+/obj/item/melee/vampirearms/pickup(mob/living/user)
+	. = ..()
+	if(quieted)
+		var/mob/living/carbon/human/resolved_blade_owner = owner?.resolve()
+		// We don't need to check if resolved_blade_owner is null, the following check will work as intended either way.
+		if(user != resolved_blade_owner)
+			to_chat(user, "<span class='userdanger'>The acidic ichor sears your hand!</span>")
+			user.apply_damage(20, BURN)
+			user.Paralyze(1)
+
 
 /obj/item
 	var/masquerade_violating = FALSE
@@ -64,6 +76,22 @@
 		if(istype(A, /obj/structure/window) || istype(A, /obj/structure/grille))
 			var/obj/structure/W = A
 			W.obj_destruction("fireaxe")
+
+/obj/item/melee/vampirearms/fireaxe/axetzi
+	icon = 'code/modules/wod13/48x32weapons.dmi'
+	icon_state = "axetzi0"
+	name = "living axe"
+	desc = "Truly, the weapon of a madman."
+	masquerade_violating = TRUE
+	base_icon_state = "axetzi1"
+/obj/item/melee/vampirearms/fireaxe/axetzi/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound)
+	AddComponent(/datum/component/two_handed, force_unwielded=10, force_wielded=40, icon_wielded="axetzi1")
+
+/obj/item/melee/vampirearms/fireaxe/axetzi/update_icon_state()
+	icon_state = "axetzi0"
+
 
 /obj/item/melee/vampirearms/katana
 	name = "katana"
@@ -824,5 +852,4 @@
 		sharpness = SHARP_NONE
 		grid_width = 2 GRID_BOXES
 		grid_height = 1 GRID_BOXES
-
 
